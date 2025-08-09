@@ -1,0 +1,67 @@
+[
+  {
+    "id": 1,
+    "text_portuguese": "Por favor",
+    "text_spanish": "Por favor",
+    "text_english": "Please",
+    "text_indonesian": "Tolong",
+    "text_tagalog": "Pakiusap",
+    "audio_portuguese": "../../../audio/portuguese/please_and_thankyou/por_favor.mp3",
+    "audio_spanish": "../../../audio/spanish/please_and_thankyou/por_favor.mp3",
+    "audio_english": "../../../audio/english/please_and_thankyou/please.mp3",
+    "audio_indonesian": "../../../audio/indonesian/please_and_thankyou/tolong.mp3",
+    "audio_tagalog": "../../../audio/tagalog/please_and_thankyou/pakiusap.mp3"
+  },
+  {
+    "id": 2,
+    "text_portuguese": "Muito obrigado",
+    "text_spanish": "Gracias",
+    "text_english": "Thankyou",
+    "text_indonesian": "Terima kasih banyak",
+    "text_tagalog": "Salamat",
+    "audio_portuguese": "../../../audio/portuguese/please_and_thankyou/muito_obrigado.mp3",
+    "audio_spanish": "../../../audio/spanish/please_and_thankyou/gracias.mp3",
+    "audio_english": "../../../audio/english/please_and_thankyou/thankyou.mp3",
+    "audio_indonesian": "../../../audio/indonesian/please_and_thankyou/terima_kasih_banyak.mp3",
+    "audio_tagalog": "../../../audio/tagalog/please_and_thankyou/salamat.mp3"
+  },
+  {
+    "id": 3,
+    "text_portuguese": "De nada",
+    "text_spanish": "De nada",
+    "text_english": "You're welcome",
+    "text_indonesian": "Sama-sama",
+    "text_tagalog": "Bahala ka",
+    "audio_portuguese": "../../../audio/portuguese/please_and_thankyou/de_nada.mp3",
+    "audio_spanish": "../../../audio/spanish/please_and_thankyou/de_nada.mp3",
+    "audio_english": "../../../audio/english/please_and_thankyou/youre_welcome.mp3",
+    "audio_indonesian": "../../../audio/indonesian/please_and_thankyou/sama-sama.mp3",
+    "audio_tagalog": "../../../audio/tagalog/please_and_thankyou/bahala_ka.mp3"
+  },
+  {
+    "id": 4,
+    "text_portuguese": "Pode me ajudar?",
+    "text_spanish": "Me puedes ayudar?",
+    "text_english": "Can you help me?",
+    "text_indonesian": "Bisakah kamu membantu saya?",
+    "text_tagalog": "Maaari mo ba akong tulungan?",
+    "audio_portuguese": "../../../audio/portuguese/please_and_thankyou/pode_me_ajudar.mp3",
+    "audio_spanish": "../../../audio/spanish/please_and_thankyou/me_puedes_ayudar.mp3",
+    "audio_english": "../../../audio/english/please_and_thankyou/can_you_help_me.mp3",
+    "audio_indonesian": "../../../audio/indonesian/please_and_thankyou/bisakah_kamu_membantu_saya.mp3",
+    "audio_tagalog": "../../../audio/tagalog/please_and_thankyou/maaari_mo_ba_akong_tulungan.mp3"
+  },
+  {
+    "id": 5,
+    "text_portuguese": "Pode repetir?",
+    "text_spanish": "Puedes repetir?",
+    "text_english": "Can you repeat that?",
+    "text_indonesian": "Bisa bicara lagi?",
+    "text_tagalog": "Pwede bang ulitin mo yan?",
+    "audio_portuguese": "../../../audio/portuguese/please_and_thankyou/pode_repetir.mp3",
+    "audio_spanish": "../../../audio/spanish/please_and_thankyou/puedes_repetir.mp3",
+    "audio_english": "../../../audio/english/please_and_thankyou/can_you_repeat_that.mp3",
+    "audio_indonesian": "../../../audio/indonesian/please_and_thankyou/bisa_bicara_lagi.mp3",
+    "audio_tagalog": "../../../audio/tagalog/please_and_thankyou/pwede_bang_ulitin_mo_yan.mp3"
+  }
+]
