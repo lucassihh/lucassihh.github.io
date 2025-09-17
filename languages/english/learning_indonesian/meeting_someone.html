@@ -80,7 +80,7 @@
                   <div class="w-6 h-6 bg-gradient-to-r from-accent to-accent/70 rounded-full flex items-center justify-center text-white hover:scale-105 transition-all duration-300">
                      1
                   </div>
-                  <div class="flex-1 overflow-hidden ripple-btn">
+                  <div class="flex-1">
                      <p class="text-md text-white">Practice pronunciation daily for better accent</p>
                      <div class="tip-detail hidden mt-2 text-xs text-white/70 p-2">
                         Spend 10-15 minutes each day focusing on pronunciation. Use voice recording apps to compare your pronunciation with native speakers.
@@ -91,7 +91,7 @@
                   <div class="w-6 h-6 bg-gradient-to-r from-accent to-accent/70 rounded-full flex items-center justify-center text-white">
                      2
                   </div>
-                  <div class="flex-1 overflow-hidden ripple-btn">
+                  <div class="flex-1">
                      <p class="text-md text-white">Use flashcards for memorization</p>
                      <div class="tip-detail hidden mt-2 text-xs text-white/80 p-2">
                         Create digital or physical flashcards with the Indonesian word on one side and English translation on the other. Review them during free moments.
@@ -102,7 +102,7 @@
                   <div class="w-6 h-6 bg-gradient-to-r from-accent to-accent/70 rounded-full flex items-center justify-center text-white">
                      3
                   </div>
-                  <div class="flex-1 overflow-hidden ripple-btn">
+                  <div class="flex-1">
                      <p class="text-md text-white">Listen music and podcasts</p>
                      <div class="tip-detail hidden mt-2 text-xs text-white/80 p-2">
                         Immerse yourself in the language through entertainment. Start with slow-paced content and gradually increase difficulty.
@@ -494,20 +494,18 @@
             <div id="quiz-feedback"
                class="flex items-center p-10 bg-dark-900/50 text-white rounded-t-xl shadow-md hidden"></div>
          </div>
-         <audio id="audio-correct" src="../../../assets/fx-sound/correct_selection.mp3"></audio>
-         <audio id="audio-incorrect" src="../../../assets/fx-sound/wrong_selection.mp3"></audio>
+         <audio id="audio-correct" src="../../../assets/sound/correct_selection.mp3"></audio>
+         <audio id="audio-incorrect" src="../../../assets/sound/wrong_selection.mp3"></audio>
       </div>
-      <script src="../../../js/learningPageUi.js"></script>
-      <script src="../../../js/tooltip.js"></script>
-      <script src="../../../js/globalAudio.js"></script>
-      <script src="../../../js/carousel.js"></script>
-      <script src="../../../js/vocabulary.js"></script>
-      <script src="../../../js/quiz.js"></script>
+      <script src="../../../js/ui/ui.js"></script>
+      <script src="../../../js/games/globalAudio.js"></script>
+      <script src="../../../js/games/carousel.js"></script>
+      <script src="../../../js/games/vocabulary.js"></script>
       <script type="module">
-         import { initializeLearningPage } from '../../../js/learningPage.js';
+         import { initializeLearningPage } from '../../../js/ui/learningPage.js';
          document.addEventListener('DOMContentLoaded', () => {
            // Slugs
-           const topicSlug = 'greetings';
+           const topicSlug = 'meeting_someone';
            const fromLanguage = 'indonesian';
            const toLanguage = 'english';
            const alphabetFile = 'english';
@@ -517,6 +515,5 @@
            initializeLearningPage(topicSlug, fromLanguage, toLanguage, imageQuiz, alphabetFile, alphabetLang);
          });
       </script>
-      <script src="../../../js/ui.js"></script>
    </body>
 </html>
