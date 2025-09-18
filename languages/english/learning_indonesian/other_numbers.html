@@ -1,330 +1,557 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en-US">
-   <head>
-      <meta charset="UTF-8">
-      <meta name="viewport" content="width=device-width, initial-scale=1.0">
-      <title>Yoo-Lang! Learning indonesian / other numbers</title>
-      <meta name="description" content="YooLang Learning indonesian">
-      <link rel="stylesheet" href="../../../css/output.css">
-      <link rel="preconnect" href="https://fonts.googleapis.com">
-      <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-      <link href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap" rel="stylesheet">
-      <style>
-         /* Estilo para a onda de ripple */
-         .ripple {
-         position: absolute;
-         border-radius: 50%;
-         transform: scale(0);
-         transform-origin: center; 
-         animation: ripple 600ms linear;
-         background-color: rgba(255, 255, 255, 0.7);
-         z-index: -1;
-         }
-         /* Animação de expansão e fade-out */
-         @keyframes ripple {
-         to {
-         transform: scale(4);
-         opacity: 0;
-         }
-         }
-      </style>
-   </head>
-   <body class="bg-gradient-to-br from-gray-900 to-gray-800 font-inter animate-fade-in">
-      <!-- Navbar --> 
-      <nav class="fixed top-0 z-50 w-full flex items-center justify-between bg-transparent backdrop-blur-xl transition-all py-4 px-4 md:px-8">
-         <div class="flex items-center space-x-4">
-            <img class="h-[2.5rem] w-[2.5rem] border-2 border-white rounded-full object-cover shadow" src="../../../assets/flag/id.svg" alt="indonesian" />
-            <div class="flex flex-col items-center justify-center">
-               <div class="h-6">
-                  <span class="text-md md:text-lg capitalize text-white">Learning indonesian</span>
-               </div>
-               <p class="text-xl md:text-2xl text-white capitalize">other numbers</p>
-            </div>
-         </div>
-         <a href="./index.html" class="flex items-center justify-center hover:scale-105 transition-all duration-300 text-white bg-white/20 h-9 w-9 rounded-full">
-            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" class="size-5">
-               <path fill-rule="evenodd" d="M17 10a.75.75 0 0 1-.75.75H5.612l4.158 3.96a.75.75 0 1 1-1.04 1.08l-5.5-5.25a.75.75 0 0 1 0-1.08l5.5-5.25a.75.75 0 1 1 1.04 1.08L5.612 9.25H16.25A.75.75 0 0 1 17 10Z" clip-rule="evenodd" />
-            </svg>
-         </a>
-      </nav>
-       <!-- Main Content -->
-      <main class="transition-all duration-300 max-w-7xl mx-auto md:px-8 py-20 space-y-4 md:space-y-8">
-        <!-- Topic Overview -->
-         <div class="bg-gradient-to-br from-gray-800 to-gray-800 overflow-hidden relative shadow-lg rounded-xl p-6 m-2">
-            <div class="absolute top-0 right-0 w-48 h-48 bg-purple/20 rounded-full blur-3xl"></div>
-            <div class="mt-2">
-               <h4 class="text-xl md:text-2xl font-bold text-white mb-4 text-center">Topic <span class="text-accent">Overview</span> </h4>
-               <div class="px-4">
-                  <p class="text-sm text-white/80">
-                     Master the fundamental words and phrases that form the foundation of <span class="uppercase text-md font-bold text-white">indonesian</span> communication. 
-                  </p>
-                  <p class="text-sm text-white/80 mt-4">
-                     This topic covers essential vocabulary for <span class="uppercase text-md font-bold text-white">other numbers</span>
-                  </p>
-               </div>
-            </div>
-         </div>
-         <!-- Tips -->
-         <div class="bg-gradient-to-br from-gray-800 to-gray-800 overflow-hidden relative shadow-lg rounded-xl p-6 m-2">
-            <div class="absolute top-0 right-0 w-48 h-48 bg-accent/20 rounded-full blur-3xl"></div>
-               <div class="flex items-center gap-3 mt-2">
-                  <div class="p-2 rounded-full border border-border/50 bg-white/10 text-accent">
-                     <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9.663 17h4.673M12 3v1m6.364 1.636l-.707.707M21 12h-1M4 12H3m3.343-5.657l-.707-.707m2.828 9.9a5 5 0 117.072 0l-.548.547A3.374 3.374 0 0014 18.469V19a2 2 0 11-4 0v-.531c0-.895-.356-1.754-.988-2.386l-.548-.547z"></path>
-                     </svg>
-                  </div>
-                  <h2 class="text-2xl font-bold text-white">Tips</h2>
-               </div>
-            <div class="mt-6 space-y-3">
-               <div class="tip-item flex items-start gap-3 p-3 bg-white/10 rounded-xl border border-border transform transition-all hover:scale-105 cursor-pointer" onclick="toggleTip(this)">
-                  <div class="w-6 h-6 bg-gradient-to-r from-accent to-accent/70 rounded-full flex items-center justify-center text-white hover:scale-105 transition-all duration-300">
-                     1
-                  </div>
-                  <div class="flex-1">
-                     <p class="text-md text-white">Practice pronunciation daily for better accent</p>
-                     <div class="tip-detail hidden mt-2 text-xs text-white/70 p-2">
-                        Spend 10-15 minutes each day focusing on pronunciation. Use voice recording apps to compare your pronunciation with native speakers.
-                     </div>
-                  </div>
-               </div>
-               <div class="tip-item flex items-start gap-3 p-3 bg-white/10 rounded-xl border border-border transform transition-all hover:scale-105 cursor-pointer" onclick="toggleTip(this)">
-                  <div class="w-6 h-6 bg-gradient-to-r from-accent to-accent/70 rounded-full flex items-center justify-center text-white">
-                     2
-                  </div>
-                  <div class="flex-1">
-                     <p class="text-md text-white">Use flashcards for memorization</p>
-                     <div class="tip-detail hidden mt-2 text-xs text-white/80 p-2">
-                        Create digital or physical flashcards with the indonesian word on one side and english translation on the other. Review them during free moments.
-                     </div>
-                  </div>
-               </div>
-               <div class="tip-item flex items-start gap-3 p-3 bg-white/10 rounded-xl border border-border transform transition-all hover:scale-105 cursor-pointer" onclick="toggleTip(this)">
-                  <div class="w-6 h-6 bg-gradient-to-r from-accent to-accent/70 rounded-full flex items-center justify-center text-white">
-                     3
-                  </div>
-                  <div class="flex-1">
-                     <p class="text-md text-white">Listen music and podcasts</p>
-                     <div class="tip-detail hidden mt-2 text-xs text-white/80 p-2">
-                        Immerse yourself in the language through entertainment. Start with slow-paced content and gradually increase difficulty.
-                     </div>
-                  </div>
-               </div>
-               <div class="mt-6 p-4 bg-gradient-to-r from-purple/20 to-purple/5 rounded-xl text-center">
-                  <p class="text-sm text-white">15 minutes daily is better than 2 hours once a week!</p>
-               </div>
-            </div>
-         </div>
-         <!-- Tooltip -->
-           <div class="bg-gradient-to-br from-gray-800 to-gray-800 overflow-hidden relative shadow-lg rounded-xl p-6 m-2">
-            <div class="absolute top-0 right-0 w-48 h-48 bg-accent/10 rounded-full blur-3xl"></div>
-            <div class="w-full p-2">
-               <div class="flex flex-col gap-4">
-                  <h4 class="text-xl font-bold text-white mb-2 text-center capitalize">other numbers <span class="text-accent">Basics</span></h4>
-                  <div class="space-y-8">
-                      <!-- Template Translate -->
-                     <p class="text-md text-white px-2">
-                        To ask "How are you?" in Indonesian, you can say 
-                        <span 
-                           class="relative cursor-pointer text-md font-bold text-accent border-b border-accent"
-                           data-tooltip-content="How are you?"
-                           >
-                        Apa kabar?
-                        </span>
-                     </p>
-                  </div>
-               </div>
-            </div>
-         </div>
-         <!-- Carousel -->
-         <section class="relative w-full py-10">
-            <div class="flex gap-2 justify-between items-center px-10">
-               <div>
-                  <h4 class="text-2xl font-bold text-white text-center">Listen</h4>
-               </div>
-               <div class="space-x-2">
-                  <button id="playBtn"
-                     class="bg-gradient-to-r from-accent to-accent/70 rounded-full inline-flex items-center justify-center text-white ripple-btn overflow-hidden hover:scale-105 transition-all duration-300 p-2">
-                     <svg id="playIcon" xmlns="http://www.w3.org/2000/svg" class="size-5" viewBox="0 0 24 24"
-                        fill="currentColor">
-                        <path fill-rule="evenodd"
-                           d="M4.5 5.653c0-1.427 1.529-2.33 2.779-1.643l11.54 6.347c1.295.712 1.295 2.573 0 3.286L7.28 19.99c-1.25.687-2.779-.217-2.779-1.643V5.653Z"
-                           clip-rule="evenodd" />
-                     </svg>
-                  </button>
-                  <button id="muteOffBtn"
-                     class="bg-gradient-to-r from-accent to-accent/70 rounded-full inline-flex items-center justify-center text-white hover:scale-105 transition-all duration-300 p-2">
-                     <svg xmlns="http://www.w3.org/2000/svg" class="size-5" viewBox="0 0 24 24" fill="currentColor">
-                        <path
-                           d="M13.5 4.06c0-1.336-1.616-2.005-2.56-1.06l-4.5 4.5H4.508c-1.141 0-2.318.664-2.66 1.905A9.76 9.76 0 0 0 1.5 12c0 .898.121 1.768.35 2.595.341 1.24 1.518 1.905 2.659 1.905h1.93l4.5 4.5c.945.945 2.561.276 2.561-1.06V4.06ZM17.78 9.22a.75.75 0 1 0-1.06 1.06L18.44 12l-1.72 1.72a.75.75 0 1 0 1.06 1.06l1.72-1.72 1.72 1.72a.75.75 0 1 0 1.06-1.06L20.56 12l1.72-1.72a.75.75 0 1 0-1.06-1.06l-1.72 1.72-1.72-1.72Z" />
-                     </svg>
-                  </button>
-                  <button id="muteOnBtn"
-                     class="bg-gradient-to-r from-accent to-accent/70 rounded-full inline-flex items-center justify-center text-white rhover:scale-105 transition-all duration-300 p-2">
-                     <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" class="size-5">
-                        <path
-                           d="M8.25 4.5a3.75 3.75 0 1 1 7.5 0v8.25a3.75 3.75 0 1 1-7.5 0V4.5Z" />
-                        <path
-                           d="M6 10.5a.75.75 0 0 1 .75.75v1.5a5.25 5.25 0 1 0 10.5 0v-1.5a.75.75 0 0 1 1.5 0v1.5a6.751 6.751 0 0 1-6 6.709v2.291h3a.75.75 0 0 1 0 1.5h-7.5a.75.75 0 0 1 0-1.5h3v-2.291a6.751 6.751 0 0 1-6-6.709v-1.5A.75.75 0 0 1 6 10.5Z" />
-                     </svg>
-                  </button>
-               </div>
-            </div>
-            <div class="flex flex-col justify-between mt-4 m-2">
-               <div class="flex items-center justify-center relative">
-                  <button id="prevBtn"
-                     class="absolute left-0 top-1/2 transform -translate-y-1/2 z-10 size-12 bg-gradient-to-r from-accent to-accent/70 rounded-full flex items-center justify-center text-white ripple-btn overflow-hidden hover:scale-105 transition-all duration-300 p-2">
-                     <svg class="size-4 fill-current" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 512">
-                        <path
-                           d="M231.293 473.899l19.799-19.799c4.686-4.686 4.686-12.284 0-16.971L70.393 256 251.092 74.87c4.686-4.686 4.686-12.284 0-16.971L231.293 38.1c-4.686-4.686-12.284-4.686-16.971 0L4.908 247.515c-4.686 4.686-4.686 12.284 0 16.971L214.322 473.9c4.687 4.686 12.285 4.686 16.971-.001z" />
-                     </svg>
-                  </button>
-                  <button id="nextBtn"
-                     class="absolute right-0 top-1/2 transform -translate-y-1/2 z-10 size-12 bg-gradient-to-r from-accent to-accent/70 rounded-full flex items-center justify-center text-white ripple-btn overflow-hidden hover:scale-105 transition-all duration-300 p-2">
-                     <svg class="size-4 fill-current" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 512">
-                        <path
-                           d="M24.707 38.101L4.908 57.899c-4.686 4.686-4.686 12.284 0 16.971L185.607 256 4.908 437.13c-4.686 4.686-4.686 12.284 0 16.971L24.707 473.9c4.686 4.686 12.284 4.686 16.971 0l209.414-209.414c4.686-4.686 4.686-12.284 0-16.971L41.678 38.101c-4.687-4.687-12.285-4.687-16.971 0z" />
-                     </svg>
-                  </button>
-                  <div id="carousel" class="flex space-x-4 w-full overflow-x-hidden py-4 px-8">
-                  </div>
-               </div>
-            </div>
-         </section>
-         <!-- Vocabulary -->
-         <section class="bg-gradient-to-br from-gray-800 to-gray-800 overflow-hidden relative shadow-lg rounded-xl p-2 m-2">
-            <div class="absolute top-0 right-0 w-48 h-48 bg-primary/30 rounded-full blur-3xl"></div>
-            <div class="flex items-center justify-between p-6">
-               <div class="flex items-center gap-3">
-                  <div class="w-10 h-10 bg-white/10 border border-border/50 rounded-full flex items-center justify-center">
-                     <span class="text-primary font-bold text-lg">V</span>
-                  </div>
-                  <div>
-                     <h3 class="text-xl font-bold text-white">Vocabulay</h3>
-                     <p class="text-white/80 text-sm">All words in this topic</p>
-                  </div>
-               </div>
-               <div class="flex items-center justify-center gap-2">
-                  <a id="open-quiz-modal" class="p-3 rounded-full bg-white/10 border border-border/50 text-white z-20">
-                     <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" class="size-5">
-                        <path d="M5.127 3.502 5.25 3.5h9.5c.041 0 .082 0 .123.002A2.251 2.251 0 0 0 12.75 2h-5.5a2.25 2.25 0 0 0-2.123 1.502ZM1 10.25A2.25 2.25 0 0 1 3.25 8h13.5A2.25 2.25 0 0 1 19 10.25v5.5A2.25 2.25 0 0 1 16.75 18H3.25A2.25 2.25 0 0 1 1 15.75v-5.5ZM3.25 6.5c-.04 0-.082 0-.123.002A2.25 2.25 0 0 1 5.25 5h9.5c.98 0 1.814.627 2.123 1.502a3.819 3.819 0 0 0-.123-.002H3.25Z" />
-                     </svg>
-                  </a>
-               </div>
-            </div>
-            <div id="vocab" class="grid grid-cols-1 md:grid-cols-2 gap-4 p-4">
-            </div>
-         </section>
-         </main>
-         <!-- Footer -->
-         <footer class="flex justify-center relative bg-gradient-to-br from-gray-900 to-gray-800 overflow-hidden">
-             <!-- Animated background elements -->
-            <div class="absolute top-10 right-0 w-32 h-32 bg-primary/50 rounded-full blur-3xl animate-pulse-slow"></div>
-            <div class="w-full max-w-4xl flex flex-col md:flex-row md:items-center md:justify-between p-10 md:px-8">
-                <!-- Info --> 
-                <div class="space-y-6 mb-8 z-20">
-                  <span class="text-2xl font-bold text-white">
-                     YooLingo
-                  </span>
-                  <p class="text-gray-300 max-w-md leading-relaxed">
-                     Language learning with easy lessons, 
-                     real-world conversations, and mini-games!
-                  </p>
-                  <div class="flex items-center space-x-4">
-                     <span class="text-lg font-semibold text-white">Any questions?</span>
-                        <a href="https://youtube.com/@lucas_sihh?si=FRJjFpimksCZHPJR" class="w-10 h-10 rounded-full text-white bg-gray-800 flex items-center justify-center hover:bg-gradient-primary hover:shadow-lg hover:shadow-primary/30 transition-all duration-300">
-                           <svg
-                              xmlns="http://www.w3.org/2000/svg" height="1.2rem" viewBox="0 0 576 512">
-                              <path fill="currentColor"
-                                 d="M549.655 124.083c-6.281-23.65-24.787-42.276-48.284-48.597C458.781 64 288 64 288 64S117.22 64 74.629 75.486c-23.497 6.322-42.003 24.947-48.284 48.597-11.412 42.867-11.412 132.305-11.412 132.305s0 89.438 11.412 132.305c6.281 23.65 24.787 41.5 48.284 47.821C117.22 448 288 448 288 448s170.78 0 213.371-11.486c23.497-6.321 42.003-24.171 48.284-47.821 11.412-42.867 11.412-132.305 11.412-132.305s0-89.438-11.412-132.305zm-317.51 213.508V175.185l142.739 81.205-142.739 81.201z">
-                              </path>
-                           </svg>
-                        </a>
-                        <a href="https://www.instagram.com/lucas_sihh?igsh=eGVsMDhrbHpncGV2" class="w-10 h-10 rounded-full text-white bg-gray-800 flex items-center justify-center hover:bg-gradient-primary hover:shadow-lg hover:shadow-primary/30 transition-all duration-300">
-                           <svg
-                              xmlns="http://www.w3.org/2000/svg" height="1.2rem" viewBox="0 0 448 512">
-                              <path fill="currentColor"
-                                 d="M224.1 141c-63.6 0-114.9 51.3-114.9 114.9s51.3 114.9 114.9 114.9S339 319.5 339 255.9 287.7 141 224.1 141zm0 189.6c-41.1 0-74.7-33.5-74.7-74.7s33.5-74.7 74.7-74.7 74.7 33.5 74.7 74.7-33.6 74.7-74.7 74.7zm146.4-194.3c0 14.9-12 26.8-26.8 26.8-14.9 0-26.8-12-26.8-26.8s12-26.8 26.8-26.8 26.8 12 26.8 26.8zm76.1 27.2c-1.7-35.9-9.9-67.7-36.2-93.9-26.2-26.2-58-34.4-93.9-36.2-37-2.1-147.9-2.1-184.9 0-35.8 1.7-67.6 9.9-93.9 36.1s-34.4 58-36.2 93.9c-2.1 37-2.1 147.9 0 184.9 1.7 35.9 9.9 67.7 36.2 93.9s58 34.4 93.9 36.2c37 2.1 147.9 2.1 184.9 0 35.9-1.7 67.7-9.9 93.9-36.2 26.2-26.2 34.4-58 36.2-93.9 2.1-37 2.1-147.8 0-184.8zM398.8 388c-7.8 19.6-22.9 34.7-42.6 42.6-29.5 11.7-99.5 9-132.1 9s-102.7 2.6-132.1-9c-19.6-7.8-34.7-22.9-42.6-42.6-11.7-29.5-9-99.5-9-132.1s-2.6-102.7 9-132.1c7.8-19.6 22.9-34.7 42.6-42.6 29.5-11.7 99.5-9 132.1-9s102.7-2.6 132.1 9c19.6 7.8 34.7 22.9 42.6 42.6 11.7 29.5 9 99.5 9 132.1s2.7 102.7-9 132.1z">
-                              </path>
-                           </svg>
-                        </a>
-                  </div>
-                </div>
-                <!-- Quick Links -->
-                <div>
-                  <h3 class="text-lg font-semibold text-white">Quick Links</h3>
-                  <ul class="flex mt-4 space-x-4">
-                     <li><a href="../../../index.html" class="text-gray-300 hover:text-white transition-colors duration-200 hover:translate-x-1 transform inline-block">Home</a></li>
-                     <li><a href="#" class="text-gray-300 hover:text-white transition-colors duration-200 hover:translate-x-1 transform inline-block">About Us</a></li>
-                  </ul>
-                </div>
-            </div>
-         </footer>
-      <!-- Quiz Modal -->
-      <div id="quiz-modal" class="fixed inset-0 flex items-center justify-center bg-gradient-to-br from-gray-900 to-gray-800 font-inter transition-all duration-300 z-50 hidden">
-         <div id="quiz-modal-content" class="w-full h-full flex flex-col relative">
-            <div class="flex items-center justify-between space-x-2 p-4">
-               <div id="progress-bar-container" class="flex-1 rounded-full h-4 mr-4 bg-transparent">
-                  <div id="progress-bar" class="bg-success h-4 rounded-full transition-all duration-500"
-                     style="width: 0%"></div>
-               </div>
-               <button id="quiz-mute"
-                  class="size-10 inline-flex items-center justify-center rounded-full text-white border border-border/50 shadow-sm hover:scale-105 transition-all duration-300"
-                  aria-label="Mute quiz">
-               </button>
-               <button id="close-quiz-modal"
-                  class="size-10 inline-flex items-center justify-center rounded-full text-white border border-border/50 shadow-sm hover:scale-105 transition-all duration-300"
-                  aria-label="Close quiz">
-                  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" class="size-6">
-                     <path fill-rule="evenodd"
-                        d="M5.47 5.47a.75.75 0 0 1 1.06 0L12 10.94l5.47-5.47a.75.75 0 1 1 1.06 1.06L13.06 12l5.47 5.47a.75.75 0 1 1-1.06 1.06L12 13.06l-5.47 5.47a.75.75 0 0 1-1.06-1.06L10.94 12 5.47 6.53a.75.75 0 0 1 0-1.06Z"
-                        clip-rule="evenodd" />
-                  </svg>
-               </button>
-            </div>
-            <div id="timer-bar" class="bg-white h-4 transition-all duration-1000"></div>
-            <div id="quiz-question-container" class="flex-1 flex flex-col items-center justify-center text-center p-2">
-               <div class="flex flex-col items-center justify-center gap-2 mb-20">
-                  <div class="text-white/80 capitalize">translate to english</div>
-                  <div id="quiz-word"
-                     class="text-3xl font-semibold italic text-white hover:scale-105 transition-all duration-300">
-                  </div>
-               </div>
-               <div id="quiz-options" class="grid grid-cols-2 gap-8 justify-center"></div>
-            </div>
-            <div id="quiz-results-container" class="flex-1 flex flex-col items-center justify-center text-center p-2 hidden">
-               <div id="quiz-score" class="text-2xl font-bold text-white mb-8"></div>
-               <button id="quiz-restart"
-                  class="bg-gradient-primary text-white p-6 rounded-full shadow-lg hover:scale-105 transition-all duration-300">
-                  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" class="size-6">
-                     <path fill-rule="evenodd"
-                        d="M4.755 10.059a7.5 7.5 0 0 1 12.548-3.364l1.903 1.903h-3.183a.75.75 0 1 0 0 1.5h4.992a.75.75 0 0 0 .75-.75V4.356a.75.75 0 0 0-1.5 0v3.18l-1.9-1.9A9 9 0 0 0 3.306 9.67a.75.75 0 1 0 1.45.388Zm15.408 3.352a.75.75 0 0 0-.919.53 7.5 7.5 0 0 1-12.548 3.364l-1.902-1.903h3.183a.75.75 0 0 0 0-1.5H2.984a.75.75 0 0 0-.75.75v4.992a.75.75 0 0 0 1.5 0v-3.18l1.9 1.9a9 9 0 0 0 15.059-4.035.75.75 0 0 0-.53-.918Z"
-                        clip-rule="evenodd" />
-                  </svg>
-               </button>
-            </div>
-            <div id="quiz-feedback"
-               class="flex items-center p-10 bg-dark-900/50 text-white rounded-t-xl shadow-md hidden"></div>
-         </div>
-         <audio id="audio-correct" src="../../../assets/sound/correct_selection.mp3"></audio>
-         <audio id="audio-incorrect" src="../../../assets/sound/wrong_selection.mp3"></audio>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Yoo-Lang! Learning indonesian / other numbers</title>
+    <meta name="description" content="YooLang Learning indonesian" />
+    <link rel="stylesheet" href="../../../css/output.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap"
+      rel="stylesheet"
+    />
+    <style>
+      /* Estilo para a onda de ripple */
+      .ripple {
+        position: absolute;
+        border-radius: 50%;
+        transform: scale(0);
+        transform-origin: center;
+        animation: ripple 600ms linear;
+        background-color: rgba(255, 255, 255, 0.7);
+        z-index: -1;
+      }
+      /* Animação de expansão e fade-out */
+      @keyframes ripple {
+        to {
+          transform: scale(4);
+          opacity: 0;
+        }
+      }
+    </style>
+  </head>
+  <body
+    class="bg-gradient-to-br from-gray-900 to-gray-800 font-inter animate-fade-in"
+  >
+    <!-- Navbar -->
+    <nav
+      class="fixed top-0 z-50 w-full flex items-center justify-between bg-transparent backdrop-blur-xl transition-all py-4 px-4 md:px-8"
+    >
+      <div class="flex items-center space-x-4">
+        <img
+          class="h-[2.5rem] w-[2.5rem] border-2 border-white rounded-full object-cover shadow"
+          src="../../../assets/flag/id.svg"
+          alt="indonesian"
+        />
+        <div class="flex flex-col items-center justify-center">
+          <div class="h-6">
+            <span class="text-md md:text-lg capitalize text-white"
+              >Learning indonesian</span
+            >
+          </div>
+          <p class="text-xl md:text-2xl text-white capitalize">other numbers</p>
+        </div>
       </div>
-      <script src="../../../js/ui/ui.js"></script>
-      <script src="../../../js/games/globalAudio.js"></script>
-      <script src="../../../js/games/carousel.js"></script>
-      <script src="../../../js/games/vocabulary.js"></script>
- <script type="module">
-         import { initializeLearningPage } from '../../../js/ui/learningPage.js';
-         document.addEventListener('DOMContentLoaded', () => {
-           // Slugs
-           const topicSlug = 'other_numbers';
-           const fromLanguage = 'indonesian';
-           const toLanguage = 'english';
-           // const alphabetFile = 'english';
-           // const alphabetLang = 'indonesian';
-           const imageQuiz = false;
-           
-           initializeLearningPage(topicSlug, fromLanguage, toLanguage, imageQuiz);
-         });
-      </script>
-   </body>
+      <a
+        href="./index.html"
+        class="flex items-center justify-center hover:scale-105 transition-all duration-300 text-white bg-white/20 h-9 w-9 rounded-full"
+      >
+        <svg
+          xmlns="http://www.w3.org/2000/svg"
+          viewBox="0 0 20 20"
+          fill="currentColor"
+          class="size-5"
+        >
+          <path
+            fill-rule="evenodd"
+            d="M17 10a.75.75 0 0 1-.75.75H5.612l4.158 3.96a.75.75 0 1 1-1.04 1.08l-5.5-5.25a.75.75 0 0 1 0-1.08l5.5-5.25a.75.75 0 1 1 1.04 1.08L5.612 9.25H16.25A.75.75 0 0 1 17 10Z"
+            clip-rule="evenodd"
+          />
+        </svg>
+      </a>
+    </nav>
+    <!-- Main Content -->
+    <main
+      class="transition-all duration-300 max-w-7xl mx-auto md:px-8 py-20 space-y-4 md:space-y-8"
+    >
+      <!-- Topic Overview -->
+      <div
+        class="bg-gradient-to-br from-gray-800 to-gray-800 overflow-hidden relative shadow-lg rounded-xl p-6 m-2"
+      >
+        <div
+          class="absolute top-0 right-0 w-48 h-48 bg-purple/20 rounded-full blur-3xl"
+        ></div>
+        <div class="mt-2">
+          <h4 class="text-xl md:text-2xl font-bold text-white mb-4 text-center">
+            Topic <span class="text-accent">Overview</span>
+          </h4>
+          <div class="px-4">
+            <p class="text-sm text-white/80">
+              Master the fundamental words and phrases that form the foundation
+              of
+              <span class="uppercase text-md font-bold text-white"
+                >indonesian</span
+              >
+              communication.
+            </p>
+            <p class="text-sm text-white/80 mt-4">
+              This topic covers essential vocabulary for
+              <span class="uppercase text-md font-bold text-white"
+                >other numbers</span
+              >
+            </p>
+          </div>
+        </div>
+      </div>
+      <!-- Tips -->
+      <div
+        class="bg-gradient-to-br from-gray-800 to-gray-800 overflow-hidden relative shadow-lg rounded-xl p-6 m-2"
+      >
+        <div
+          class="absolute top-0 right-0 w-48 h-48 bg-accent/20 rounded-full blur-3xl"
+        ></div>
+        <div class="flex items-center gap-3 mt-2">
+          <div
+            class="p-2 rounded-full border border-border/50 bg-white/10 text-accent"
+          >
+            <svg
+              class="w-6 h-6"
+              fill="none"
+              stroke="currentColor"
+              viewBox="0 0 24 24"
+            >
+              <path
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                stroke-width="2"
+                d="M9.663 17h4.673M12 3v1m6.364 1.636l-.707.707M21 12h-1M4 12H3m3.343-5.657l-.707-.707m2.828 9.9a5 5 0 117.072 0l-.548.547A3.374 3.374 0 0014 18.469V19a2 2 0 11-4 0v-.531c0-.895-.356-1.754-.988-2.386l-.548-.547z"
+              ></path>
+            </svg>
+          </div>
+          <h2 class="text-2xl font-bold text-white">Tips</h2>
+        </div>
+        <div class="mt-6 space-y-3">
+          <div
+            class="tip-item flex items-start gap-3 p-3 bg-white/10 rounded-xl border border-border transform transition-all hover:scale-105 cursor-pointer"
+            onclick="toggleTip(this)"
+          >
+            <div
+              class="w-6 h-6 bg-gradient-to-r from-accent to-accent/70 rounded-full flex items-center justify-center text-white hover:scale-105 transition-all duration-300"
+            >
+              1
+            </div>
+            <div class="flex-1">
+              <p class="text-md text-white">
+                Practice pronunciation daily for better accent
+              </p>
+              <div class="tip-detail hidden mt-2 text-xs text-white/70 p-2">
+                Spend 10-15 minutes each day focusing on pronunciation. Use
+                voice recording apps to compare your pronunciation with native
+                speakers.
+              </div>
+            </div>
+          </div>
+          <div
+            class="tip-item flex items-start gap-3 p-3 bg-white/10 rounded-xl border border-border transform transition-all hover:scale-105 cursor-pointer"
+            onclick="toggleTip(this)"
+          >
+            <div
+              class="w-6 h-6 bg-gradient-to-r from-accent to-accent/70 rounded-full flex items-center justify-center text-white"
+            >
+              2
+            </div>
+            <div class="flex-1">
+              <p class="text-md text-white">Use flashcards for memorization</p>
+              <div class="tip-detail hidden mt-2 text-xs text-white/80 p-2">
+                Create digital or physical flashcards with the indonesian word
+                on one side and english translation on the other. Review them
+                during free moments.
+              </div>
+            </div>
+          </div>
+          <div
+            class="tip-item flex items-start gap-3 p-3 bg-white/10 rounded-xl border border-border transform transition-all hover:scale-105 cursor-pointer"
+            onclick="toggleTip(this)"
+          >
+            <div
+              class="w-6 h-6 bg-gradient-to-r from-accent to-accent/70 rounded-full flex items-center justify-center text-white"
+            >
+              3
+            </div>
+            <div class="flex-1">
+              <p class="text-md text-white">Listen music and podcasts</p>
+              <div class="tip-detail hidden mt-2 text-xs text-white/80 p-2">
+                Immerse yourself in the language through entertainment. Start
+                with slow-paced content and gradually increase difficulty.
+              </div>
+            </div>
+          </div>
+          <div
+            class="mt-6 p-4 bg-gradient-to-r from-purple/20 to-purple/5 rounded-xl text-center"
+          >
+            <p class="text-sm text-white">
+              15 minutes daily is better than 2 hours once a week!
+            </p>
+          </div>
+        </div>
+      </div>
+      <!-- Tooltip -->
+      <div
+        class="bg-gradient-to-br from-gray-800 to-gray-800 overflow-hidden relative shadow-lg rounded-xl p-6 m-2"
+      >
+        <div
+          class="absolute top-0 right-0 w-48 h-48 bg-accent/10 rounded-full blur-3xl"
+        ></div>
+        <div class="w-full p-2">
+          <div class="flex flex-col gap-4">
+            <h4
+              class="text-xl font-bold text-white mb-2 text-center capitalize"
+            >
+              other numbers <span class="text-accent">Basics</span>
+            </h4>
+            <div class="space-y-8">
+              <!-- Template Translate -->
+              <p class="text-md text-white px-2">
+                To ask "How are you?" in Indonesian, you can say
+                <span
+                  class="relative cursor-pointer text-md font-bold text-accent border-b border-accent"
+                  data-tooltip-content="How are you?"
+                >
+                  Apa kabar?
+                </span>
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- Carousel -->
+      <section class="relative w-full py-10">
+        <div class="flex gap-2 justify-between items-center px-10">
+          <div>
+            <h4 class="text-2xl font-bold text-white text-center">Listen</h4>
+          </div>
+          <div class="space-x-2">
+            <button
+              id="playBtn"
+              class="bg-gradient-to-r from-accent to-accent/70 rounded-full inline-flex items-center justify-center text-white ripple-btn overflow-hidden hover:scale-105 transition-all duration-300 p-2"
+            >
+              <svg
+                id="playIcon"
+                xmlns="http://www.w3.org/2000/svg"
+                class="size-5"
+                viewBox="0 0 24 24"
+                fill="currentColor"
+              >
+                <path
+                  fill-rule="evenodd"
+                  d="M4.5 5.653c0-1.427 1.529-2.33 2.779-1.643l11.54 6.347c1.295.712 1.295 2.573 0 3.286L7.28 19.99c-1.25.687-2.779-.217-2.779-1.643V5.653Z"
+                  clip-rule="evenodd"
+                />
+              </svg>
+            </button>
+            <button
+              id="muteOffBtn"
+              class="bg-gradient-to-r from-accent to-accent/70 rounded-full inline-flex items-center justify-center text-white hover:scale-105 transition-all duration-300 p-2"
+            >
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                class="size-5"
+                viewBox="0 0 24 24"
+                fill="currentColor"
+              >
+                <path
+                  d="M13.5 4.06c0-1.336-1.616-2.005-2.56-1.06l-4.5 4.5H4.508c-1.141 0-2.318.664-2.66 1.905A9.76 9.76 0 0 0 1.5 12c0 .898.121 1.768.35 2.595.341 1.24 1.518 1.905 2.659 1.905h1.93l4.5 4.5c.945.945 2.561.276 2.561-1.06V4.06ZM17.78 9.22a.75.75 0 1 0-1.06 1.06L18.44 12l-1.72 1.72a.75.75 0 1 0 1.06 1.06l1.72-1.72 1.72 1.72a.75.75 0 1 0 1.06-1.06L20.56 12l1.72-1.72a.75.75 0 1 0-1.06-1.06l-1.72 1.72-1.72-1.72Z"
+                />
+              </svg>
+            </button>
+            <button
+              id="muteOnBtn"
+              class="bg-gradient-to-r from-accent to-accent/70 rounded-full inline-flex items-center justify-center text-white rhover:scale-105 transition-all duration-300 p-2"
+            >
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                viewBox="0 0 24 24"
+                fill="currentColor"
+                class="size-5"
+              >
+                <path
+                  d="M8.25 4.5a3.75 3.75 0 1 1 7.5 0v8.25a3.75 3.75 0 1 1-7.5 0V4.5Z"
+                />
+                <path
+                  d="M6 10.5a.75.75 0 0 1 .75.75v1.5a5.25 5.25 0 1 0 10.5 0v-1.5a.75.75 0 0 1 1.5 0v1.5a6.751 6.751 0 0 1-6 6.709v2.291h3a.75.75 0 0 1 0 1.5h-7.5a.75.75 0 0 1 0-1.5h3v-2.291a6.751 6.751 0 0 1-6-6.709v-1.5A.75.75 0 0 1 6 10.5Z"
+                />
+              </svg>
+            </button>
+          </div>
+        </div>
+        <div class="flex flex-col justify-between mt-4 m-2">
+          <div class="flex items-center justify-center relative">
+            <button
+              id="prevBtn"
+              class="absolute left-0 top-1/2 transform -translate-y-1/2 z-10 size-12 bg-gradient-to-r from-accent to-accent/70 rounded-full flex items-center justify-center text-white ripple-btn overflow-hidden hover:scale-105 transition-all duration-300 p-2"
+            >
+              <svg
+                class="size-4 fill-current"
+                xmlns="http://www.w3.org/2000/svg"
+                viewBox="0 0 256 512"
+              >
+                <path
+                  d="M231.293 473.899l19.799-19.799c4.686-4.686 4.686-12.284 0-16.971L70.393 256 251.092 74.87c4.686-4.686 4.686-12.284 0-16.971L231.293 38.1c-4.686-4.686-12.284-4.686-16.971 0L4.908 247.515c-4.686 4.686-4.686 12.284 0 16.971L214.322 473.9c4.687 4.686 12.285 4.686 16.971-.001z"
+                />
+              </svg>
+            </button>
+            <button
+              id="nextBtn"
+              class="absolute right-0 top-1/2 transform -translate-y-1/2 z-10 size-12 bg-gradient-to-r from-accent to-accent/70 rounded-full flex items-center justify-center text-white ripple-btn overflow-hidden hover:scale-105 transition-all duration-300 p-2"
+            >
+              <svg
+                class="size-4 fill-current"
+                xmlns="http://www.w3.org/2000/svg"
+                viewBox="0 0 256 512"
+              >
+                <path
+                  d="M24.707 38.101L4.908 57.899c-4.686 4.686-4.686 12.284 0 16.971L185.607 256 4.908 437.13c-4.686 4.686-4.686 12.284 0 16.971L24.707 473.9c4.686 4.686 12.284 4.686 16.971 0l209.414-209.414c4.686-4.686 4.686-12.284 0-16.971L41.678 38.101c-4.687-4.687-12.285-4.687-16.971 0z"
+                />
+              </svg>
+            </button>
+            <div
+              id="carousel"
+              class="flex space-x-4 w-full overflow-x-hidden py-4 px-8"
+            ></div>
+          </div>
+        </div>
+      </section>
+      <!-- Vocabulary -->
+      <section
+        class="bg-gradient-to-br from-gray-800 to-gray-800 overflow-hidden relative shadow-lg rounded-xl p-2 m-2"
+      >
+        <div
+          class="absolute top-0 right-0 w-48 h-48 bg-primary/30 rounded-full blur-3xl"
+        ></div>
+        <div class="flex items-center justify-between p-6">
+          <div class="flex items-center gap-3">
+            <div
+              class="w-10 h-10 bg-white/10 border border-border/50 rounded-full flex items-center justify-center"
+            >
+              <span class="text-primary font-bold text-lg">V</span>
+            </div>
+            <div>
+              <h3 class="text-xl font-bold text-white">Vocabulay</h3>
+              <p class="text-white/80 text-sm">All words in this topic</p>
+            </div>
+          </div>
+          <div class="flex items-center justify-center gap-2">
+            <a
+              id="open-quiz-modal"
+              class="p-3 rounded-full bg-white/10 border border-border/50 text-white z-20"
+            >
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                viewBox="0 0 20 20"
+                fill="currentColor"
+                class="size-5"
+              >
+                <path
+                  d="M5.127 3.502 5.25 3.5h9.5c.041 0 .082 0 .123.002A2.251 2.251 0 0 0 12.75 2h-5.5a2.25 2.25 0 0 0-2.123 1.502ZM1 10.25A2.25 2.25 0 0 1 3.25 8h13.5A2.25 2.25 0 0 1 19 10.25v5.5A2.25 2.25 0 0 1 16.75 18H3.25A2.25 2.25 0 0 1 1 15.75v-5.5ZM3.25 6.5c-.04 0-.082 0-.123.002A2.25 2.25 0 0 1 5.25 5h9.5c.98 0 1.814.627 2.123 1.502a3.819 3.819 0 0 0-.123-.002H3.25Z"
+                />
+              </svg>
+            </a>
+          </div>
+        </div>
+        <div id="vocab" class="grid grid-cols-1 md:grid-cols-2 gap-4 p-4"></div>
+      </section>
+    </main>
+    <!-- Footer -->
+    <footer
+      class="flex justify-center relative bg-gradient-to-br from-gray-900 to-gray-800 overflow-hidden"
+    >
+      <!-- Animated background elements -->
+      <div
+        class="absolute top-10 right-0 w-32 h-32 bg-primary/50 rounded-full blur-3xl animate-pulse-slow"
+      ></div>
+      <div
+        class="w-full max-w-4xl flex flex-col md:flex-row md:items-center md:justify-between p-10 md:px-8"
+      >
+        <!-- Info -->
+        <div class="space-y-6 mb-8 z-20">
+          <span class="text-2xl font-bold text-white"> YooLingo </span>
+          <p class="text-gray-300 max-w-md leading-relaxed">
+            Language learning with easy lessons, real-world conversations, and
+            mini-games!
+          </p>
+          <div class="flex items-center space-x-4">
+            <span class="text-lg font-semibold text-white">Any questions?</span>
+            <a
+              href="https://youtube.com/@lucas_sihh?si=FRJjFpimksCZHPJR"
+              class="w-10 h-10 rounded-full text-white bg-gray-800 flex items-center justify-center hover:bg-gradient-primary hover:shadow-lg hover:shadow-primary/30 transition-all duration-300"
+            >
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                height="1.2rem"
+                viewBox="0 0 576 512"
+              >
+                <path
+                  fill="currentColor"
+                  d="M549.655 124.083c-6.281-23.65-24.787-42.276-48.284-48.597C458.781 64 288 64 288 64S117.22 64 74.629 75.486c-23.497 6.322-42.003 24.947-48.284 48.597-11.412 42.867-11.412 132.305-11.412 132.305s0 89.438 11.412 132.305c6.281 23.65 24.787 41.5 48.284 47.821C117.22 448 288 448 288 448s170.78 0 213.371-11.486c23.497-6.321 42.003-24.171 48.284-47.821 11.412-42.867 11.412-132.305 11.412-132.305s0-89.438-11.412-132.305zm-317.51 213.508V175.185l142.739 81.205-142.739 81.201z"
+                ></path>
+              </svg>
+            </a>
+            <a
+              href="https://www.instagram.com/lucas_sihh?igsh=eGVsMDhrbHpncGV2"
+              class="w-10 h-10 rounded-full text-white bg-gray-800 flex items-center justify-center hover:bg-gradient-primary hover:shadow-lg hover:shadow-primary/30 transition-all duration-300"
+            >
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                height="1.2rem"
+                viewBox="0 0 448 512"
+              >
+                <path
+                  fill="currentColor"
+                  d="M224.1 141c-63.6 0-114.9 51.3-114.9 114.9s51.3 114.9 114.9 114.9S339 319.5 339 255.9 287.7 141 224.1 141zm0 189.6c-41.1 0-74.7-33.5-74.7-74.7s33.5-74.7 74.7-74.7 74.7 33.5 74.7 74.7-33.6 74.7-74.7 74.7zm146.4-194.3c0 14.9-12 26.8-26.8 26.8-14.9 0-26.8-12-26.8-26.8s12-26.8 26.8-26.8 26.8 12 26.8 26.8zm76.1 27.2c-1.7-35.9-9.9-67.7-36.2-93.9-26.2-26.2-58-34.4-93.9-36.2-37-2.1-147.9-2.1-184.9 0-35.8 1.7-67.6 9.9-93.9 36.1s-34.4 58-36.2 93.9c-2.1 37-2.1 147.9 0 184.9 1.7 35.9 9.9 67.7 36.2 93.9s58 34.4 93.9 36.2c37 2.1 147.9 2.1 184.9 0 35.9-1.7 67.7-9.9 93.9-36.2 26.2-26.2 34.4-58 36.2-93.9 2.1-37 2.1-147.8 0-184.8zM398.8 388c-7.8 19.6-22.9 34.7-42.6 42.6-29.5 11.7-99.5 9-132.1 9s-102.7 2.6-132.1-9c-19.6-7.8-34.7-22.9-42.6-42.6-11.7-29.5-9-99.5-9-132.1s-2.6-102.7 9-132.1c7.8-19.6 22.9-34.7 42.6-42.6 29.5-11.7 99.5-9 132.1-9s102.7-2.6 132.1 9c19.6 7.8 34.7 22.9 42.6 42.6 11.7 29.5 9 99.5 9 132.1s2.7 102.7-9 132.1z"
+                ></path>
+              </svg>
+            </a>
+          </div>
+        </div>
+        <!-- Quick Links -->
+        <div>
+          <h3 class="text-lg font-semibold text-white">Quick Links</h3>
+          <ul class="flex mt-4 space-x-4">
+            <li>
+              <a
+                href="../../../index.html"
+                class="text-gray-300 hover:text-white transition-colors duration-200 hover:translate-x-1 transform inline-block"
+                >Home</a
+              >
+            </li>
+            <li>
+              <a
+                href="#"
+                class="text-gray-300 hover:text-white transition-colors duration-200 hover:translate-x-1 transform inline-block"
+                >About Us</a
+              >
+            </li>
+          </ul>
+        </div>
+      </div>
+    </footer>
+    <!-- Quiz Modal -->
+    <div
+      id="quiz-modal"
+      class="fixed inset-0 flex items-center justify-center bg-gradient-to-br from-gray-900 to-gray-800 font-inter transition-all duration-300 z-50 hidden"
+    >
+      <div id="quiz-modal-content" class="w-full h-full flex flex-col relative">
+        <div class="flex items-center justify-between space-x-2 p-4">
+          <div
+            id="progress-bar-container"
+            class="flex-1 rounded-full h-4 mr-4 bg-transparent"
+          >
+            <div
+              id="progress-bar"
+              class="bg-success h-4 rounded-full transition-all duration-500"
+              style="width: 0%"
+            ></div>
+          </div>
+          <button
+            id="quiz-mute"
+            class="size-10 inline-flex items-center justify-center rounded-full text-white border border-border/50 shadow-sm hover:scale-105 transition-all duration-300"
+            aria-label="Mute quiz"
+          ></button>
+          <button
+            id="close-quiz-modal"
+            class="size-10 inline-flex items-center justify-center rounded-full text-white border border-border/50 shadow-sm hover:scale-105 transition-all duration-300"
+            aria-label="Close quiz"
+          >
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              viewBox="0 0 24 24"
+              fill="currentColor"
+              class="size-6"
+            >
+              <path
+                fill-rule="evenodd"
+                d="M5.47 5.47a.75.75 0 0 1 1.06 0L12 10.94l5.47-5.47a.75.75 0 1 1 1.06 1.06L13.06 12l5.47 5.47a.75.75 0 1 1-1.06 1.06L12 13.06l-5.47 5.47a.75.75 0 0 1-1.06-1.06L10.94 12 5.47 6.53a.75.75 0 0 1 0-1.06Z"
+                clip-rule="evenodd"
+              />
+            </svg>
+          </button>
+        </div>
+        <div
+          id="timer-bar"
+          class="bg-white h-4 transition-all duration-1000"
+        ></div>
+        <div
+          id="quiz-question-container"
+          class="flex-1 flex flex-col items-center justify-center text-center p-2"
+        >
+          <div class="flex flex-col items-center justify-center gap-2 mb-20">
+            <div class="text-white/80 capitalize">translate to english</div>
+            <div
+              id="quiz-word"
+              class="text-3xl font-semibold italic text-white hover:scale-105 transition-all duration-300"
+            ></div>
+          </div>
+          <div
+            id="quiz-options"
+            class="grid grid-cols-2 gap-8 justify-center"
+          ></div>
+        </div>
+        <div
+          id="quiz-results-container"
+          class="flex-1 flex flex-col items-center justify-center text-center p-2 hidden"
+        >
+          <div id="quiz-score" class="text-2xl font-bold text-white mb-8"></div>
+          <button
+            id="quiz-restart"
+            class="bg-gradient-primary text-white p-6 rounded-full shadow-lg hover:scale-105 transition-all duration-300"
+          >
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              viewBox="0 0 24 24"
+              fill="currentColor"
+              class="size-6"
+            >
+              <path
+                fill-rule="evenodd"
+                d="M4.755 10.059a7.5 7.5 0 0 1 12.548-3.364l1.903 1.903h-3.183a.75.75 0 1 0 0 1.5h4.992a.75.75 0 0 0 .75-.75V4.356a.75.75 0 0 0-1.5 0v3.18l-1.9-1.9A9 9 0 0 0 3.306 9.67a.75.75 0 1 0 1.45.388Zm15.408 3.352a.75.75 0 0 0-.919.53 7.5 7.5 0 0 1-12.548 3.364l-1.902-1.903h3.183a.75.75 0 0 0 0-1.5H2.984a.75.75 0 0 0-.75.75v4.992a.75.75 0 0 0 1.5 0v-3.18l1.9 1.9a9 9 0 0 0 15.059-4.035.75.75 0 0 0-.53-.918Z"
+                clip-rule="evenodd"
+              />
+            </svg>
+          </button>
+        </div>
+        <div
+          id="quiz-feedback"
+          class="flex items-center p-10 bg-dark-900/50 text-white rounded-t-xl shadow-md hidden"
+        ></div>
+      </div>
+      <audio
+        id="audio-correct"
+        src="../../../assets/sound/correct_selection.mp3"
+      ></audio>
+      <audio
+        id="audio-incorrect"
+        src="../../../assets/sound/wrong_selection.mp3"
+      ></audio>
+    </div>
+    <script src="../../../js/ui/ui.js"></script>
+    <script src="../../../js/games/globalAudio.js"></script>
+    <script src="../../../js/games/carousel.js"></script>
+    <script src="../../../js/games/vocabulary.js"></script>
+    <script type="module">
+      import { initializeLearningPage } from '../../../js/ui/learningPage.js';
+      document.addEventListener('DOMContentLoaded', () => {
+        // Slugs
+        const topicSlug = 'other_numbers';
+        const fromLanguage = 'indonesian';
+        const toLanguage = 'english';
+        // const alphabetFile = 'english';
+        // const alphabetLang = 'indonesian';
+        const imageQuiz = false;
+
+        initializeLearningPage(topicSlug, fromLanguage, toLanguage, imageQuiz);
+      });
+    </script>
+  </body>
 </html>
