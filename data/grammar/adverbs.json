@@ -1,0 +1,66 @@
+[
+  {
+    "id": 1,
+    "text_portuguese": "Rapidamente",
+    "text_spanish": "Rápidamente",
+    "text_english": "Quickly",
+    "text_indonesian": "Cepat",
+    "text_tagalog": "Mabilis"
+  },
+  {
+    "id": 2,
+    "text_portuguese": "Lentamente",
+    "text_spanish": "Lentamente",
+    "text_english": "Slowly",
+    "text_indonesian": "Perlahan",
+    "text_tagalog": "Mabagal"
+  },
+  {
+    "id": 3,
+    "text_portuguese": "Sempre",
+    "text_spanish": "Siempre",
+    "text_english": "Always",
+    "text_indonesian": "Selalu",
+    "text_tagalog": "Palagi"
+  },
+  {
+    "id": 4,
+    "text_portuguese": "Nunca",
+    "text_spanish": "Nunca",
+    "text_english": "Never",
+    "text_indonesian": "Tidak pernah",
+    "text_tagalog": "Huwag"
+  },
+  {
+    "id": 5,
+    "text_portuguese": "Agora",
+    "text_spanish": "Ahora",
+    "text_english": "Now",
+    "text_indonesian": "Sekarang",
+    "text_tagalog": "Ngayon"
+  },
+  {
+    "id": 6,
+    "text_portuguese": "Amanhã",
+    "text_spanish": "Mañana",
+    "text_english": "Tomorrow",
+    "text_indonesian": "Besok",
+    "text_tagalog": "Bukas"
+  },
+  {
+    "id": 7,
+    "text_portuguese": "Lá",
+    "text_spanish": "Allí",
+    "text_english": "There",
+    "text_indonesian": "Di sana",
+    "text_tagalog": "Doon"
+  },
+  {
+    "id": 8,
+    "text_portuguese": "Aqui",
+    "text_spanish": "Aquí",
+    "text_english": "Here",
+    "text_indonesian": "Di sini",
+    "text_tagalog": "Dito"
+  }
+]

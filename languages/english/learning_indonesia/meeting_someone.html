@@ -1,0 +1,356 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>YooLingo - Learning [learning_language]</title>
+
+    <!-- Tailwind CSS -->
+    <link rel="stylesheet" href="../../../styles/globals.css" />
+
+    <!-- Icons -->
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css"
+    />
+
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap"
+      rel="stylesheet"
+    />
+
+    <!-- Other -->
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" />
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+
+    <!-- No bg flicker -->
+    <script>
+      (function () {
+        const theme = localStorage.getItem("theme");
+        const prefersDark = window.matchMedia(
+          "(prefers-color-scheme: dark)",
+        ).matches;
+        if (theme === "dark" || (!theme && prefersDark)) {
+          document.documentElement.classList.add("dark");
+        } else {
+          document.documentElement.classList.remove("dark");
+        }
+      })();
+    </script>
+    
+      
+    <!-- Alpine JS -->
+    <script
+      defer
+      src="https://cdn.jsdelivr.net/npm/alpinejs@3.x.x/dist/cdn.min.js"
+    ></script>
+
+    <style>
+      body {
+        font-family: "Inter", sans-serif;
+      }
+    </style>
+  </head>
+
+  <body
+    class="bg-background text-black"
+    x-data="{ 
+        open: false, 
+        modalOpen: false,
+        selectedLang: '',
+        nickname: '',
+        level: 'beginner',
+        theme: 'light',
+        position: 'end',
+        mobileFullWidth: false,
+        size: 'sm'
+    }"
+    data-topic-slug="meeting_someone"
+    data-from-lang="english"
+    data-to-lang="indonesian"
+    data-image-quiz="false"
+    data-num-questions="0"
+    x-on:keydown.esc.prevent="open = false; modalOpen = false"
+  >
+    <!-- Header -->
+    <header class="pb-12">
+      <div class="w-full max-w-7xl mx-auto">
+        <div
+          class="flex justify-between gap-8 items-center border-b border-border p-4 pb-6"
+        >
+          <!-- Logo -->
+          <div class="flex items-center gap-4">
+            <div class="font-bold text-3xl tracking-tighter">
+              <span class="text-primary font-bold text-xl tracking-tighter"
+                >YooLingo</span
+              >
+            </div>
+          </div>
+
+          <!-- Desktop Links -->
+          <div class="flex items-center gap-8">
+            <!-- Buttons -->
+            <div class="flex items-center gap-3">
+              <!-- Theme Toggle -->
+              <button
+                id="theme-toggle"
+                data-tooltip="Theme"
+                data-side="bottom"
+                class="btn-outline size-8 rounded-full text-primary"
+              >
+                <svg
+                  id="theme-icon-light"
+                  xmlns="http://www.w3.org/2000/svg"
+                  class="h-5 w-5"
+                  viewBox="0 0 20 20"
+                  fill="currentColor"
+                >
+                  <path
+                    fill-rule="evenodd"
+                    d="M10 2a1 1 0 011 1v1a1 1 0 11-2 0V3a1 1 0 011-1zm4 8a4 4 0 11-8 0 4 4 0 018 0zm-.464 4.95l.707.707a1 1 0 001.414-1.414l-.707-.707a1 1 0 00-1.414 1.414zm2.12-10.607a1 1 0 010 1.414l-.706.707a1 1 0 11-1.414-1.414l.707-.707a1 1 0 011.414 0zM17 11a1 1 0 100-2h-1a1 1 0 100 2h1zm-7 4a1 1 0 011 1v1a1 1 0 11-2 0v-1a1 1 0 011-1zM5.05 6.464A1 1 0 106.465 5.05l-.708-.707a1 1 0 00-1.414 1.414l.707.707zm1.414 8.486l-.707.707a1 1 0 01-1.414-1.414l.707-.707a1 1 0 011.414 1.414zM4 11a1 1 0 100-2H3a1 1 0 000 2h1z"
+                    clip-rule="evenodd"
+                  />
+                </svg>
+                <svg
+                  id="theme-icon-dark"
+                  xmlns="http://www.w3.org/2000/svg"
+                  class="h-5 w-5 hidden"
+                  viewBox="0 0 20 20"
+                  fill="currentColor"
+                >
+                  <path
+                    d="M17.293 13.293A8 8 0 016.707 2.707a8.001 8.001 0 1010.586 10.586z"
+                  />
+                </svg>
+              </button>
+
+              <!-- Fullscreen -->
+              <button
+                id="fullscreen-button"
+                class="btn-outline size-8 rounded-full text-primary"
+              >
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  width="24"
+                  height="24"
+                  viewBox="0 0 24 24"
+                >
+                  <path
+                    fill="currentColor"
+                    d="M8.141 4.5C8 5.343 8 6.462 8 8v8c0 1.538 0 2.657.141 3.5H8c-2.357 0-3.536 0-4.268-.732C3 18.035 3 16.857 3 14.5v-5c0-2.357 0-3.536.732-4.268S5.643 4.5 8 4.5z"
+                    opacity="0.5"
+                  />
+                  <path
+                    fill="currentColor"
+                    fill-rule="evenodd"
+                    d="M8.879 2.879C8 3.757 8 5.172 8 8v8c0 2.828 0 4.243.879 5.121C9.757 22 11.172 22 14 22h1c2.828 0 4.243 0 5.121-.879C21 20.243 21 18.828 21 16V8c0-2.828 0-4.243-.879-5.121C19.243 2 17.828 2 15 2h-1c-2.828 0-4.243 0-5.121.879m6.151 4.59a.75.75 0 0 0-1.06 0l-2.5 2.5a.75.75 0 1 0 1.06 1.061l1.22-1.22V16a.75.75 0 0 0 1.5 0V9.81l1.22 1.22a.75.75 0 1 0 1.06-1.06z"
+                    clip-rule="evenodd"
+                  />
+                </svg>
+              </button>
+
+              <!-- Sidebar Button -->
+              <button
+                x-on:click="open = true"
+                class="flex items-center justify-center bg-primary text-secondary rounded-full size-10 hover:scale-105 transition-transform"
+              >
+                <i class="bi bi-list text-xl"></i>
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </header>
+
+    <!-- Sidebar -->
+    <div
+      x-cloak
+      x-show="open"
+      x-transition:enter="transition ease-out duration-300"
+      x-transition:enter-start="opacity-0"
+      x-transition:enter-end="opacity-100"
+      x-transition:leave="transition ease-in duration-200"
+      x-transition:leave-start="opacity-100"
+      x-transition:leave-end="opacity-0"
+      class="fixed inset-0 z-[100] overflow-hidden bg-black/40 backdrop-blur-sm"
+      role="dialog"
+      aria-modal="true"
+    >
+      <!-- Sidebar Content -->
+      <div
+        x-show="open"
+        x-on:click.away="open = false"
+        x-transition:enter="transition ease-out duration-300"
+        x-transition:enter-start="translate-x-full"
+        x-transition:enter-end="translate-x-0"
+        x-transition:leave="transition ease-in duration-200"
+        x-transition:leave-start="translate-x-0"
+        x-transition:leave-end="translate-x-full"
+        class="absolute right-0 top-0 h-full w-full max-w-xs md:max-w-md bg-white shadow-2xl flex flex-col"
+      >
+        <!-- Sidebar Header -->
+        <div
+          class="flex items-center justify-between p-6 border-b border-gray-100"
+        >
+          <h3 class="text-2xl font-bold tracking-tight">Menu</h3>
+          <button
+            x-on:click="open = false"
+            class="size-10 flex items-center justify-center rounded-full hover:bg-gray-100 transition-colors"
+          >
+            <i class="bi bi-x-lg text-lg"></i>
+          </button>
+        </div>
+
+        <!-- Sidebar Links -->
+        <div class="flex-grow overflow-y-auto p-8">
+          <nav class="flex flex-col gap-6">
+            <a
+              href="./index"
+              class="text-2xl font-bold hover:text-gray-400 transition-colors"
+              >Back to Topics</a
+            >
+            <a
+              href="./grammar"
+              class="text-2xl font-bold hover:text-gray-400 transition-colors"
+              >Grammar</a
+            >
+            <a
+              href="../../../index"
+              class="text-2xl font-bold hover:text-gray-400 transition-colors"
+              >Home</a
+            >
+          </nav>
+
+          <div class="mt-20 pt-10 border-t border-gray-100 hidden">
+            <p
+              class="text-xs uppercase tracking-widest text-gray-400 font-bold mb-6"
+            >
+              Donations
+            </p>
+            <ul class="flex flex-col gap-4 text-sm font-medium">
+              <li href="#" class="hover:underline"># Name</li>
+            </ul>
+          </div>
+        </div>
+
+        <!-- Sidebar Footer -->
+        <div class="p-8 bg-gray-50 flex gap-4">
+          <h3 class="text-2xl font-bold tracking-tight">Follow us</h3>
+          <a
+            href="https://www.instagram.com/lucas_sihh?igsh=eGVsMDhrbHpncGV2"
+            class="size-10 flex items-center justify-center bg-black text-white rounded-full hover:scale-105 transition-all duration-300"
+          >
+            <i class="bi bi-instagram"></i>
+          </a>
+          <a
+            href="https://youtube.com/@lucas_sihh?si=PPt3C4WivRR0uelx"
+            class="size-10 flex items-center justify-center bg-black text-white rounded-full hover:scale-105 transition-all duration-300"
+          >
+            <i class="bi bi-youtube"></i>
+          </a>
+        </div>
+      </div>
+    </div>
+
+    <!-- Main content -->
+    <main class="pt-24 w-full max-w-4xl mx-auto fade-element">
+      <!-- Vocabulary -->
+      <section class="py-6" data-aos="fade-up" data-aos-duration="1000">
+
+        <!-- Mini Games / Vocabulary -->
+        <div
+          class="w-full py-4 flex flex-col md:flex-row items-center justify-between gap-4"
+        >
+          <div class="text-center md:text-left">
+            <h4 class="text-3xl text-primary font-black tracking-tighter mb-1">
+              Palavras deste tópico
+            </h4>
+            <p
+              class="text-[10px] font-bold text-gray-400 uppercase tracking-widest"
+            >
+              Jogue mini games
+            </p>
+          </div>
+
+          <div class="flex flex-wrap justify-center gap-4">
+            <button
+              id="open-quiz-modal"
+              class="flex items-center gap-4 bg-black dark:bg-white text-white dark:text-black px-8 py-4 rounded-full font-black uppercase tracking-widest text-[10px] hover:scale-105 active:scale-95 transition-all shadow-xl shadow-black/10"
+            >
+              <span>Quiz</span>
+            </button>
+
+            <button
+              id="open-flashcards-modal"
+              class="group flex items-center gap-4 bg-white dark:bg-zinc-800 text-black dark:text-white border border-gray-200 dark:border-zinc-700 px-8 py-4 rounded-full font-black uppercase tracking-widest text-[10px] hover:border-black dark:hover:border-white hover:scale-105 active:scale-95 transition-all"
+            >
+              <span>Flashcards</span>
+            </button>
+          </div>
+        </div>
+
+        <div
+          id="vocab"
+          class="grid grid-cols-1 md:grid-cols-2 py-2 px-2 gap-4"
+        ></div>
+      </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="p-10 border-t border-gray-100">
+      <div
+        class="max-w-6xl mx-auto flex flex-col md:flex-row justify-between items-center gap-8"
+      >
+        <div class="text-center md:text-left">
+          <span class="text-primary font-bold text-xl tracking-tighter"
+            >YooLingo</span
+          >
+          <p
+            class="text-[10px] font-black uppercase tracking-[0.4em] text-gray-300 mt-4"
+          >
+            @Lucas_sihh
+          </p>
+        </div>
+        <nav
+          class="flex gap-8 text-[10px] font-black uppercase tracking-widest text-gray-400"
+        >
+          <a href="#" class="hover:text-black">Sobre</a>
+          <a href="#" class="hover:text-black">Privacidade</a>
+          <a href="#" class="hover:text-black">Doação</a>
+        </nav>
+      </div>
+    </footer>
+
+    <!-- JS -->
+    <script src="../../../js/globalAudio.js"></script>
+    <script type="module" src="../../../js/g/g.js"></script>
+    <script src="../../../js/themeToggle.js"></script>
+    <script type="module" src="../../../js/modal.js"></script>
+    
+
+    <script>
+      // Fullscreen
+      const fullscreenButton = document.getElementById("fullscreen-button");
+
+      fullscreenButton.addEventListener("click", toggleFullscreen);
+
+      function toggleFullscreen() {
+        if (document.fullscreenElement) {
+          // If already in fullscreen, exit fullscreen
+          document.exitFullscreen();
+        } else {
+          // If not in fullscreen, request fullscreen
+          document.documentElement.requestFullscreen();
+        }
+      }
+    </script>
+    
+    <!-- Aos -->
+    <script>
+      AOS.init();
+    </script>
+  </body>
+</html>

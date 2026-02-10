@@ -1,0 +1,66 @@
+[
+  {
+    "id": 1,
+    "text_portuguese": "Casa (F)",
+    "text_spanish": "Casa (F)",
+    "text_english": "House",
+    "text_indonesian": "Rumah",
+    "text_tagalog": "Bahay"
+  },
+  {
+    "id": 2,
+    "text_portuguese": "Carro (M)",
+    "text_spanish": "Coche (M), Carro (M) [Latam]",
+    "text_english": "Car",
+    "text_indonesian": "Mobil",
+    "text_tagalog": "Sasakyan, Kotse"
+  },
+  {
+    "id": 3,
+    "text_portuguese": "Livro (M)",
+    "text_spanish": "Libro (M)",
+    "text_english": "Book",
+    "text_indonesian": "Buku",
+    "text_tagalog": "Aklat"
+  },
+  {
+    "id": 4,
+    "text_portuguese": "Mesa (F)",
+    "text_spanish": "Mesa (F)",
+    "text_english": "Table",
+    "text_indonesian": "Meja",
+    "text_tagalog": "Lamesa"
+  },
+  {
+    "id": 5,
+    "text_portuguese": "Água (F)",
+    "text_spanish": "Agua (F)",
+    "text_english": "Water",
+    "text_indonesian": "Air",
+    "text_tagalog": "Tubig"
+  },
+  {
+    "id": 6,
+    "text_portuguese": "Pessoa (F)",
+    "text_spanish": "Persona (F)",
+    "text_english": "Person",
+    "text_indonesian": "Orang",
+    "text_tagalog": "Tao"
+  },
+  {
+    "id": 7,
+    "text_portuguese": "Tempo (M)",
+    "text_spanish": "Tiempo (M)",
+    "text_english": "Time",
+    "text_indonesian": "Waktu",
+    "text_tagalog": "Oras"
+  },
+  {
+    "id": 8,
+    "text_portuguese": "Comida (F)",
+    "text_spanish": "Comida (F)",
+    "text_english": "Food",
+    "text_indonesian": "Makanan",
+    "text_tagalog": "Pagkain"
+  }
+]

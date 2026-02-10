@@ -1,0 +1,1097 @@
+{
+  "portuguese": {
+    "langCode": "pt-PT",
+    "letters": [
+      {
+        "letter": "A",
+        "examples": [
+          {
+            "word": "Água",
+            "pronunciation": "/ˈa.gwɐ/",
+            "description": "Water, a transparent, odorless, tasteless liquid."
+          }
+        ]
+      },
+      {
+        "letter": "B",
+        "examples": [
+          {
+            "word": "Brasil",
+            "pronunciation": "/bɾaˈziw/",
+            "description": "Brazil, the largest country in South America."
+          }
+        ]
+      },
+      {
+        "letter": "C",
+        "examples": [
+          {
+            "word": "Casa",
+            "pronunciation": "/ˈka.zɐ/",
+            "description": "House, a building for human habitation."
+          }
+        ]
+      },
+      {
+        "letter": "D",
+        "examples": [
+          {
+            "word": "Dia",
+            "pronunciation": "/ˈdʒi.ɐ/",
+            "description": "Day, a 24-hour period."
+          }
+        ]
+      },
+      {
+        "letter": "E",
+        "examples": [
+          {
+            "word": "Escola",
+            "pronunciation": "/iʃˈkɔ.lɐ/",
+            "description": "School, an institution for educating children."
+          }
+        ]
+      },
+      {
+        "letter": "F",
+        "examples": [
+          {
+            "word": "Família",
+            "pronunciation": "/faˈmi.ʎɐ/",
+            "description": "Family, a group of related people."
+          }
+        ]
+      },
+      {
+        "letter": "G",
+        "examples": [
+          {
+            "word": "Gato",
+            "pronunciation": "/ˈga.tu/",
+            "description": "Cat, a small domesticated carnivorous mammal."
+          }
+        ]
+      },
+      {
+        "letter": "H",
+        "examples": [
+          {
+            "word": "Homem",
+            "pronunciation": "/ˈɔ.mẽj/",
+            "description": "Man, an adult male human being."
+          }
+        ]
+      },
+      {
+        "letter": "I",
+        "examples": [
+          {
+            "word": "Ilha",
+            "pronunciation": "/ˈi.ʎɐ/",
+            "description": "Island, a piece of land surrounded by water."
+          }
+        ]
+      },
+      {
+        "letter": "J",
+        "examples": [
+          {
+            "word": "Janela",
+            "pronunciation": "/ʒaˈnɛ.lɐ/",
+            "description": "Window, an opening in a wall or roof."
+          }
+        ]
+      },
+      {
+        "letter": "K",
+        "examples": [
+          {
+            "word": "Kiwi",
+            "pronunciation": "/ˈki.wi/",
+            "description": "Kiwi, a fruit or a bird (used in loanwords)."
+          }
+        ]
+      },
+      {
+        "letter": "L",
+        "examples": [
+          {
+            "word": "Livro",
+            "pronunciation": "/ˈli.vɾu/",
+            "description": "Book, a set of written or printed pages."
+          }
+        ]
+      },
+      {
+        "letter": "M",
+        "examples": [
+          {
+            "word": "Mãe",
+            "pronunciation": "/mɐ̃j̃/",
+            "description": "Mother, a female parent."
+          }
+        ]
+      },
+      {
+        "letter": "N",
+        "examples": [
+          {
+            "word": "Noite",
+            "pronunciation": "/ˈnoj.tʃi/",
+            "description": "Night, the period from sunset to sunrise."
+          }
+        ]
+      },
+      {
+        "letter": "O",
+        "examples": [
+          {
+            "word": "Ouro",
+            "pronunciation": "/ˈo.ɾu/",
+            "description": "Gold, a precious yellow metallic element."
+          }
+        ]
+      },
+      {
+        "letter": "P",
+        "examples": [
+          {
+            "word": "Pai",
+            "pronunciation": "/ˈpaj/",
+            "description": "Father, a male parent."
+          }
+        ]
+      },
+      {
+        "letter": "Q",
+        "examples": [
+          {
+            "word": "Queijo",
+            "pronunciation": "/ˈkej.ʒu/",
+            "description": "Cheese, a dairy product."
+          }
+        ]
+      },
+      {
+        "letter": "R",
+        "examples": [
+          {
+            "word": "Rato",
+            "pronunciation": "/ˈʁa.tu/",
+            "description": "Mouse/Rat, a small rodent."
+          }
+        ]
+      },
+      {
+        "letter": "S",
+        "examples": [
+          {
+            "word": "Sol",
+            "pronunciation": "/sɔl/",
+            "description": "Sun, the star that is the central body of the solar system."
+          }
+        ]
+      },
+      {
+        "letter": "T",
+        "examples": [
+          {
+            "word": "Tempo",
+            "pronunciation": "/ˈtẽ.pu/",
+            "description": "Time or Weather."
+          }
+        ]
+      },
+      {
+        "letter": "U",
+        "examples": [
+          {
+            "word": "Uva",
+            "pronunciation": "/ˈu.vɐ/",
+            "description": "Grape, a fruit that grows in clusters."
+          }
+        ]
+      },
+      {
+        "letter": "V",
+        "examples": [
+          {
+            "word": "Vinho",
+            "pronunciation": "/ˈvi.ɲu/",
+            "description": "Wine, an alcoholic drink made from fermented grapes."
+          }
+        ]
+      },
+      {
+        "letter": "W",
+        "examples": [
+          {
+            "word": "Webcam",
+            "pronunciation": "/wɛbˈkẽj̃/",
+            "description": "Webcam, a video camera for computers (used in loanwords)."
+          }
+        ]
+      },
+      {
+        "letter": "X",
+        "examples": [
+          {
+            "word": "Xícara",
+            "pronunciation": "/ˈʃi.kɐ.ɾɐ/",
+            "description": "Cup, a small bowl-shaped container."
+          }
+        ]
+      },
+      {
+        "letter": "Y",
+        "examples": [
+          {
+            "word": "Yogurte",
+            "pronunciation": "/joˈguʁ.tʃi/",
+            "description": "Yogurt, a food produced by bacterial fermentation of milk (used in loanwords)."
+          }
+        ]
+      },
+      {
+        "letter": "Z",
+        "examples": [
+          {
+            "word": "Zebra",
+            "pronunciation": "/ˈze.bɾɐ/",
+            "description": "Zebra, an African wild horse with black-and-white stripes."
+          }
+        ]
+      }
+    ]
+  },
+  "spanish": {
+    "langCode": "es-ES",
+    "letters": [
+      {
+        "letter": "A",
+        "examples": [
+          {
+            "word": "Árbol",
+            "pronunciation": "/ˈaɾ.βol/",
+            "description": "Tree, a tall plant with a trunk and branches."
+          }
+        ]
+      },
+      {
+        "letter": "B",
+        "examples": [
+          {
+            "word": "Biblioteca",
+            "pronunciation": "/bi.βljoˈte.ka/",
+            "description": "Library, a building or room containing collections of books."
+          }
+        ]
+      },
+      {
+        "letter": "C",
+        "examples": [
+          {
+            "word": "Coche",
+            "pronunciation": "/ˈko.tʃe/",
+            "description": "Car, a road vehicle, typically with four wheels, powered by an internal combustion engine."
+          }
+        ]
+      },
+      {
+        "letter": "D",
+        "examples": [
+          {
+            "word": "Dinero",
+            "pronunciation": "/diˈne.ɾo/",
+            "description": "Money, a medium of exchange."
+          }
+        ]
+      },
+      {
+        "letter": "E",
+        "examples": [
+          {
+            "word": "Elefante",
+            "pronunciation": "/e.leˈfan.te/",
+            "description": "Elephant, a large plant-eating mammal with a trunk."
+          }
+        ]
+      },
+      {
+        "letter": "F",
+        "examples": [
+          {
+            "word": "Familia",
+            "pronunciation": "/faˈmi.lja/",
+            "description": "Family, a group of related people."
+          }
+        ]
+      },
+      {
+        "letter": "G",
+        "examples": [
+          {
+            "word": "Gato",
+            "pronunciation": "/ˈga.to/",
+            "description": "Cat, a small domesticated carnivorous mammal."
+          }
+        ]
+      },
+      {
+        "letter": "H",
+        "examples": [
+          {
+            "word": "Hielo",
+            "pronunciation": "/ˈje.lo/",
+            "description": "Ice, frozen water."
+          }
+        ]
+      },
+      {
+        "letter": "I",
+        "examples": [
+          {
+            "word": "Isla",
+            "pronunciation": "/ˈis.la/",
+            "description": "Island, a piece of land surrounded by water."
+          }
+        ]
+      },
+      {
+        "letter": "J",
+        "examples": [
+          {
+            "word": "Jirafa",
+            "pronunciation": "/xiˈɾa.fa/",
+            "description": "Giraffe, a tall African mammal."
+          }
+        ]
+      },
+      {
+        "letter": "K",
+        "examples": [
+          {
+            "word": "Kiwi",
+            "pronunciation": "/ˈki.wi/",
+            "description": "Kiwi, a fruit (used mainly in loanwords)."
+          }
+        ]
+      },
+      {
+        "letter": "L",
+        "examples": [
+          {
+            "word": "Libro",
+            "pronunciation": "/ˈli.βɾo/",
+            "description": "Book, a set of written or printed pages."
+          }
+        ]
+      },
+      {
+        "letter": "M",
+        "examples": [
+          {
+            "word": "Música",
+            "pronunciation": "/ˈmu.si.ka/",
+            "description": "Music, vocal or instrumental sounds combined to produce beauty of form, harmony, and expression of emotion."
+          }
+        ]
+      },
+      {
+        "letter": "N",
+        "examples": [
+          {
+            "word": "Nube",
+            "pronunciation": "/ˈnu.βe/",
+            "description": "Cloud, a visible mass of condensed water vapor floating in the atmosphere."
+          }
+        ]
+      },
+      {
+        "letter": "Ñ",
+        "examples": [
+          {
+            "word": "Niña",
+            "pronunciation": "/ˈni.ɲa/",
+            "description": "Little Girl, a young female human being."
+          }
+        ]
+      },
+      {
+        "letter": "O",
+        "examples": [
+          {
+            "word": "Otoño",
+            "pronunciation": "/oˈto.ɲo/",
+            "description": "Autumn (Fall), the season after summer and before winter."
+          }
+        ]
+      },
+      {
+        "letter": "P",
+        "examples": [
+          {
+            "word": "Perro",
+            "pronunciation": "/ˈpe.ro/",
+            "description": "Dog, a domesticated carnivore."
+          }
+        ]
+      },
+      {
+        "letter": "Q",
+        "examples": [
+          {
+            "word": "Queso",
+            "pronunciation": "/ˈke.so/",
+            "description": "Cheese, a dairy product."
+          }
+        ]
+      },
+      {
+        "letter": "R",
+        "examples": [
+          {
+            "word": "Rojo",
+            "pronunciation": "/ˈro.xo/",
+            "description": "Red, a primary color."
+          }
+        ]
+      },
+      {
+        "letter": "S",
+        "examples": [
+          {
+            "word": "Sol",
+            "pronunciation": "/sol/",
+            "description": "Sun, the star that is the central body of the solar system."
+          }
+        ]
+      },
+      {
+        "letter": "T",
+        "examples": [
+          {
+            "word": "Tigre",
+            "pronunciation": "/ˈti.ɣɾe/",
+            "description": "Tiger, a large carnivorous feline mammal."
+          }
+        ]
+      },
+      {
+        "letter": "U",
+        "examples": [
+          {
+            "word": "Uvas",
+            "pronunciation": "/ˈu.βas/",
+            "description": "Grapes, a fruit that grows in clusters."
+          }
+        ]
+      },
+      {
+        "letter": "V",
+        "examples": [
+          {
+            "word": "Ventana",
+            "pronunciation": "/benˈta.na/",
+            "description": "Window, an opening in a wall or roof."
+          }
+        ]
+      },
+      {
+        "letter": "W",
+        "examples": [
+          {
+            "word": "Wifi",
+            "pronunciation": "/ˈwi.fi/",
+            "description": "Wi-Fi, a wireless networking technology (used mainly in loanwords)."
+          }
+        ]
+      },
+      {
+        "letter": "X",
+        "examples": [
+          {
+            "word": "Examen",
+            "pronunciation": "/ekˈsa.men/",
+            "description": "Exam/Test, a formal inspection."
+          }
+        ]
+      },
+      {
+        "letter": "Y",
+        "examples": [
+          {
+            "word": "Yogur",
+            "pronunciation": "/ʝoˈɣur/",
+            "description": "Yogurt, a food produced by bacterial fermentation of milk."
+          }
+        ]
+      },
+      {
+        "letter": "Z",
+        "examples": [
+          {
+            "word": "Zorro",
+            "pronunciation": "/ˈθo.ro/",
+            "description": "Fox, a carnivorous mammal of the dog family."
+          }
+        ]
+      }
+    ]
+  },
+  "indonesian": {
+    "langCode": "id-ID",
+    "letters": [
+      {
+        "letter": "A",
+        "examples": [
+          {
+            "word": "Api",
+            "pronunciation": "/ˈa.pi/",
+            "description": "Fire, the rapid oxidation of a material."
+          },
+          {
+            "word": "Api",
+            "pronunciation": "/ˈa.pi/",
+            "description": "Fire, the rapid oxidation of a material."
+          }
+        ]
+      },
+      {
+        "letter": "B",
+        "examples": [
+          {
+            "word": "Bintang",
+            "pronunciation": "/ˈbin.taŋ/",
+            "description": "Star, a luminous globe of gas."
+          }
+        ]
+      },
+      {
+        "letter": "C",
+        "examples": [
+          {
+            "word": "Cantik",
+            "pronunciation": "/ˈtʃan.tiʔ/",
+            "description": "Beautiful, having qualities that give great pleasure or satisfaction."
+          }
+        ]
+      },
+      {
+        "letter": "D",
+        "examples": [
+          {
+            "word": "Daun",
+            "pronunciation": "/ˈda.ʔun/",
+            "description": "Leaf, a flattened, typically green, part of a plant."
+          }
+        ]
+      },
+      {
+        "letter": "E",
+        "examples": [
+          {
+            "word": "Emas",
+            "pronunciation": "/ˈe.mas/",
+            "description": "Gold, a precious yellow metal."
+          }
+        ]
+      },
+      {
+        "letter": "F",
+        "examples": [
+          {
+            "word": "Foto",
+            "pronunciation": "/ˈfo.to/",
+            "description": "Photo, a picture produced using the chemical action of light."
+          }
+        ]
+      },
+      {
+        "letter": "G",
+        "examples": [
+          {
+            "word": "Gajah",
+            "pronunciation": "/ˈga.dʒah/",
+            "description": "Elephant, a large plant-eating mammal."
+          }
+        ]
+      },
+      {
+        "letter": "H",
+        "examples": [
+          {
+            "word": "Hijau",
+            "pronunciation": "/ˈhi.dʒa.ʔu/",
+            "description": "Green, a color."
+          }
+        ]
+      },
+      {
+        "letter": "I",
+        "examples": [
+          {
+            "word": "Ikan",
+            "pronunciation": "/ˈi.kan/",
+            "description": "Fish, an aquatic animal."
+          }
+        ]
+      },
+      {
+        "letter": "J",
+        "examples": [
+          {
+            "word": "Jalan",
+            "pronunciation": "/ˈdʒa.lan/",
+            "description": "Street/Road, a public thoroughfare."
+          }
+        ]
+      },
+      {
+        "letter": "K",
+        "examples": [
+          {
+            "word": "Kopi",
+            "pronunciation": "/ˈko.pi/",
+            "description": "Coffee, a dark, bitter drink made from ground beans."
+          }
+        ]
+      },
+      {
+        "letter": "L",
+        "examples": [
+          {
+            "word": "Langit",
+            "pronunciation": "/ˈla.ŋit/",
+            "description": "Sky, the region of the atmosphere and outer space seen from the earth."
+          }
+        ]
+      },
+      {
+        "letter": "M",
+        "examples": [
+          {
+            "word": "Makan",
+            "pronunciation": "/ˈma.kan/",
+            "description": "To eat, to put food into the mouth and chew and swallow it."
+          }
+        ]
+      },
+      {
+        "letter": "N",
+        "examples": [
+          {
+            "word": "Nama",
+            "pronunciation": "/ˈna.ma/",
+            "description": "Name, a word or set of words by which a person or thing is known."
+          }
+        ]
+      },
+      {
+        "letter": "O",
+        "examples": [
+          {
+            "word": "Obat",
+            "pronunciation": "/ˈo.bat/",
+            "description": "Medicine, a compound or preparation used for the treatment or prevention of disease."
+          }
+        ]
+      },
+      {
+        "letter": "P",
+        "examples": [
+          {
+            "word": "Pagi",
+            "pronunciation": "/ˈpa.gi/",
+            "description": "Morning, the period from sunrise to noon."
+          }
+        ]
+      },
+      {
+        "letter": "Q",
+        "examples": [
+          {
+            "word": "Quran",
+            "pronunciation": "/ˈku.ran/",
+            "description": "Quran, the central religious text of Islam (used mainly in religious proper names)."
+          }
+        ]
+      },
+      {
+        "letter": "R",
+        "examples": [
+          {
+            "word": "Rasa",
+            "pronunciation": "/ˈra.sa/",
+            "description": "Taste/Feeling, the sensation of flavor."
+          }
+        ]
+      },
+      {
+        "letter": "S",
+        "examples": [
+          {
+            "word": "Sore",
+            "pronunciation": "/ˈso.re/",
+            "description": "Afternoon/Early Evening."
+          }
+        ]
+      },
+      {
+        "letter": "T",
+        "examples": [
+          {
+            "word": "Tidur",
+            "pronunciation": "/ˈti.dur/",
+            "description": "To sleep, to rest in a state of unconsciousness."
+          }
+        ]
+      },
+      {
+        "letter": "U",
+        "examples": [
+          {
+            "word": "Ular",
+            "pronunciation": "/ˈu.lar/",
+            "description": "Snake, a long, legless reptile."
+          }
+        ]
+      },
+      {
+        "letter": "V",
+        "examples": [
+          {
+            "word": "Vespa",
+            "pronunciation": "/ˈfɛs.pa/",
+            "description": "Vespa, a brand of scooter (used in loanwords, often pronounced with an 'f')."
+          }
+        ]
+      },
+      {
+        "letter": "W",
+        "examples": [
+          {
+            "word": "Waktu",
+            "pronunciation": "/ˈwak.tu/",
+            "description": "Time, the indefinite continued progress of existence."
+          }
+        ]
+      },
+      {
+        "letter": "X",
+        "examples": [
+          {
+            "word": "Xenon",
+            "pronunciation": "/ˈsɛ.nɔn/",
+            "description": "Xenon, a noble gas (used mainly in scientific terms or loanwords)."
+          }
+        ]
+      },
+      {
+        "letter": "Y",
+        "examples": [
+          {
+            "word": "Ya",
+            "pronunciation": "/ˈja/",
+            "description": "Yes, an affirmative response."
+          }
+        ]
+      },
+      {
+        "letter": "Z",
+        "examples": [
+          {
+            "word": "Zaman",
+            "pronunciation": "/ˈdʒa.man/",
+            "description": "Era/Time, a period of time (used mainly in loanwords, often pronounced with a 'j')."
+          }
+        ]
+      }
+    ]
+  },
+  "tagalog": {
+    "langCode": "tl-PH",
+    "letters": [
+      {
+        "letter": "A",
+        "examples": [
+          {
+            "word": "Araw",
+            "pronunciation": "/ˈʔa.raw/",
+            "description": "Sun or Day."
+          }
+        ]
+      },
+      {
+        "letter": "B",
+        "examples": [
+          {
+            "word": "Bahay",
+            "pronunciation": "/ˈba.haj/",
+            "description": "House, a building for shelter."
+          }
+        ]
+      },
+      {
+        "letter": "C",
+        "examples": [
+          {
+            "word": "Castañas",
+            "pronunciation": "/kas.ˈta.ɲas/",
+            "description": "Chestnuts (used in Spanish loanwords)."
+          }
+        ]
+      },
+      {
+        "letter": "D",
+        "examples": [
+          {
+            "word": "Damo",
+            "pronunciation": "/ˈda.mɔ/",
+            "description": "Grass."
+          }
+        ]
+      },
+      {
+        "letter": "E",
+        "examples": [
+          {
+            "word": "Eleksyon",
+            "pronunciation": "/e.lek.ˈsyon/",
+            "description": "Election (from Spanish loanword 'elección')."
+          }
+        ]
+      },
+      {
+        "letter": "F",
+        "examples": [
+          {
+            "word": "Filipino",
+            "pronunciation": "/fi.li.ˈpi.no/",
+            "description": "Filipino (used in loanwords)."
+          }
+        ]
+      },
+      {
+        "letter": "G",
+        "examples": [
+          {
+            "word": "Gatas",
+            "pronunciation": "/ˈga.tas/",
+            "description": "Milk."
+          }
+        ]
+      },
+      {
+        "letter": "H",
+        "examples": [
+          {
+            "word": "Hapon",
+            "pronunciation": "/ˈha.pon/",
+            "description": "Afternoon."
+          }
+        ]
+      },
+      {
+        "letter": "I",
+        "examples": [
+          {
+            "word": "Ilog",
+            "pronunciation": "/ˈʔi.log/",
+            "description": "River."
+          }
+        ]
+      },
+      {
+        "letter": "J",
+        "examples": [
+          {
+            "word": "Jeep",
+            "pronunciation": "/dʒip/",
+            "description": "Jeep (used in loanwords like 'Jeepney')."
+          }
+        ]
+      },
+      {
+        "letter": "K",
+        "examples": [
+          {
+            "word": "Kahon",
+            "pronunciation": "/ˈka.hon/",
+            "description": "Box."
+          }
+        ]
+      },
+      {
+        "letter": "L",
+        "examples": [
+          {
+            "word": "Lapis",
+            "pronunciation": "/ˈla.pis/",
+            "description": "Pencil, a writing tool."
+          }
+        ]
+      },
+      {
+        "letter": "M",
+        "examples": [
+          {
+            "word": "Mahal",
+            "pronunciation": "/ma.ˈhal/",
+            "description": "Love or Expensive."
+          }
+        ]
+      },
+      {
+        "letter": "N",
+        "examples": [
+          {
+            "word": "Ngiti",
+            "pronunciation": "/ˈŋi.ti/",
+            "description": "Smile."
+          }
+        ]
+      },
+      {
+        "letter": "Ñ",
+        "examples": [
+          {
+            "word": "Piña",
+            "pronunciation": "/ˈpi.ɲa/",
+            "description": "Pineapple (used in Spanish loanwords)."
+          }
+        ]
+      },
+      {
+        "letter": "NG",
+        "examples": [
+          {
+            "word": "Ngipin",
+            "pronunciation": "/ˈŋi.pin/",
+            "description": "Tooth, a hard white structure in the mouth."
+          }
+        ]
+      },
+      {
+        "letter": "O",
+        "examples": [
+          {
+            "word": "Oo",
+            "pronunciation": "/ˈʔo.ʔɔ/",
+            "description": "Yes, an affirmative response."
+          }
+        ]
+      },
+      {
+        "letter": "P",
+        "examples": [
+          {
+            "word": "Puso",
+            "pronunciation": "/ˈpu.sɔ/",
+            "description": "Heart, the organ that circulates blood."
+          }
+        ]
+      },
+      {
+        "letter": "Q",
+        "examples": [
+          {
+            "word": "Queen",
+            "pronunciation": "/kwin/",
+            "description": "Queen, a female monarch (used in foreign words)."
+          }
+        ]
+      },
+      {
+        "letter": "R",
+        "examples": [
+          {
+            "word": "Regalo",
+            "pronunciation": "/re.ˈga.lɔ/",
+            "description": "Gift, something given voluntarily."
+          }
+        ]
+      },
+      {
+        "letter": "S",
+        "examples": [
+          {
+            "word": "Salamat",
+            "pronunciation": "/sa.ˈla.mat/",
+            "description": "Thank you, an expression of gratitude."
+          }
+        ]
+      },
+      {
+        "letter": "T",
+        "examples": [
+          {
+            "word": "Tao",
+            "pronunciation": "/ˈta.ʔɔ/",
+            "description": "Person/Human."
+          }
+        ]
+      },
+      {
+        "letter": "U",
+        "examples": [
+          {
+            "word": "Ulan",
+            "pronunciation": "/ˈʔu.lan/",
+            "description": "Rain."
+          }
+        ]
+      },
+      {
+        "letter": "V",
+        "examples": [
+          {
+            "word": "Vinta",
+            "pronunciation": "/ˈvin.ta/",
+            "description": "Vinta, a traditional Filipino boat."
+          }
+        ]
+      },
+      {
+        "letter": "W",
+        "examples": [
+          {
+            "word": "Watawat",
+            "pronunciation": "/wa.ˈta.wat/",
+            "description": "Flag, a piece of cloth with a distinctive design."
+          }
+        ]
+      },
+      {
+        "letter": "X",
+        "examples": [
+          {
+            "word": "Xerox",
+            "pronunciation": "/ˈse.roks/",
+            "description": "Xerox, a photocopier machine (used in foreign words)."
+          }
+        ]
+      },
+      {
+        "letter": "Y",
+        "examples": [
+          {
+            "word": "Yelo",
+            "pronunciation": "/ˈje.lɔ/",
+            "description": "Ice."
+          }
+        ]
+      },
+      {
+        "letter": "Z",
+        "examples": [
+          {
+            "word": "Zoo",
+            "pronunciation": "/zu/",
+            "description": "Zoo, a place where animals are kept (used in foreign words)."
+          }
+        ]
+      }
+    ]
+  }
+}

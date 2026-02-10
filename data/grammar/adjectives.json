@@ -1,0 +1,130 @@
+[
+  {
+    "id": 1,
+    "text_portuguese": "Bonito",
+    "text_spanish": "Bonito",
+    "text_english": "Beautiful",
+    "text_indonesian": "Cantik",
+    "text_tagalog": "Maganda"
+  },
+  {
+    "id": 2,
+    "text_portuguese": "Grande",
+    "text_spanish": "Grande",
+    "text_english": "Big",
+    "text_indonesian": "Besar",
+    "text_tagalog": "Malaki"
+  },
+  {
+    "id": 3,
+    "text_portuguese": "Pequeno",
+    "text_spanish": "Pequeño",
+    "text_english": "Small",
+    "text_indonesian": "Kecil",
+    "text_tagalog": "Maliit"
+  },
+  {
+    "id": 4,
+    "text_portuguese": "Rápido",
+    "text_spanish": "Rápido",
+    "text_english": "Fast",
+    "text_indonesian": "Cepat",
+    "text_tagalog": "Mabilis"
+  },
+  {
+    "id": 5,
+    "text_portuguese": "Lento",
+    "text_spanish": "Lento",
+    "text_english": "Slow",
+    "text_indonesian": "Lambat",
+    "text_tagalog": "Mabagal"
+  },
+  {
+    "id": 6,
+    "text_portuguese": "Feliz",
+    "text_spanish": "Feliz",
+    "text_english": "Happy",
+    "text_indonesian": "Bahagia",
+    "text_tagalog": "Masaya"
+  },
+  {
+    "id": 7,
+    "text_portuguese": "Triste",
+    "text_spanish": "Triste",
+    "text_english": "Sad",
+    "text_indonesian": "Sedih",
+    "text_tagalog": "Malungkot"
+  },
+  {
+    "id": 8,
+    "text_portuguese": "Forte",
+    "text_spanish": "Fuerte",
+    "text_english": "Strong",
+    "text_indonesian": "Kuat",
+    "text_tagalog": "Malakas"
+  },
+  {
+    "id": 9,
+    "text_portuguese": "Fraco",
+    "text_spanish": "Débil",
+    "text_english": "Weak",
+    "text_indonesian": "Lemah",
+    "text_tagalog": "Mahina"
+  },
+  {
+    "id": 10,
+    "text_portuguese": "Quente",
+    "text_spanish": "Caliente",
+    "text_english": "Hot",
+    "text_indonesian": "Panas",
+    "text_tagalog": "Mainit"
+  },
+  {
+    "id": 11,
+    "text_portuguese": "Frio",
+    "text_spanish": "Frío",
+    "text_english": "Cold",
+    "text_indonesian": "Dingin",
+    "text_tagalog": "Malamig"
+  },
+  {
+    "id": 12,
+    "text_portuguese": "Fácil",
+    "text_spanish": "Fácil",
+    "text_english": "Easy",
+    "text_indonesian": "Mudah",
+    "text_tagalog": "Madali"
+  },
+  {
+    "id": 13,
+    "text_portuguese": "Difícil",
+    "text_spanish": "Difícil",
+    "text_english": "Difficult",
+    "text_indonesian": "Sulit",
+    "text_tagalog": "Mahirap"
+  },
+  {
+    "id": 14,
+    "text_portuguese": "Novo",
+    "text_spanish": "Nuevo",
+    "text_english": "New",
+    "text_indonesian": "Baru",
+    "text_tagalog": "Bago"
+  },
+  {
+    "id": 15,
+    "text_portuguese": "Velho",
+    "text_spanish": "Viejo",
+    "text_english": "Old",
+    "text_indonesian": "Tua",
+    "text_tagalog": "Luma"
+  },
+  {
+    "id": 16,
+    "text_portuguese": "Interessante",
+    "text_spanish": "Interesante",
+    "text_english": "Interesting",
+    "text_indonesian": "Menarik",
+    "text_tagalog": "Kawili-wili"
+  }
+]

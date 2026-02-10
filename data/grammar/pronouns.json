@@ -1,0 +1,58 @@
+[
+  {
+    "id": 1,
+    "text_portuguese": "Eu / Me",
+    "text_spanish": "Yo / Me",
+    "text_english": "I / Me",
+    "text_indonesian": "Saya, Aku",
+    "text_tagalog": "Ako"
+  },
+  {
+    "id": 2,
+    "text_portuguese": "Você, Tu / Te",
+    "text_spanish": "Tú, Usted / Te",
+    "text_english": "You",
+    "text_indonesian": "Kamu, Anda",
+    "text_tagalog": "Ikaw, Ka"
+  },
+  {
+    "id": 3,
+    "text_portuguese": "Ele / Ela",
+    "text_spanish": "Él / Ella",
+    "text_english": "He / She",
+    "text_indonesian": "Dia",
+    "text_tagalog": "Siya"
+  },
+  {
+    "id": 4,
+    "text_portuguese": "Nós / Nos",
+    "text_spanish": "Nosotros(as) / Nos",
+    "text_english": "We / Us",
+    "text_indonesian": "Kami, Kita",
+    "text_tagalog": "Tayo, Kami"
+  },
+  {
+    "id": 5,
+    "text_portuguese": "Eles / Elas",
+    "text_spanish": "Ellos / Ellas",
+    "text_english": "They",
+    "text_indonesian": "Mereka",
+    "text_tagalog": "Sila"
+  },
+  {
+    "id": 6,
+    "text_portuguese": "Meu / Minha",
+    "text_spanish": "Mi / Mío(a)",
+    "text_english": "My / Mine",
+    "text_indonesian": "Saya, Ku",
+    "text_tagalog": "Akin, Ko"
+  },
+  {
+    "id": 7,
+    "text_portuguese": "Este, Esta",
+    "text_spanish": "Este, Esta",
+    "text_english": "This",
+    "text_indonesian": "Ini",
+    "text_tagalog": "Ito"
+  }
+]

@@ -1,0 +1,66 @@
+[
+  {
+    "id": 1,
+    "text_portuguese": "Ser / Estar",
+    "text_spanish": "Ser / Estar",
+    "text_english": "To Be",
+    "text_indonesian": "Adalah / Ada",
+    "text_tagalog": "Ay"
+  },
+  {
+    "id": 2,
+    "text_portuguese": "Ter",
+    "text_spanish": "Tener",
+    "text_english": "To Have",
+    "text_indonesian": "Mempunyai, Punya",
+    "text_tagalog": "Mayroon, Meron"
+  },
+  {
+    "id": 3,
+    "text_portuguese": "Falar",
+    "text_spanish": "Hablar",
+    "text_english": "To Speak",
+    "text_indonesian": "Berbicara",
+    "text_tagalog": "Magsalita"
+  },
+  {
+    "id": 4,
+    "text_portuguese": "Comer",
+    "text_spanish": "Comer",
+    "text_english": "To Eat",
+    "text_indonesian": "Makan",
+    "text_tagalog": "Kumain"
+  },
+  {
+    "id": 5,
+    "text_portuguese": "Fazer",
+    "text_spanish": "Hacer",
+    "text_english": "To Do / To Make",
+    "text_indonesian": "Melakukan, Membuat",
+    "text_tagalog": "Gawin"
+  },
+  {
+    "id": 6,
+    "text_portuguese": "Ir",
+    "text_spanish": "Ir",
+    "text_english": "To Go",
+    "text_indonesian": "Pergi",
+    "text_tagalog": "Pumunta"
+  },
+  {
+    "id": 7,
+    "text_portuguese": "Ver",
+    "text_spanish": "Ver",
+    "text_english": "To See",
+    "text_indonesian": "Melihat",
+    "text_tagalog": "Makita"
+  },
+  {
+    "id": 8,
+    "text_portuguese": "Gostar",
+    "text_spanish": "Gustar",
+    "text_english": "To Like",
+    "text_indonesian": "Suka",
+    "text_tagalog": "Gusto"
+  }
+]

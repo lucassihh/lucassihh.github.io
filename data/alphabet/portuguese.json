@@ -1,0 +1,1037 @@
+{
+  "english": {
+    "langCode": "en-US",
+    "letters": [
+      {
+        "letter": "A",
+        "examples": [
+          {
+            "word": "Apple",
+            "pronunciation": "/ˈæpəl/",
+            "description": "Maçã, uma fruta comum."
+          },
+          {
+            "word": "Ant",
+            "pronunciation": "/ænt/",
+            "description": "Formiga, um pequeno inseto."
+          },
+          {
+            "word": "All",
+            "pronunciation": "/ɔːl/",
+            "description": "Tudo, uma palavra para totalidade."
+          }
+        ]
+      },
+      {
+        "letter": "B",
+        "examples": [
+          {
+            "word": "Beautiful",
+            "pronunciation": "/ˈbjuːtɪfəl/",
+            "description": "Adjetivo para algo bonito."
+          },
+          {
+            "word": "Ball",
+            "pronunciation": "/bɔːl/",
+            "description": "Bola, um objeto esférico."
+          },
+          {
+            "word": "Book",
+            "pronunciation": "/bʊk/",
+            "description": "Livro, um objeto para leitura."
+          }
+        ]
+      },
+      {
+        "letter": "C",
+        "examples": [
+          {
+            "word": "Cat",
+            "pronunciation": "/kæt/",
+            "description": "Gato, um animal de estimação."
+          },
+          {
+            "word": "Computer",
+            "pronunciation": "/kəmˈpjuːtər/",
+            "description": "Computador, um dispositivo eletrônico."
+          },
+          {
+            "word": "Car",
+            "pronunciation": "/kɑːr/",
+            "description": "Carro, um veículo."
+          }
+        ]
+      },
+      {
+        "letter": "D",
+        "examples": [
+          {
+            "word": "Dog",
+            "pronunciation": "/dɔːɡ/",
+            "description": "Cachorro, um animal de estimação."
+          },
+          {
+            "word": "Day",
+            "pronunciation": "/deɪ/",
+            "description": "Dia, o período de luz do sol."
+          },
+          {
+            "word": "Drink",
+            "pronunciation": "/drɪŋk/",
+            "description": "Beber, o ato de ingerir líquido."
+          }
+        ]
+      },
+      {
+        "letter": "E",
+        "examples": [
+          {
+            "word": "Elephant",
+            "pronunciation": "/ˈɛlɪfənt/",
+            "description": "Elefante, um grande mamífero."
+          },
+          {
+            "word": "Eye",
+            "pronunciation": "/aɪ/",
+            "description": "Olho, parte da visão."
+          },
+          {
+            "word": "Eat",
+            "pronunciation": "/iːt/",
+            "description": "Comer, o ato de ingerir comida."
+          }
+        ]
+      },
+      {
+        "letter": "F",
+        "examples": [
+          {
+            "word": "Fish",
+            "pronunciation": "/fɪʃ/",
+            "description": "Peixe, um animal aquático."
+          },
+          {
+            "word": "Friend",
+            "pronunciation": "/frɛnd/",
+            "description": "Amigo, uma pessoa próxima."
+          },
+          {
+            "word": "Flower",
+            "pronunciation": "/ˈflaʊər/",
+            "description": "Flor, parte de uma planta."
+          }
+        ]
+      },
+      {
+        "letter": "G",
+        "examples": [
+          {
+            "word": "Giraffe",
+            "pronunciation": "/dʒɪˈræf/",
+            "description": "Girafa, um animal alto."
+          },
+          {
+            "word": "Green",
+            "pronunciation": "/ɡriːn/",
+            "description": "Verde, uma cor."
+          },
+          {
+            "word": "Go",
+            "pronunciation": "/ɡoʊ/",
+            "description": "Ir, o ato de se mover."
+          }
+        ]
+      },
+      {
+        "letter": "H",
+        "examples": [
+          {
+            "word": "House",
+            "pronunciation": "/haʊs/",
+            "description": "Casa, um lugar para morar."
+          },
+          {
+            "word": "Happy",
+            "pronunciation": "/ˈhæpi/",
+            "description": "Feliz, um sentimento."
+          },
+          {
+            "word": "Hello",
+            "pronunciation": "/həˈloʊ/",
+            "description": "Olá, uma saudação."
+          }
+        ]
+      },
+      {
+        "letter": "I",
+        "examples": [
+          {
+            "word": "Ice",
+            "pronunciation": "/aɪs/",
+            "description": "Gelo, água congelada."
+          },
+          {
+            "word": "Idea",
+            "pronunciation": "/aɪˈdiːə/",
+            "description": "Ideia, um pensamento."
+          },
+          {
+            "word": "Island",
+            "pronunciation": "/ˈaɪlənd/",
+            "description": "Ilha, terra cercada por água."
+          }
+        ]
+      },
+      {
+        "letter": "J",
+        "examples": [
+          {
+            "word": "Jungle",
+            "pronunciation": "/ˈdʒʌŋɡəl/",
+            "description": "Selva, uma floresta densa."
+          },
+          {
+            "word": "Jump",
+            "pronunciation": "/dʒʌmp/",
+            "description": "Pular, o ato de saltar."
+          },
+          {
+            "word": "Job",
+            "pronunciation": "/dʒɑːb/",
+            "description": "Trabalho, uma atividade remunerada."
+          }
+        ]
+      },
+      {
+        "letter": "K",
+        "examples": [
+          {
+            "word": "King",
+            "pronunciation": "/kɪŋ/",
+            "description": "Rei, um líder real."
+          },
+          {
+            "word": "Key",
+            "pronunciation": "/kiː/",
+            "description": "Chave, um objeto para abrir fechaduras."
+          },
+          {
+            "word": "Kite",
+            "pronunciation": "/kaɪt/",
+            "description": "Pipa, um brinquedo."
+          }
+        ]
+      },
+      {
+        "letter": "L",
+        "examples": [
+          {
+            "word": "Lion",
+            "pronunciation": "/ˈlaɪən/",
+            "description": "Leão, um grande felino."
+          },
+          {
+            "word": "Light",
+            "pronunciation": "/laɪt/",
+            "description": "Luz, a energia visível."
+          },
+          {
+            "word": "Love",
+            "pronunciation": "/lʌv/",
+            "description": "Amor, um sentimento forte."
+          }
+        ]
+      },
+      {
+        "letter": "M",
+        "examples": [
+          {
+            "word": "Moon",
+            "pronunciation": "/muːn/",
+            "description": "Lua, o satélite da Terra."
+          },
+          {
+            "word": "Milk",
+            "pronunciation": "/mɪlk/",
+            "description": "Leite, uma bebida."
+          },
+          {
+            "word": "Map",
+            "pronunciation": "/mæp/",
+            "description": "Mapa, um guia geográfico."
+          }
+        ]
+      },
+      {
+        "letter": "N",
+        "examples": [
+          {
+            "word": "Night",
+            "pronunciation": "/naɪt/",
+            "description": "Noite, o período de escuridão."
+          },
+          {
+            "word": "Nose",
+            "pronunciation": "/noʊz/",
+            "description": "Nariz, uma parte do rosto."
+          },
+          {
+            "word": "New",
+            "pronunciation": "/nuː/",
+            "description": "Novo, algo que não é velho."
+          }
+        ]
+      },
+      {
+        "letter": "O",
+        "examples": [
+          {
+            "word": "Orange",
+            "pronunciation": "/ˈɔːrɪndʒ/",
+            "description": "Laranja, uma fruta e uma cor."
+          },
+          {
+            "word": "Open",
+            "pronunciation": "/ˈoʊpən/",
+            "description": "Abrir, o ato de desobstruir."
+          },
+          {
+            "word": "Ocean",
+            "pronunciation": "/ˈoʊʃən/",
+            "description": "Oceano, um grande corpo de água."
+          }
+        ]
+      },
+      {
+        "letter": "P",
+        "examples": [
+          {
+            "word": "Pen",
+            "pronunciation": "/pɛn/",
+            "description": "Caneta, um instrumento de escrita."
+          },
+          {
+            "word": "Pencil",
+            "pronunciation": "/ˈpɛnsəl/",
+            "description": "Lápis, um instrumento de escrita."
+          },
+          {
+            "word": "Paper",
+            "pronunciation": "/ˈpeɪpər/",
+            "description": "Papel, um material para escrita."
+          }
+        ]
+      },
+      {
+        "letter": "Q",
+        "examples": [
+          {
+            "word": "Queen",
+            "pronunciation": "/kwiːn/",
+            "description": "Rainha, uma líder real."
+          },
+          {
+            "word": "Quick",
+            "pronunciation": "/kwɪk/",
+            "description": "Rápido, em alta velocidade."
+          },
+          {
+            "word": "Quiet",
+            "pronunciation": "/ˈkwaɪət/",
+            "description": "Quieto, sem barulho."
+          }
+        ]
+      },
+      {
+        "letter": "R",
+        "examples": [
+          {
+            "word": "Rabbit",
+            "pronunciation": "/ˈræbɪt/",
+            "description": "Coelho, um pequeno mamífero."
+          },
+          {
+            "word": "Red",
+            "pronunciation": "/rɛd/",
+            "description": "Vermelho, uma cor."
+          },
+          {
+            "word": "Rain",
+            "pronunciation": "/reɪn/",
+            "description": "Chuva, precipitação da água."
+          }
+        ]
+      },
+      {
+        "letter": "S",
+        "examples": [
+          {
+            "word": "Sun",
+            "pronunciation": "/sʌn/",
+            "description": "Sol, a estrela do nosso sistema solar."
+          },
+          {
+            "word": "Star",
+            "pronunciation": "/stɑːr/",
+            "description": "Estrela, um corpo celeste."
+          },
+          {
+            "word": "School",
+            "pronunciation": "/skuːl/",
+            "description": "Escola, um lugar de aprendizado."
+          }
+        ]
+      },
+      {
+        "letter": "T",
+        "examples": [
+          {
+            "word": "Tree",
+            "pronunciation": "/triː/",
+            "description": "Árvore, uma grande planta."
+          },
+          {
+            "word": "Table",
+            "pronunciation": "/ˈteɪbəl/",
+            "description": "Mesa, um móvel com tampo."
+          },
+          {
+            "word": "Time",
+            "pronunciation": "/taɪm/",
+            "description": "Tempo, a dimensão da existência."
+          }
+        ]
+      },
+      {
+        "letter": "U",
+        "examples": [
+          {
+            "word": "Umbrella",
+            "pronunciation": "/ʌmˈbrɛlə/",
+            "description": "Guarda-chuva, um acessório de proteção."
+          },
+          {
+            "word": "Up",
+            "pronunciation": "/ʌp/",
+            "description": "Para cima, na direção oposta à Terra."
+          },
+          {
+            "word": "Under",
+            "pronunciation": "/ˈʌndər/",
+            "description": "Abaixo de, em posição inferior."
+          }
+        ]
+      },
+      {
+        "letter": "V",
+        "examples": [
+          {
+            "word": "Van",
+            "pronunciation": "/væn/",
+            "description": "Van, um tipo de veículo."
+          },
+          {
+            "word": "Vote",
+            "pronunciation": "/voʊt/",
+            "description": "Voto, o ato de eleger."
+          },
+          {
+            "word": "Very",
+            "pronunciation": "/ˈvɛri/",
+            "description": "Muito, um advérbio de intensidade."
+          }
+        ]
+      },
+      {
+        "letter": "W",
+        "examples": [
+          {
+            "word": "Water",
+            "pronunciation": "/ˈwɔːtər/",
+            "description": "Água, um líquido essencial."
+          },
+          {
+            "word": "Window",
+            "pronunciation": "/ˈwɪndoʊ/",
+            "description": "Janela, uma abertura na parede."
+          },
+          {
+            "word": "World",
+            "pronunciation": "/wɜːrld/",
+            "description": "Mundo, o planeta Terra."
+          }
+        ]
+      },
+      {
+        "letter": "X",
+        "examples": [
+          {
+            "word": "X-ray",
+            "pronunciation": "/ˈɛksˌreɪ/",
+            "description": "Raio-X, um tipo de radiação."
+          },
+          {
+            "word": "Xenon",
+            "pronunciation": "/ˈzɛnɑːn/",
+            "description": "Xenônio, um gás nobre."
+          },
+          {
+            "word": "Xylophone",
+            "pronunciation": "/ˈzaɪləˌfoʊn/",
+            "description": "Xilofone, um instrumento musical."
+          }
+        ]
+      },
+      {
+        "letter": "Y",
+        "examples": [
+          {
+            "word": "Yellow",
+            "pronunciation": "/ˈjɛloʊ/",
+            "description": "Amarelo, uma cor."
+          },
+          {
+            "word": "Yes",
+            "pronunciation": "/jɛs/",
+            "description": "Sim, uma resposta afirmativa."
+          },
+          {
+            "word": "You",
+            "pronunciation": "/juː/",
+            "description": "Você, um pronome."
+          }
+        ]
+      },
+      {
+        "letter": "Z",
+        "examples": [
+          {
+            "word": "Zebra",
+            "pronunciation": "/ˈziːbrə/",
+            "description": "Zebra, um animal listrado."
+          },
+          {
+            "word": "Zoo",
+            "pronunciation": "/zuː/",
+            "description": "Zoológico, um lugar para ver animais."
+          },
+          {
+            "word": "Zero",
+            "pronunciation": "/ˈzɪəroʊ/",
+            "description": "Zero, um número."
+          }
+        ]
+      }
+    ]
+  },
+  "indonesian": {
+    "langCode": "id-ID",
+    "letters": [
+      {
+        "letter": "A",
+        "examples": [
+          {
+            "word": "Aku",
+            "pronunciation": "/aˈku/",
+            "description": "Eu, pronome pessoal."
+          },
+          {
+            "word": "Api",
+            "pronunciation": "/aˈpi/",
+            "description": "Fogo, um elemento."
+          },
+          {
+            "word": "Air",
+            "pronunciation": "/aˈir/",
+            "description": "Água, um líquido."
+          }
+        ]
+      },
+      {
+        "letter": "B",
+        "examples": [
+          {
+            "word": "Bicara",
+            "pronunciation": "/biˈtʃara/",
+            "description": "Falar, o ato de se comunicar."
+          },
+          {
+            "word": "Buku",
+            "pronunciation": "/ˈbuku/",
+            "description": "Livro, um objeto para leitura."
+          },
+          {
+            "word": "Bumi",
+            "pronunciation": "/ˈbumi/",
+            "description": "Terra, o nosso planeta."
+          }
+        ]
+      },
+      {
+        "letter": "C",
+        "examples": [
+          {
+            "word": "Cepat",
+            "pronunciation": "/ˈtʃəpat/",
+            "description": "Rápido, em alta velocidade."
+          },
+          {
+            "word": "Cinta",
+            "pronunciation": "/ˈtʃinta/",
+            "description": "Amor, um sentimento forte."
+          },
+          {
+            "word": "Cari",
+            "pronunciation": "/ˈtʃari/",
+            "description": "Procurar, o ato de buscar."
+          }
+        ]
+      },
+      {
+        "letter": "D",
+        "examples": [
+          {
+            "word": "Datang",
+            "pronunciation": "/ˈdataŋ/",
+            "description": "Chegar, o ato de vir."
+          },
+          {
+            "word": "Dua",
+            "pronunciation": "/ˈdua/",
+            "description": "Dois, um número."
+          },
+          {
+            "word": "Dinding",
+            "pronunciation": "/ˈdindin/",
+            "description": "Parede, uma estrutura da casa."
+          }
+        ]
+      },
+      {
+        "letter": "E",
+        "examples": [
+          {
+            "word": "Enam",
+            "pronunciation": "/ˈənam/",
+            "description": "Seis, um número."
+          },
+          {
+            "word": "Enak",
+            "pronunciation": "/ˈənak/",
+            "description": "Delicioso, um sabor agradável."
+          },
+          {
+            "word": "Ekor",
+            "pronunciation": "/ˈəkor/",
+            "description": "Cauda, a parte final de um animal."
+          }
+        ]
+      },
+      {
+        "letter": "F",
+        "examples": [
+          {
+            "word": "Foto",
+            "pronunciation": "/ˈfoto/",
+            "description": "Foto, uma imagem."
+          },
+          {
+            "word": "Fajar",
+            "pronunciation": "/ˈfadʒar/",
+            "description": "Amanhecer, o nascer do sol."
+          },
+          {
+            "word": "Film",
+            "pronunciation": "/ˈfilm/",
+            "description": "Filme, uma produção cinematográfica."
+          }
+        ]
+      },
+      {
+        "letter": "G",
+        "examples": [
+          {
+            "word": "Garuda",
+            "pronunciation": "/ˈgaruda/",
+            "description": "Garuda, uma ave mítica."
+          },
+          {
+            "word": "Gajah",
+            "pronunciation": "/ˈɡadʒah/",
+            "description": "Elefante, um grande animal."
+          },
+          {
+            "word": "Gula",
+            "pronunciation": "/ˈɡula/",
+            "description": "Açúcar, um adoçante."
+          }
+        ]
+      },
+      {
+        "letter": "H",
+        "examples": [
+          {
+            "word": "Halo",
+            "pronunciation": "/ˈhalo/",
+            "description": "Olá, uma saudação informal."
+          },
+          {
+            "word": "Hari",
+            "pronunciation": "/ˈhari/",
+            "description": "Dia, um período de 24 horas."
+          },
+          {
+            "word": "Hujan",
+            "pronunciation": "/ˈhudʒan/",
+            "description": "Chuva, precipitação da água."
+          }
+        ]
+      },
+      {
+        "letter": "I",
+        "examples": [
+          {
+            "word": "Ini",
+            "pronunciation": "/ˈini/",
+            "description": "Este, um pronome demonstrativo."
+          },
+          {
+            "word": "Ikan",
+            "pronunciation": "/ˈikan/",
+            "description": "Peixe, um animal aquático."
+          },
+          {
+            "word": "Ibu",
+            "pronunciation": "/ˈibu/",
+            "description": "Mãe, uma figura materna."
+          }
+        ]
+      },
+      {
+        "letter": "J",
+        "examples": [
+          {
+            "word": "Jalan",
+            "pronunciation": "/ˈdʒalan/",
+            "description": "Caminho, uma via."
+          },
+          {
+            "word": "Jendela",
+            "pronunciation": "/dʒənˈdela/",
+            "description": "Janela, uma abertura na parede."
+          },
+          {
+            "word": "Jari",
+            "pronunciation": "/ˈdʒari/",
+            "description": "Dedo, parte da mão."
+          }
+        ]
+      },
+      {
+        "letter": "K",
+        "examples": [
+          {
+            "word": "Kopi",
+            "pronunciation": "/ˈkopi/",
+            "description": "Café, uma bebida popular."
+          },
+          {
+            "word": "Kucing",
+            "pronunciation": "/ˈkutʃiŋ/",
+            "description": "Gato, um animal de estimação."
+          },
+          {
+            "word": "Kerja",
+            "pronunciation": "/ˈkərdʒa/",
+            "description": "Trabalho, uma atividade."
+          }
+        ]
+      },
+      {
+        "letter": "L",
+        "examples": [
+          {
+            "word": "Lima",
+            "pronunciation": "/ˈlima/",
+            "description": "Cinco, um número."
+          },
+          {
+            "word": "Langit",
+            "pronunciation": "/ˈlaŋit/",
+            "description": "Céu, a camada acima da Terra."
+          },
+          {
+            "word": "Lampu",
+            "pronunciation": "/ˈlampu/",
+            "description": "Lâmpada, um objeto de iluminação."
+          }
+        ]
+      },
+      {
+        "letter": "M",
+        "examples": [
+          {
+            "word": "Makan",
+            "pronunciation": "/ˈmakan/",
+            "description": "Comer, o ato de ingerir comida."
+          },
+          {
+            "word": "Malam",
+            "pronunciation": "/ˈmalam/",
+            "description": "Noite, o período de escuridão."
+          },
+          {
+            "word": "Minum",
+            "pronunciation": "/ˈminum/",
+            "description": "Beber, o ato de ingerir líquido."
+          }
+        ]
+      },
+      {
+        "letter": "N",
+        "examples": [
+          {
+            "word": "Nama",
+            "pronunciation": "/ˈnama/",
+            "description": "Nome, uma palavra de identificação."
+          },
+          {
+            "word": "Nasi",
+            "pronunciation": "/ˈnasi/",
+            "description": "Arroz, um alimento básico."
+          },
+          {
+            "word": "Naga",
+            "pronunciation": "/ˈnaɡa/",
+            "description": "Dragão, um animal mitológico."
+          }
+        ]
+      },
+      {
+        "letter": "O",
+        "examples": [
+          {
+            "word": "Orang",
+            "pronunciation": "/ˈoraŋ/",
+            "description": "Pessoa, um ser humano."
+          },
+          {
+            "word": "Otomatis",
+            "pronunciation": "/o.toˈma.tis/",
+            "description": "Automático, que funciona sozinho."
+          },
+          {
+            "word": "Obat",
+            "pronunciation": "/ˈobat/",
+            "description": "Remédio, uma substância medicinal."
+          }
+        ]
+      },
+      {
+        "letter": "P",
+        "examples": [
+          {
+            "word": "Pagi",
+            "pronunciation": "/ˈpaɡi/",
+            "description": "Manhã, o início do dia."
+          },
+          {
+            "word": "Pulau",
+            "pronunciation": "/ˈpulau/",
+            "description": "Ilha, terra cercada por água."
+          },
+          {
+            "word": "Pintu",
+            "pronunciation": "/ˈpintu/",
+            "description": "Porta, uma abertura para entrada."
+          }
+        ]
+      },
+      {
+        "letter": "Q",
+        "examples": [
+          {
+            "word": "Quran",
+            "pronunciation": "/kuˈran/",
+            "description": "Alcorão, livro sagrado."
+          },
+          {
+            "word": "Qurban",
+            "pronunciation": "/qurˈban/",
+            "description": "Sacrifício, um ritual."
+          }
+        ]
+      },
+      {
+        "letter": "R",
+        "examples": [
+          {
+            "word": "Rumah",
+            "pronunciation": "/ˈrumah/",
+            "description": "Casa, um lugar para morar."
+          },
+          {
+            "word": "Rasa",
+            "pronunciation": "/ˈrasa/",
+            "description": "Sentimento, uma sensação."
+          },
+          {
+            "word": "Rambut",
+            "pronunciation": "/ˈrambut/",
+            "description": "Cabelo, os fios da cabeça."
+          }
+        ]
+      },
+      {
+        "letter": "S",
+        "examples": [
+          {
+            "word": "Satu",
+            "pronunciation": "/ˈsatu/",
+            "description": "Um, o primeiro número."
+          },
+          {
+            "word": "Sore",
+            "pronunciation": "/ˈsorə/",
+            "description": "Tarde, o período após o meio-dia."
+          },
+          {
+            "word": "Susu",
+            "pronunciation": "/ˈsusu/",
+            "description": "Leite, uma bebida."
+          }
+        ]
+      },
+      {
+        "letter": "T",
+        "examples": [
+          {
+            "word": "Tidur",
+            "pronunciation": "/ˈtidur/",
+            "description": "Dormir, o ato de repousar."
+          },
+          {
+            "word": "Tangan",
+            "pronunciation": "/ˈtaŋan/",
+            "description": "Mão, parte do corpo."
+          },
+          {
+            "word": "Teh",
+            "pronunciation": "/ˈteh/",
+            "description": "Chá, uma bebida."
+          }
+        ]
+      },
+      {
+        "letter": "U",
+        "examples": [
+          {
+            "word": "Uang",
+            "pronunciation": "/ˈuaŋ/",
+            "description": "Dinheiro, meio de troca."
+          },
+          {
+            "word": "Ular",
+            "pronunciation": "/ˈular/",
+            "description": "Cobra, um réptil."
+          },
+          {
+            "word": "Udara",
+            "pronunciation": "/ˈudara/",
+            "description": "Ar, o gás que respiramos."
+          }
+        ]
+      },
+      {
+        "letter": "V",
+        "examples": [
+          {
+            "word": "Vitamin",
+            "pronunciation": "/ˈvitamin/",
+            "description": "Vitamina, um nutriente essencial."
+          },
+          {
+            "word": "Vonis",
+            "pronunciation": "/ˈvoniːs/",
+            "description": "Veredito, uma decisão judicial."
+          },
+          {
+            "word": "Virus",
+            "pronunciation": "/ˈvirus/",
+            "description": "Vírus, um agente infeccioso."
+          }
+        ]
+      },
+      {
+        "letter": "W",
+        "examples": [
+          {
+            "word": "Waktu",
+            "pronunciation": "/ˈwaktu/",
+            "description": "Tempo, a dimensão da existência."
+          },
+          {
+            "word": "Wajah",
+            "pronunciation": "/ˈwadʒah/",
+            "description": "Rosto, a parte frontal da cabeça."
+          },
+          {
+            "word": "Warna",
+            "pronunciation": "/ˈwarna/",
+            "description": "Cor, uma propriedade da luz."
+          }
+        ]
+      },
+      {
+        "letter": "X",
+        "examples": [
+          {
+            "word": "Xilofon",
+            "pronunciation": "/siˈlofon/",
+            "description": "Xilofone, um instrumento musical."
+          },
+          {
+            "word": "Xenon",
+            "pronunciation": "/ˈsɛnɔn/",
+            "description": "Xenônio, um gás nobre."
+          }
+        ]
+      },
+      {
+        "letter": "Y",
+        "examples": [
+          {
+            "word": "Ya",
+            "pronunciation": "/ˈja/",
+            "description": "Sim, uma resposta afirmativa."
+          },
+          {
+            "word": "Yang",
+            "pronunciation": "/jaŋ/",
+            "description": "Quem, um pronome relativo."
+          },
+          {
+            "word": "Yoyo",
+            "pronunciation": "/ˈjo.jo/",
+            "description": "Ioiô, um brinquedo."
+          }
+        ]
+      },
+      {
+        "letter": "Z",
+        "examples": [
+          {
+            "word": "Zebra",
+            "pronunciation": "/ˈzəbra/",
+            "description": "Zebra, um animal listrado."
+          },
+          {
+            "word": "Zona",
+            "pronunciation": "/ˈzona/",
+            "description": "Zona, uma área definida."
+          }
+        ]
+      }
+    ]
+  }
+}

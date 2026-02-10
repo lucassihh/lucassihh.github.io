@@ -1,0 +1,466 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <title>YooLingo</title>
+    <link rel="icon" type="image/x-icon" href="./imgs/favico.png" />
+
+    <!-- Tailwind CSS -->
+    <link rel="stylesheet" href="./styles/globals.css" />
+
+    <!-- Icons -->
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css"
+    />
+
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap"
+      rel="stylesheet"
+    />
+
+    <!-- Other -->
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" />
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+
+    <!-- No bg flicker -->
+    <script>
+      (function () {
+        const theme = localStorage.getItem("theme");
+        const prefersDark = window.matchMedia(
+          "(prefers-color-scheme: dark)",
+        ).matches;
+        if (theme === "dark" || (!theme && prefersDark)) {
+          document.documentElement.classList.add("dark");
+        } else {
+          document.documentElement.classList.remove("dark");
+        }
+      })();
+    </script>
+
+    <style>
+      body {
+        font-family: "Inter", sans-serif;
+      }
+    </style>
+  </head>
+  <body
+    class="bg-background text-black"
+    x-data="{ 
+        open: false, 
+        modalOpen: false,
+        selectedLang: '',
+        nickname: '',
+        level: 'beginner',
+        theme: 'light',
+        position: 'end',
+        mobileFullWidth: false,
+        size: 'sm'
+    }"
+    x-on:keydown.esc.prevent="open = false; modalOpen = false"
+  >
+    <!-- Header -->
+    <header class="pb-12">
+      <div class="w-full max-w-7xl mx-auto">
+        <div
+          class="flex justify-between gap-8 items-center border-b border-border p-4 pb-6"
+        >
+          <!-- Logo -->
+          <div class="flex items-center gap-4">
+            <div class="font-bold text-3xl tracking-tighter">
+              <span class="text-primary font-bold text-xl tracking-tighter"
+                >YooLingo</span
+              >
+            </div>
+          </div>
+
+          <!-- Desktop Links -->
+          <div class="flex items-center gap-8">
+            <!-- Buttons -->
+            <div class="flex gap-3">
+              <!-- Theme Toggle -->
+              <button
+                id="theme-toggle"
+                data-tooltip="Theme"
+                data-side="bottom"
+                class="btn-outline size-8 rounded-full text-primary"
+              >
+                <svg
+                  id="theme-icon-light"
+                  xmlns="http://www.w3.org/2000/svg"
+                  class="h-5 w-5"
+                  viewBox="0 0 20 20"
+                  fill="currentColor"
+                >
+                  <path
+                    fill-rule="evenodd"
+                    d="M10 2a1 1 0 011 1v1a1 1 0 11-2 0V3a1 1 0 011-1zm4 8a4 4 0 11-8 0 4 4 0 018 0zm-.464 4.95l.707.707a1 1 0 001.414-1.414l-.707-.707a1 1 0 00-1.414 1.414zm2.12-10.607a1 1 0 010 1.414l-.706.707a1 1 0 11-1.414-1.414l.707-.707a1 1 0 011.414 0zM17 11a1 1 0 100-2h-1a1 1 0 100 2h1zm-7 4a1 1 0 011 1v1a1 1 0 11-2 0v-1a1 1 0 011-1zM5.05 6.464A1 1 0 106.465 5.05l-.708-.707a1 1 0 00-1.414 1.414l.707.707zm1.414 8.486l-.707.707a1 1 0 01-1.414-1.414l.707-.707a1 1 0 011.414 1.414zM4 11a1 1 0 100-2H3a1 1 0 000 2h1z"
+                    clip-rule="evenodd"
+                  />
+                </svg>
+                <svg
+                  id="theme-icon-dark"
+                  xmlns="http://www.w3.org/2000/svg"
+                  class="h-5 w-5 hidden"
+                  viewBox="0 0 20 20"
+                  fill="currentColor"
+                >
+                  <path
+                    d="M17.293 13.293A8 8 0 016.707 2.707a8.001 8.001 0 1010.586 10.586z"
+                  />
+                </svg>
+              </button>
+
+              <!-- Sidebar Button -->
+              <button
+                x-on:click="open = true"
+                class="flex items-center justify-center bg-primary text-secondary rounded-full size-10 hover:scale-105 transition-transform"
+              >
+                <i class="bi bi-list text-xl"></i>
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </header>
+
+    <!-- Sidebar -->
+    <div
+      x-cloak
+      x-show="open"
+      x-transition:enter="transition ease-out duration-300"
+      x-transition:enter-start="opacity-0"
+      x-transition:enter-end="opacity-100"
+      x-transition:leave="transition ease-in duration-200"
+      x-transition:leave-start="opacity-100"
+      x-transition:leave-end="opacity-0"
+      class="fixed inset-0 z-[100] overflow-hidden bg-black/40 backdrop-blur-sm"
+      role="dialog"
+      aria-modal="true"
+    >
+      <!-- Sidebar Content -->
+      <div
+        x-show="open"
+        x-on:click.away="open = false"
+        x-transition:enter="transition ease-out duration-300"
+        x-transition:enter-start="translate-x-full"
+        x-transition:enter-end="translate-x-0"
+        x-transition:leave="transition ease-in duration-200"
+        x-transition:leave-start="translate-x-0"
+        x-transition:leave-end="translate-x-full"
+        class="absolute right-0 top-0 h-full w-full max-w-xs md:max-w-md bg-white shadow-2xl flex flex-col"
+      >
+        <!-- Sidebar Header -->
+        <div
+          class="flex items-center justify-between p-6 border-b border-gray-100"
+        >
+          <h3 class="text-2xl font-bold tracking-tight">Menu</h3>
+          <button
+            x-on:click="open = false"
+            class="size-10 flex items-center justify-center rounded-full hover:bg-gray-100 transition-colors"
+          >
+            <i class="bi bi-x-lg text-lg"></i>
+          </button>
+        </div>
+
+        <!-- Sidebar Links -->
+        <div class="flex-grow overflow-y-auto p-8">
+          <nav class="flex flex-col gap-6">
+            <a
+              href="#"
+              class="text-2xl font-bold hover:text-gray-400 transition-colors"
+              >About</a
+            >
+            <a
+              href="#"
+              class="text-2xl font-bold hover:text-gray-400 transition-colors"
+              >Help</a
+            >
+            <a
+              href="#"
+              class="text-2xl font-bold hover:text-gray-400 transition-colors"
+              >Donate</a
+            >
+          </nav>
+
+          <div class="mt-20 pt-10 border-t border-gray-100 hidden">
+            <p
+              class="text-xs uppercase tracking-widest text-gray-400 font-bold mb-6"
+            >
+              Donations
+            </p>
+            <ul class="flex flex-col gap-4 text-sm font-medium">
+              <li href="#" class="hover:underline"># Name</li>
+            </ul>
+          </div>
+        </div>
+
+        <!-- Sidebar Footer -->
+        <div class="p-8 bg-gray-50 flex gap-4">
+          <h3 class="text-2xl font-bold tracking-tight">Follow us</h3>
+          <a
+            href="#"
+            class="size-10 flex items-center justify-center bg-black text-white rounded-full hover:scale-105 transition-all duration-300"
+          >
+            <i class="bi bi-instagram"></i>
+          </a>
+          <a
+            href="#"
+            class="size-10 flex items-center justify-center bg-black text-white rounded-full hover:scale-105 transition-all duration-300"
+          >
+            <i class="bi bi-youtube"></i>
+          </a>
+        </div>
+      </div>
+    </div>
+
+    <!-- Hero -->
+    <section class="p-4 py-10" data-aos="fade-down" data-aos-duration="1000">
+      <div class="w-full max-w-7xl mx-auto text-center">
+        <div class="flex flex-col gap-10 items-center">
+          <div class="max-w-2xl mb-14" data-aos="fade-up">
+            <div class="flex items-center justify-center gap-3 mb-6">
+              <span
+                class="text-xs font-black uppercase tracking-[0.3em] text-gray-400"
+                >Bem vindo(a)!</span
+              >
+            </div>
+            <h1
+              class="text-6xl md:text-8xl font-black tracking-tight leading-[0.9] mb-10 text-primary"
+            >
+              Cansou de pagar caro em cursos?
+            </h1>
+            <span
+              class="italic text-gray-300 dark:text-gray-500 text-4xl font-black tracking-tight leading-[0.9]"
+            >
+              Ouça, Repita, Aprenda!
+            </span>
+          </div>
+          <div class="flex flex-col md:flex-row items-center mb-6">
+            <a
+              href="#languages"
+              class="bg-black border border-black text-white rounded-full py-3 px-10 shadow-2xl hover:bg-gray-800 hover:scale-105 outline-none font-medium transition-all duration-300"
+            >
+              Let's go!
+            </a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Languages (Modal) -->
+    <div
+      x-cloak
+      x-show="modalOpen"
+      class="fixed inset-0 z-[110] flex items-center justify-center p-4 bg-black/60 backdrop-blur-md"
+    >
+      <div
+        x-show="modalOpen"
+        x-transition:enter="transition ease-out duration-300 transform"
+        x-transition:enter-start="scale-90 opacity-0"
+        x-transition:enter-end="scale-100 opacity-100"
+        class="bg-white rounded-2xl w-full max-w-lg overflow-hidden shadow-sm"
+      >
+        <div class="p-8 md:p-12">
+          <div class="flex justify-between items-start mb-8">
+            <div>
+              <h2 class="text-3xl font-black tracking-tight">Your Profile</h2>
+              <p class="text-gray-500 mt-3">
+                <span
+                  class="text-3xl text-black font-bold"
+                  x-text="selectedLang"
+                ></span>
+              </p>
+            </div>
+            <button
+              x-on:click="modalOpen = false"
+              class="size-10 flex items-center justify-center rounded-full bg-gray-100 hover:bg-gray-200 transition-colors"
+            >
+              <i class="bi bi-x-lg"></i>
+            </button>
+          </div>
+
+          <div class="space-y-8">
+            <!-- Nickname -->
+            <div class="space-y-2">
+              <label
+                class="hidden text-xs font-black uppercase tracking-widest text-gray-400"
+              >
+                Nickname
+                <span class="font-bold text-black ml-2">@basic</span>
+              </label>
+              <!-- <input type="text" x-model="nickname" placeholder="Seu nome aqui..." class="w-full bg-gray-50 border-none rounded-2xl py-4 px-6 focus:ring-2 ring-black transition-all outline-none font-medium"> -->
+            </div>
+
+            <!-- Level Select -->
+            <div class="space-y-3">
+              <label
+                class="text-xs font-black uppercase tracking-widest text-gray-400"
+                >Level</label
+              >
+              <div class="grid grid-cols-3 gap-3 mt-3">
+                <button
+                  @click="level = 'beginner'"
+                  :class="level === 'beginner' ? 'bg-black text-white' : 'bg-gray-50 text-gray-500'"
+                  class="py-3 rounded-xl font-bold text-sm transition-all"
+                >
+                  Beginner
+                </button>
+                <button
+                  @click="level = 'inter'"
+                  :class="level === 'inter' ? 'bg-black text-white' : 'bg-gray-50 text-gray-500'"
+                  class="py-3 rounded-xl font-bold text-sm transition-all"
+                >
+                  Inter
+                </button>
+                <button
+                  @click="level = 'advanced'"
+                  :class="level === 'advanced' ? 'bg-black text-white' : 'bg-gray-50 text-gray-500'"
+                  class="py-3 rounded-xl font-bold text-sm transition-all"
+                >
+                  Advanced
+                </button>
+              </div>
+            </div>
+
+            <!-- Action -->
+            <button
+              x-on:click="
+                        if(selectedLang) {
+                            let langPath = selectedLang.toLowerCase().replace(/\s+/g, '');
+                            let langPathGood = langPath.replace('bahasa', '');
+                            window.location.href = `./languages/english/learning_${langPathGood}/index.html`;
+                        }
+                        modalOpen = false;
+                    "
+              class="w-full bg-black text-white py-5 rounded-full font-bold text-lg hover:scale-105 active:scale-95 transition-all shadow-xl mt-4"
+            >
+              Start
+              <i class="bi bi-arrow-right ml-2"></i>
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Languages -->
+    <section class="p-4 py-20 bg-gray-50" id="languages" data-aos="fade-down">
+      <div class="w-full max-w-7xl mx-auto">
+        <div class="flex flex-col gap-16">
+          <div
+            class="flex flex-col lg:flex-row justify-between items-center text-center gap-6"
+          >
+            <div>
+              <h2
+                class="text-6xl md:text-8xl font-black tracking-tight leading-[0.9] mb-8"
+              >
+                Idiomas
+              </h2>
+            </div>
+
+            <div class="flex gap-3">
+              <button
+                class="px-6 py-2.5 border border-black hover:bg-black hover:text-white rounded-full transition-all duration-300 font-semibold text-sm"
+              >
+                Popular
+              </button>
+              <button
+                class="px-6 py-2.5 border border-black bg-black text-white rounded-full font-semibold text-sm"
+              >
+                Todos
+              </button>
+            </div>
+          </div>
+
+          <!-- Grid -->
+          <div class="grid grid-cols-2 md:grid-cols-4 lg:grid-cols-6 gap-8">
+            <!-- Loop -->
+            <template
+              x-for="lang in [
+                  {name: 'Bahasa Indonesia', sub: 'Indonesia', code: 'id'},
+                  {name: 'Portuguese', sub: 'Brasil', code: 'br'},
+                  {name: 'Spanish', sub: 'Spain', code: 'es'},
+               ]"
+            >
+              <div
+                @click="selectedLang = lang.name; modalOpen = true"
+                class="group cursor-pointer flex flex-col items-center"
+              >
+                <div
+                  class="relative size-24 md:size-32 rounded-full overflow-hidden border-4 border-white shadow-md bg-gray-200 transition-transform duration-500 group-hover:scale-110"
+                >
+                  <img
+                    class="w-full h-full object-cover"
+                    :src="`https://flagcdn.com/w160/${lang.code}.png`"
+                    :alt="lang.name"
+                  />
+                  <div
+                    class="absolute inset-0 bg-black/10 opacity-0 group-hover:opacity-100 transition-opacity flex items-center justify-center"
+                  >
+                    <i
+                      class="bi bi-box-arrow-in-up-right text-white text-2xl"
+                    ></i>
+                  </div>
+                </div>
+                <div class="mt-5 text-center">
+                  <h3
+                    class="text-xl font-bold text-gray-900 group-hover:text-gray-500 transition-colors"
+                    x-text="lang.name"
+                  ></h3>
+                  <p
+                    class="text-xs font-bold uppercase tracking-widest text-gray-400 mt-1"
+                    x-text="lang.sub"
+                  ></p>
+                </div>
+              </div>
+            </template>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="p-10 border-t border-gray-100">
+      <div
+        class="max-w-6xl mx-auto flex flex-col md:flex-row justify-between items-center gap-8"
+      >
+        <div class="text-center md:text-left">
+          <span class="text-primary font-bold text-xl tracking-tighter"
+            >YooLingo</span
+          >
+          <p
+            class="text-[10px] font-black uppercase tracking-[0.4em] text-gray-300 mt-4"
+          >
+            @Lucas_sihh
+          </p>
+        </div>
+        <nav
+          class="flex gap-8 text-[10px] font-black uppercase tracking-widest text-gray-400"
+        >
+          <a href="#" class="hover:text-black">Sobre</a>
+          <a href="#" class="hover:text-black">Privacidade</a>
+          <a href="#" class="hover:text-black">Doação</a>
+        </nav>
+      </div>
+    </footer>
+
+    <!-- JS -->
+    <script src="../../../js/themeToggle.js"></script>
+
+    <!-- Alpine JS -->
+    <script
+      defer
+      src="https://cdn.jsdelivr.net/npm/alpinejs@3.x.x/dist/cdn.min.js"
+    ></script>
+
+    <!-- Aos -->
+    <script>
+      AOS.init();
+    </script>
+  </body>
+</html>

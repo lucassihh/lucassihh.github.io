@@ -1,0 +1,93 @@
+[
+  {
+    "id": 1,
+    "text_portuguese": "Que horas são?",
+    "text_spanish": "Qué hora es?",
+    "text_english": "What time is it?",
+    "text_indonesian": "Jam berapa sekarang?",
+    "text_tagalog": "Anong oras na?",
+    "audio_portuguese": "../../../data/audios/portuguese/common_questions/que_horas_sao.mp3",
+    "audio_spanish": "../../../data/audios/spanish/common_questions/que_hora_es.mp3",
+    "audio_english": "../../../data/audios/english/common_questions/what_time_is_it.mp3",
+    "audio_indonesian": "../../../data/audios/indonesian/common_questions/jam_berapa_sekarang.mp3",
+    "audio_tagalog": "../../../data/audios/tagalog/common_questions/anong_oras_na.mp3"
+  },
+  {
+    "id": 2,
+    "text_portuguese": "Onde fica o banheiro?",
+    "text_spanish": "Dónde está el baño?",
+    "text_english": "Where is the bathroom?",
+    "text_indonesian": "Di mana kamar mandi?",
+    "text_tagalog": "Nasaan ang banyo?",
+    "audio_portuguese": "../../../data/audios/portuguese/common_questions/onde_fica_o_banheiro.mp3",
+    "audio_spanish": "../../../data/audios/spanish/common_questions/donde_esta_el_bano.mp3",
+    "audio_english": "../../../data/audios/english/common_questions/where_is_the_bathroom.mp3",
+    "audio_indonesian": "../../../data/audios/indonesian/common_questions/di_mana_kamar_mandi.mp3",
+    "audio_tagalog": "../../../data/audios/tagalog/common_questions/nasaan_ang_banyo.mp3"
+  },
+  {
+    "id": 3,
+    "text_portuguese": "Quanto custa isso?",
+    "text_spanish": "Cuánto cuesta esto?",
+    "text_english": "How much is this?",
+    "text_indonesian": "Berapa harganya ini?",
+    "text_tagalog": "Magkano ito?",
+    "audio_portuguese": "../../../data/audios/portuguese/common_questions/quanto_custa_isso.mp3",
+    "audio_spanish": "../../../data/audios/spanish/common_questions/cuanto_cuesta_esto.mp3",
+    "audio_english": "../../../data/audios/english/common_questions/how_much_is_this.mp3",
+    "audio_indonesian": "../../../data/audios/indonesian/common_questions/berapa_harganya_ini.mp3",
+    "audio_tagalog": "../../../data/audios/tagalog/common_questions/magkano_ito.mp3"
+  },
+  {
+    "id": 4,
+    "text_portuguese": "Você pode me ajudar?",
+    "text_spanish": "Puedes ayudarme?",
+    "text_english": "Can you help me?",
+    "text_indonesian": "Bisa tolong saya?",
+    "text_tagalog": "Maaari mo ba akong tulungan?",
+    "audio_portuguese": "../../../data/audios/portuguese/common_questions/voce_pode_me_ajudar.mp3",
+    "audio_spanish": "../../../data/audios/spanish/common_questions/puedes_ayudarme.mp3",
+    "audio_english": "../../../data/audios/english/common_questions/can_you_help_me.mp3",
+    "audio_indonesian": "../../../data/audios/indonesian/common_questions/bisa_tolong_saya.mp3",
+    "audio_tagalog": "../../../data/audios/tagalog/common_questions/maaari_mo_ba_akong_tulungan.mp3"
+  },
+  {
+    "id": 5,
+    "text_portuguese": "Onde você mora?",
+    "text_spanish": "Dónde vives?",
+    "text_english": "Where do you live?",
+    "text_indonesian": "Kamu tinggal di mana?",
+    "text_tagalog": "Saan ka nakatira?",
+    "audio_portuguese": "../../../data/audios/portuguese/common_questions/onde_voce_mora.mp3",
+    "audio_spanish": "../../../data/audios/spanish/common_questions/donde_vives.mp3",
+    "audio_english": "../../../data/audios/english/common_questions/where_do_you_live.mp3",
+    "audio_indonesian": "../../../data/audios/indonesian/common_questions/kamu_tinggal_di_mana.mp3",
+    "audio_tagalog": "../../../data/audios/tagalog/common_questions/saan_ka_nakatira.mp3"
+  },
+  {
+    "id": 6,
+    "text_portuguese": "Qual é a sua comida favorita?",
+    "text_spanish": "Cuál es tu comida favorita?",
+    "text_english": "What is your favorite food?",
+    "text_indonesian": "Apa makanan favoritmu?",
+    "text_tagalog": "Ano ang paborito mong pagkain?",
+    "audio_portuguese": "../../../data/audios/portuguese/common_questions/qual_e_a_sua_comida_favorita.mp3",
+    "audio_spanish": "../../../data/audios/spanish/common_questions/cual_es_tu_comida_favorita.mp3",
+    "audio_english": "../../../data/audios/english/common_questions/what_is_your_favorite_food.mp3",
+    "audio_indonesian": "../../../data/audios/indonesian/common_questions/apa_makanan_favoritmu.mp3",
+    "audio_tagalog": "../../../data/audios/tagalog/common_questions/ano_ang_paborito_mong_pagkain.mp3"
+  },
+  {
+    "id": 7,
+    "text_portuguese": "Você está ocupado agora?",
+    "text_spanish": "Estás ocupado ahora?",
+    "text_english": "Are you busy right now?",
+    "text_indonesian": "Apakah kamu sibuk sekarang?",
+    "text_tagalog": "Abala ka ba ngayon?",
+    "audio_portuguese": "../../../data/audios/portuguese/common_questions/voce_esta_ocupado_agora.mp3",
+    "audio_spanish": "../../../data/audios/spanish/common_questions/estas_ocupado_ahora.mp3",
+    "audio_english": "../../../data/audios/english/common_questions/are_you_busy_right_now.mp3",
+    "audio_indonesian": "../../../data/audios/indonesian/common_questions/apakah_kamu_sibuk_sekarang.mp3",
+    "audio_tagalog": "../../../data/audios/tagalog/common_questions/abala_ka_ba_ngayon.mp3"
+  }
+]
