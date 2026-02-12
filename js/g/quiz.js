@@ -13,7 +13,7 @@ const QUIZ_MODAL_HTML = `
     >
       <div class="modal-overlay absolute inset-0 bg-black/50 backdrop-blur-sm transition-all duration-300"></div>
       
-      <div class="modal-dialog w-full max-w-2xl relative flex flex-col gap-8 p-8 md:p-12 bg-[#120d1d] rounded-xl border border-border shadow-sm transition-all duration-300">
+      <div class="modal-dialog w-full max-w-2xl relative flex flex-col gap-8 p-8 md:p-12 bg-[#120d1d] rounded-xl border border-white/20 shadow-sm transition-all duration-300">
         
         <div class="flex items-center justify-between gap-6">
           <div id="progress-bar-container" class="flex-1 bg-primary/5 h-2 rounded-full overflow-hidden">
@@ -21,8 +21,9 @@ const QUIZ_MODAL_HTML = `
           </div>
           
           <div class="flex items-center gap-2">
-            <button id="quiz-mute" class="size-10 flex items-center justify-center rounded-full text-slate-400 hover:bg-slate-50 dark:hover:bg-zinc-800 transition-colors"></button>
-            <button id="close-quiz-modal" data-modal-close class="size-10 flex items-center justify-center rounded-full bg-slate-50 dark:bg-zinc-800 text-slate-400 hover:bg-black hover:text-white dark:hover:bg-white dark:hover:text-black transition-all">
+            <!-- Quiz Buttons -->
+            <button id="quiz-mute" class="size-10 relative overflow-hidden ripple-btn p-2 rounded-full glass-card"></button>
+            <button id="close-quiz-modal" data-modal-close class="size-10 relative overflow-hidden ripple-btn p-2 rounded-full glass-card">
               <i class="bi bi-x-lg text-sm"></i>
             </button>
           </div>

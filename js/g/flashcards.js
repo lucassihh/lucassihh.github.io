@@ -22,14 +22,14 @@ export function initializeFlashcards(data, fromLang, toLang) {
      
       <div class="modal-overlay absolute inset-0 bg-black/50 backdrop-blur-sm transition-all duration-300"></div>
       
-      <div class="modal-dialog w-full max-w-2xl relative flex flex-col gap-8 p-8 bg-[#120d1d] rounded-xl border border-border shadow-sm transition-all duration-300">
+      <div class="modal-dialog w-full max-w-2xl relative flex flex-col gap-8 p-8 bg-[#120d1d] rounded-xl border border-white/20 shadow-sm transition-all duration-300">
         
         <div class="flex items-center justify-between">
-          <button id="flashcard-play" class="size-12 flex items-center justify-center rounded-full bg-slate-50 dark:bg-zinc-800 text-black dark:text-white hover:scale-105 transition-transform">
+          <button id="flashcard-play" class="size-12 relative overflow-hidden ripple-btn p-2 rounded-full glass-card">
             ${ICONS.play}
           </button>
           <div id="flashcard-progress" class="text-lg font-black uppercase tracking-[0.2em] text-slate-400"></div>
-          <button data-modal-close class="size-12 flex items-center justify-center rounded-full bg-slate-50 dark:bg-zinc-800 text-slate-400 hover:text-black dark:hover:text-white transition-colors">
+          <button data-modal-close class="size-12 relative overflow-hidden ripple-btn p-2 rounded-full glass-card">
             ${ICONS.close}
           </button>
         </div>
