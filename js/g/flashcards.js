@@ -90,7 +90,7 @@ export function initializeFlashcards(data, fromLang, toLang) {
     frontText.textContent = item[`text_${fromLang}`];
     backText.textContent = item[`text_${toLang}`];
     progressIndicator.textContent = `${index + 1} / ${data.length}`;
-    
+
     // Reset do Flip ao mudar de carta
     isFlipped = false;
     cardInner.style.transform = "rotateY(0deg)";
@@ -103,7 +103,10 @@ export function initializeFlashcards(data, fromLang, toLang) {
 
   function playAudio(audioSrc) {
     return new Promise((resolve) => {
-      if (!audioSrc) { resolve(); return; }
+      if (!audioSrc) {
+        resolve();
+        return;
+      }
       currentAudio = new Audio(audioSrc);
       currentAudio.onended = resolve;
       currentAudio.onerror = () => resolve();
@@ -114,7 +117,7 @@ export function initializeFlashcards(data, fromLang, toLang) {
   async function playSequence() {
     isPlaying = true;
     playBtn.innerHTML = ICONS.pause;
-    [prevBtn, nextBtn, flipBtn].forEach((el) => el.style.opacity = "0.5");
+    [prevBtn, nextBtn, flipBtn].forEach((el) => (el.style.opacity = "0.5"));
 
     for (let i = currentIndex; i < data.length; i++) {
       if (!isPlaying) break;
@@ -147,7 +150,7 @@ export function initializeFlashcards(data, fromLang, toLang) {
   function stopPlayback() {
     isPlaying = false;
     playBtn.innerHTML = ICONS.play;
-    [prevBtn, nextBtn, flipBtn].forEach((el) => el.style.opacity = "1");
+    [prevBtn, nextBtn, flipBtn].forEach((el) => (el.style.opacity = "1"));
 
     if (currentAudio) {
       currentAudio.pause();
@@ -173,7 +176,7 @@ export function initializeFlashcards(data, fromLang, toLang) {
 
   closeBtn?.addEventListener("click", stopAndCloseFlashcards);
   overlay?.addEventListener("click", stopAndCloseFlashcards);
-  
+
   function handleInteraction(actionFn) {
     stopPlayback();
     actionFn();
@@ -181,18 +184,20 @@ export function initializeFlashcards(data, fromLang, toLang) {
 
   cardScene.onclick = () => handleInteraction(flipCard);
   flipBtn.onclick = () => handleInteraction(flipCard);
-  
-  nextBtn.onclick = () => handleInteraction(() => {
-    currentIndex = (currentIndex + 1) % data.length;
-    renderCard(currentIndex);
-  });
 
-  prevBtn.onclick = () => handleInteraction(() => {
-    currentIndex = (currentIndex - 1 + data.length) % data.length;
-    renderCard(currentIndex);
-  });
+  nextBtn.onclick = () =>
+    handleInteraction(() => {
+      currentIndex = (currentIndex + 1) % data.length;
+      renderCard(currentIndex);
+    });
 
-  playBtn.onclick = () => isPlaying ? stopPlayback() : playSequence();
+  prevBtn.onclick = () =>
+    handleInteraction(() => {
+      currentIndex = (currentIndex - 1 + data.length) % data.length;
+      renderCard(currentIndex);
+    });
+
+  playBtn.onclick = () => (isPlaying ? stopPlayback() : playSequence());
 
   return {
     open: () => {

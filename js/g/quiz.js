@@ -125,116 +125,145 @@ export function initializeQuiz({
     timerBar.style.transition = `width ${TIMER_DURATION}ms linear`;
     timerBar.style.width = "0%";
     questionTimeout = setTimeout(() => {
-      handleAnswer(null, quizData[current].correct_answer, quizData[current].question_text);
+      handleAnswer(
+        null,
+        quizData[current].correct_answer,
+        quizData[current].question_text,
+      );
     }, TIMER_DURATION);
   };
 
-const showCorrectAnswer = (correctAnswer) => {
-  [...optionsEl.children].forEach((button) => {
-    const btnText = button.querySelector("span")?.textContent.trim() || button.textContent.trim();
-    
-    if (btnText === correctAnswer) {
-      // Feedback visual da resposta correta
-      button.classList.add("border-4", "border-green-500", "dark:border-green-700", "bg-green-200", "scale-105", "transition-all", "duration-300", "animate-bounce");
+  const showCorrectAnswer = (correctAnswer) => {
+    [...optionsEl.children].forEach((button) => {
+      const btnText =
+        button.querySelector("span")?.textContent.trim() ||
+        button.textContent.trim();
+
+      if (btnText === correctAnswer) {
+        // Feedback visual da resposta correta
+        button.classList.add(
+          "border-4",
+          "border-green-500",
+          "dark:border-green-700",
+          "bg-green-200",
+          "scale-105",
+          "transition-all",
+          "duration-300",
+          "animate-bounce",
+        );
+      } else {
+        // Esmaece as outras para destacar a correta
+        button.style.opacity = "0.5";
+      }
+    });
+  };
+
+  const handleAnswer = (selected, correct, questionText, btn) => {
+    stopQuizLogic();
+    [...optionsEl.children].forEach((b) => (b.disabled = true));
+    const isCorrect = selected === correct;
+
+    if (isCorrect) {
+      score++;
+      audioCorrect.currentTime = 0;
+      audioCorrect.play();
+      btn?.classList.add(
+        "border-4",
+        "border-green-500",
+        "dark:border-green-700",
+        "bg-green-200",
+      );
+
+      // Se acertou, vai para a próxima em 2s
+      transitionTimeout = setTimeout(() => {
+        current++;
+        showQuestion();
+      }, 2000);
     } else {
-      // Esmaece as outras para destacar a correta
-      button.style.opacity = "0.5";
+      audioIncorrect.currentTime = 0;
+      audioIncorrect.play();
+      wrongAnswers.push({ question: questionText, correct, selected });
+
+      // Marca a errada imediatamente
+      btn?.classList.add("border-4", "border-red-400", "bg-red-200");
+
+      // Aguarda 300ms para mostrar a correta
+      setTimeout(() => {
+        showCorrectAnswer(correct);
+      }, 300);
+
+      // Dá mais tempo para o usuário ver a correção antes de passar
+      transitionTimeout = setTimeout(() => {
+        current++;
+        showQuestion();
+      }, 2000);
     }
-  });
-};
+  };
 
-const handleAnswer = (selected, correct, questionText, btn) => {
-  stopQuizLogic();
-  [...optionsEl.children].forEach((b) => (b.disabled = true));
-  const isCorrect = selected === correct;
-
-  if (isCorrect) {
-    score++;
-    audioCorrect.currentTime = 0;
-    audioCorrect.play();
-    btn?.classList.add("border-4", "border-green-500", "dark:border-green-700", "bg-green-200");
-    
-    // Se acertou, vai para a próxima em 2s
-    transitionTimeout = setTimeout(() => {
-      current++;
-      showQuestion();
-    }, 2000);
-
-  } else {
-    audioIncorrect.currentTime = 0;
-    audioIncorrect.play();
-    wrongAnswers.push({ question: questionText, correct, selected });
-    
-    // Marca a errada imediatamente
-    btn?.classList.add("border-4", "border-red-400", "bg-red-200");
-
-    // Aguarda 300ms para mostrar a correta
-    setTimeout(() => {
-      showCorrectAnswer(correct);
-    }, 300);
-
-    // Dá mais tempo para o usuário ver a correção antes de passar
-    transitionTimeout = setTimeout(() => {
-      current++;
-      showQuestion();
-    }, 2000);
-  }
-};
-
-
-    const showQuestion = () => {
+  const showQuestion = () => {
     stopQuizLogic(); // Para timers da questão anterior
-    
+
     if (current >= quizData.length) return showResults();
     updateProgressBar();
 
-    const { question_text, options, correct_answer, audio_path } = quizData[current];
-    
+    const { question_text, options, correct_answer, audio_path } =
+      quizData[current];
+
     if (audio_path) {
       if (window.playAudio) {
         window.playAudio(audio_path);
       } else {
         const autoAudio = new Audio(audio_path);
-        autoAudio.play().catch(e => console.log("Autoplay aguardando interação..."));
+        autoAudio
+          .play()
+          .catch((e) => console.log("Autoplay aguardando interação..."));
       }
     }
-    
+
     wordEl.textContent = question_text;
-    wordEl.onclick = () => audio_path && (window.playAudio ? window.playAudio(audio_path) : new Audio(audio_path).play());
+    wordEl.onclick = () =>
+      audio_path &&
+      (window.playAudio
+        ? window.playAudio(audio_path)
+        : new Audio(audio_path).play());
 
     optionsEl.innerHTML = "";
-    optionsEl.className = imageQuiz ? "grid grid-cols-2 gap-4" : "flex flex-col gap-3 w-full";
+    optionsEl.className = imageQuiz
+      ? "grid grid-cols-2 gap-4"
+      : "flex flex-col gap-3 w-full";
 
     options.forEach((option) => {
       const btn = document.createElement("button");
-    
+
       // Options Button Design
       btn.className = imageQuiz
         ? "group relative overflow-hidden bg-slate-50 dark:bg-zinc-800/50 aspect-square rounded-[2rem] border border-slate-100 dark:border-zinc-800 hover:scale-105 transition-all p-2"
         : "group relative w-full text-center bg-background p-6 rounded-xl border-4 border-primary/10 hover:scale-105 transition-all duration-300";
-    
+
       const span = document.createElement("span");
       span.textContent = option.text;
-     
+
       // Options Text Design
-      span.className = "text-sm font-bold tracking-tight text-black dark:text-white";
+      span.className =
+        "text-sm font-bold tracking-tight text-black dark:text-white";
 
       if (imageQuiz && option.image) {
         const img = document.createElement("img");
         img.src = option.image;
         img.className = "w-full h-full object-cover rounded-[1.5rem]";
         btn.appendChild(img);
-        span.className = "absolute bottom-4 left-4 right-4 text-center bg-white/90 dark:bg-zinc-900/90 backdrop-blur-md py-2 rounded-xl text-[10px] font-black uppercase tracking-widest opacity-0 group-hover:opacity-100 transition-opacity";
+        span.className =
+          "absolute bottom-4 left-4 right-4 text-center bg-white/90 dark:bg-zinc-900/90 backdrop-blur-md py-2 rounded-xl text-[10px] font-black uppercase tracking-widest opacity-0 group-hover:opacity-100 transition-opacity";
       }
 
       btn.appendChild(span);
-      btn.onclick = () => handleAnswer(option.text, correct_answer, question_text, btn);
+      btn.onclick = () =>
+        handleAnswer(option.text, correct_answer, question_text, btn);
       optionsEl.appendChild(btn);
     });
 
     startTimer();
   };
-  
 
   const showResults = () => {
     stopQuizLogic();
@@ -254,7 +283,12 @@ const handleAnswer = (selected, correct, questionText, btn) => {
     if (percent >= 80) {
       import("https://cdn.jsdelivr.net/npm/canvas-confetti@1.6.0/dist/confetti.browser.min.js").then(
         ({ default: confetti }) => {
-          confetti({ particleCount: 150, spread: 80, origin: { y: 0.6 }, colors: ["#000000", "#ffffff", "#cccccc"] });
+          confetti({
+            particleCount: 150,
+            spread: 80,
+            origin: { y: 0.6 },
+            colors: ["#000000", "#ffffff", "#cccccc"],
+          });
         },
       );
     }
@@ -263,30 +297,41 @@ const handleAnswer = (selected, correct, questionText, btn) => {
   async function loadAndStartQuiz() {
     stopQuizLogic();
     if (window.stopAllComponents) window.stopAllComponents();
-    
+
     try {
-      const data = await getQuizData(topic, questionLang, optionsLang, numQuestions);
+      const data = await getQuizData(
+        topic,
+        questionLang,
+        optionsLang,
+        numQuestions,
+      );
       if (!data.length) return;
       quizData = data;
-      current = 0; score = 0; wrongAnswers = [];
+      current = 0;
+      score = 0;
+      wrongAnswers = [];
       startTime = Date.now();
-      
+
       resultsContainer.classList.add("hidden");
       questionContainer.classList.remove("hidden");
       muteBtn.classList.remove("hidden");
       modal.classList.remove("hidden");
       if (typeof modal.open === "function") modal.open();
-      
+
       showQuestion();
-    } catch (err) { console.error(err); }
+    } catch (err) {
+      console.error(err);
+    }
   }
 
   closeBtn.addEventListener("click", closeQuiz);
   restartBtn.onclick = () => {
-    current = 0; score = 0; startTime = Date.now();
+    current = 0;
+    score = 0;
+    startTime = Date.now();
     resultsContainer.classList.add("hidden");
     questionContainer.classList.remove("hidden");
-    muteBtn.classList.remove("hidden"); 
+    muteBtn.classList.remove("hidden");
     showQuestion();
   };
 

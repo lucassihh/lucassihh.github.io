@@ -1,29 +1,15 @@
+// V4
 // Icons
 const ICON_PLAY = `
-<svg xmlns="http://www.w3.org/2000/svg" class="size-6" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-width="1.5"><path stroke-linecap="round" d="M12 22c5.523 0 10-4.477 10-10S17.523 2 12 2"/><path stroke-dasharray="4 3" stroke-linecap="round" d="M12 22C6.477 22 2 17.523 2 12S6.977 2 12.5 2" opacity="0.5"/><path d="M15.414 10.941c.781.462.781 1.656 0 2.118l-4.72 2.787C9.934 16.294 9 15.71 9 14.786V9.214c0-.924.934-1.507 1.694-1.059z"/></g></svg>
-
+<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-headphones-icon lucide-headphones"><path d="M3 14h3a2 2 0 0 1 2 2v3a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-7a9 9 0 0 1 18 0v7a2 2 0 0 1-2 2h-1a2 2 0 0 1-2-2v-3a2 2 0 0 1 2-2h3"/></svg>
 `;
 
 const ICON_PAUSE = `
-<svg xmlns="http://www.w3.org/2000/svg" class="size-6" viewBox="0 0 24 24"><path fill="currentColor" d="M2 6c0-1.886 0-2.828.586-3.414S4.114 2 6 2s2.828 0 3.414.586S10 4.114 10 6v12c0 1.886 0 2.828-.586 3.414S7.886 22 6 22s-2.828 0-3.414-.586S2 19.886 2 18z"/><path fill="currentColor" d="M14 6c0-1.886 0-2.828.586-3.414S16.114 2 18 2s2.828 0 3.414.586S22 4.114 22 6v12c0 1.886 0 2.828-.586 3.414S19.886 22 18 22s-2.828 0-3.414-.586S14 19.886 14 18z" opacity="0.5"/></svg>
+<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="6" y="4" width="4" height="16"></rect><rect x="14" y="4" width="4" height="16"></rect></svg>
 `;
 
 let currentAudio = null;
 let currentButton = null;
-
-const FLAG_MAP = {
-  indonesian: "id",
-  tagalog: "ph",
-  portuguese: "br",
-  english: "us",
-  spanish: "es",
-};
-
-function getFlagSrc(lang) {
-  const flagCode = FLAG_MAP[lang.toLowerCase()] || "us";
-  // Flag folder
-  return `../../../assets/flag/${flagCode}.svg`;
-}
 
 function sanitizeText(text) {
   const div = document.createElement("div");
@@ -45,11 +31,8 @@ function stopCurrentAudio() {
 
 if (typeof window.registerStopFunction === "function") {
   window.registerStopFunction(stopCurrentAudio);
-} else {
-  // console.warn('window.registerStopFunction não está definida. A função de parada global não foi registrada.');
 }
 
-// Verifica se arquivo existe
 async function checkAudioExists(url) {
   try {
     if (!url || typeof url !== "string") return false;
@@ -63,12 +46,13 @@ async function checkAudioExists(url) {
 }
 
 function createPlayButton(audioSrc) {
-  const playButton = document.createElement("div");
+  const playButton = document.createElement("button");
   playButton.className =
-    "text-primary rounded-full p-1 play-audio-btn flex-shrink-0 hover:scale-105 transition-all duration-200";
+    "p-3 rounded-full bg-white/5 group-hover:bg-white text-white group-hover:text-black transition-all flex-shrink-0";
   playButton.innerHTML = ICON_PLAY;
 
-  playButton.addEventListener("click", () => {
+  playButton.addEventListener("click", (e) => {
+    e.stopPropagation();
     if (currentAudio && currentButton === playButton) {
       stopCurrentAudio();
       return;
@@ -88,64 +72,57 @@ function createPlayButton(audioSrc) {
   return playButton;
 }
 
-// Cria rapidamente o item (sem esperar áudio)
+// Cria o item
 function createVocabItemElement(item, fromLang, toLang) {
   const fromText = sanitizeText(item[`text_${fromLang}`] || "");
   const toText = sanitizeText(item[`text_${toLang}`] || "");
   const audioSrc = item[`audio_${toLang}`] || null;
 
-  // Div principal para as Frases
+  // Container Principal
   const wrapper = document.createElement("div");
   wrapper.className =
-    "relative flex flex-col items-center p-4 border-4 border-gray-200/70 rounded-full bg-secondary/50";
+    "glass-card p-5 rounded-[2rem] flex items-center justify-between group hover:bg-white/5 transition-all cursor-pointer";
 
-  // fromLang (Idioma de Origem)
-  const fromContainer = document.createElement("div");
-  fromContainer.className = "flex items-center gap-2";
+  // Lado Esquerdo => Textos e Indicador
+  const infoContainer = document.createElement("div");
+  infoContainer.className = "flex items-center gap-4";
 
-  const fromFlag = document.createElement("img");
+  const textGroup = document.createElement("div");
 
-  fromFlag.className =
-    "size-4 border border-white rounded-full object-cover shadow-sm";
-  fromFlag.src = getFlagSrc(fromLang);
+  // Toque para ouvir
+  const hintText = document.createElement("p");
+  hintText.className = "text-xs text-gray-400 flex items-center gap-1";
+  hintText.innerHTML =
+    '<span class="w-2 h-2 rounded-full bg-green-500"></span> Toque para ouvir';
 
-  const fromTextElem = document.createElement("p");
-  fromTextElem.className = "text-md capitalize text-primary/80";
-  fromTextElem.textContent = fromText;
+  // Se não houver SRC de áudio, ocultamos a frase de dica
+  if (!audioSrc || audioSrc === "vazio") {
+    hintText.style.display = "none";
+  }
 
-  fromContainer.append(fromFlag, fromTextElem);
+  // Texto Principal
+  const mainText = document.createElement("h4");
+  mainText.className = "font-bold text-lg text-primary capitalize";
+  mainText.textContent = toText;
 
-  // toLang (Tradução e Áudio)
-  const toContainer = document.createElement("div");
-  toContainer.className = "flex items-center gap-2 mt-1";
+  // Tradução
+  const subText = document.createElement("p");
+  subText.className = "text-sm text-gray-500 italic capitalize";
+  subText.textContent = fromText;
 
-  const toFlag = document.createElement("img");
-  toFlag.className =
-    "size-5 border border-white rounded-full object-cover shadow-sm";
-  toFlag.src = getFlagSrc(toLang);
+  textGroup.append(hintText, mainText, subText);
+  infoContainer.append(textGroup);
+  wrapper.append(infoContainer);
 
-  const toTextElem = document.createElement("p");
-  toTextElem.className = "text-lg text-primary capitalize"; // flex-grow para empurrar o botão para o final
-  toTextElem.textContent = toText;
-
-  // Bandeira e texto da tradução
-  toContainer.append(toFlag, toTextElem);
-
-  // Anexar os containers ao wrapper principal
-  wrapper.append(fromContainer, toContainer);
-
-  // Adiciona atributo temporário
-  // ALTERAÇÃO 3: Armazenamos o SRC no toContainer para que o check assíncrono possa injetar o botão no local correto
+  // Armazenamento para verificação
   if (audioSrc && audioSrc !== "vazio") {
-    toContainer.dataset.audioSrc = audioSrc;
-    // Adiciona classe para indicar que terá um botão (útil para estilos ou testes)
-    toContainer.classList.add("has-audio");
+    wrapper.dataset.audioSrc = audioSrc;
+    wrapper.classList.add("has-audio");
   }
 
   return wrapper;
 }
 
-// Renderização otimizada com verificação assíncrona
 export async function renderVocabulario({
   vocabulario,
   containerId,
@@ -153,14 +130,11 @@ export async function renderVocabulario({
   toLang = "portuguese",
 }) {
   const container = document.getElementById(containerId);
-  if (!container) {
-    console.error(`Container with ID '${containerId}' not found.`);
-    return;
-  }
+  if (!container) return;
 
   if (!Array.isArray(vocabulario) || vocabulario.length === 0) {
     container.innerHTML =
-      '<p class="text-primary p-4">No vocabulary items found for this topic.</p>';
+      '<p class="text-primary p-4">Nenhum item encontrado.</p>';
     return;
   }
 
@@ -169,31 +143,34 @@ export async function renderVocabulario({
     createVocabItemElement(item, fromLang, toLang),
   );
 
-  for (const el of elements) fragment.appendChild(el);
+  elements.forEach((el) => fragment.appendChild(el));
+  container.innerHTML = "";
   container.appendChild(fragment);
 
-  // Verifica os áudios em segundo plano
-  // ALTERAÇÃO 4: Busca os elementos que serão o alvo do botão de play
-  const audioTargetContainers = elements
-    .map((el) => el.querySelector(".has-audio"))
-    .filter((c) => c);
+  // Verificação de áudios
+  const audioItems = elements.filter((el) =>
+    el.classList.contains("has-audio"),
+  );
 
-  const checks = audioTargetContainers.map(async (targetContainer) => {
-    const src = targetContainer.dataset.audioSrc;
-    if (src) {
-      const exists = await checkAudioExists(src);
-      if (exists) {
-        const playBtn = createPlayButton(src);
-        // Insere o botão no final do contêiner flex
-        targetContainer.appendChild(playBtn);
-      }
-      // Limpa os atributos temporários
-      delete targetContainer.dataset.audioSrc;
-      targetContainer.classList.remove("has-audio");
+  const checks = audioItems.map(async (card) => {
+    const src = card.dataset.audioSrc;
+    const exists = await checkAudioExists(src);
+
+    if (exists) {
+      const playBtn = createPlayButton(src);
+      card.appendChild(playBtn);
+      const hint = card.querySelector("p");
+      if (hint) hint.style.display = "flex";
+    } else {
+      // Se o arquivo não existir remove a dica de áudio
+      const hint = card.querySelector("p");
+      if (hint) hint.style.display = "none";
     }
+
+    delete card.dataset.audioSrc;
+    card.classList.remove("has-audio");
   });
 
-  // Não bloqueia a interface
   Promise.allSettled(checks);
 }
 

@@ -60,9 +60,9 @@ function setupAlphabet(allAlphabetData, language) {
     currentAlphabet.letters.forEach((item, index) => {
       const button = document.createElement("button");
       button.className = `
-        letter-button relative aspect-square rounded-xl
-        text-primary font-semibold text-xl border-[2px] border-primary/10
-        hover:scale-105 hover:border-primary transition-all duration-300
+        letter-button relative p-4 rounded-xl
+        text-white font-semibold text-xl border-2 border-transparent
+        hover:scale-105 hover:border-purple-400 hover:text-purple-400 transition-colors
       `;
       button.textContent = item.letter;
       button.style.animationDelay = `${index * 50}ms`;
@@ -114,7 +114,7 @@ function setupAlphabet(allAlphabetData, language) {
                   <span class="text-md text-primary/80">${example.pronunciation}</span>
                 </div>
               </div>
-              <div class="bg-primary/5 p-3 rounded-b-xl">
+              <div class="bg-white/5 p-3 rounded-lg m-2">
                 <p class="text-lg font-medium text-primary">${example.description}</p>
               </div>
             </div>
@@ -126,7 +126,6 @@ function setupAlphabet(allAlphabetData, language) {
 
     // Resetamos o estado do botão global ao trocar o conteúdo do modal
     playingButton = null;
-
 
     // Reanexa os eventos de áudio
     modalContent.querySelectorAll(".play-button").forEach((btn) => {
