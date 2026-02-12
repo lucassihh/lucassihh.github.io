@@ -22,8 +22,8 @@ const QUIZ_MODAL_HTML = `
           
           <div class="flex items-center gap-2">
             <!-- Quiz Buttons -->
-            <button id="quiz-mute" class="size-10 relative overflow-hidden ripple-btn p-2 rounded-full glass-card"></button>
-            <button id="close-quiz-modal" data-modal-close class="size-10 relative overflow-hidden ripple-btn p-2 rounded-full glass-card">
+            <button id="quiz-mute" class="flex items-center justify-center text-white hover:scale-105 transition-all duration-300 size-10 relative overflow-hidden ripple-btn p-2 rounded-full glass-card"></button>
+            <button id="close-quiz-modal" data-modal-close class="flex items-center justify-center text-white hover:scale-105 transition-all duration-300 size-10 relative overflow-hidden ripple-btn p-2 rounded-full glass-card">
               <i class="bi bi-x-lg text-sm"></i>
             </button>
           </div>

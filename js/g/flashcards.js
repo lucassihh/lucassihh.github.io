@@ -25,11 +25,11 @@ export function initializeFlashcards(data, fromLang, toLang) {
       <div class="modal-dialog w-full max-w-2xl relative flex flex-col gap-8 p-8 bg-[#120d1d] rounded-xl border border-white/20 shadow-sm transition-all duration-300">
         
         <div class="flex items-center justify-between">
-          <button id="flashcard-play" class="size-12 relative overflow-hidden ripple-btn p-2 rounded-full glass-card">
+          <button id="flashcard-play" class="flex items-center justify-center text-white hover:scale-105 transition-all duration-300 size-12 relative overflow-hidden ripple-btn p-2 rounded-full glass-card">
             ${ICONS.play}
           </button>
           <div id="flashcard-progress" class="text-lg font-black uppercase tracking-[0.2em] text-slate-400"></div>
-          <button data-modal-close class="size-12 relative overflow-hidden ripple-btn p-2 rounded-full glass-card">
+          <button data-modal-close class="flex items-center justify-center text-white hover:scale-105 transition-all duration-300 size-12 relative overflow-hidden ripple-btn p-2 rounded-full glass-card">
             ${ICONS.close}
           </button>
         </div>
@@ -50,10 +50,10 @@ export function initializeFlashcards(data, fromLang, toLang) {
 
         <div class="flex items-center gap-4">
           <div class="flex gap-2">
-            <button id="flashcard-prev" class="size-14 flex items-center justify-center rounded-2xl border border-slate-100 dark:border-zinc-800 hover:bg-slate-50 dark:hover:bg-zinc-800 transition-colors">
+            <button id="flashcard-prev" class="flex items-center justify-center text-white hover:scale-105 transition-all duration-300 size-14 relative overflow-hidden ripple-btn p-2 rounded-full glass-card">
               ${ICONS.prev}
             </button>
-            <button id="flashcard-next" class="size-14 flex items-center justify-center rounded-2xl border border-slate-100 dark:border-zinc-800 hover:bg-slate-50 dark:hover:bg-zinc-800 transition-colors">
+            <button id="flashcard-next" class="flex items-center justify-center text-white hover:scale-105 transition-all duration-300 size-14 relative overflow-hidden ripple-btn p-2 rounded-full glass-card">
               ${ICONS.next}
             </button>
           </div>
