@@ -13,23 +13,24 @@ const QUIZ_MODAL_HTML = `
     >
       <div class="modal-overlay absolute inset-0 bg-black/50 backdrop-blur-sm transition-all duration-300"></div>
       
-      <div class="modal-dialog w-full max-w-2xl relative flex flex-col gap-8 p-8 md:p-12 bg-[#120d1d] rounded-xl border border-white/20 shadow-sm transition-all duration-300">
+      <div class="modal-dialog w-full max-w-2xl relative flex flex-col gap-8 p-8 md:p-12 bg-[#120d1d] rounded-[1rem] border border-white/20 shadow-sm transition-all duration-300">
         
         <div class="flex items-center justify-between gap-6">
-          <div id="progress-bar-container" class="flex-1 bg-primary/5 h-2 rounded-full overflow-hidden">
+          <div id="progress-bar-container" class="flex-1 bg-white/5 h-2 rounded-full overflow-hidden">
              <div id="progress-bar" class="bg-green-400 h-full transition-all duration-500" style="width: 0%"></div>
           </div>
           
           <div class="flex items-center gap-2">
             <!-- Quiz Buttons -->
-            <button id="quiz-mute" class="flex items-center justify-center text-white hover:scale-105 transition-all duration-300 size-10 relative overflow-hidden ripple-btn p-2 rounded-full glass-card"></button>
+            <button id="quiz-mute" class="flex items-center justify-center text-white hover:scale-105 transition-all duration-300 size-10 relative overflow-hidden ripple-btn p-2 rounded-full glass-card">
+            </button>
             <button id="close-quiz-modal" data-modal-close class="flex items-center justify-center text-white hover:scale-105 transition-all duration-300 size-10 relative overflow-hidden ripple-btn p-2 rounded-full glass-card">
-              <i class="bi bi-x-lg text-sm"></i>
+              <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-minimize2-icon lucide-minimize-2"><path d="m14 10 7-7"/><path d="M20 10h-6V4"/><path d="m3 21 7-7"/><path d="M4 14h6v6"/></svg>
             </button>
           </div>
         </div>
 
-        <div class="w-full bg-primary/5 h-2 rounded-full overflow-hidden">
+        <div class="w-full bg-white/5 h-2 rounded-full overflow-hidden">
            <div id="timer-bar" class="bg-orange-400 h-full transition-all duration-1000"></div>
         </div>
         
@@ -86,8 +87,8 @@ export function initializeQuiz({
   const audioIncorrect = document.getElementById("audio-incorrect");
 
   const ICONS = {
-    soundOn: `<i class="bi bi-volume-up-fill text-xl"></i>`,
-    soundOff: `<i class="bi bi-volume-mute-fill text-xl"></i>`,
+    soundOn: `<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-headphones-icon lucide-headphones"><path d="M3 14h3a2 2 0 0 1 2 2v3a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-7a9 9 0 0 1 18 0v7a2 2 0 0 1-2 2h-1a2 2 0 0 1-2-2v-3a2 2 0 0 1 2-2h3"/></svg>`,
+    soundOff: `<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-headphone-off-icon lucide-headphone-off"><path d="M21 14h-1.343"/><path d="M9.128 3.47A9 9 0 0 1 21 12v3.343"/><path d="m2 2 20 20"/><path d="M20.414 20.414A2 2 0 0 1 19 21h-1a2 2 0 0 1-2-2v-3"/><path d="M3 14h3a2 2 0 0 1 2 2v3a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-7a9 9 0 0 1 2.636-6.364"/></svg>`,
   };
 
   let quizData = [];
