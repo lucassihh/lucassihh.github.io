@@ -6,7 +6,7 @@ import { getQuizData } from "./quizData.js";
 const QUIZ_MODAL_HTML = `
     <div
       id="quiz-modal"
-      class="modal fixed inset-0 flex items-center justify-center z-20 hidden px-4"
+      class="modal fixed inset-0 flex items-center justify-center z-40 hidden px-4"
       role="dialog"
       aria-modal="true"
       aria-labelledby="quiz-word"

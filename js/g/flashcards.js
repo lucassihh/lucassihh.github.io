@@ -18,7 +18,7 @@ export function initializeFlashcards(data, fromLang, toLang) {
   let currentAudio = null;
 
   const modalHTML = `
-    <div id="flashcards-modal" class="modal fixed inset-0 flex items-center justify-center z-[100] hidden px-4">
+    <div id="flashcards-modal" class="modal fixed inset-0 flex items-center justify-center z-40 hidden px-4">
      
       <div class="modal-overlay absolute inset-0 bg-black/50 backdrop-blur-sm transition-all duration-300"></div>
       
