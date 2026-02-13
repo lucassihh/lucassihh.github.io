@@ -1,33 +1,31 @@
-// Lucide Icons Init
-lucide.createIcons();
+// Lucide Icons
+if (window.lucide) {
+  lucide.createIcons();
+}
 
 // Mobile Menu
 const menuBtn = document.getElementById("menu-btn");
 const closeMenuBtn = document.getElementById("close-menu-btn");
 const mobileMenu = document.getElementById("mobile-menu");
-const body = document.body;
 
-function openMenu() {
-  mobileMenu.classList.add("open");
-  body.style.overflow = "hidden";
+if (menuBtn && closeMenuBtn && mobileMenu) {
+  const openMenu = () => {
+    mobileMenu.classList.add("open");
+    document.body.style.overflow = "hidden";
+  };
+
+  const closeMenu = () => {
+    mobileMenu.classList.remove("open");
+    document.body.style.overflow = "";
+  };
+
+  menuBtn.addEventListener("click", openMenu);
+  closeMenuBtn.addEventListener("click", closeMenu);
+
+  document.querySelectorAll("#mobile-menu a").forEach((link) => {
+    link.addEventListener("click", closeMenu);
+  });
 }
-
-function closeMenu() {
-  mobileMenu.classList.remove("open");
-  body.style.overflow = "";
-}
-
-menuBtn.addEventListener("click", openMenu);
-closeMenuBtn.addEventListener("click", closeMenu);
-
-// Close Menu When Open Link
-document.querySelectorAll("#mobile-menu a").forEach((link) => {
-  link.addEventListener("click", closeMenu);
-});
-
-
-
-// Other
 
 // Ripple Effect
 function createRipple(event) {
@@ -35,7 +33,6 @@ function createRipple(event) {
   const circle = document.createElement("span");
   const diameter = Math.max(button.clientWidth, button.clientHeight);
   const radius = diameter / 2;
-
   const rect = button.getBoundingClientRect();
 
   circle.style.width = circle.style.height = `${diameter}px`;
@@ -43,48 +40,76 @@ function createRipple(event) {
   circle.style.top = `${event.clientY - rect.top - radius}px`;
   circle.classList.add("ripple");
 
-  const ripple = button.getElementsByClassName("ripple")[0];
-  if (ripple) {
-    ripple.remove();
-  }
+  const ripple = button.querySelector(".ripple");
+  if (ripple) ripple.remove();
 
   button.appendChild(circle);
 }
 
-const buttons = document.getElementsByClassName("ripple-btn");
-for (const button of buttons) {
-  button.addEventListener("click", createRipple);
-}
+document.querySelectorAll(".ripple-btn").forEach(btn => {
+  btn.addEventListener("click", createRipple);
+});
+
+
+// <a> Delay for Effect
+document.querySelectorAll("a").forEach((link) => {
+  link.addEventListener("click", function (e) {
+    const href = this.getAttribute("href");
+
+    // If is a valid link
+    if (
+      href && 
+      !href.startsWith("#") && 
+      this.target !== "_blank" &&
+      !e.metaKey &&
+      !e.ctrlKey
+    ) {
+      e.preventDefault();
+
+      setTimeout(() => {
+        window.location.href = href;
+      }, 300); // 300ms
+    }
+  });
+});
+
+
 
 // Tabs Effect
-function activateTab(el) {
-  document
-    .querySelectorAll(".tab-btn")
-    .forEach((b) => b.classList.remove("tab-active"));
-  el.classList.add("tab-active");
+const tabButtons = document.querySelectorAll(".tab-btn");
+
+if (tabButtons.length > 0) {
+  tabButtons.forEach((btn) => {
+    btn.addEventListener("click", () => {
+      tabButtons.forEach((b) => b.classList.remove("tab-active"));
+      btn.classList.add("tab-active");
+    });
+  });
 }
 
-// Fullscreen Feature
+// Fullscreen
 const fullscreenButton = document.getElementById("fullscreen-button");
-
-fullscreenButton.addEventListener("click", toggleFullscreen);
-
-function toggleFullscreen() {
-  if (document.fullscreenElement) {
-    // If already in fullscreen, exit fullscreen
-    document.exitFullscreen();
-  } else {
-    // If not in fullscreen, request fullscreen
-    document.documentElement.requestFullscreen();
-  }
+if (fullscreenButton) {
+  fullscreenButton.addEventListener("click", () => {
+    if (!document.fullscreenElement) {
+      document.documentElement.requestFullscreen().catch(err => {
+        console.error(`Erro ao ativar fullscreen: ${err.message}`);
+      });
+    } else {
+      document.exitFullscreen();
+    }
+  });
 }
 
-// Theme Toggle Feature
+// Theme Toggle
 const toggleBtn = document.querySelector("#theme-toggle");
-toggleBtn.addEventListener("click", themeToggle);
+if (toggleBtn) {
+  if (localStorage.getItem("theme") === "dark") {
+    document.documentElement.classList.add("dark");
+  }
 
-function themeToggle() {
-  const html = document.documentElement;
-  const isDark = html.classList.toggle("dark");
-  localStorage.setItem("theme", isDark ? "dark" : "light");
+  toggleBtn.addEventListener("click", () => {
+    const isDark = document.documentElement.classList.toggle("dark");
+    localStorage.setItem("theme", isDark ? "dark" : "light");
+  });
 }

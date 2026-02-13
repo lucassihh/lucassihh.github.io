@@ -1,12 +1,9 @@
-// V4
-// Icons
-const ICON_PLAY = `
-<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-headphones-icon lucide-headphones"><path d="M3 14h3a2 2 0 0 1 2 2v3a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-7a9 9 0 0 1 18 0v7a2 2 0 0 1-2 2h-1a2 2 0 0 1-2-2v-3a2 2 0 0 1 2-2h3"/></svg>
-`;
+// V3 ( Optimized )
 
-const ICON_PAUSE = `
-<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="6" y="4" width="4" height="16"></rect><rect x="14" y="4" width="4" height="16"></rect></svg>
-`;
+// Icons
+const ICON_PLAY = `<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="size-10 p-2 bg-white/5 rounded-full group-hover:scale-110 transition-all duration-300"><path d="M3 14h3a2 2 0 0 1 2 2v3a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-7a9 9 0 0 1 18 0v7a2 2 0 0 1-2 2h-1a2 2 0 0 1-2-2v-3a2 2 0 0 1 2-2h3"/></svg>`;
+
+const ICON_PAUSE = `<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="size-10 p-2 bg-white text-black rounded-full hover:scale-110 transition-all duration-300 animate-bounce"><rect x="14" y="3" width="5" height="18" rx="1"/><rect x="5" y="3" width="5" height="18" rx="1"/></svg>`;
 
 let currentAudio = null;
 let currentButton = null;
@@ -25,6 +22,13 @@ function stopCurrentAudio() {
   }
   if (currentButton) {
     currentButton.innerHTML = ICON_PLAY;
+    
+    // Remove bg-white/5 Wrapper When Stop
+    const parentWrapper = currentButton.closest('.group');
+    if (parentWrapper) {
+      parentWrapper.classList.remove('bg-white/5');
+    }
+    
     currentButton = null;
   }
 }
@@ -47,22 +51,31 @@ async function checkAudioExists(url) {
 
 function createPlayButton(audioSrc) {
   const playButton = document.createElement("button");
-  playButton.className =
-    "p-3 rounded-full bg-white/5 group-hover:bg-white text-white group-hover:text-black transition-all flex-shrink-0";
+  playButton.className = "flex items-center justify-center flex-shrink-0";
   playButton.innerHTML = ICON_PLAY;
 
   playButton.addEventListener("click", (e) => {
     e.stopPropagation();
+    
+    // Reference to Wrapper(Main Div)
+    const parentWrapper = playButton.closest('.group');
+
     if (currentAudio && currentButton === playButton) {
       stopCurrentAudio();
       return;
     }
 
     stopCurrentAudio();
+    
     const audio = new Audio(audioSrc);
     currentAudio = audio;
     currentButton = playButton;
     playButton.innerHTML = ICON_PAUSE;
+
+    // Set bg-white/5 if Playing
+    if (parentWrapper) {
+      parentWrapper.classList.add('bg-white/5');
+    }
 
     audio.play().catch(() => stopCurrentAudio());
     audio.addEventListener("ended", stopCurrentAudio);
@@ -72,40 +85,40 @@ function createPlayButton(audioSrc) {
   return playButton;
 }
 
-// Cria o item
+// Create Item
 function createVocabItemElement(item, fromLang, toLang) {
   const fromText = sanitizeText(item[`text_${fromLang}`] || "");
   const toText = sanitizeText(item[`text_${toLang}`] || "");
   const audioSrc = item[`audio_${toLang}`] || null;
 
-  // Container Principal
+  // Main Div
   const wrapper = document.createElement("div");
   wrapper.className =
-    "glass-card p-5 rounded-[2rem] flex items-center justify-between group hover:bg-white/5 transition-all cursor-pointer";
+    "p-5 rounded-[2rem] flex items-center justify-between group hover:bg-white/5 transition-all duration-300 cursor-pointer";
 
-  // Lado Esquerdo => Textos e Indicador
+  // Left => 
   const infoContainer = document.createElement("div");
   infoContainer.className = "flex items-center gap-4";
 
   const textGroup = document.createElement("div");
 
-  // Toque para ouvir
+  // Click to Listen
   const hintText = document.createElement("p");
   hintText.className = "text-xs text-gray-400 flex items-center gap-1";
   hintText.innerHTML =
-    '<span class="w-2 h-2 rounded-full bg-green-500"></span> Toque para ouvir';
+    '<span class="size-2 rounded-full bg-green-500"></span>Toque para ouvir';
 
-  // Se não houver SRC de áudio, ocultamos a frase de dica
+  // If dont have audio SRC => hidden 
   if (!audioSrc || audioSrc === "vazio") {
     hintText.style.display = "none";
   }
 
-  // Texto Principal
+  // Main Text
   const mainText = document.createElement("h4");
-  mainText.className = "font-bold text-lg text-primary capitalize";
+  mainText.className = "font-bold text-lg text-white capitalize";
   mainText.textContent = toText;
 
-  // Tradução
+  // Translate
   const subText = document.createElement("p");
   subText.className = "text-sm text-gray-500 italic capitalize";
   subText.textContent = fromText;
@@ -114,7 +127,7 @@ function createVocabItemElement(item, fromLang, toLang) {
   infoContainer.append(textGroup);
   wrapper.append(infoContainer);
 
-  // Armazenamento para verificação
+  // Verifying Audio
   if (audioSrc && audioSrc !== "vazio") {
     wrapper.dataset.audioSrc = audioSrc;
     wrapper.classList.add("has-audio");
@@ -134,7 +147,7 @@ export async function renderVocabulario({
 
   if (!Array.isArray(vocabulario) || vocabulario.length === 0) {
     container.innerHTML =
-      '<p class="text-primary p-4">Nenhum item encontrado.</p>';
+      '<p class="text-primary p-4">Item not found</p>';
     return;
   }
 
@@ -147,7 +160,7 @@ export async function renderVocabulario({
   container.innerHTML = "";
   container.appendChild(fragment);
 
-  // Verificação de áudios
+  // Verifying if has audio
   const audioItems = elements.filter((el) =>
     el.classList.contains("has-audio"),
   );
@@ -161,8 +174,9 @@ export async function renderVocabulario({
       card.appendChild(playBtn);
       const hint = card.querySelector("p");
       if (hint) hint.style.display = "flex";
+      // card.addEventListener("click", () => playBtn.click());
     } else {
-      // Se o arquivo não existir remove a dica de áudio
+      // If dont have audio file, hidden the text
       const hint = card.querySelector("p");
       if (hint) hint.style.display = "none";
     }

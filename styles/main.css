@@ -33,7 +33,7 @@ body {
 }
 
 /* Efeito glass */
-.glass-card {
+.glass {
   background: rgba(255, 255, 255, 0.03);
   backdrop-filter: blur(10px);
   border-top: 1px solid rgba(255, 255, 255, 0.3);

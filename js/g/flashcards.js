@@ -1,12 +1,12 @@
-// V2
+// V3 ( Optimized )
 
 const ICONS = {
-  play: `<svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="size-6"><path stroke-linecap="round" stroke-linejoin="round" d="M5.25 5.653c0-.856.917-1.398 1.667-.986l11.54 6.347a1.125 1.125 0 0 1 0 1.972l-11.54 6.347a1.125 1.125 0 0 1-1.667-.986V5.653Z" /></svg>`,
-  pause: `<svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="size-6"><path stroke-linecap="round" stroke-linejoin="round" d="M15.75 5.25v13.5m-7.5-13.5v13.5" /></svg>`,
-  prev: `<svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="size-6"><path stroke-linecap="round" stroke-linejoin="round" d="M15.75 19.5 8.25 12l7.5-7.5" /></svg>`,
-  next: `<svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="size-6"><path stroke-linecap="round" stroke-linejoin="round" d="m8.25 4.5 7.5 7.5-7.5 7.5" /></svg>`,
-  close: `<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" class="size-6"><path fill-rule="evenodd" d="M5.47 5.47a.75.75 0 0 1 1.06 0L12 10.94l5.47-5.47a.75.75 0 1 1 1.06 1.06L13.06 12l5.47 5.47a.75.75 0 1 1-1.06 1.06L12 13.06l-5.47 5.47a.75.75 0 0 1-1.06-1.06L10.94 12 5.47 6.53a.75.75 0 0 1 0-1.06Z" clip-rule="evenodd" /></svg>`,
-  flip: `<svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="size-8"><path stroke-linecap="round" stroke-linejoin="round" d="M16.023 9.348h4.992v-.001M2.985 19.644v-4.992m0 0h4.992m-4.993 0 3.181 3.183a8.25 8.25 0 0 0 13.803-3.7M4.031 9.865a8.25 8.25 0 0 1 13.803-3.7l3.181 3.182m0-4.991v4.99" /></svg>`,
+  play: `<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-play-icon lucide-play"><path d="M5 5a2 2 0 0 1 3.008-1.728l11.997 6.998a2 2 0 0 1 .003 3.458l-12 7A2 2 0 0 1 5 19z"/></svg>`,
+  pause: `<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-pause-icon lucide-pause text-orange-400"><rect x="14" y="3" width="5" height="18" rx="1"/><rect x="5" y="3" width="5" height="18" rx="1"/></svg>`,
+  prev: `<svg xmlns="http://www.w3.org/2000/svg" width="34" height="34" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-arrow-big-left-dash-icon lucide-arrow-big-left-dash"><path d="M13 9a1 1 0 0 1-1-1V5.061a1 1 0 0 0-1.811-.75l-6.835 6.836a1.207 1.207 0 0 0 0 1.707l6.835 6.835a1 1 0 0 0 1.811-.75V16a1 1 0 0 1 1-1h2a1 1 0 0 0 1-1v-4a1 1 0 0 0-1-1z"/><path d="M20 9v6"/></svg>`,
+  next: `<svg xmlns="http://www.w3.org/2000/svg" width="34" height="34" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-arrow-big-right-dash-icon lucide-arrow-big-right-dash"><path d="M11 9a1 1 0 0 0 1-1V5.061a1 1 0 0 1 1.811-.75l6.836 6.836a1.207 1.207 0 0 1 0 1.707l-6.836 6.835a1 1 0 0 1-1.811-.75V16a1 1 0 0 0-1-1H9a1 1 0 0 1-1-1v-4a1 1 0 0 1 1-1z"/><path d="M4 9v6"/></svg>`,
+  close: `<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-minimize2-icon lucide-minimize-2"><path d="m14 10 7-7"/><path d="M20 10h-6V4"/><path d="m3 21 7-7"/><path d="M4 14h6v6"/></svg>`,
+  flip: `<svg xmlns="http://www.w3.org/2000/svg" width="34" height="34" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-book-copy-icon lucide-book-copy"><path d="M5 7a2 2 0 0 0-2 2v11"/><path d="M5.803 18H5a2 2 0 0 0 0 4h9.5a.5.5 0 0 0 .5-.5V21"/><path d="M9 15V4a2 2 0 0 1 2-2h9.5a.5.5 0 0 1 .5.5v14a.5.5 0 0 1-.5.5H11a2 2 0 0 1 0-4h10"/></svg>`,
 };
 
 export function initializeFlashcards(data, fromLang, toLang) {
@@ -22,45 +22,44 @@ export function initializeFlashcards(data, fromLang, toLang) {
      
       <div class="modal-overlay absolute inset-0 bg-black/50 backdrop-blur-sm transition-all duration-300"></div>
       
-      <div class="modal-dialog w-full max-w-2xl relative flex flex-col gap-8 p-8 bg-[#120d1d] rounded-xl border border-white/20 shadow-sm transition-all duration-300">
+      <div class="modal-dialog w-full max-w-2xl relative flex flex-col gap-8 bg-[#120d1d]/70 backdrop-blur-lg rounded-[1.5rem] border border-white/20 shadow-sm transition-all duration-300">
         
-        <div class="flex items-center justify-between">
-          <button id="flashcard-play" class="flex items-center justify-center text-white hover:scale-105 transition-all duration-300 size-12 relative overflow-hidden ripple-btn p-2 rounded-full glass-card">
+        <!-- Buttons -->
+        <div class="flex items-center justify-between p-8">
+          <button id="flashcard-play" class="flex items-center justify-center text-white hover:scale-105 transition-all duration-300">
             ${ICONS.play}
           </button>
-          <div id="flashcard-progress" class="text-lg font-black uppercase tracking-[0.2em] text-slate-400"></div>
-          <button data-modal-close class="flex items-center justify-center text-white hover:scale-105 transition-all duration-300 size-12 relative overflow-hidden ripple-btn p-2 rounded-full glass-card">
+          <div id="flashcard-progress" class="text-lg font-black text-white"></div>
+          <button data-modal-close class="flex items-center justify-center text-white hover:scale-105 transition-all duration-300">
             ${ICONS.close}
           </button>
         </div>
 
-        <div id="flashcard-scene" class="w-full h-[30rem] cursor-pointer group" style="perspective: 1200px;">
+        <!-- Main Design -->
+        <div id="flashcard-scene" class="w-full h-[30rem] group p-4" style="perspective: 1200px;">
           <div id="flashcard-inner" class="relative w-full h-full transition-transform duration-700 rounded-xl" style="transform-style: preserve-3d;">
-            
             <div class="absolute inset-0 w-full h-full flex items-center justify-center p-12" style="backface-visibility: hidden;">
               <span id="flashcard-front-text" class="text-3xl md:text-5xl font-black text-center tracking-tighter text-primary"></span>
             </div>
             
-            <div class="absolute inset-0 w-full h-full flex items-center justify-center p-12 bg-primary/80 text-secondary rounded-xl" style="backface-visibility: hidden; transform: rotateY(180deg);">
+            <div class="absolute inset-0 w-full h-full flex items-center justify-center p-12 bg-orange-400 text-secondary rounded-xl" style="backface-visibility: hidden; transform: rotateY(180deg);">
               <span id="flashcard-back-text" class="text-3xl md:text-5xl font-black text-center tracking-tighter"></span>
             </div>
-
           </div>
         </div>
-
-        <div class="flex items-center gap-4">
+       
+        <!-- Bottom Buttons -->
+        <div class="flex items-center justify-between gap-4 p-6">
           <div class="flex gap-2">
-            <button id="flashcard-prev" class="flex items-center justify-center text-white hover:scale-105 transition-all duration-300 size-14 relative overflow-hidden ripple-btn p-2 rounded-full glass-card">
+            <button id="flashcard-prev" class="flex items-center justify-center text-white hover:scale-110 hover:bg-orange-400 rounded-full p-1 transition-all duration-300">
               ${ICONS.prev}
             </button>
-            <button id="flashcard-next" class="flex items-center justify-center text-white hover:scale-105 transition-all duration-300 size-14 relative overflow-hidden ripple-btn p-2 rounded-full glass-card">
+            <button id="flashcard-next" class="flex items-center justify-center text-white hover:scale-110 hover:bg-orange-400 rounded-full p-1 transition-all duration-300">
               ${ICONS.next}
             </button>
           </div>
-          
-          <button id="flashcard-flip" class="flex-1 h-14 bg-black dark:bg-white text-white dark:text-black rounded-2xl flex items-center justify-center gap-3 font-black uppercase tracking-widest text-[10px] hover:scale-[1.02] active:scale-95 transition-all shadow-xl shadow-black/10">
+          <button id="flashcard-flip" class="flex items-center justify-center text-white hover:scale-110 hover:bg-orange-400 rounded-full p-2 transition-all duration-300">
             ${ICONS.flip}
-            <span>Flip</span>
           </button>
         </div>
 
@@ -91,7 +90,7 @@ export function initializeFlashcards(data, fromLang, toLang) {
     backText.textContent = item[`text_${toLang}`];
     progressIndicator.textContent = `${index + 1} / ${data.length}`;
 
-    // Reset do Flip ao mudar de carta
+    // Reset Flip
     isFlipped = false;
     cardInner.style.transform = "rotateY(0deg)";
   }
