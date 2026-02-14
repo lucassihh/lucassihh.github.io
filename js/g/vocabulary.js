@@ -22,13 +22,13 @@ function stopCurrentAudio() {
   }
   if (currentButton) {
     currentButton.innerHTML = ICON_PLAY;
-    
+
     // Remove bg-white/5 Wrapper When Stop
-    const parentWrapper = currentButton.closest('.group');
+    const parentWrapper = currentButton.closest(".group");
     if (parentWrapper) {
-      parentWrapper.classList.remove('bg-white/5');
+      parentWrapper.classList.remove("bg-white/5");
     }
-    
+
     currentButton = null;
   }
 }
@@ -56,9 +56,9 @@ function createPlayButton(audioSrc) {
 
   playButton.addEventListener("click", (e) => {
     e.stopPropagation();
-    
+
     // Reference to Wrapper(Main Div)
-    const parentWrapper = playButton.closest('.group');
+    const parentWrapper = playButton.closest(".group");
 
     if (currentAudio && currentButton === playButton) {
       stopCurrentAudio();
@@ -66,7 +66,7 @@ function createPlayButton(audioSrc) {
     }
 
     stopCurrentAudio();
-    
+
     const audio = new Audio(audioSrc);
     currentAudio = audio;
     currentButton = playButton;
@@ -74,7 +74,7 @@ function createPlayButton(audioSrc) {
 
     // Set bg-white/5 if Playing
     if (parentWrapper) {
-      parentWrapper.classList.add('bg-white/5');
+      parentWrapper.classList.add("bg-white/5");
     }
 
     audio.play().catch(() => stopCurrentAudio());
@@ -96,7 +96,7 @@ function createVocabItemElement(item, fromLang, toLang) {
   wrapper.className =
     "p-5 rounded-[2rem] flex items-center justify-between group hover:bg-white/5 transition-all duration-300 cursor-pointer";
 
-  // Left => 
+  // Left =>
   const infoContainer = document.createElement("div");
   infoContainer.className = "flex items-center gap-4";
 
@@ -108,7 +108,7 @@ function createVocabItemElement(item, fromLang, toLang) {
   hintText.innerHTML =
     '<span class="size-2 rounded-full bg-green-500"></span>Toque para ouvir';
 
-  // If dont have audio SRC => hidden 
+  // If dont have audio SRC => hidden
   if (!audioSrc || audioSrc === "vazio") {
     hintText.style.display = "none";
   }
@@ -146,8 +146,7 @@ export async function renderVocabulario({
   if (!container) return;
 
   if (!Array.isArray(vocabulario) || vocabulario.length === 0) {
-    container.innerHTML =
-      '<p class="text-primary p-4">Item not found</p>';
+    container.innerHTML = '<p class="text-primary p-4">Item not found</p>';
     return;
   }
 

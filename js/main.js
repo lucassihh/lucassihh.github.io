@@ -27,6 +27,55 @@ if (menuBtn && closeMenuBtn && mobileMenu) {
   });
 }
 
+// Language Dropdown
+const langBtn = document.getElementById("lang-menu-btn");
+const langMenu = document.getElementById("lang-menu-options");
+const langChevron = document.getElementById("lang-chevron");
+
+if (langBtn && langMenu) {
+  const toggleDropdown = (e) => {
+    e.stopPropagation();
+    const isHidden = langMenu.classList.contains("hidden");
+
+    if (isHidden) {
+      // Open
+      langMenu.classList.remove("hidden");
+      // Timeout for Animation Tailwind
+      setTimeout(() => {
+        langMenu.classList.remove("opacity-0", "scale-95");
+        langMenu.classList.add("opacity-100", "scale-100");
+      }, 10);
+      langChevron.style.transform = "rotate(180deg)";
+    } else {
+      closeDropdown();
+    }
+  };
+
+  const closeDropdown = () => {
+    langMenu.classList.add("opacity-0", "scale-95");
+    langMenu.classList.remove("opacity-100", "scale-100");
+    langChevron.style.transform = "rotate(0deg)";
+    // Wait Animation
+    setTimeout(() => {
+      langMenu.classList.add("hidden");
+    }, 200);
+  };
+
+  langBtn.addEventListener("click", toggleDropdown);
+
+  // Close When Click Outside
+  document.addEventListener("click", (e) => {
+    if (!langMenu.contains(e.target) && !langBtn.contains(e.target)) {
+      if (!langMenu.classList.contains("hidden")) closeDropdown();
+    }
+  });
+
+  // Close Using ESC
+  document.addEventListener("keydown", (e) => {
+    if (e.key === "Escape") closeDropdown();
+  });
+}
+
 // Ripple Effect
 function createRipple(event) {
   const button = event.currentTarget;
@@ -46,10 +95,9 @@ function createRipple(event) {
   button.appendChild(circle);
 }
 
-document.querySelectorAll(".ripple-btn").forEach(btn => {
+document.querySelectorAll(".ripple-btn").forEach((btn) => {
   btn.addEventListener("click", createRipple);
 });
-
 
 // <a> Delay for Effect
 document.querySelectorAll("a").forEach((link) => {
@@ -58,8 +106,8 @@ document.querySelectorAll("a").forEach((link) => {
 
     // If is a valid link
     if (
-      href && 
-      !href.startsWith("#") && 
+      href &&
+      !href.startsWith("#") &&
       this.target !== "_blank" &&
       !e.metaKey &&
       !e.ctrlKey
@@ -72,8 +120,6 @@ document.querySelectorAll("a").forEach((link) => {
     }
   });
 });
-
-
 
 // Tabs Effect
 const tabButtons = document.querySelectorAll(".tab-btn");
@@ -92,7 +138,7 @@ const fullscreenButton = document.getElementById("fullscreen-button");
 if (fullscreenButton) {
   fullscreenButton.addEventListener("click", () => {
     if (!document.fullscreenElement) {
-      document.documentElement.requestFullscreen().catch(err => {
+      document.documentElement.requestFullscreen().catch((err) => {
         console.error(`Erro ao ativar fullscreen: ${err.message}`);
       });
     } else {

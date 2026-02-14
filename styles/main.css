@@ -3,6 +3,10 @@
   --accent-glow: rgba(255, 255, 255, 0.1);
 }
 
+html {
+  scroll-behavior: smooth !important;
+}
+
 body {
   font-family: "Plus Jakarta Sans", sans-serif;
   background-color: var(--bg-dark);
@@ -11,7 +15,7 @@ body {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   overflow-x: hidden;
-}
+ }
 
 /* Background Lines */
 .bg-curves {
@@ -39,7 +43,7 @@ body {
   border-top: 1px solid rgba(255, 255, 255, 0.3);
 }
 
-/* Gradientes para os cards de tópicos */
+/* Gradients Layout */
 .gradient-1 {
   background: linear-gradient(135deg, #a78bfa 0%, #7c3aed 100%);
   border-bottom: 4px solid #7c2aed;
@@ -57,6 +61,23 @@ body {
   border-bottom: 4px solid #db1777;
 }
 
+.gradient-5 {
+  background: linear-gradient(135deg, #60a5fa 0%, #2563eb 100%);
+  border-bottom: 4px solid #1d4ed8;
+}
+
+.gradient-6 {
+  background: linear-gradient(135deg, #fb923c 0%, #ea580c 100%);
+  border-bottom: 4px solid #c2410c;
+}
+
+.gradient-7 {
+  background: linear-gradient(135deg, #f87171 0%, #dc2626 100%);
+  border-bottom: 4px solid #b91c1c;
+}
+
+
+
 /* Tab Buttons 3D */
 .tab-btn {
   transition: all 0.2s;
@@ -71,7 +92,9 @@ body {
   box-shadow: 0 10px 20px -5px var(--accent-glow);
 }
 
-/* Efeito de click no botão*/
+
+
+/* Click Effect Btn */
 .btn-action {
   transition: all 0.1s;
 }
@@ -81,7 +104,11 @@ body {
   border-bottom-width: 0px;
 }
 
-/* Sombra Branca */
+
+
+
+
+/* Light Shadow */
 .shadow-light {
   box-shadow: 0 10px 20px -5px var(--accent-glow);
 }
@@ -102,6 +129,38 @@ body {
     opacity: 0;
   }
 }
+
+
+/* Mockup Float */
+@keyframes float {
+  0%, 100% { transform: translateY(0) rotate(0deg); }
+  50% { transform: translateY(-20px) rotate(2deg); }
+}
+
+.animate-float {
+  animation: float 6s ease-in-out infinite;
+}
+
+/* Mockup Fade */
+.mockup-fade {
+    
+  /* For Chrome, Edge & Safari */
+  -webkit-mask-image: linear-gradient(to bottom, 
+    black 0%,
+    black 20%,
+    transparent 75%
+  );
+
+  /* Modern Browsers */
+  mask-image: linear-gradient(to bottom, 
+    black 0%,
+    black 20%,
+    transparent 75%
+  );
+  
+}
+
+
 
 /* Mobile Menu Transitions */
 #mobile-menu {
