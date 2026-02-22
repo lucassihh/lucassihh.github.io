@@ -1,0 +1,10 @@
+/* Click Effect */
+.btn-click {
+  transition: all 0.1s;
+}
+
+.btn-click:active {
+  transform: translateY(4px);
+  box-shadow: 0 0px 0 #c2410c;
+  border: none;
+}

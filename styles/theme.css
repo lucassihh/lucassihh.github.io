@@ -1,0 +1,142 @@
+@custom-variant dark (&:is(.dark *));
+
+:root {
+  --radius: 0.625rem;
+  --background: oklch(1 0 0);
+  --foreground: oklch(0.145 0 0);
+  --card: oklch(0.985 0.002 247.839);
+  --card-foreground: oklch(0.145 0 0);
+  --color-coral: #ff7f50;
+  --popover: oklch(1 0 0);
+  --popover-foreground: oklch(0.145 0 0);
+  --primary: oklch(0.205 0 0);
+  --primary-foreground: oklch(0.985 0 0);
+  --secondary: oklch(0.97 0 0);
+  --secondary-foreground: oklch(0.205 0 0);
+  --muted: oklch(0.707 0.022 261.325); /* Gray 400 */
+  --muted-foreground: oklch(0.556 0 0);
+  --accent: oklch(0.872 0.01 258.338); /* Gray 300 */
+  --accent-foreground: oklch(0.205 0 0);
+  --destructive: oklch(0.577 0.245 27.325);
+  --border: oklch(0.922 0 0);
+  
+  /* MyColors */
+  --purple: #a78bfa;
+  --purple-accent: #7c3aed;
+  --purple-shadow: #7c2aed;
+  --yellow: #fbbf24;
+  --yellow-accent: #f59e0b;
+  --yellow-shadow: #f58e0b;
+  --green: #34d398;
+  --green-accent: #059668;
+  --green-shadow: #058669;
+  --pink: #f472b6;
+  --pink-accent: #db2777;
+  --pink-shadow: #db1777;
+  --blue: #60a5fa;
+  --blue-accent: #2563eb;
+  --blue-shadow: #1d4ed8;
+  --orange: #fb923c;
+  --orange-accent: #ea580c;
+  --orange-shadow: #c2410c;
+  --red: #f87171;
+  --red-accent: #dc2626;
+  --red-shadow: #b91c1c;
+  
+}
+
+.dark {
+  --background: oklch(0.145 0 0);
+  --foreground: oklch(0.985 0 0);
+  --card: oklch(0.205 0 0);
+  --card-foreground: oklch(0.985 0 0);
+  --color-coral: #ff7f50;
+  --popover: oklch(0.269 0 0);
+  --popover-foreground: oklch(0.985 0 0);
+  --primary: oklch(0.922 0 0);
+  --primary-foreground: oklch(0.205 0 0);
+  --secondary: oklch(0.269 0 0);
+  --secondary-foreground: oklch(0.985 0 0);
+  --muted: oklch(0.446 0.03 256.802); /* Gray 600 */
+  --muted-foreground: oklch(0.708 0 0);
+  --accent: oklch(0.446 0.03 256.802); /* Gray 600 */
+  --accent-foreground: oklch(0.985 0 0);
+  --destructive: oklch(0.704 0.191 22.216);
+  --border: oklch(1 0 0 / 10%);
+  color-scheme: dark;
+}
+
+@theme {
+  --radius-sm: calc(var(--radius) - 4px);
+  --radius-md: calc(var(--radius) - 2px);
+  --radius-lg: var(--radius);
+  --radius-xl: calc(var(--radius) + 4px);
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+  --color-card: var(--card);
+  --color-card-foreground: var(--card-foreground);
+  --color-popover: var(--popover);
+  --color-popover-foreground: var(--popover-foreground);
+  --color-primary: var(--primary);
+  --color-primary-foreground: var(--primary-foreground);
+  --color-secondary: var(--secondary);
+  --color-secondary-foreground: var(--secondary-foreground);
+  --color-muted: var(--muted);
+  --color-muted-foreground: var(--muted-foreground);
+  --color-accent: var(--accent);
+  --color-accent-foreground: var(--accent-foreground);
+  --color-destructive: var(--destructive);
+  --color-border: var(--border);
+  
+  /* MyColors */
+  --color-purple: var(--purple);
+  --color-purple-accent: var(--purple-accent);
+  --color-purple-shadow: var(--purple-shadow);
+  --color-yellow: var(--yellow);
+  --color-yellow-accent: var(--yellow-accent);
+  --color-yellow-shadow: var(--yellow-shadow);
+  --color-green: var(--green);
+  --color-green-accent: var(--green-accent);
+  --color-green-shadow: var(--green-shadow);
+  --color-pink: var(--pink);
+  --color-pink-accent: var(--pink-accent);
+  --color-pink-shadow: var(--pink-shadow);
+  --color-blue: var(--blue);
+  --color-blue-accent: var(--blue-accent);
+  --color-blue-shadow: var(--blue-shadow);
+  --color-orange: var(--orange);
+  --color-orange-accent: var(--orange-accent);
+  --color-orange-shadow: var(--orange-shadow);
+  --color-red: var(--red);
+  --color-red-accent: var(--red-accent);
+  --color-red-shadow: var(--red-shadow);
+  
+  --font-noto-sans: "Noto Sans", sans-serif;
+  --font-plus-jakarta-sans: "Plus Jakarta Sans", sans-serif;
+  --font-khausan: "Khausan Script", cursive;
+}
+
+@layer base {
+  html {
+    @apply scroll-smooth;
+  }
+  .scrollbar {
+    scrollbar-width: thin;
+    scrollbar-color: var(--scrollbar-thumb) var(--scrollbar-track);
+
+    &::-webkit-scrollbar {
+      width: var(--scrollbar-width);
+    }
+    &::-webkit-scrollbar-track {
+      background: var(--scrollbar-track);
+    }
+    &::-webkit-scrollbar-thumb {
+      background: var(--scrollbar-thumb);
+      border-radius: var(--scrollbar-radius);
+    }
+  }
+  /* Alpine.js */
+  [x-cloak] {
+    display: none !important;
+  }
+}

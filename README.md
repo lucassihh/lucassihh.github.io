@@ -1,6 +1,23 @@
 # YooLingo
 
-**Version 1.3beta**
+**1.3beta**
 
-- New Design
-- Fixed Layout
+## TODO
+
+- [] Tela de carregamento 
+- [] Procurar palavras
+- [] Login
+- [] Progresso do usuário 
+- [] Favoritos idiomas/tópicos/palavras
+- [] Admin Dashboard
+- [] Download Audios e PFF
+
+
+## Mapa
+
+languages/
+choose.html
+
+id: indonesian
+pt: portuguese
+en: english

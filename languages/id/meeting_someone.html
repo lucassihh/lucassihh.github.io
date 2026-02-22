@@ -1,0 +1,182 @@
+<!doctype html>
+<html lang="pt-br">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="Learn Languages for Free!" />
+
+    <title>YooLingo - Aprendendo Indonésio</title>
+
+    <!-- Tailwind CSS -->
+    <link rel="stylesheet" href="../../styles/tailwind.css" />
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" /> 
+    <script src="https://unpkg.com/lucide@latest"></script>
+    
+    <!-- Anti Fliker -->
+    <script>
+      (function () {
+        const savedTheme = localStorage.getItem("theme");
+        const systemPrefersDark = window.matchMedia(
+          "(prefers-color-scheme: dark)",
+        ).matches;
+
+        if (savedTheme === "dark" || (!savedTheme && systemPrefersDark)) {
+          document.documentElement.classList.add("dark");
+        } else {
+          document.documentElement.classList.remove("dark");
+        }
+      })();
+    </script>
+  </head>
+  <body
+    class="bg-background font-plus-jakarta-sans"
+    data-topic-slug="meeting_someone"
+    data-from-lang="portuguese"
+    data-to-lang="indonesian"
+    data-image-quiz="false"
+    data-num-questions="0"
+  >
+
+    <!-- Header -->
+    <header
+      class="fixed top-0 sticky flex justify-between items-center bg-background/90 backdrop-blur-sm p-6 border-b border-border z-20"
+    >
+      <nav class="flex items-center gap-4">
+        <!--Back -->
+        <a
+          href="./index.html"
+          class="hidden md:block relative overflow-hidden flex items-center justify-center ripple-btn p-2 rounded-full text-primary hover:bg-card hover:scale-105 transition-all duration-300"
+        >
+          <i data-lucide="arrow-left" class="size-6"></i>
+        </a>
+        <!-- Theme Toggle -->
+        <button
+          id="theme-toggle-desktop"
+          class="relative overflow-hidden flex items-center justify-center ripple-btn p-2 rounded-full text-primary hover:bg-card hover:scale-105 transition-all duration-300"
+        >
+          <i data-lucide="moon-star" class="w-5 h-5 dark:hidden"></i>
+          <i data-lucide="sun" class="w-5 h-5 hidden dark:block"></i>
+        </button>
+      </nav>
+    </header>
+
+    <!-- Main -->
+    <main class="py-4 space-y-8">
+      <div class="px-4">
+        <div class="flex items-center gap-2">
+          <img
+            class="size-8 rounded-full border-2 border-white object-cover"
+            src="../../assets/flag/id.svg"
+          />
+          <h1
+            class="text-primary text-4xl font-semibold leading-tight tracking-tight"
+          >
+            Bahasa Indonesia
+          </h1>
+        </div>
+        <p
+          class="text-muted text-3xl font-semibold leading-tight tracking-tight"
+        >
+          Conhecendo alguém
+        </p>
+      </div>
+
+      <!-- Vocabulary -->
+      <section class="space-y-4">
+        <div class="flex justify-between items-center px-4">
+          <h2 class="text-primary text-xl font-bold italic">
+            Vocabulário deste tópico
+          </h2>
+
+          <button
+            class="text-xs text-orange font-bold uppercase tracking-widest"
+          >
+            Tudo
+          </button>
+        </div>
+
+        <!-- Grid Games -->
+        <section class="grid grid-cols-2 md:grid-cols-4 gap-4">
+          <!-- Quiz -->
+          <button
+            id="open-quiz-modal"
+            class="relative flex flex-col items-center justify-end overflow-hidden g-purple p-4 rounded-[2.5rem] group shadow-light"
+          >
+            <div
+              class="absolute top-4 right-4 text-white bg-white/20 p-2 rounded-full group-hover:bg-white/40 transition-all"
+            >
+              <i data-lucide="arrow-up-right" class="size-6"></i>
+            </div>
+
+            <span
+              class="text-[10px] uppercase font-bold text-white/80 w-fit py-1 px-2 bg-white/10 rounded-xl mb-1"
+              >Mini-games</span
+            >
+            <h3 class="font-bold text-xl leading-tight text-white">Quiz</h3>
+          </button>
+
+          <!-- Flashcard -->
+          <!-- Quiz -->
+          <button
+            id="open-flashcards-modal"
+            class="relative flex flex-col items-center justify-end overflow-hidden g-blue p-4 rounded-[2.5rem] group shadow-light"
+          >
+            <div
+              class="absolute top-4 right-4 text-white bg-white/20 p-2 rounded-full group-hover:bg-white/40 transition-all"
+            >
+              <i data-lucide="arrow-up-right" class="size-6"></i>
+            </div>
+
+            <span
+              class="text-[10px] uppercase font-bold text-white/80 w-fit py-1 px-2 bg-white/10 rounded-xl mb-1"
+              >Mini-games</span
+            >
+            <h3 class="font-bold text-xl leading-tight text-white">
+              Flashcard
+            </h3>
+          </button>
+        </section>
+
+        <!-- Vocab Div -->
+        <div
+          id="vocab"
+          class="grid grid-cols-1 md:grid-cols-2 py-2 px-2 pb-20 gap-2"
+        ></div>
+      </section>
+    </main>
+
+    <!-- Float Menu -->
+    <nav
+      class="fixed bottom-6 left-1/2 -translate-x-1/2 w-[80vw] max-w-md bg-white rounded-full p-2 flex justify-between items-center shadow-2xl z-20 md:hidden"
+    >
+      <!-- Home -->
+      <a
+        href="../../index.html"
+        class="relative overflow-hidden ripple-btn size-12 flex items-center justify-center bg-black text-white rounded-full"
+      >
+        <i data-lucide="house" class="size-6"></i>
+      </a>
+
+      <!-- Back -->
+      <a
+        href="./index.html"
+        class="flex items-center justify-center text-black/70 hover:text-black hover:scale-105 transition-all duration-300"
+      >
+        <i data-lucide="arrow-left" class="size-6"></i>
+      </a>
+      <!-- Fullscreen -->
+      <button
+        id="fullscreen-button"
+        class="size-12 flex items-center justify-center text-black/70 hover:text-black hover:scale-105 transition-all duration-300"
+      >
+        <i data-lucide="maximize" class="size-6"></i>
+      </button>
+    </nav>
+
+    <!-- JS -->
+    <script src="../../scripts/globalAudio.js"></script>
+    <script src="../../scripts/main.js" defer></script>
+    <script type="module" src="../../scripts/modal.js"></script>
+    <script type="module" src="../../scripts/g/g.js"></script>
+  </body>
+</html>

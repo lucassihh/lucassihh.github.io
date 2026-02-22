@@ -1,365 +1,84 @@
 <!doctype html>
-<html lang="pt-br">
+<html lang="en-US">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta name="description" content="Learn Languages for Free!" />
 
     <title>YooLingo</title>
-
-    <!-- Tailwind CDN -->
-    <script src="https://cdn.tailwindcss.com"></script>
-
-    <!-- Main CSS -->
-    <link rel="stylesheet" href="./styles/main.css" />
-
-    <!-- Font -->
-    <link
-      href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700&display=swap"
-      rel="stylesheet"
-    />
-
-    <!-- Lucide Icons -->
+    
+    <!-- Tailwind CSS -->
+    <link rel="stylesheet" href="./styles/tailwind.css" />
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" /> 
     <script src="https://unpkg.com/lucide@latest"></script>
+    
+
   </head>
-  <body class="selection:bg-brand-500 selection:text-white">
-    <!-- Background Curves -->
-    <div class="bg-curves">
-      <div class="curve w-[200vw] h-[100vh] -top-1/4 -left-1/2"></div>
-      <div class="curve w-[200vw] h-[100vh] top-0 -left-1/2"></div>
-      <div class="curve w-[200vw] h-[100vh] top-1/4 -left-1/2"></div>
-    </div>
-
-    <!-- Header -->
-    <header
-      class="fixed top-0 w-full z-20 bg-background backdrop-blur-sm transition-all duration-300"
-      id="navbar"
-    >
-      <div class="max-w-7xl mx-auto px-6 p-4 flex items-center justify-between">
-        <!-- Logo / Languages -->
-        <div class="flex items-center gap-2 group focus:outline-none">
-          <!-- Language Dropdown -->
-          <div class="relative inline-block text-left" id="language-dropdown">
-            <button
-              type="button"
-              id="lang-menu-btn"
-              class="flex items-center gap-1 transition-colors focus:outline-none"
-            >
-              <img
-                src="./assets/flag/br.svg"
-                alt="BR"
-                class="size-6 rounded-full object-cover border-2 border-white"
-                id="current-lang-flag"
-              />
-              <i
-                data-lucide="chevron-down"
-                class="size-6 transition-transform duration-200"
-                id="lang-chevron"
-              ></i>
-            </button>
-
-            <div
-              id="lang-menu-options"
-              class="hidden absolute right-18 mt-4 w-48 origin-top-right rounded-[1rem] bg-[#1e1b2e] shadow-md border border-white/20 overflow-hidden transform opacity-0 scale-95 transition-all duration-200"
-            >
-              <div class="p-2">
-                <a
-                  href="#"
-                  class="flex items-center gap-3 px-2 py-3 text-sm text-white hover:bg-white/5 transition-colors rounded-xl"
-                >
-                  <img
-                    src="./assets/flag/id.svg"
-                    class="size-6 rounded-full object-cover border-2 border-white"
-                    alt="ID"
-                  />
-                  <h1>Bahasa Indonesia</h1>
-                </a>
-
-                <a
-                  href="#"
-                  class="flex items-center gap-3 px-2 py-3 text-sm text-white hover:bg-white/5 transition-colors rounded-xl"
-                >
-                  <img
-                    src="./assets/flag/us.svg"
-                    class="size-6 rounded-full object-cover border-2 border-white"
-                    alt="US"
-                  />
-                  <h1>English</h1>
-                </a>
-              </div>
-            </div>
-          </div>
-
-          <!-- Logo -->
-          <h1
-            class="text-2xl font-black tracking-tighter text-white capitalize"
-          >
-            YooLingo
-          </h1>
-        </div>
-
-        <!-- Desktop Links -->
-        <div class="hidden md:flex items-center gap-8">
-          <a
-            href="#"
-            class="text-sm font-medium text-gray-300 hover:text-white transition-colors"
-            >Link</a
-          >
-          
-        </div>
-
-        <!-- Desktop Actions -->
-        <div class="hidden md:flex items-center gap-4">
-          <!-- Theme Toggle Desktop -->
-          <!--
-          <button
-            id="theme-toggle-mobile"
-            class="hidden md:block p-2 rounded-full hover:bg-white/10 text-gray-300 transition-colors"
-          >
-            <i data-lucide="moon-star" class="w-5 h-5 dark:hidden"></i>
-            <i data-lucide="sun" class="w-5 h-5 hidden dark:block"></i>
-          </button>
-          -->
-
-          <!-- Login ( Soon ) -->
-          <button
-            class="hidden flex items-center justify-center gap-2 relative overflow-hidden ripple-btn px-3 py-2 rounded-xl btn-action gradient-1 font-bold text-lg"
-          >
-            Login(Soon)
-          </button>
-        </div>
-
-        <!-- Mobile Actions -->
-        <div class="flex items-center gap-3 md:hidden">
-          <!-- Theme Toggle -->
-          <!-- 
-          <button
-            id="theme-toggle-mobile"
-            class="p-2 rounded-full hover:bg-white/10 text-gray-300 transition-colors"
-          >
-            <i data-lucide="moon-star" class="w-5 h-5 dark:hidden"></i>
-            <i data-lucide="sun" class="w-5 h-5 hidden dark:block"></i>
-          </button>
-          -->
-
-          <button
-            id="menu-btn"
-            class="p-2 -mr-2 text-white focus:outline-none"
-            aria-label="Open Menu"
-          >
-            <i data-lucide="menu" class="size-6"></i>
-          </button>
-        </div>
-      </div>
-    </header>
-
-    <!-- Mobile Fullscreen Menu -->
-    <div
-      id="mobile-menu"
-      class="fixed inset-0 z-[60] bg-[#120d1d] h-[100dvh] w-full flex flex-col pt-24 px-6 gap-6 md:hidden"
-    >
-      <button
-        id="close-menu-btn"
-        class="absolute top-5 right-6 p-2 text-gray-400 hover:text-white"
-        aria-label="Close Menu"
+  <body class="bg-background font-plus-jakarta-sans">
+   
+      <!-- Home -->
+      <section
+        class="relative w-full max-w-6xl bg-white overflow-hidden flex flex-col md:flex-row mx-auto"
       >
-        <i data-lucide="circle-x" class="w-8 h-8"></i>
-      </button>
+        <img
+          src="../../assets/img/freepik/girl.jpg"
+          class="absolute inset-0 h-full w-full object-cover z-10"
+        />
 
-      <nav class="flex flex-col gap-6">
-        <a
-          href="#"
-          class="text-3xl font-bold text-white tracking-tight"
-          >
-        link
-       </a>
-
-        
-      </nav>
-
-      <!-- Line -->
-      <span class="hidden h-px w-full bg-gray-800 my-4"></span>
-    </div>
-
-    
-    
-    
-    
-    
-    
-    <!-- Hero -->
-    <section class="relative pt-14 md:pt-20 overflow-hidden">
-     
-      <!-- Abstract Background  -->
-      <div
-        class="absolute top-0 left-1/2 -translate-x-1/2 w-full h-full z-0 pointer-events-none"
-      >
         <div
-          class="absolute top-20 left-1/4 w-72 h-72 bg-purple-500/20 rounded-full mix-blend-multiply filter blur-3xl animate-blob"
+          class="absolute inset-0 bg-gradient-to-r from-transparent via-black/20 to-black/80 z-20"
         ></div>
 
+        <div class="hidden md:block md:w-1/2 z-30"></div>
+
         <div
-          class="absolute top-20 right-1/4 w-72 h-72 bg-indigo-500/20 rounded-full mix-blend-multiply filter blur-3xl animate-blob animation-delay-2000"
-        ></div>
-
-      </div>
-      
-      <!-- Hero Content -->
-      <div
-        class="relative z-10 max-w-4xl mx-auto px-4  flex flex-col md:flex-row items-center text-center"
-      >
-      
-        <!-- (Left) -->
-        <div class="flex flex-col items-center py-10 gap-4">
-         
-          <!-- Version -->
-          <div
-            class="inline-flex items-center gap-2 px-3 py-1 rounded-full text-white bg-[#a78bfa] text-sm font-bold tracking-wide shadow-sm"
-          >
-
-            v1.3beta
-          </div>
-
-          <!-- Text -->
-          <h1
-            class="text-5xl md:text-6xl font-bold tracking-tight text-white mb-6"
-          >
-            Aprenda <span class="text-gradient text-5xl">Idiomas</span> 
-              No piscar de olhos<br />
-            <span class="text-gradient text-4xl">Let's go!</span>
-          </h1>
-
-          <!-- Start Button -->
-          <div class="flex gap-3 w-fit sm:w-auto">
-            <a href="#languages"
-              class="flex items-center justify-center gap-2 relative overflow-hidden ripple-btn px-4 py-3 rounded-2xl btn-action gradient-2 font-bold text-lg"
-            >
-              Começar
-              <i data-lucide="arrow-down" class="size-5"></i>
-            </a>
-          </div>
-        </div>
-
-        <!-- Mockup (Right) -->
-        <div
-          class="animate-float pointer-events-none max-h-[45vh] md:max-h-[25vh]"
+          class="w-full h-[100vh] md:w-1/2 p-10 md:p-16 flex flex-col items-center justify-center z-40 relative"
         >
-        
-          <div class="mockup-fade">
-            <img src="./assets/img/mockup.png" class="w-[300px] md:w-[400px] h-full" />
+          <div class="flex justify-center md:justify-end items-center gap-2">
+            <span class="font-black text-3xl text-white tracking-tighter">
+              Yoo<span class="text-orange">Lingo</span>
+            </span>
           </div>
-          
+
+          <div
+            class="flex flex-col justify-center items-center text-center md:text-left gap-2 mt-20"
+          >
+            <h1
+              class="text-5xl md:text-7xl font-black text-white leading-[0.9] tracking-tighter"
+              data-aos="fade-left"
+            >
+              Talk to
+            </h1>
+
+            <div class="flex items-center gap-6">
+              <h1
+                class="text-5xl md:text-7xl font-black text-orange-400 leading-[0.9] tracking-tighter"
+                data-aos="fade-left"
+                data-aos-delay="100"
+              >
+                World
+              </h1>
+
+              <a
+                href="./languages/choose.html"
+                class="flex items-center justify-center size-16 md:size-20 g-orange hover:bg-orange-500 text-white rounded-full transition-all shadow-xl hover:scale-110 active:scale-95 group"
+                data-aos="zoom-in"
+                data-aos-delay="300"
+              >
+                <i
+                  data-lucide="arrow-right"
+                  class="size-10 group-hover:translate-x-1 transition-transform"
+                ></i>
+              </a>
+            </div>
+          </div>
         </div>
-        
-      </div>
-      
-      
-      
-          <!-- Languages -->
-    <section id="languages" class="px-4 max-w-7xl mx-auto">
-        
-  <div class="text-center mb-12">
-    <h2 class="text-4xl md:text-5xl font-bold mb-4 tracking-tight text-white">
-      Qual idioma vai<span class="text-gradient"> aprender </span> hoje?
-    </h2>
-  </div>
-
-  <div class="grid grid-cols-2 md:grid-cols-3 gap-6 md:px-10">
-    
-       <!-- Bahasa Indonesia -->
-          <a
-            href="./languages/english/learning_indonesia/index.html"
-            class="relative overflow-hidden flex flex-col items-center gap-2 ripple-btn btn-action gradient-4 p-3 rounded-[2.5rem] h-fit group shadow-light"
-          >
-           <!-- Flag -->
-            <div class="size-16 rounded-full overflow-hidden border-4 border-white/20 shadow-lg">
-               <img src="./assets/flag/id.svg" alt="ID" class="w-full h-full object-cover">
-            </div>
-            
-            <!-- Language Name & About -->
-            <div class="flex flex-col text-center">
-               <span class="text-sm text-white/80">
-                Idioma
-               </span>
-               <h3 class="font-bold text-md text-white">Indonésio</h3>
-            </div>
-        </a>
-        
-        
-        <!-- English -->
-          <a
-            href="#"
-            class="opacity-30 relative overflow-hidden flex flex-col items-center gap-2 ripple-btn btn-action gradient-1 p-3 rounded-[2.5rem] h-fit group shadow-light"
-          >
-           <!-- Flag -->
-            <div class="size-16 rounded-full overflow-hidden border-4 border-white/20 shadow-lg">
-               <img src="./assets/flag/us.svg" alt="US" class="w-full h-full object-cover">
-            </div>
-            
-            <!-- Language Name & About -->
-            <div class="flex flex-col text-center">
-               <span class="text-sm text-white/80">
-                Idioma
-               </span>
-               <h3 class="font-bold text-md text-white">Inglês</h3>
-            </div>
-        </a>
-        
-        
-        <!-- Spanish -->
-          <a
-            href="#"
-            class="hidden opacity-30 relative overflow-hidden flex flex-col items-center gap-2 ripple-btn btn-action gradient-2 p-3 rounded-[2.5rem] h-fit group shadow-light"
-          >
-           <!-- Flag -->
-            <div class="size-16 rounded-full overflow-hidden border-4 border-white/20 shadow-lg">
-               <img src="./assets/flag/es.svg" alt="ES" class="w-full h-full object-cover">
-            </div>
-            
-            <!-- Language Name & About -->
-            <div class="flex flex-col text-center">
-               <span class="text-sm text-white/80">
-                Idioma
-               </span>
-               <h3 class="font-bold text-md text-white">Espanhol</h3>
-            </div>
-        </a>
-        
-
-  </div>
-  
-  
-</section>
-    
-      
-      
-      
-      
-    </section>
-
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-
-    
-    
-    
-    <!-- Footer -->
-    <footer
-      class="bg-background"
-    >
-    
-    </footer>
+      </section>
+    </main>
 
     <!-- JS -->
-    <script src="./js/main.js"></script>
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script src="./scripts/main.js"></script>
+
   </body>
 </html>
