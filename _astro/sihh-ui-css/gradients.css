@@ -1,0 +1,38 @@
+/* Gradients */
+.g-purple {
+  background: linear-gradient(
+    135deg,
+    var(--purple) 0%,
+    var(--purple-accent) 100%
+  );
+}
+.g-yellow {
+  background: linear-gradient(
+    135deg,
+    var(--yellow) 0%,
+    var(--yellow-accent) 100%
+  );
+}
+.g-green {
+  background: linear-gradient(
+    135deg,
+    var(--green) 0%,
+    var(--green-accent) 100%
+  );
+}
+.g-pink {
+  background: linear-gradient(135deg, var(--pink) 0%, var(--pink-accent) 100%);
+}
+.g-blue {
+  background: linear-gradient(135deg, var(--blue) 0%, var(--blue-accent) 100%);
+}
+.g-orange {
+  background: linear-gradient(
+    135deg,
+    var(--orange) 0%,
+    var(--orange-accent) 100%
+  );
+}
+.g-red {
+  background: linear-gradient(135deg, var(--red) 0%, var(--red-accent) 100%);
+}
