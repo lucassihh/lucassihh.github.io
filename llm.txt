@@ -3,129 +3,129 @@
 
 
 Sobre o template:
-http://localhost:4321/docs/sobre-o-template
+https://lucassihh.github.io//docs/sobre-o-template
 
 Adicionar conteúdo:
-http://localhost:4321/docs/adicionar-conteudo
+https://lucassihh.github.io//docs/adicionar-conteudo
 
 Configuração do Layout:
-http://localhost:4321/docs/configurar-o-layout
+https://lucassihh.github.io//docs/configurar-o-layout
 
 Estrutura de arquivos:
-http://localhost:4321/docs/estrutura-de-arquivos
+https://lucassihh.github.io//docs/estrutura-de-arquivos
 
 Features:
-http://localhost:4321/docs/features
+https://lucassihh.github.io//docs/features
 
 
 
 UI Components
 
-Avatar:
-http://localhost:4321/ui-components/avatar
+Accordion:
+https://lucassihh.github.io//ui-components/accordion
 
 Alert:
-http://localhost:4321/ui-components/alert
+https://lucassihh.github.io//ui-components/alert
 
-Accordion:
-http://localhost:4321/ui-components/accordion
+Avatar:
+https://lucassihh.github.io//ui-components/avatar
 
 Badge:
-http://localhost:4321/ui-components/badge
+https://lucassihh.github.io//ui-components/badge
 
 Breadcrumb:
-http://localhost:4321/ui-components/breadcrumb
+https://lucassihh.github.io//ui-components/breadcrumb
 
 Button-Group:
-http://localhost:4321/ui-components/button-group
+https://lucassihh.github.io//ui-components/button-group
 
 Button:
-http://localhost:4321/ui-components/button
+https://lucassihh.github.io//ui-components/button
 
 Card:
-http://localhost:4321/ui-components/card
-
-Chip:
-http://localhost:4321/ui-components/chip
-
-Collapse:
-http://localhost:4321/ui-components/collapse
-
-Dropdown:
-http://localhost:4321/ui-components/dropdown
-
-Footer:
-http://localhost:4321/ui-components/footer
-
-Gallery:
-http://localhost:4321/ui-components/gallery
-
-Icon-Button:
-http://localhost:4321/ui-components/icon-button
+https://lucassihh.github.io//ui-components/card
 
 Checkbox:
-http://localhost:4321/ui-components/checkbox
+https://lucassihh.github.io//ui-components/checkbox
 
-Input:
-http://localhost:4321/ui-components/input
+Chip:
+https://lucassihh.github.io//ui-components/chip
 
-List:
-http://localhost:4321/ui-components/list
+Collapse:
+https://lucassihh.github.io//ui-components/collapse
+
+Dropdown:
+https://lucassihh.github.io//ui-components/dropdown
+
+Footer:
+https://lucassihh.github.io//ui-components/footer
+
+Gallery:
+https://lucassihh.github.io//ui-components/gallery
+
+Icon-Button:
+https://lucassihh.github.io//ui-components/icon-button
 
 Image:
-http://localhost:4321/ui-components/image
+https://lucassihh.github.io//ui-components/image
+
+Input:
+https://lucassihh.github.io//ui-components/input
+
+List:
+https://lucassihh.github.io//ui-components/list
 
 Modal:
-http://localhost:4321/ui-components/modal
+https://lucassihh.github.io//ui-components/modal
 
 Pagination:
-http://localhost:4321/ui-components/pagination
+https://lucassihh.github.io//ui-components/pagination
 
 Navbar:
-http://localhost:4321/ui-components/navbar
+https://lucassihh.github.io//ui-components/navbar
 
 Popover:
-http://localhost:4321/ui-components/popover
+https://lucassihh.github.io//ui-components/popover
 
 Progress:
-http://localhost:4321/ui-components/progress
+https://lucassihh.github.io//ui-components/progress
 
 Radio:
-http://localhost:4321/ui-components/radio
+https://lucassihh.github.io//ui-components/radio
 
 Rating:
-http://localhost:4321/ui-components/rating
+https://lucassihh.github.io//ui-components/rating
 
 Sidebar:
-http://localhost:4321/ui-components/sidebar
-
-Slider:
-http://localhost:4321/ui-components/slider
+https://lucassihh.github.io//ui-components/sidebar
 
 Spinner:
-http://localhost:4321/ui-components/spinner
+https://lucassihh.github.io//ui-components/spinner
 
-Switch:
-http://localhost:4321/ui-components/switch
+Slider:
+https://lucassihh.github.io//ui-components/slider
 
 Stepper:
-http://localhost:4321/ui-components/stepper
+https://lucassihh.github.io//ui-components/stepper
+
+Switch:
+https://lucassihh.github.io//ui-components/switch
 
 Table:
-http://localhost:4321/ui-components/table
+https://lucassihh.github.io//ui-components/table
 
 Tabs:
-http://localhost:4321/ui-components/tabs
+https://lucassihh.github.io//ui-components/tabs
 
 Textarea:
-http://localhost:4321/ui-components/textarea
-
-Tooltip:
-http://localhost:4321/ui-components/tooltip
+https://lucassihh.github.io//ui-components/textarea
 
 Timeline:
-http://localhost:4321/ui-components/timeline
+https://lucassihh.github.io//ui-components/timeline
+
+Tooltip:
+https://lucassihh.github.io//ui-components/tooltip
 
 Typography:
-http://localhost:4321/ui-components/typography
+https://lucassihh.github.io//ui-components/typography
 
