@@ -1,0 +1,866 @@
+<!DOCTYPE html><html lang="en-US"> <head><!-- Global Metadata --><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22></text></svg>"><meta name="generator" content="Astro v5.17.3"><!-- Canonical URL --><link rel="canonical" href="http://localhost:4321/page/ui-components/timeline/"><!-- Primary Meta Tags --><title>Timeline | Sihh UI</title><meta name="title" content="Timeline | Sihh UI"><meta name="description" content="Timeline components"><!-- Open Graph / Facebook --><meta property="og:type" content="website"><meta property="og:url" content="http://localhost:4321/page/ui-components/timeline/"><meta property="og:title" content="Timeline | Sihh UI"><meta property="og:description" content="Timeline components"><meta property="og:image" content="http://localhost:4321/open-graph/ui-components/timeline.png"><!-- Twitter --><meta property="twitter:card" content="summary_large_image"><meta property="twitter:url" content="http://localhost:4321/page/ui-components/timeline/"><meta property="twitter:title" content="Timeline | Sihh UI"><meta property="twitter:description" content="Timeline components"><meta property="twitter:image" content="http://localhost:4321/open-graph/ui-components/timeline.png"><!-- David UI JS --><script type="module" src="/_astro/BaseLayout.astro_astro_type_script_index_0_lang.BFU0OQAd.js"></script><script type="module">const r=new WeakSet;function l(){document.querySelectorAll(".tab-group").forEach(a=>{if(r.has(a))return;const s=a.querySelector("[role='tablist']"),o=s.querySelectorAll(".tab-link"),d=a.querySelectorAll(".tab-content"),n=s.querySelector(".tab-indicator"),u=a.getAttribute("data-orientation")==="vertical";function f(i){const t=i.getBoundingClientRect(),e=s.getBoundingClientRect();requestAnimationFrame(()=>{u?(n.style.transform=`translateY(${t.top-e.top}px)`,n.style.height=`${t.height}px`):(n.style.transform=`translateX(${t.left-e.left}px)`,n.style.width=`${t.width}px`),n.classList.remove("hidden"),n.style.opacity="1",n.style.scale="1"})}function c(i){o.forEach(e=>e.classList.remove("active")),d.forEach(e=>{e.classList.add("hidden"),e.classList.remove("block")}),i.classList.add("active");const t=document.getElementById(i.getAttribute("data-tab-target"));t&&(t.classList.add("block"),t.classList.remove("hidden")),f(i)}function b(){const i=s.querySelector(".tab-link.active");i?c(i):o.length>0&&c(o[0]),o.forEach(t=>{t.addEventListener("click",e=>{e.preventDefault(),c(t)})})}b(),r.add(a)})}typeof window<"u"&&document.addEventListener("DOMContentLoaded",()=>{l(),new MutationObserver(()=>{l()}).observe(document.body,{childList:!0,subtree:!0})});</script><script type="module">const p=new WeakSet;function S(t){const s=t.querySelectorAll("[data-step]"),f=t.querySelectorAll("[data-step-content]"),n=t.querySelectorAll("[data-stepper-prev]"),r=t.querySelectorAll("[data-stepper-next]");let a=parseInt(t.dataset.currentStep||"1",10);function d(){s.forEach((e,l)=>{const c=l+1;e.dataset.active=c===a,e.dataset.completed=c<a,e.setAttribute("aria-disabled",c>a)}),f.forEach(e=>{parseInt(e.dataset.stepContent,10)===a?e.classList.remove("hidden"):e.classList.add("hidden")}),n.forEach(e=>{e.disabled=a===1}),r.forEach(e=>{e.disabled=a===s.length})}function o(){a<s.length&&(a++,t.dataset.currentStep=a,d())}function i(){a>1&&(a--,t.dataset.currentStep=a,d())}r.forEach(e=>{e.addEventListener("click",o)}),n.forEach(e=>{e.addEventListener("click",i)}),t.__stepperCleanup=()=>{r.forEach(e=>{e.removeEventListener("click",o)}),n.forEach(e=>{e.removeEventListener("click",i)})},d()}function u(){document.querySelectorAll("[data-stepper-container]").forEach(t=>{if(!p.has(t)){p.add(t);const s=parseInt(t.getAttribute("data-initial-step")||"1",10);t.dataset.currentStep=s,S(t)}})}typeof window<"u"&&document.addEventListener("DOMContentLoaded",()=>{u(),new MutationObserver(u).observe(document.body,{childList:!0,subtree:!0})});</script><script type="module" src="/_astro/BaseLayout.astro_astro_type_script_index_3_lang.Bgt6mJ5p.js"></script><script type="module">const a=new WeakSet;let n=[];function u(e){const s=e.currentTarget.getAttribute("data-target"),t=document.querySelector(s);if(t){const o=t.classList.contains("pointer-events-none");t.classList.toggle("opacity-0",!o),o?t.classList.remove("pointer-events-none"):setTimeout(()=>t.classList.add("pointer-events-none"),300),t.classList.toggle("opacity-100",o);const i=t.querySelector(o?".scale-95":".scale-100");i.classList.toggle("scale-95",!o),i.classList.toggle("scale-100",o),t.setAttribute("aria-hidden",!o),o?t.addEventListener("click",c):t.removeEventListener("click",c),o?n.push(t):n=n.filter(r=>r!==t)}}function d(e){const s=e.currentTarget.closest(".fixed");if(s){s.classList.add("opacity-0"),s.classList.remove("opacity-100");const t=s.querySelector(".scale-100");t.classList.add("scale-95"),t.classList.remove("scale-100"),setTimeout(()=>{s.classList.add("pointer-events-none"),s.setAttribute("aria-hidden","true")},300),s.removeEventListener("click",c),n=n.filter(o=>o!==s)}}function c(e){e.currentTarget.querySelector(".scale-100, .scale-95").contains(e.target)||d({currentTarget:e.currentTarget})}function l(){document.querySelectorAll("[data-toggle='modal']").forEach(e=>{a.has(e)||(e.addEventListener("click",u),a.add(e))}),document.querySelectorAll("[data-dismiss='modal']").forEach(e=>{a.has(e)||(e.addEventListener("click",d),a.add(e))})}typeof window<"u"&&typeof document<"u"&&document.addEventListener("DOMContentLoaded",()=>{l(),new MutationObserver(()=>{l()}).observe(document.body,{childList:!0,subtree:!0})});</script><script type="module">const a=new WeakSet;function r(e){const t=e.currentTarget,n=document.querySelector("[data-main-image]");n&&(n.src=t.src,document.querySelectorAll("[data-thumbnail]").forEach(c=>{c.classList.remove("active-thumbnail")}),t.classList.add("active-thumbnail"))}function i(){document.querySelectorAll("[data-thumbnail]").forEach(e=>{a.has(e)||(e.addEventListener("click",r),a.add(e))})}typeof window<"u"&&document.addEventListener("DOMContentLoaded",()=>{i(),new MutationObserver(()=>{i()}).observe(document.body,{childList:!0,subtree:!0})});</script><script type="module" src="/_astro/BaseLayout.astro_astro_type_script_index_6_lang.hr4ToEFt.js"></script><script type="module">const n=new WeakSet;function c(e){const t=e.currentTarget.getAttribute("data-target");if(t&&t.startsWith("#")){const r=document.querySelector(t),a=e.currentTarget.getAttribute("aria-expanded")==="true";if(r){r.style.maxHeight=a?"0":r.scrollHeight+"px",e.currentTarget.setAttribute("aria-expanded",!a);const o=e.currentTarget.querySelector("[data-icon]");o&&o.classList.toggle("rotate-180",!a)}}}function i(){document.querySelectorAll("[data-toggle='collapse']").forEach(e=>{n.has(e)||(e.addEventListener("click",c),n.add(e))})}typeof window<"u"&&document.addEventListener("DOMContentLoaded",()=>{i(),new MutationObserver(()=>{i()}).observe(document.body,{childList:!0,subtree:!0})});</script><script type="module">const n=new WeakSet;function o(e){const t=e.currentTarget.closest('[role="alert"]');t&&t.remove()}function r(){document.querySelectorAll("[data-dismiss='alert']").forEach(e=>{n.has(e)||(e.addEventListener("click",o),n.add(e))})}typeof window<"u"&&document.addEventListener("DOMContentLoaded",()=>{r(),new MutationObserver(()=>{r()}).observe(document.body,{childList:!0,subtree:!0})});</script><script type="module">const s=new WeakSet,g=(e,t,o=!1)=>{const c=e.querySelector("[data-accordion-icon-open]"),r=e.querySelector("[data-accordion-icon-close]"),a=e.querySelector("[data-accordion-icon]");c&&r&&(c.style.display=t?"block":"none",r.style.display=t?"none":"block"),a&&a.classList.toggle("rotate-180",o?t:!t)},n=(e,t,o)=>{e.style.maxHeight=o?e.scrollHeight+"px":"0",t.setAttribute("aria-expanded",o),g(t,o)};function f(e){if(e.currentTarget.getAttribute("aria-disabled")==="true")return;const t=e.currentTarget.getAttribute("data-accordion-target"),o=e.currentTarget.closest("[data-accordion-container]"),c=o?.getAttribute("data-accordion-mode");if(t?.startsWith("#")){const r=document.querySelector(t),a=e.currentTarget.getAttribute("aria-expanded")==="true";c==="exclusive"&&o&&o.querySelectorAll("[data-accordion-toggle]").forEach(i=>{const d=i.getAttribute("data-accordion-target");if(d!==t){const l=document.querySelector(d);l&&n(l,i,!1)}}),r&&n(r,e.currentTarget,!a)}}function m(e){e=e.startsWith("#")?e:"#"+e;const t=document.querySelector(e),o=document.querySelector(`[data-accordion-target="${e}"]`);if(o?.getAttribute("aria-disabled")==="true"||!t||!o)return;const c=o.getAttribute("aria-expanded")==="true",r=o.closest("[data-accordion-container]");r?.getAttribute("data-accordion-mode")==="exclusive"&&r&&r.querySelectorAll("[data-accordion-toggle]").forEach(i=>{const d=i.getAttribute("data-accordion-target");if(d!==e){const l=document.querySelector(d);l&&n(l,i,!1)}}),n(t,o,!c)}function u(){document.querySelectorAll("[data-accordion-toggle]").forEach(e=>{if(!s.has(e)){e.addEventListener("click",f),s.add(e);const t=document.querySelector(e.getAttribute("data-accordion-target")),o=e.getAttribute("aria-expanded")==="true";t&&n(t,e,o)}}),document.querySelectorAll("[data-accordion-container]").forEach(e=>{const t=e.getAttribute("data-accordion-mode"),o=e.querySelectorAll("[data-accordion-toggle]");t==="exclusive"?Array.from(o).filter(r=>r.getAttribute("aria-expanded")==="true").slice(1).forEach(r=>{const a=document.querySelector(r.getAttribute("data-accordion-target"));a&&n(a,r,!1)}):t==="all-open"&&o.forEach(c=>{const r=document.querySelector(c.getAttribute("data-accordion-target"));r&&n(r,c,!0)})})}typeof window<"u"&&(window.toggleAccordionById=m,document.addEventListener("DOMContentLoaded",()=>{u(),new MutationObserver(u).observe(document.body,{childList:!0,subtree:!0})}));</script><script type="module" src="/_astro/BaseLayout.astro_astro_type_script_index_10_lang.C2ijBjtM.js"></script><!-- Theme Toggle --><script>
+    const theme = (() => {
+      if (typeof localStorage !== 'undefined' && localStorage.getItem('theme')) return localStorage.getItem('theme');
+      if (window.matchMedia('(prefers-color-scheme: dark)').matches) return 'dark';
+      return 'light';
+    })();
+    document.documentElement.classList.toggle('dark', theme === 'dark');
+
+    document.addEventListener('basecoat:theme', () => {
+      const isDark = document.documentElement.classList.toggle("dark");
+      localStorage.setItem("theme", isDark ? "dark" : "light");
+    });
+  </script><style>header[data-astro-cid-3ef6ksr2]{--thickness: 1px}@supports (mask-image: none) or (-webkit-mask-image: none){.backdrop[data-astro-cid-3ef6ksr2]{height:200%;-webkit-mask-image:linear-gradient(to bottom,black 0% 50%,transparent 50% 100%);mask-image:linear-gradient(to bottom,black 0% 50%,transparent 50% 100%)}.backdrop-edge[data-astro-cid-3ef6ksr2]{height:100%;inset:0;-webkit-mask-image:linear-gradient(to bottom,black 0,black var(--thickness),transparent var(--thickness));mask-image:linear-gradient(to bottom,black 0,black var(--thickness),transparent var(--thickness));filter:brightness(1.5)}}.mobileMenuPopover{transform:translate(-100%);transition:transform .2s cubic-bezier(.4,0,.2,1),overlay .2s allow-discrete,display .2s allow-discrete;&:popover-open{transform:translate(0)}&::backdrop{background-color:#00000080;backdrop-filter:blur(4px)}}@media(min-width:768px){.mobileMenuPopover{display:block!important;transform:none!important;position:relative!important;width:100%!important;height:100%!important;border:none!important;background:transparent!important}.mobileMenuPopover::backdrop{display:none!important}}
+</style>
+<link rel="stylesheet" href="/_astro/globals.CCy1yEVd.css"><script type="module" src="/_astro/page.B1D-nYk3.js"></script></head> <body class="bg-background min-h-screen font-jakarta">  <header class="fixed left-0 right-0 top-0 z-50 md:left-72" data-astro-cid-3ef6ksr2> <nav class="z-20 flex h-16 w-full items-center justify-between p-2 px-4 md:justify-end" aria-label="Global" data-astro-cid-3ef6ksr2> <div class="z-20 flex items-center md:hidden" data-astro-cid-3ef6ksr2> <button popovertarget="mobile-menu-pop" data-astro-cid-3ef6ksr2> <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" data-astro-cid-3ef6ksr2="true" class="lucide lucide-square-chevron-right"> <rect width="18" height="18" x="3" y="3" rx="2"></rect><path d="m10 8 4 4-4 4"></path>  </svg> </button> </div> <div class="z-10 flex items-center" data-astro-cid-3ef6ksr2> <!-- Theme Toggle --> <div class="flex gap-4 items-center" data-astro-cid-3ef6ksr2> <!-- Theme Toggle Button --> <div data-astro-cid-3ef6ksr2> <button type="button" aria-label="Toggle dark mode" data-tooltip="Toggle dark mode" id="themeToggle" data-side="bottom" onclick="document.dispatchEvent(new CustomEvent('basecoat:theme'))" class="btn-icon-outline size-8" data-astro-cid-3ef6ksr2> <span class="hidden dark:block" data-astro-cid-3ef6ksr2> <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" data-astro-cid-3ef6ksr2="true" class="lucide lucide-sun"> <circle cx="12" cy="12" r="4"></circle><path d="M12 2v2"></path><path d="M12 20v2"></path><path d="m4.93 4.93 1.41 1.41"></path><path d="m17.66 17.66 1.41 1.41"></path><path d="M2 12h2"></path><path d="M20 12h2"></path><path d="m6.34 17.66-1.41 1.41"></path><path d="m19.07 4.93-1.41 1.41"></path>  </svg> </span> <span class="block dark:hidden" data-astro-cid-3ef6ksr2> <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" data-astro-cid-3ef6ksr2="true" class="lucide lucide-moon"> <path d="M20.985 12.486a9 9 0 1 1-9.473-9.472c.405-.022.617.46.402.803a6 6 0 0 0 8.268 8.268c.344-.215.825-.004.803.401"></path>  </svg> </span> </button> </div> </div> </div> </nav> <!-- Glass effect --> <div class="backdrop pointer-events-none absolute inset-0 bg-gradient-to-b from-zinc-50/90 via-zinc-50/0 backdrop-blur-md dark:from-zinc-950/90 dark:via-zinc-950/0" data-astro-cid-3ef6ksr2></div> <div class="backdrop-edge pointer-events-none absolute bottom-0 left-0 right-0 translate-y-full bg-zinc-900/10 backdrop-blur dark:bg-zinc-500/10" data-astro-cid-3ef6ksr2></div> </header>  <div class="flex justify-center"> <aside popover id="mobile-menu-pop" class="mobileMenuPopover inset-auto left-0 top-0 h-full w-full w-72 max-w-72 bg-background border-r border-border md:fixed z-60"> <!-- Sidebar Header --> <div class="sticky top-0 z-10 flex h-16 px-4 items-center justify-between border-b border-border md:hidden"> <span class="text-xl font-bold">Sihh UI</span> <button popovertarget="mobile-menu-pop" popovertargetaction="hide" class="size-6 text-primary"> <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" class="lucide lucide-square-chevron-left"> <rect width="18" height="18" x="3" y="3" rx="2"></rect><path d="m14 16-4-4 4-4"></path>  </svg> </button> </div> <!-- Sidebar Content --> <div class="h-[calc(100dvh-4rem)] md:h-screen overflow-y-auto"> <div class="flex flex-col space-y-4 pt-4 pb-8 px-4"> <h2 class="text-lg font-medium mb-3 text-primary">Documentação</h2> <div class="flex flex-col mb-4"> <!-- Category Name -->  <div class="flex flex-col gap-1"> <a href="/page/docs/sobre-o-template" class="block py-1.5 px-3 text-sm transition-colors text-sm text-primary/70 hover:scale-105 hover:translate-x-2 hover:text-primary transition-all" data-sidebar-link> Sobre o template </a><a href="/page/docs/adicionar-conteudo" class="block py-1.5 px-3 text-sm transition-colors text-sm text-primary/70 hover:scale-105 hover:translate-x-2 hover:text-primary transition-all" data-sidebar-link> Adicionar conteúdo </a><a href="/page/docs/configurar-o-layout" class="block py-1.5 px-3 text-sm transition-colors text-sm text-primary/70 hover:scale-105 hover:translate-x-2 hover:text-primary transition-all" data-sidebar-link> Configuração do Layout </a><a href="/page/docs/estrutura-de-arquivos" class="block py-1.5 px-3 text-sm transition-colors text-sm text-primary/70 hover:scale-105 hover:translate-x-2 hover:text-primary transition-all" data-sidebar-link> Estrutura de arquivos </a><a href="/page/docs/features" class="block py-1.5 px-3 text-sm transition-colors text-sm text-primary/70 hover:scale-105 hover:translate-x-2 hover:text-primary transition-all" data-sidebar-link> Features </a> </div> </div><div class="flex flex-col mb-4"> <!-- Category Name --> <h3 class="text-lg font-medium mb-3 text-primary"> UI Components </h3> <div class="flex flex-col gap-1"> <a href="/page/ui-components/accordion" class="block py-1.5 px-3 text-sm transition-colors text-sm text-primary/70 hover:scale-105 hover:translate-x-2 hover:text-primary transition-all" data-sidebar-link> Accordion </a><a href="/page/ui-components/alert" class="block py-1.5 px-3 text-sm transition-colors text-sm text-primary/70 hover:scale-105 hover:translate-x-2 hover:text-primary transition-all" data-sidebar-link> Alert </a><a href="/page/ui-components/avatar" class="block py-1.5 px-3 text-sm transition-colors text-sm text-primary/70 hover:scale-105 hover:translate-x-2 hover:text-primary transition-all" data-sidebar-link> Avatar </a><a href="/page/ui-components/breadcrumb" class="block py-1.5 px-3 text-sm transition-colors text-sm text-primary/70 hover:scale-105 hover:translate-x-2 hover:text-primary transition-all" data-sidebar-link> Breadcrumb </a><a href="/page/ui-components/badge" class="block py-1.5 px-3 text-sm transition-colors text-sm text-primary/70 hover:scale-105 hover:translate-x-2 hover:text-primary transition-all" data-sidebar-link> Badge </a><a href="/page/ui-components/button" class="block py-1.5 px-3 text-sm transition-colors text-sm text-primary/70 hover:scale-105 hover:translate-x-2 hover:text-primary transition-all" data-sidebar-link> Button </a><a href="/page/ui-components/button-group" class="block py-1.5 px-3 text-sm transition-colors text-sm text-primary/70 hover:scale-105 hover:translate-x-2 hover:text-primary transition-all" data-sidebar-link> Button-Group </a><a href="/page/ui-components/card" class="block py-1.5 px-3 text-sm transition-colors text-sm text-primary/70 hover:scale-105 hover:translate-x-2 hover:text-primary transition-all" data-sidebar-link> Card </a><a href="/page/ui-components/chip" class="block py-1.5 px-3 text-sm transition-colors text-sm text-primary/70 hover:scale-105 hover:translate-x-2 hover:text-primary transition-all" data-sidebar-link> Chip </a><a href="/page/ui-components/checkbox" class="block py-1.5 px-3 text-sm transition-colors text-sm text-primary/70 hover:scale-105 hover:translate-x-2 hover:text-primary transition-all" data-sidebar-link> Checkbox </a><a href="/page/ui-components/collapse" class="block py-1.5 px-3 text-sm transition-colors text-sm text-primary/70 hover:scale-105 hover:translate-x-2 hover:text-primary transition-all" data-sidebar-link> Collapse </a><a href="/page/ui-components/dropdown" class="block py-1.5 px-3 text-sm transition-colors text-sm text-primary/70 hover:scale-105 hover:translate-x-2 hover:text-primary transition-all" data-sidebar-link> Dropdown </a><a href="/page/ui-components/footer" class="block py-1.5 px-3 text-sm transition-colors text-sm text-primary/70 hover:scale-105 hover:translate-x-2 hover:text-primary transition-all" data-sidebar-link> Footer </a><a href="/page/ui-components/gallery" class="block py-1.5 px-3 text-sm transition-colors text-sm text-primary/70 hover:scale-105 hover:translate-x-2 hover:text-primary transition-all" data-sidebar-link> Gallery </a><a href="/page/ui-components/icon-button" class="block py-1.5 px-3 text-sm transition-colors text-sm text-primary/70 hover:scale-105 hover:translate-x-2 hover:text-primary transition-all" data-sidebar-link> Icon-Button </a><a href="/page/ui-components/image" class="block py-1.5 px-3 text-sm transition-colors text-sm text-primary/70 hover:scale-105 hover:translate-x-2 hover:text-primary transition-all" data-sidebar-link> Image </a><a href="/page/ui-components/navbar" class="block py-1.5 px-3 text-sm transition-colors text-sm text-primary/70 hover:scale-105 hover:translate-x-2 hover:text-primary transition-all" data-sidebar-link> Navbar </a><a href="/page/ui-components/input" class="block py-1.5 px-3 text-sm transition-colors text-sm text-primary/70 hover:scale-105 hover:translate-x-2 hover:text-primary transition-all" data-sidebar-link> Input </a><a href="/page/ui-components/list" class="block py-1.5 px-3 text-sm transition-colors text-sm text-primary/70 hover:scale-105 hover:translate-x-2 hover:text-primary transition-all" data-sidebar-link> List </a><a href="/page/ui-components/modal" class="block py-1.5 px-3 text-sm transition-colors text-sm text-primary/70 hover:scale-105 hover:translate-x-2 hover:text-primary transition-all" data-sidebar-link> Modal </a><a href="/page/ui-components/popover" class="block py-1.5 px-3 text-sm transition-colors text-sm text-primary/70 hover:scale-105 hover:translate-x-2 hover:text-primary transition-all" data-sidebar-link> Popover </a><a href="/page/ui-components/progress" class="block py-1.5 px-3 text-sm transition-colors text-sm text-primary/70 hover:scale-105 hover:translate-x-2 hover:text-primary transition-all" data-sidebar-link> Progress </a><a href="/page/ui-components/pagination" class="block py-1.5 px-3 text-sm transition-colors text-sm text-primary/70 hover:scale-105 hover:translate-x-2 hover:text-primary transition-all" data-sidebar-link> Pagination </a><a href="/page/ui-components/radio" class="block py-1.5 px-3 text-sm transition-colors text-sm text-primary/70 hover:scale-105 hover:translate-x-2 hover:text-primary transition-all" data-sidebar-link> Radio </a><a href="/page/ui-components/rating" class="block py-1.5 px-3 text-sm transition-colors text-sm text-primary/70 hover:scale-105 hover:translate-x-2 hover:text-primary transition-all" data-sidebar-link> Rating </a><a href="/page/ui-components/spinner" class="block py-1.5 px-3 text-sm transition-colors text-sm text-primary/70 hover:scale-105 hover:translate-x-2 hover:text-primary transition-all" data-sidebar-link> Spinner </a><a href="/page/ui-components/slider" class="block py-1.5 px-3 text-sm transition-colors text-sm text-primary/70 hover:scale-105 hover:translate-x-2 hover:text-primary transition-all" data-sidebar-link> Slider </a><a href="/page/ui-components/sidebar" class="block py-1.5 px-3 text-sm transition-colors text-sm text-primary/70 hover:scale-105 hover:translate-x-2 hover:text-primary transition-all" data-sidebar-link> Sidebar </a><a href="/page/ui-components/stepper" class="block py-1.5 px-3 text-sm transition-colors text-sm text-primary/70 hover:scale-105 hover:translate-x-2 hover:text-primary transition-all" data-sidebar-link> Stepper </a><a href="/page/ui-components/switch" class="block py-1.5 px-3 text-sm transition-colors text-sm text-primary/70 hover:scale-105 hover:translate-x-2 hover:text-primary transition-all" data-sidebar-link> Switch </a><a href="/page/ui-components/table" class="block py-1.5 px-3 text-sm transition-colors text-sm text-primary/70 hover:scale-105 hover:translate-x-2 hover:text-primary transition-all" data-sidebar-link> Table </a><a href="/page/ui-components/tabs" class="block py-1.5 px-3 text-sm transition-colors text-sm text-primary/70 hover:scale-105 hover:translate-x-2 hover:text-primary transition-all" data-sidebar-link> Tabs </a><a href="/page/ui-components/textarea" class="block py-1.5 px-3 text-sm transition-colors text-sm text-primary/70 hover:scale-105 hover:translate-x-2 hover:text-primary transition-all" data-sidebar-link> Textarea </a><a href="/page/ui-components/timeline" class="block py-1.5 px-3 text-sm transition-colors text-md text-primary font-bold" data-sidebar-link> Timeline </a><a href="/page/ui-components/tooltip" class="block py-1.5 px-3 text-sm transition-colors text-sm text-primary/70 hover:scale-105 hover:translate-x-2 hover:text-primary transition-all" data-sidebar-link> Tooltip </a><a href="/page/ui-components/typography" class="block py-1.5 px-3 text-sm transition-colors text-sm text-primary/70 hover:scale-105 hover:translate-x-2 hover:text-primary transition-all" data-sidebar-link> Typography </a> </div> </div> </div> </div> </aside> <!-- Sidebar JS --> <script>
+  const popoverMenu = document.getElementById("mobile-menu-pop");
+  
+  if (popoverMenu) {
+    // Block background scrolling on mobile when opened
+    popoverMenu.addEventListener("toggle", (event) => {
+      if (window.innerWidth < 768) {
+        document.body.style.overflow = event.newState === 'open' ? 'hidden' : '';
+      }
+    });
+
+    // Closes when click links
+    popoverMenu.querySelectorAll('[data-sidebar-link]').forEach(link => {
+      link.addEventListener('click', () => {
+        if (window.innerWidth < 768) popoverMenu.hidePopover();
+      });
+    });
+  }
+</script> <!-- Main Content --> <main class="flex flex-col w-full overflow-hidden">  <!-- Main Content Position --><div class="prose max-w-none dark:prose-invert p-2 md:p-4 mt-20"> <main class="overflow-hidden w-full">  
+
+
+
+<h1 id="timelines">Timelines</h1>
+<div id="tabs-0p4g6gj" class="not-prose bg-background border border-border rounded-[0.5rem] w-full my-6"> <!-- Header --> <div class="flex items-center justify-between px-4 py-3 border-b bg-card rounded-t-[0.5rem]"> <!-- Tabs --> <div> <nav role="tablist" class="inline-flex items-center justify-center gap-1 rounded-lg bg-muted/50 border-t-1 border-black/20 dark:border-black/80 p-0.5 text-muted-foreground"> <button type="button" role="tab" aria-selected="true" data-target="preview" class="tab-trigger inline-flex items-center justify-center whitespace-nowrap rounded-md px-2 py-1 text-sm font-medium transition-all bg-card text-primary shadow-md">
+Preview
+</button> <button type="button" role="tab" data-target="code" class="tab-trigger inline-flex items-center justify-center whitespace-nowrap rounded-md px-2 py-1 text-sm font-medium transition-all">
+Code
+</button> </nav> </div> <!-- Title and Type --> <div class="flex items-center gap-2"> <h1 class="text-sm font-normal text-orange tracking-tight">Timeline Default</h1> <span class="text-[10px] uppercase tracking-wider text-muted-foreground bg-muted px-2 py-1 rounded-md"> html </span> </div> </div> <!-- Preview --> <div data-content="preview" class="tab-content p-4 not-prose"> <div> <div><div class="flex w-full flex-col">
+  <div class="relative flex gap-4">
+    <div class="relative">
+      <div
+        class="absolute left-1/2 top-3 h-full w-0.5 -translate-x-1/2 bg-stone-200"
+      ></div>
+      <span
+        class="relative grid h-4 w-4 place-items-center rounded-full bg-stone-200"
+      ></span>
+    </div>
+    <div class="flex-1 mb-10">
+      <p class="text-base font-bold text-stone-800 dark:text-white">
+        First Step
+      </p>
+      <small class="mt-2 block text-sm text-stone-500"
+        >Start your journey with this initial step. This is where everything
+        begins and sets the foundation for what's to come.</small
+      >
+    </div>
+  </div>
+
+  <div class="relative flex gap-4">
+    <div class="relative">
+      <div
+        class="absolute left-1/2 top-3 h-full w-0.5 -translate-x-1/2 bg-stone-200"
+      ></div>
+      <span
+        class="relative grid h-4 w-4 place-items-center rounded-full bg-stone-200"
+      ></span>
+    </div>
+    <div class="flex-1 mb-10">
+      <p class="text-base font-bold text-stone-800 dark:text-white">
+        Second Step
+      </p>
+      <small class="mt-2 block text-sm text-stone-500"
+        >Building upon the foundation, this step takes you further along your
+        path with more advanced concepts and ideas.</small
+      >
+    </div>
+  </div>
+
+  <div class="relative flex gap-4">
+    <div class="relative">
+      <span
+        class="relative grid h-4 w-4 place-items-center rounded-full bg-stone-200"
+      ></span>
+    </div>
+    <div class="flex-1">
+      <p class="text-base font-bold text-stone-800 dark:text-white">
+        Final Step
+      </p>
+      <small class="mt-2 block text-sm text-stone-500"
+        >The culmination of your journey. Here you'll put everything together
+        and see the results of your progress.</small
+      >
+    </div>
+  </div>
+</div>
+</div> </div> </div> <!-- Code --> <div data-content="code" class="tab-content hidden"> <div> <pre class="astro-code astro-code-themes github-light github-dark" style="--shiki-light:#24292e;--shiki-dark:#e1e4e8;--shiki-light-bg:#fff;--shiki-dark-bg:#24292e; overflow-x: auto;" tabindex="0" data-language="html"><code><span class="line"><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">&#x3C;</span><span style="--shiki-light:#22863A;--shiki-dark:#85E89D">div</span><span style="--shiki-light:#6F42C1;--shiki-dark:#B392F0"> class</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">=</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF">"flex w-full flex-col"</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">></span></span>
+<span class="line"><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">  &#x3C;</span><span style="--shiki-light:#22863A;--shiki-dark:#85E89D">div</span><span style="--shiki-light:#6F42C1;--shiki-dark:#B392F0"> class</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">=</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF">"relative flex gap-4"</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">></span></span>
+<span class="line"><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">    &#x3C;</span><span style="--shiki-light:#22863A;--shiki-dark:#85E89D">div</span><span style="--shiki-light:#6F42C1;--shiki-dark:#B392F0"> class</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">=</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF">"relative"</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">></span></span>
+<span class="line"><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">      &#x3C;</span><span style="--shiki-light:#22863A;--shiki-dark:#85E89D">div</span></span>
+<span class="line"><span style="--shiki-light:#6F42C1;--shiki-dark:#B392F0">        class</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">=</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF">"absolute left-1/2 top-3 h-full w-0.5 -translate-x-1/2 bg-stone-200"</span></span>
+<span class="line"><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">      >&#x3C;/</span><span style="--shiki-light:#22863A;--shiki-dark:#85E89D">div</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">></span></span>
+<span class="line"><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">      &#x3C;</span><span style="--shiki-light:#22863A;--shiki-dark:#85E89D">span</span></span>
+<span class="line"><span style="--shiki-light:#6F42C1;--shiki-dark:#B392F0">        class</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">=</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF">"relative grid h-4 w-4 place-items-center rounded-full bg-stone-200"</span></span>
+<span class="line"><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">      >&#x3C;/</span><span style="--shiki-light:#22863A;--shiki-dark:#85E89D">span</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">></span></span>
+<span class="line"><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">    &#x3C;/</span><span style="--shiki-light:#22863A;--shiki-dark:#85E89D">div</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">></span></span>
+<span class="line"><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">    &#x3C;</span><span style="--shiki-light:#22863A;--shiki-dark:#85E89D">div</span><span style="--shiki-light:#6F42C1;--shiki-dark:#B392F0"> class</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">=</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF">"flex-1 mb-10"</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">></span></span>
+<span class="line"><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">      &#x3C;</span><span style="--shiki-light:#22863A;--shiki-dark:#85E89D">p</span><span style="--shiki-light:#6F42C1;--shiki-dark:#B392F0"> class</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">=</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF">"text-base font-bold text-stone-800 dark:text-white"</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">></span></span>
+<span class="line"><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">        First Step</span></span>
+<span class="line"><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">      &#x3C;/</span><span style="--shiki-light:#22863A;--shiki-dark:#85E89D">p</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">></span></span>
+<span class="line"><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">      &#x3C;</span><span style="--shiki-light:#22863A;--shiki-dark:#85E89D">small</span><span style="--shiki-light:#6F42C1;--shiki-dark:#B392F0"> class</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">=</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF">"mt-2 block text-sm text-stone-500"</span></span>
+<span class="line"><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">        >Start your journey with this initial step. This is where everything</span></span>
+<span class="line"><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">        begins and sets the foundation for what's to come.&#x3C;/</span><span style="--shiki-light:#22863A;--shiki-dark:#85E89D">small</span></span>
+<span class="line"><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">      ></span></span>
+<span class="line"><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">    &#x3C;/</span><span style="--shiki-light:#22863A;--shiki-dark:#85E89D">div</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">></span></span>
+<span class="line"><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">  &#x3C;/</span><span style="--shiki-light:#22863A;--shiki-dark:#85E89D">div</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">></span></span>
+<span class="line"></span>
+<span class="line"><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">  &#x3C;</span><span style="--shiki-light:#22863A;--shiki-dark:#85E89D">div</span><span style="--shiki-light:#6F42C1;--shiki-dark:#B392F0"> class</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">=</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF">"relative flex gap-4"</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">></span></span>
+<span class="line"><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">    &#x3C;</span><span style="--shiki-light:#22863A;--shiki-dark:#85E89D">div</span><span style="--shiki-light:#6F42C1;--shiki-dark:#B392F0"> class</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">=</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF">"relative"</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">></span></span>
+<span class="line"><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">      &#x3C;</span><span style="--shiki-light:#22863A;--shiki-dark:#85E89D">div</span></span>
+<span class="line"><span style="--shiki-light:#6F42C1;--shiki-dark:#B392F0">        class</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">=</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF">"absolute left-1/2 top-3 h-full w-0.5 -translate-x-1/2 bg-stone-200"</span></span>
+<span class="line"><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">      >&#x3C;/</span><span style="--shiki-light:#22863A;--shiki-dark:#85E89D">div</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">></span></span>
+<span class="line"><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">      &#x3C;</span><span style="--shiki-light:#22863A;--shiki-dark:#85E89D">span</span></span>
+<span class="line"><span style="--shiki-light:#6F42C1;--shiki-dark:#B392F0">        class</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">=</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF">"relative grid h-4 w-4 place-items-center rounded-full bg-stone-200"</span></span>
+<span class="line"><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">      >&#x3C;/</span><span style="--shiki-light:#22863A;--shiki-dark:#85E89D">span</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">></span></span>
+<span class="line"><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">    &#x3C;/</span><span style="--shiki-light:#22863A;--shiki-dark:#85E89D">div</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">></span></span>
+<span class="line"><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">    &#x3C;</span><span style="--shiki-light:#22863A;--shiki-dark:#85E89D">div</span><span style="--shiki-light:#6F42C1;--shiki-dark:#B392F0"> class</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">=</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF">"flex-1 mb-10"</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">></span></span>
+<span class="line"><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">      &#x3C;</span><span style="--shiki-light:#22863A;--shiki-dark:#85E89D">p</span><span style="--shiki-light:#6F42C1;--shiki-dark:#B392F0"> class</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">=</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF">"text-base font-bold text-stone-800 dark:text-white"</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">></span></span>
+<span class="line"><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">        Second Step</span></span>
+<span class="line"><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">      &#x3C;/</span><span style="--shiki-light:#22863A;--shiki-dark:#85E89D">p</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">></span></span>
+<span class="line"><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">      &#x3C;</span><span style="--shiki-light:#22863A;--shiki-dark:#85E89D">small</span><span style="--shiki-light:#6F42C1;--shiki-dark:#B392F0"> class</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">=</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF">"mt-2 block text-sm text-stone-500"</span></span>
+<span class="line"><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">        >Building upon the foundation, this step takes you further along your</span></span>
+<span class="line"><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">        path with more advanced concepts and ideas.&#x3C;/</span><span style="--shiki-light:#22863A;--shiki-dark:#85E89D">small</span></span>
+<span class="line"><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">      ></span></span>
+<span class="line"><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">    &#x3C;/</span><span style="--shiki-light:#22863A;--shiki-dark:#85E89D">div</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">></span></span>
+<span class="line"><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">  &#x3C;/</span><span style="--shiki-light:#22863A;--shiki-dark:#85E89D">div</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">></span></span>
+<span class="line"></span>
+<span class="line"><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">  &#x3C;</span><span style="--shiki-light:#22863A;--shiki-dark:#85E89D">div</span><span style="--shiki-light:#6F42C1;--shiki-dark:#B392F0"> class</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">=</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF">"relative flex gap-4"</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">></span></span>
+<span class="line"><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">    &#x3C;</span><span style="--shiki-light:#22863A;--shiki-dark:#85E89D">div</span><span style="--shiki-light:#6F42C1;--shiki-dark:#B392F0"> class</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">=</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF">"relative"</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">></span></span>
+<span class="line"><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">      &#x3C;</span><span style="--shiki-light:#22863A;--shiki-dark:#85E89D">span</span></span>
+<span class="line"><span style="--shiki-light:#6F42C1;--shiki-dark:#B392F0">        class</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">=</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF">"relative grid h-4 w-4 place-items-center rounded-full bg-stone-200"</span></span>
+<span class="line"><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">      >&#x3C;/</span><span style="--shiki-light:#22863A;--shiki-dark:#85E89D">span</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">></span></span>
+<span class="line"><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">    &#x3C;/</span><span style="--shiki-light:#22863A;--shiki-dark:#85E89D">div</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">></span></span>
+<span class="line"><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">    &#x3C;</span><span style="--shiki-light:#22863A;--shiki-dark:#85E89D">div</span><span style="--shiki-light:#6F42C1;--shiki-dark:#B392F0"> class</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">=</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF">"flex-1"</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">></span></span>
+<span class="line"><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">      &#x3C;</span><span style="--shiki-light:#22863A;--shiki-dark:#85E89D">p</span><span style="--shiki-light:#6F42C1;--shiki-dark:#B392F0"> class</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">=</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF">"text-base font-bold text-stone-800 dark:text-white"</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">></span></span>
+<span class="line"><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">        Final Step</span></span>
+<span class="line"><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">      &#x3C;/</span><span style="--shiki-light:#22863A;--shiki-dark:#85E89D">p</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">></span></span>
+<span class="line"><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">      &#x3C;</span><span style="--shiki-light:#22863A;--shiki-dark:#85E89D">small</span><span style="--shiki-light:#6F42C1;--shiki-dark:#B392F0"> class</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">=</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF">"mt-2 block text-sm text-stone-500"</span></span>
+<span class="line"><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">        >The culmination of your journey. Here you'll put everything together</span></span>
+<span class="line"><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">        and see the results of your progress.&#x3C;/</span><span style="--shiki-light:#22863A;--shiki-dark:#85E89D">small</span></span>
+<span class="line"><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">      ></span></span>
+<span class="line"><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">    &#x3C;/</span><span style="--shiki-light:#22863A;--shiki-dark:#85E89D">div</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">></span></span>
+<span class="line"><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">  &#x3C;/</span><span style="--shiki-light:#22863A;--shiki-dark:#85E89D">div</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">></span></span>
+<span class="line"><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">&#x3C;/</span><span style="--shiki-light:#22863A;--shiki-dark:#85E89D">div</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">></span></span></code></pre> </div>  </div> </div> <!-- CodePreview JS --> <script>(function(){const id = "tabs-0p4g6gj";
+
+  (() => {
+    const container = document.getElementById(id);
+    if (!container) return;
+
+    const buttons = container.querySelectorAll(".tab-trigger");
+    const contents = container.querySelectorAll(".tab-content");
+
+    const activeClasses = [
+      "bg-card",
+      "text-primary",
+      "shadow-md",
+    ];
+
+    buttons.forEach((button) => {
+      button.addEventListener("click", () => {
+        buttons.forEach((btn) => {
+          btn.setAttribute("aria-selected", "false");
+          btn.classList.remove(...activeClasses);
+        });
+
+        contents.forEach((content) =>
+          content.classList.add("hidden")
+        );
+
+        button.setAttribute("aria-selected", "true");
+        button.classList.add(...activeClasses);
+
+        const targetType = button.dataset.target;
+        const targetContent = container.querySelector(
+          `[data-content="${targetType}"]`
+        );
+
+        if (targetContent) {
+          targetContent.classList.remove("hidden");
+        }
+      });
+    });
+  })();
+})();</script>
+<div id="tabs-wifm8py" class="not-prose bg-background border border-border rounded-[0.5rem] w-full my-6"> <!-- Header --> <div class="flex items-center justify-between px-4 py-3 border-b bg-card rounded-t-[0.5rem]"> <!-- Tabs --> <div> <nav role="tablist" class="inline-flex items-center justify-center gap-1 rounded-lg bg-muted/50 border-t-1 border-black/20 dark:border-black/80 p-0.5 text-muted-foreground"> <button type="button" role="tab" aria-selected="true" data-target="preview" class="tab-trigger inline-flex items-center justify-center whitespace-nowrap rounded-md px-2 py-1 text-sm font-medium transition-all bg-card text-primary shadow-md">
+Preview
+</button> <button type="button" role="tab" data-target="code" class="tab-trigger inline-flex items-center justify-center whitespace-nowrap rounded-md px-2 py-1 text-sm font-medium transition-all">
+Code
+</button> </nav> </div> <!-- Title and Type --> <div class="flex items-center gap-2"> <h1 class="text-sm font-normal text-orange tracking-tight">Timeline Card</h1> <span class="text-[10px] uppercase tracking-wider text-muted-foreground bg-muted px-2 py-1 rounded-md"> html </span> </div> </div> <!-- Preview --> <div data-content="preview" class="tab-content p-4 not-prose"> <div> <div><div class="flex w-full max-w-md flex-col">
+  <!-- Timeline Card -->
+  <div
+    class="flex items-center gap-4 mb-6 bg-stone-100 rounded-lg p-2.5 border border-stone-200"
+  >
+    <div class="relative flex-none">
+      <span
+        class="relative grid h-10 w-10 place-items-center rounded-full bg-stone-800"
+        ><svg
+          width="1.5em"
+          height="1.5em"
+          stroke-width="1.5"
+          viewBox="0 0 24 24"
+          fill="none"
+          xmlns="http://www.w3.org/2000/svg"
+          color="currentColor"
+          class="h-4 w-4 text-white"
+        >
+          <path
+            d="M18 8.4C18 6.70261 17.3679 5.07475 16.2426 3.87452C15.1174 2.67428 13.5913 2 12 2C10.4087 2 8.88258 2.67428 7.75736 3.87452C6.63214 5.07475 6 6.70261 6 8.4C6 15.8667 3 18 3 18H21C21 18 18 15.8667 18 8.4Z"
+            stroke="currentColor"
+            stroke-linecap="round"
+            stroke-linejoin="round"
+          ></path>
+          <path
+            d="M13.73 21C13.5542 21.3031 13.3019 21.5547 12.9982 21.7295C12.6946 21.9044 12.3504 21.9965 12 21.9965C11.6496 21.9965 11.3054 21.9044 11.0018 21.7295C10.6982 21.5547 10.4458 21.3031 10.27 21"
+            stroke="currentColor"
+            stroke-linecap="round"
+            stroke-linejoin="round"
+          ></path></svg
+      ></span>
+    </div>
+    <div class="flex-1">
+      <h1 class="text-base font-bold text-stone-800 dark:text-white">
+        Lorem ipsum
+      </h1>
+      <p class="text-sm text-stone-500">There is no one who loves pain itself, who seeks after it and wants to have it, simply because it is pain...</p>
+    </div>
+  </div>
+
+</div>
+</div> </div> </div> <!-- Code --> <div data-content="code" class="tab-content hidden"> <div> <pre class="astro-code astro-code-themes github-light github-dark" style="--shiki-light:#24292e;--shiki-dark:#e1e4e8;--shiki-light-bg:#fff;--shiki-dark-bg:#24292e; overflow-x: auto;" tabindex="0" data-language="html"><code><span class="line"><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">&#x3C;</span><span style="--shiki-light:#22863A;--shiki-dark:#85E89D">div</span><span style="--shiki-light:#6F42C1;--shiki-dark:#B392F0"> class</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">=</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF">"flex w-full max-w-md flex-col"</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">></span></span>
+<span class="line"><span style="--shiki-light:#6A737D;--shiki-dark:#6A737D">  &#x3C;!-- Timeline Card --></span></span>
+<span class="line"><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">  &#x3C;</span><span style="--shiki-light:#22863A;--shiki-dark:#85E89D">div</span></span>
+<span class="line"><span style="--shiki-light:#6F42C1;--shiki-dark:#B392F0">    class</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">=</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF">"flex items-center gap-4 mb-6 bg-stone-100 rounded-lg p-2.5 border border-stone-200"</span></span>
+<span class="line"><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">  ></span></span>
+<span class="line"><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">    &#x3C;</span><span style="--shiki-light:#22863A;--shiki-dark:#85E89D">div</span><span style="--shiki-light:#6F42C1;--shiki-dark:#B392F0"> class</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">=</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF">"relative flex-none"</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">></span></span>
+<span class="line"><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">      &#x3C;</span><span style="--shiki-light:#22863A;--shiki-dark:#85E89D">span</span></span>
+<span class="line"><span style="--shiki-light:#6F42C1;--shiki-dark:#B392F0">        class</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">=</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF">"relative grid h-10 w-10 place-items-center rounded-full bg-stone-800"</span></span>
+<span class="line"><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">        >&#x3C;</span><span style="--shiki-light:#22863A;--shiki-dark:#85E89D">svg</span></span>
+<span class="line"><span style="--shiki-light:#6F42C1;--shiki-dark:#B392F0">          width</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">=</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF">"1.5em"</span></span>
+<span class="line"><span style="--shiki-light:#6F42C1;--shiki-dark:#B392F0">          height</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">=</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF">"1.5em"</span></span>
+<span class="line"><span style="--shiki-light:#6F42C1;--shiki-dark:#B392F0">          stroke-width</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">=</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF">"1.5"</span></span>
+<span class="line"><span style="--shiki-light:#6F42C1;--shiki-dark:#B392F0">          viewBox</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">=</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF">"0 0 24 24"</span></span>
+<span class="line"><span style="--shiki-light:#6F42C1;--shiki-dark:#B392F0">          fill</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">=</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF">"none"</span></span>
+<span class="line"><span style="--shiki-light:#6F42C1;--shiki-dark:#B392F0">          xmlns</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">=</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF">"http://www.w3.org/2000/svg"</span></span>
+<span class="line"><span style="--shiki-light:#6F42C1;--shiki-dark:#B392F0">          color</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">=</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF">"currentColor"</span></span>
+<span class="line"><span style="--shiki-light:#6F42C1;--shiki-dark:#B392F0">          class</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">=</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF">"h-4 w-4 text-white"</span></span>
+<span class="line"><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">        ></span></span>
+<span class="line"><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">          &#x3C;</span><span style="--shiki-light:#22863A;--shiki-dark:#85E89D">path</span></span>
+<span class="line"><span style="--shiki-light:#6F42C1;--shiki-dark:#B392F0">            d</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">=</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF">"M18 8.4C18 6.70261 17.3679 5.07475 16.2426 3.87452C15.1174 2.67428 13.5913 2 12 2C10.4087 2 8.88258 2.67428 7.75736 3.87452C6.63214 5.07475 6 6.70261 6 8.4C6 15.8667 3 18 3 18H21C21 18 18 15.8667 18 8.4Z"</span></span>
+<span class="line"><span style="--shiki-light:#6F42C1;--shiki-dark:#B392F0">            stroke</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">=</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF">"currentColor"</span></span>
+<span class="line"><span style="--shiki-light:#6F42C1;--shiki-dark:#B392F0">            stroke-linecap</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">=</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF">"round"</span></span>
+<span class="line"><span style="--shiki-light:#6F42C1;--shiki-dark:#B392F0">            stroke-linejoin</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">=</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF">"round"</span></span>
+<span class="line"><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">          >&#x3C;/</span><span style="--shiki-light:#22863A;--shiki-dark:#85E89D">path</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">></span></span>
+<span class="line"><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">          &#x3C;</span><span style="--shiki-light:#22863A;--shiki-dark:#85E89D">path</span></span>
+<span class="line"><span style="--shiki-light:#6F42C1;--shiki-dark:#B392F0">            d</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">=</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF">"M13.73 21C13.5542 21.3031 13.3019 21.5547 12.9982 21.7295C12.6946 21.9044 12.3504 21.9965 12 21.9965C11.6496 21.9965 11.3054 21.9044 11.0018 21.7295C10.6982 21.5547 10.4458 21.3031 10.27 21"</span></span>
+<span class="line"><span style="--shiki-light:#6F42C1;--shiki-dark:#B392F0">            stroke</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">=</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF">"currentColor"</span></span>
+<span class="line"><span style="--shiki-light:#6F42C1;--shiki-dark:#B392F0">            stroke-linecap</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">=</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF">"round"</span></span>
+<span class="line"><span style="--shiki-light:#6F42C1;--shiki-dark:#B392F0">            stroke-linejoin</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">=</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF">"round"</span></span>
+<span class="line"><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">          >&#x3C;/</span><span style="--shiki-light:#22863A;--shiki-dark:#85E89D">path</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">>&#x3C;/</span><span style="--shiki-light:#B31D28;--shiki-light-font-style:italic;--shiki-dark:#FDAEB7;--shiki-dark-font-style:italic">svg</span></span>
+<span class="line"><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">      >&#x3C;/</span><span style="--shiki-light:#B31D28;--shiki-light-font-style:italic;--shiki-dark:#FDAEB7;--shiki-dark-font-style:italic">span</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">></span></span>
+<span class="line"><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">    &#x3C;/</span><span style="--shiki-light:#B31D28;--shiki-light-font-style:italic;--shiki-dark:#FDAEB7;--shiki-dark-font-style:italic">div</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">></span></span>
+<span class="line"><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">    &#x3C;</span><span style="--shiki-light:#B31D28;--shiki-light-font-style:italic;--shiki-dark:#FDAEB7;--shiki-dark-font-style:italic">div</span><span style="--shiki-light:#6F42C1;--shiki-dark:#B392F0"> class</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">=</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF">"flex-1"</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">></span></span>
+<span class="line"><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">      &#x3C;</span><span style="--shiki-light:#B31D28;--shiki-light-font-style:italic;--shiki-dark:#FDAEB7;--shiki-dark-font-style:italic">h1</span><span style="--shiki-light:#6F42C1;--shiki-dark:#B392F0"> class</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">=</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF">"text-base font-bold text-stone-800 dark:text-white"</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">></span></span>
+<span class="line"><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">        Lorem ipsum</span></span>
+<span class="line"><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">      &#x3C;/</span><span style="--shiki-light:#B31D28;--shiki-light-font-style:italic;--shiki-dark:#FDAEB7;--shiki-dark-font-style:italic">h1</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">></span></span>
+<span class="line"><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">      &#x3C;</span><span style="--shiki-light:#B31D28;--shiki-light-font-style:italic;--shiki-dark:#FDAEB7;--shiki-dark-font-style:italic">p</span><span style="--shiki-light:#6F42C1;--shiki-dark:#B392F0"> class</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">=</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF">"text-sm text-stone-500"</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">>There is no one who loves pain itself, who seeks after it and wants to have it, simply because it is pain...&#x3C;/</span><span style="--shiki-light:#B31D28;--shiki-light-font-style:italic;--shiki-dark:#FDAEB7;--shiki-dark-font-style:italic">p</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">></span></span>
+<span class="line"><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">    &#x3C;/</span><span style="--shiki-light:#B31D28;--shiki-light-font-style:italic;--shiki-dark:#FDAEB7;--shiki-dark-font-style:italic">div</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">></span></span>
+<span class="line"><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">  &#x3C;/</span><span style="--shiki-light:#B31D28;--shiki-light-font-style:italic;--shiki-dark:#FDAEB7;--shiki-dark-font-style:italic">div</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">></span></span>
+<span class="line"></span>
+<span class="line"><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">&#x3C;/</span><span style="--shiki-light:#B31D28;--shiki-light-font-style:italic;--shiki-dark:#FDAEB7;--shiki-dark-font-style:italic">div</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">></span></span></code></pre> </div>  </div> </div> <!-- CodePreview JS --> <script>(function(){const id = "tabs-wifm8py";
+
+  (() => {
+    const container = document.getElementById(id);
+    if (!container) return;
+
+    const buttons = container.querySelectorAll(".tab-trigger");
+    const contents = container.querySelectorAll(".tab-content");
+
+    const activeClasses = [
+      "bg-card",
+      "text-primary",
+      "shadow-md",
+    ];
+
+    buttons.forEach((button) => {
+      button.addEventListener("click", () => {
+        buttons.forEach((btn) => {
+          btn.setAttribute("aria-selected", "false");
+          btn.classList.remove(...activeClasses);
+        });
+
+        contents.forEach((content) =>
+          content.classList.add("hidden")
+        );
+
+        button.setAttribute("aria-selected", "true");
+        button.classList.add(...activeClasses);
+
+        const targetType = button.dataset.target;
+        const targetContent = container.querySelector(
+          `[data-content="${targetType}"]`
+        );
+
+        if (targetContent) {
+          targetContent.classList.remove("hidden");
+        }
+      });
+    });
+  })();
+})();</script>
+<div id="tabs-f5fd67k" class="not-prose bg-background border border-border rounded-[0.5rem] w-full my-6"> <!-- Header --> <div class="flex items-center justify-between px-4 py-3 border-b bg-card rounded-t-[0.5rem]"> <!-- Tabs --> <div> <nav role="tablist" class="inline-flex items-center justify-center gap-1 rounded-lg bg-muted/50 border-t-1 border-black/20 dark:border-black/80 p-0.5 text-muted-foreground"> <button type="button" role="tab" aria-selected="true" data-target="preview" class="tab-trigger inline-flex items-center justify-center whitespace-nowrap rounded-md px-2 py-1 text-sm font-medium transition-all bg-card text-primary shadow-md">
+Preview
+</button> <button type="button" role="tab" data-target="code" class="tab-trigger inline-flex items-center justify-center whitespace-nowrap rounded-md px-2 py-1 text-sm font-medium transition-all">
+Code
+</button> </nav> </div> <!-- Title and Type --> <div class="flex items-center gap-2"> <h1 class="text-sm font-normal text-orange tracking-tight">Timeline With Avatar</h1> <span class="text-[10px] uppercase tracking-wider text-muted-foreground bg-muted px-2 py-1 rounded-md"> html </span> </div> </div> <!-- Preview --> <div data-content="preview" class="tab-content p-4 not-prose"> <div> <div><div class="flex w-full flex-col">
+  <div class="relative flex gap-4">
+    <div class="relative">
+      <div
+        class="absolute left-1/2 top-5 h-full w-0.5 -translate-x-1/2 bg-stone-200"
+      ></div>
+      <span
+        class="relative grid h-10 w-10 place-items-center rounded-full bg-stone-200 text-surface-foreground p-0.5"
+      >
+        <img
+          src="https://github.com/lucassihh.png"
+          alt="Avatar"
+          class="inline-block object-cover object-center rounded-full h-full w-full"
+        />
+      </span>
+    </div>
+    <div class="flex-1 mb-10">
+      <h1 class="text-base font-bold text-stone-800 dark:text-white">
+        Lorem ipsum
+      </h1>
+      <p class="mt-2 block text-sm text-stone-500"
+        >There is no one who loves pain itself, who seeks after it and wants to have it, simply because it is pain...</p
+      >
+    </div>
+  </div>
+
+  <div class="relative flex gap-4">
+    <div class="relative">
+      <div
+        class="absolute left-1/2 top-5 h-full w-0.5 -translate-x-1/2 bg-stone-200"
+      ></div>
+      <span
+        class="relative grid h-10 w-10 place-items-center rounded-full bg-stone-200 text-surface-foreground p-0.5"
+      >
+        <img
+          src="https://github.com/lucassihh.png"
+          alt="Avatar"
+          class="inline-block object-cover object-center rounded-full h-full w-full"
+        />
+      </span>
+    </div>
+    <div class="flex-1 mb-10">
+      <h1 class="text-base font-bold text-stone-800 dark:text-white">
+        Lorem ipsum
+      </h1>
+      <p class="mt-2 block text-sm text-stone-500"
+        >There is no one who loves pain itself, who seeks after it and wants to have it, simply because it is pain...</p
+      >
+    </div>
+  </div>
+
+  <div class="relative flex gap-4">
+    <div class="relative">
+      <span
+        class="relative grid h-10 w-10 place-items-center rounded-full bg-stone-200 text-surface-foreground p-0.5"
+      >
+        <img
+          src="https://github.com/lucassihh.png"
+          alt="Avatar"
+          class="inline-block object-cover object-center rounded-full h-full w-full"
+        />
+      </span>
+    </div>
+    <div class="flex-1">
+      <h1 class="text-base font-bold text-stone-800 dark:text-white">
+        Lorem ipsum
+      </h1>
+      <p class="mt-2 block text-sm text-stone-500"
+        >There is no one who loves pain itself, who seeks after it and wants to have it, simply because it is pain...
+        </p
+      >
+    </div>
+  </div>
+</div>
+</div> </div> </div> <!-- Code --> <div data-content="code" class="tab-content hidden"> <div> <pre class="astro-code astro-code-themes github-light github-dark" style="--shiki-light:#24292e;--shiki-dark:#e1e4e8;--shiki-light-bg:#fff;--shiki-dark-bg:#24292e; overflow-x: auto;" tabindex="0" data-language="html"><code><span class="line"><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">&#x3C;</span><span style="--shiki-light:#22863A;--shiki-dark:#85E89D">div</span><span style="--shiki-light:#6F42C1;--shiki-dark:#B392F0"> class</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">=</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF">"flex w-full flex-col"</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">></span></span>
+<span class="line"><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">  &#x3C;</span><span style="--shiki-light:#22863A;--shiki-dark:#85E89D">div</span><span style="--shiki-light:#6F42C1;--shiki-dark:#B392F0"> class</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">=</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF">"relative flex gap-4"</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">></span></span>
+<span class="line"><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">    &#x3C;</span><span style="--shiki-light:#22863A;--shiki-dark:#85E89D">div</span><span style="--shiki-light:#6F42C1;--shiki-dark:#B392F0"> class</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">=</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF">"relative"</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">></span></span>
+<span class="line"><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">      &#x3C;</span><span style="--shiki-light:#22863A;--shiki-dark:#85E89D">div</span></span>
+<span class="line"><span style="--shiki-light:#6F42C1;--shiki-dark:#B392F0">        class</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">=</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF">"absolute left-1/2 top-5 h-full w-0.5 -translate-x-1/2 bg-stone-200"</span></span>
+<span class="line"><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">      >&#x3C;/</span><span style="--shiki-light:#22863A;--shiki-dark:#85E89D">div</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">></span></span>
+<span class="line"><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">      &#x3C;</span><span style="--shiki-light:#22863A;--shiki-dark:#85E89D">span</span></span>
+<span class="line"><span style="--shiki-light:#6F42C1;--shiki-dark:#B392F0">        class</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">=</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF">"relative grid h-10 w-10 place-items-center rounded-full bg-stone-200 text-surface-foreground p-0.5"</span></span>
+<span class="line"><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">      ></span></span>
+<span class="line"><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">        &#x3C;</span><span style="--shiki-light:#22863A;--shiki-dark:#85E89D">img</span></span>
+<span class="line"><span style="--shiki-light:#6F42C1;--shiki-dark:#B392F0">          src</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">=</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF">"https://github.com/lucassihh.png"</span></span>
+<span class="line"><span style="--shiki-light:#6F42C1;--shiki-dark:#B392F0">          alt</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">=</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF">"Avatar"</span></span>
+<span class="line"><span style="--shiki-light:#6F42C1;--shiki-dark:#B392F0">          class</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">=</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF">"inline-block object-cover object-center rounded-full h-full w-full"</span></span>
+<span class="line"><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">        /></span></span>
+<span class="line"><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">      &#x3C;/</span><span style="--shiki-light:#22863A;--shiki-dark:#85E89D">span</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">></span></span>
+<span class="line"><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">    &#x3C;/</span><span style="--shiki-light:#22863A;--shiki-dark:#85E89D">div</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">></span></span>
+<span class="line"><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">    &#x3C;</span><span style="--shiki-light:#22863A;--shiki-dark:#85E89D">div</span><span style="--shiki-light:#6F42C1;--shiki-dark:#B392F0"> class</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">=</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF">"flex-1 mb-10"</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">></span></span>
+<span class="line"><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">      &#x3C;</span><span style="--shiki-light:#22863A;--shiki-dark:#85E89D">h1</span><span style="--shiki-light:#6F42C1;--shiki-dark:#B392F0"> class</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">=</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF">"text-base font-bold text-stone-800 dark:text-white"</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">></span></span>
+<span class="line"><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">        Lorem ipsum</span></span>
+<span class="line"><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">      &#x3C;/</span><span style="--shiki-light:#22863A;--shiki-dark:#85E89D">h1</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">></span></span>
+<span class="line"><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">      &#x3C;</span><span style="--shiki-light:#22863A;--shiki-dark:#85E89D">p</span><span style="--shiki-light:#6F42C1;--shiki-dark:#B392F0"> class</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">=</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF">"mt-2 block text-sm text-stone-500"</span></span>
+<span class="line"><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">        >There is no one who loves pain itself, who seeks after it and wants to have it, simply because it is pain...&#x3C;/</span><span style="--shiki-light:#22863A;--shiki-dark:#85E89D">p</span></span>
+<span class="line"><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">      ></span></span>
+<span class="line"><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">    &#x3C;/</span><span style="--shiki-light:#22863A;--shiki-dark:#85E89D">div</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">></span></span>
+<span class="line"><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">  &#x3C;/</span><span style="--shiki-light:#22863A;--shiki-dark:#85E89D">div</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">></span></span>
+<span class="line"></span>
+<span class="line"><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">  &#x3C;</span><span style="--shiki-light:#22863A;--shiki-dark:#85E89D">div</span><span style="--shiki-light:#6F42C1;--shiki-dark:#B392F0"> class</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">=</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF">"relative flex gap-4"</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">></span></span>
+<span class="line"><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">    &#x3C;</span><span style="--shiki-light:#22863A;--shiki-dark:#85E89D">div</span><span style="--shiki-light:#6F42C1;--shiki-dark:#B392F0"> class</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">=</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF">"relative"</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">></span></span>
+<span class="line"><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">      &#x3C;</span><span style="--shiki-light:#22863A;--shiki-dark:#85E89D">div</span></span>
+<span class="line"><span style="--shiki-light:#6F42C1;--shiki-dark:#B392F0">        class</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">=</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF">"absolute left-1/2 top-5 h-full w-0.5 -translate-x-1/2 bg-stone-200"</span></span>
+<span class="line"><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">      >&#x3C;/</span><span style="--shiki-light:#22863A;--shiki-dark:#85E89D">div</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">></span></span>
+<span class="line"><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">      &#x3C;</span><span style="--shiki-light:#22863A;--shiki-dark:#85E89D">span</span></span>
+<span class="line"><span style="--shiki-light:#6F42C1;--shiki-dark:#B392F0">        class</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">=</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF">"relative grid h-10 w-10 place-items-center rounded-full bg-stone-200 text-surface-foreground p-0.5"</span></span>
+<span class="line"><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">      ></span></span>
+<span class="line"><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">        &#x3C;</span><span style="--shiki-light:#22863A;--shiki-dark:#85E89D">img</span></span>
+<span class="line"><span style="--shiki-light:#6F42C1;--shiki-dark:#B392F0">          src</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">=</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF">"https://github.com/lucassihh.png"</span></span>
+<span class="line"><span style="--shiki-light:#6F42C1;--shiki-dark:#B392F0">          alt</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">=</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF">"Avatar"</span></span>
+<span class="line"><span style="--shiki-light:#6F42C1;--shiki-dark:#B392F0">          class</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">=</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF">"inline-block object-cover object-center rounded-full h-full w-full"</span></span>
+<span class="line"><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">        /></span></span>
+<span class="line"><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">      &#x3C;/</span><span style="--shiki-light:#22863A;--shiki-dark:#85E89D">span</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">></span></span>
+<span class="line"><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">    &#x3C;/</span><span style="--shiki-light:#22863A;--shiki-dark:#85E89D">div</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">></span></span>
+<span class="line"><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">    &#x3C;</span><span style="--shiki-light:#22863A;--shiki-dark:#85E89D">div</span><span style="--shiki-light:#6F42C1;--shiki-dark:#B392F0"> class</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">=</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF">"flex-1 mb-10"</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">></span></span>
+<span class="line"><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">      &#x3C;</span><span style="--shiki-light:#22863A;--shiki-dark:#85E89D">h1</span><span style="--shiki-light:#6F42C1;--shiki-dark:#B392F0"> class</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">=</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF">"text-base font-bold text-stone-800 dark:text-white"</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">></span></span>
+<span class="line"><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">        Lorem ipsum</span></span>
+<span class="line"><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">      &#x3C;/</span><span style="--shiki-light:#22863A;--shiki-dark:#85E89D">h1</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">></span></span>
+<span class="line"><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">      &#x3C;</span><span style="--shiki-light:#22863A;--shiki-dark:#85E89D">p</span><span style="--shiki-light:#6F42C1;--shiki-dark:#B392F0"> class</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">=</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF">"mt-2 block text-sm text-stone-500"</span></span>
+<span class="line"><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">        >There is no one who loves pain itself, who seeks after it and wants to have it, simply because it is pain...&#x3C;/</span><span style="--shiki-light:#22863A;--shiki-dark:#85E89D">p</span></span>
+<span class="line"><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">      ></span></span>
+<span class="line"><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">    &#x3C;/</span><span style="--shiki-light:#22863A;--shiki-dark:#85E89D">div</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">></span></span>
+<span class="line"><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">  &#x3C;/</span><span style="--shiki-light:#22863A;--shiki-dark:#85E89D">div</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">></span></span>
+<span class="line"></span>
+<span class="line"><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">  &#x3C;</span><span style="--shiki-light:#22863A;--shiki-dark:#85E89D">div</span><span style="--shiki-light:#6F42C1;--shiki-dark:#B392F0"> class</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">=</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF">"relative flex gap-4"</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">></span></span>
+<span class="line"><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">    &#x3C;</span><span style="--shiki-light:#22863A;--shiki-dark:#85E89D">div</span><span style="--shiki-light:#6F42C1;--shiki-dark:#B392F0"> class</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">=</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF">"relative"</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">></span></span>
+<span class="line"><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">      &#x3C;</span><span style="--shiki-light:#22863A;--shiki-dark:#85E89D">span</span></span>
+<span class="line"><span style="--shiki-light:#6F42C1;--shiki-dark:#B392F0">        class</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">=</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF">"relative grid h-10 w-10 place-items-center rounded-full bg-stone-200 text-surface-foreground p-0.5"</span></span>
+<span class="line"><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">      ></span></span>
+<span class="line"><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">        &#x3C;</span><span style="--shiki-light:#22863A;--shiki-dark:#85E89D">img</span></span>
+<span class="line"><span style="--shiki-light:#6F42C1;--shiki-dark:#B392F0">          src</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">=</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF">"https://github.com/lucassihh.png"</span></span>
+<span class="line"><span style="--shiki-light:#6F42C1;--shiki-dark:#B392F0">          alt</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">=</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF">"Avatar"</span></span>
+<span class="line"><span style="--shiki-light:#6F42C1;--shiki-dark:#B392F0">          class</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">=</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF">"inline-block object-cover object-center rounded-full h-full w-full"</span></span>
+<span class="line"><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">        /></span></span>
+<span class="line"><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">      &#x3C;/</span><span style="--shiki-light:#22863A;--shiki-dark:#85E89D">span</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">></span></span>
+<span class="line"><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">    &#x3C;/</span><span style="--shiki-light:#22863A;--shiki-dark:#85E89D">div</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">></span></span>
+<span class="line"><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">    &#x3C;</span><span style="--shiki-light:#22863A;--shiki-dark:#85E89D">div</span><span style="--shiki-light:#6F42C1;--shiki-dark:#B392F0"> class</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">=</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF">"flex-1"</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">></span></span>
+<span class="line"><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">      &#x3C;</span><span style="--shiki-light:#22863A;--shiki-dark:#85E89D">h1</span><span style="--shiki-light:#6F42C1;--shiki-dark:#B392F0"> class</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">=</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF">"text-base font-bold text-stone-800 dark:text-white"</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">></span></span>
+<span class="line"><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">        Lorem ipsum</span></span>
+<span class="line"><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">      &#x3C;/</span><span style="--shiki-light:#22863A;--shiki-dark:#85E89D">h1</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">></span></span>
+<span class="line"><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">      &#x3C;</span><span style="--shiki-light:#22863A;--shiki-dark:#85E89D">p</span><span style="--shiki-light:#6F42C1;--shiki-dark:#B392F0"> class</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">=</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF">"mt-2 block text-sm text-stone-500"</span></span>
+<span class="line"><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">        >There is no one who loves pain itself, who seeks after it and wants to have it, simply because it is pain...</span></span>
+<span class="line"><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">        &#x3C;/</span><span style="--shiki-light:#22863A;--shiki-dark:#85E89D">p</span></span>
+<span class="line"><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">      ></span></span>
+<span class="line"><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">    &#x3C;/</span><span style="--shiki-light:#22863A;--shiki-dark:#85E89D">div</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">></span></span>
+<span class="line"><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">  &#x3C;/</span><span style="--shiki-light:#22863A;--shiki-dark:#85E89D">div</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">></span></span>
+<span class="line"><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">&#x3C;/</span><span style="--shiki-light:#22863A;--shiki-dark:#85E89D">div</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">></span></span></code></pre> </div>  </div> </div> <!-- CodePreview JS --> <script>(function(){const id = "tabs-f5fd67k";
+
+  (() => {
+    const container = document.getElementById(id);
+    if (!container) return;
+
+    const buttons = container.querySelectorAll(".tab-trigger");
+    const contents = container.querySelectorAll(".tab-content");
+
+    const activeClasses = [
+      "bg-card",
+      "text-primary",
+      "shadow-md",
+    ];
+
+    buttons.forEach((button) => {
+      button.addEventListener("click", () => {
+        buttons.forEach((btn) => {
+          btn.setAttribute("aria-selected", "false");
+          btn.classList.remove(...activeClasses);
+        });
+
+        contents.forEach((content) =>
+          content.classList.add("hidden")
+        );
+
+        button.setAttribute("aria-selected", "true");
+        button.classList.add(...activeClasses);
+
+        const targetType = button.dataset.target;
+        const targetContent = container.querySelector(
+          `[data-content="${targetType}"]`
+        );
+
+        if (targetContent) {
+          targetContent.classList.remove("hidden");
+        }
+      });
+    });
+  })();
+})();</script>
+<div id="tabs-tzf7ait" class="not-prose bg-background border border-border rounded-[0.5rem] w-full my-6"> <!-- Header --> <div class="flex items-center justify-between px-4 py-3 border-b bg-card rounded-t-[0.5rem]"> <!-- Tabs --> <div> <nav role="tablist" class="inline-flex items-center justify-center gap-1 rounded-lg bg-muted/50 border-t-1 border-black/20 dark:border-black/80 p-0.5 text-muted-foreground"> <button type="button" role="tab" aria-selected="true" data-target="preview" class="tab-trigger inline-flex items-center justify-center whitespace-nowrap rounded-md px-2 py-1 text-sm font-medium transition-all bg-card text-primary shadow-md">
+Preview
+</button> <button type="button" role="tab" data-target="code" class="tab-trigger inline-flex items-center justify-center whitespace-nowrap rounded-md px-2 py-1 text-sm font-medium transition-all">
+Code
+</button> </nav> </div> <!-- Title and Type --> <div class="flex items-center gap-2"> <h1 class="text-sm font-normal text-orange tracking-tight">Timeline With Icon</h1> <span class="text-[10px] uppercase tracking-wider text-muted-foreground bg-muted px-2 py-1 rounded-md"> html </span> </div> </div> <!-- Preview --> <div data-content="preview" class="tab-content p-4 not-prose"> <div> <div><div class="flex w-full flex-col">
+  <div class="relative flex gap-4">
+    <div class="relative">
+      <div
+        class="absolute left-1/2 top-5 h-full w-0.5 -translate-x-1/2 bg-stone-200"
+      ></div>
+      <span
+        class="relative grid h-10 w-10 place-items-center rounded-full bg-stone-200 text-surface-foreground"
+        ><svg
+          width="1.5em"
+          height="1.5em"
+          stroke-width="1.5"
+          viewBox="0 0 24 24"
+          fill="none"
+          xmlns="http://www.w3.org/2000/svg"
+          color="currentColor"
+          class="h-5 w-5"
+        >
+          <path
+            d="M17 21H7C4.79086 21 3 19.2091 3 17V10.7076C3 9.30887 3.73061 8.01175 4.92679 7.28679L9.92679 4.25649C11.2011 3.48421 12.7989 3.48421 14.0732 4.25649L19.0732 7.28679C20.2694 8.01175 21 9.30887 21 10.7076V17C21 19.2091 19.2091 21 17 21Z"
+            stroke="currentColor"
+            stroke-linecap="round"
+            stroke-linejoin="round"
+          ></path>
+          <path
+            d="M9 17H15"
+            stroke="currentColor"
+            stroke-linecap="round"
+            stroke-linejoin="round"
+          ></path></svg
+      ></span>
+    </div>
+    <div class="flex-1 mb-10">
+      <h1 class="text-base font-bold text-stone-800 dark:text-white">
+        Lorem ipsum
+      </h1>
+      <p class="mt-2 block text-sm text-stone-600"
+        >There is no one who loves pain itself, who seeks after it and wants to have it, simply because it is pain...</p
+      >
+    </div>
+  </div>
+
+  <div class="relative flex gap-4">
+    <div class="relative">
+      <div
+        class="absolute left-1/2 top-5 h-full w-0.5 -translate-x-1/2 bg-stone-200"
+      ></div>
+      <span
+        class="relative grid h-10 w-10 place-items-center rounded-full bg-stone-200 text-surface-foreground"
+        ><svg
+          width="1.5em"
+          height="1.5em"
+          stroke-width="1.5"
+          viewBox="0 0 24 24"
+          fill="none"
+          xmlns="http://www.w3.org/2000/svg"
+          color="currentColor"
+          class="h-5 w-5"
+        >
+          <path
+            d="M18 8.4C18 6.70261 17.3679 5.07475 16.2426 3.87452C15.1174 2.67428 13.5913 2 12 2C10.4087 2 8.88258 2.67428 7.75736 3.87452C6.63214 5.07475 6 6.70261 6 8.4C6 15.8667 3 18 3 18H21C21 18 18 15.8667 18 8.4Z"
+            stroke="currentColor"
+            stroke-linecap="round"
+            stroke-linejoin="round"
+          ></path>
+          <path
+            d="M13.73 21C13.5542 21.3031 13.3019 21.5547 12.9982 21.7295C12.6946 21.9044 12.3504 21.9965 12 21.9965C11.6496 21.9965 11.3054 21.9044 11.0018 21.7295C10.6982 21.5547 10.4458 21.3031 10.27 21"
+            stroke="currentColor"
+            stroke-linecap="round"
+            stroke-linejoin="round"
+          ></path></svg
+      ></span>
+    </div>
+    <div class="flex-1 mb-10">
+      <h1 class="text-base font-bold text-stone-800 dark:text-white">
+        Lorem ipsum
+      </h1>
+<p class="mt-2 block text-sm text-stone-600"
+        >There is no one who loves pain itself, who seeks after it and wants to have it, simply because it is pain...</p
+      >
+    </div>
+  </div>
+
+  <div class="relative flex gap-4">
+    <div class="relative">
+      <span
+        class="relative grid h-10 w-10 place-items-center rounded-full bg-stone-200 text-surface-foreground"
+        ><svg
+          width="1.5em"
+          height="1.5em"
+          stroke-width="1.5"
+          viewBox="0 0 24 24"
+          fill="none"
+          xmlns="http://www.w3.org/2000/svg"
+          color="currentColor"
+          class="h-5 w-5"
+        >
+          <path
+            d="M12 22C17.5228 22 22 17.5228 22 12C22 6.47715 17.5228 2 12 2C6.47715 2 2 6.47715 2 12C2 17.5228 6.47715 22 12 22Z"
+            stroke="currentColor"
+            stroke-linecap="round"
+            stroke-linejoin="round"
+          ></path>
+          <path
+            d="M15 8.5C14.315 7.81501 13.1087 7.33855 12 7.30872M9 15C9.64448 15.8593 10.8428 16.3494 12 16.391M12 7.30872C10.6809 7.27322 9.5 7.86998 9.5 9.50001C9.5 12.5 15 11 15 14C15 15.711 13.5362 16.4462 12 16.391M12 7.30872V5.5M12 16.391V18.5"
+            stroke="currentColor"
+            stroke-linecap="round"
+            stroke-linejoin="round"
+          ></path></svg
+      ></span>
+    </div>
+    <div class="flex-1">
+      <h1 class="text-base font-bold text-stone-800 dark:text-white">
+        Lorem ipsum
+      </h1>
+      <p class="mt-2 block text-sm text-stone-600"
+        >There is no one who loves pain itself, who seeks after it and wants to have it, simply because it is pain...</p
+      >
+    </div>
+  </div>
+</div>
+</div> </div> </div> <!-- Code --> <div data-content="code" class="tab-content hidden"> <div> <pre class="astro-code astro-code-themes github-light github-dark" style="--shiki-light:#24292e;--shiki-dark:#e1e4e8;--shiki-light-bg:#fff;--shiki-dark-bg:#24292e; overflow-x: auto;" tabindex="0" data-language="html"><code><span class="line"><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">&#x3C;</span><span style="--shiki-light:#22863A;--shiki-dark:#85E89D">div</span><span style="--shiki-light:#6F42C1;--shiki-dark:#B392F0"> class</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">=</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF">"flex w-full flex-col"</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">></span></span>
+<span class="line"><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">  &#x3C;</span><span style="--shiki-light:#22863A;--shiki-dark:#85E89D">div</span><span style="--shiki-light:#6F42C1;--shiki-dark:#B392F0"> class</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">=</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF">"relative flex gap-4"</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">></span></span>
+<span class="line"><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">    &#x3C;</span><span style="--shiki-light:#22863A;--shiki-dark:#85E89D">div</span><span style="--shiki-light:#6F42C1;--shiki-dark:#B392F0"> class</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">=</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF">"relative"</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">></span></span>
+<span class="line"><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">      &#x3C;</span><span style="--shiki-light:#22863A;--shiki-dark:#85E89D">div</span></span>
+<span class="line"><span style="--shiki-light:#6F42C1;--shiki-dark:#B392F0">        class</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">=</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF">"absolute left-1/2 top-5 h-full w-0.5 -translate-x-1/2 bg-stone-200"</span></span>
+<span class="line"><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">      >&#x3C;/</span><span style="--shiki-light:#22863A;--shiki-dark:#85E89D">div</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">></span></span>
+<span class="line"><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">      &#x3C;</span><span style="--shiki-light:#22863A;--shiki-dark:#85E89D">span</span></span>
+<span class="line"><span style="--shiki-light:#6F42C1;--shiki-dark:#B392F0">        class</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">=</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF">"relative grid h-10 w-10 place-items-center rounded-full bg-stone-200 text-surface-foreground"</span></span>
+<span class="line"><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">        >&#x3C;</span><span style="--shiki-light:#22863A;--shiki-dark:#85E89D">svg</span></span>
+<span class="line"><span style="--shiki-light:#6F42C1;--shiki-dark:#B392F0">          width</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">=</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF">"1.5em"</span></span>
+<span class="line"><span style="--shiki-light:#6F42C1;--shiki-dark:#B392F0">          height</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">=</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF">"1.5em"</span></span>
+<span class="line"><span style="--shiki-light:#6F42C1;--shiki-dark:#B392F0">          stroke-width</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">=</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF">"1.5"</span></span>
+<span class="line"><span style="--shiki-light:#6F42C1;--shiki-dark:#B392F0">          viewBox</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">=</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF">"0 0 24 24"</span></span>
+<span class="line"><span style="--shiki-light:#6F42C1;--shiki-dark:#B392F0">          fill</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">=</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF">"none"</span></span>
+<span class="line"><span style="--shiki-light:#6F42C1;--shiki-dark:#B392F0">          xmlns</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">=</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF">"http://www.w3.org/2000/svg"</span></span>
+<span class="line"><span style="--shiki-light:#6F42C1;--shiki-dark:#B392F0">          color</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">=</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF">"currentColor"</span></span>
+<span class="line"><span style="--shiki-light:#6F42C1;--shiki-dark:#B392F0">          class</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">=</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF">"h-5 w-5"</span></span>
+<span class="line"><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">        ></span></span>
+<span class="line"><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">          &#x3C;</span><span style="--shiki-light:#22863A;--shiki-dark:#85E89D">path</span></span>
+<span class="line"><span style="--shiki-light:#6F42C1;--shiki-dark:#B392F0">            d</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">=</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF">"M17 21H7C4.79086 21 3 19.2091 3 17V10.7076C3 9.30887 3.73061 8.01175 4.92679 7.28679L9.92679 4.25649C11.2011 3.48421 12.7989 3.48421 14.0732 4.25649L19.0732 7.28679C20.2694 8.01175 21 9.30887 21 10.7076V17C21 19.2091 19.2091 21 17 21Z"</span></span>
+<span class="line"><span style="--shiki-light:#6F42C1;--shiki-dark:#B392F0">            stroke</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">=</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF">"currentColor"</span></span>
+<span class="line"><span style="--shiki-light:#6F42C1;--shiki-dark:#B392F0">            stroke-linecap</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">=</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF">"round"</span></span>
+<span class="line"><span style="--shiki-light:#6F42C1;--shiki-dark:#B392F0">            stroke-linejoin</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">=</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF">"round"</span></span>
+<span class="line"><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">          >&#x3C;/</span><span style="--shiki-light:#22863A;--shiki-dark:#85E89D">path</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">></span></span>
+<span class="line"><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">          &#x3C;</span><span style="--shiki-light:#22863A;--shiki-dark:#85E89D">path</span></span>
+<span class="line"><span style="--shiki-light:#6F42C1;--shiki-dark:#B392F0">            d</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">=</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF">"M9 17H15"</span></span>
+<span class="line"><span style="--shiki-light:#6F42C1;--shiki-dark:#B392F0">            stroke</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">=</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF">"currentColor"</span></span>
+<span class="line"><span style="--shiki-light:#6F42C1;--shiki-dark:#B392F0">            stroke-linecap</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">=</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF">"round"</span></span>
+<span class="line"><span style="--shiki-light:#6F42C1;--shiki-dark:#B392F0">            stroke-linejoin</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">=</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF">"round"</span></span>
+<span class="line"><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">          >&#x3C;/</span><span style="--shiki-light:#22863A;--shiki-dark:#85E89D">path</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">>&#x3C;/</span><span style="--shiki-light:#B31D28;--shiki-light-font-style:italic;--shiki-dark:#FDAEB7;--shiki-dark-font-style:italic">svg</span></span>
+<span class="line"><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">      >&#x3C;/</span><span style="--shiki-light:#B31D28;--shiki-light-font-style:italic;--shiki-dark:#FDAEB7;--shiki-dark-font-style:italic">span</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">></span></span>
+<span class="line"><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">    &#x3C;/</span><span style="--shiki-light:#B31D28;--shiki-light-font-style:italic;--shiki-dark:#FDAEB7;--shiki-dark-font-style:italic">div</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">></span></span>
+<span class="line"><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">    &#x3C;</span><span style="--shiki-light:#B31D28;--shiki-light-font-style:italic;--shiki-dark:#FDAEB7;--shiki-dark-font-style:italic">div</span><span style="--shiki-light:#6F42C1;--shiki-dark:#B392F0"> class</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">=</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF">"flex-1 mb-10"</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">></span></span>
+<span class="line"><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">      &#x3C;</span><span style="--shiki-light:#B31D28;--shiki-light-font-style:italic;--shiki-dark:#FDAEB7;--shiki-dark-font-style:italic">h1</span><span style="--shiki-light:#6F42C1;--shiki-dark:#B392F0"> class</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">=</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF">"text-base font-bold text-stone-800 dark:text-white"</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">></span></span>
+<span class="line"><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">        Lorem ipsum</span></span>
+<span class="line"><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">      &#x3C;/</span><span style="--shiki-light:#B31D28;--shiki-light-font-style:italic;--shiki-dark:#FDAEB7;--shiki-dark-font-style:italic">h1</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">></span></span>
+<span class="line"><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">      &#x3C;</span><span style="--shiki-light:#B31D28;--shiki-light-font-style:italic;--shiki-dark:#FDAEB7;--shiki-dark-font-style:italic">p</span><span style="--shiki-light:#6F42C1;--shiki-dark:#B392F0"> class</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">=</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF">"mt-2 block text-sm text-stone-600"</span></span>
+<span class="line"><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">        >There is no one who loves pain itself, who seeks after it and wants to have it, simply because it is pain...&#x3C;/</span><span style="--shiki-light:#B31D28;--shiki-light-font-style:italic;--shiki-dark:#FDAEB7;--shiki-dark-font-style:italic">p</span></span>
+<span class="line"><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">      ></span></span>
+<span class="line"><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">    &#x3C;/</span><span style="--shiki-light:#B31D28;--shiki-light-font-style:italic;--shiki-dark:#FDAEB7;--shiki-dark-font-style:italic">div</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">></span></span>
+<span class="line"><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">  &#x3C;/</span><span style="--shiki-light:#B31D28;--shiki-light-font-style:italic;--shiki-dark:#FDAEB7;--shiki-dark-font-style:italic">div</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">></span></span>
+<span class="line"></span>
+<span class="line"><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">  &#x3C;</span><span style="--shiki-light:#B31D28;--shiki-light-font-style:italic;--shiki-dark:#FDAEB7;--shiki-dark-font-style:italic">div</span><span style="--shiki-light:#6F42C1;--shiki-dark:#B392F0"> class</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">=</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF">"relative flex gap-4"</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">></span></span>
+<span class="line"><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">    &#x3C;</span><span style="--shiki-light:#B31D28;--shiki-light-font-style:italic;--shiki-dark:#FDAEB7;--shiki-dark-font-style:italic">div</span><span style="--shiki-light:#6F42C1;--shiki-dark:#B392F0"> class</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">=</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF">"relative"</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">></span></span>
+<span class="line"><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">      &#x3C;</span><span style="--shiki-light:#B31D28;--shiki-light-font-style:italic;--shiki-dark:#FDAEB7;--shiki-dark-font-style:italic">div</span></span>
+<span class="line"><span style="--shiki-light:#6F42C1;--shiki-dark:#B392F0">        class</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">=</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF">"absolute left-1/2 top-5 h-full w-0.5 -translate-x-1/2 bg-stone-200"</span></span>
+<span class="line"><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">      >&#x3C;/</span><span style="--shiki-light:#B31D28;--shiki-light-font-style:italic;--shiki-dark:#FDAEB7;--shiki-dark-font-style:italic">div</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">></span></span>
+<span class="line"><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">      &#x3C;</span><span style="--shiki-light:#B31D28;--shiki-light-font-style:italic;--shiki-dark:#FDAEB7;--shiki-dark-font-style:italic">span</span></span>
+<span class="line"><span style="--shiki-light:#6F42C1;--shiki-dark:#B392F0">        class</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">=</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF">"relative grid h-10 w-10 place-items-center rounded-full bg-stone-200 text-surface-foreground"</span></span>
+<span class="line"><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">        >&#x3C;</span><span style="--shiki-light:#B31D28;--shiki-light-font-style:italic;--shiki-dark:#FDAEB7;--shiki-dark-font-style:italic">svg</span></span>
+<span class="line"><span style="--shiki-light:#6F42C1;--shiki-dark:#B392F0">          width</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">=</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF">"1.5em"</span></span>
+<span class="line"><span style="--shiki-light:#6F42C1;--shiki-dark:#B392F0">          height</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">=</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF">"1.5em"</span></span>
+<span class="line"><span style="--shiki-light:#6F42C1;--shiki-dark:#B392F0">          stroke-width</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">=</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF">"1.5"</span></span>
+<span class="line"><span style="--shiki-light:#6F42C1;--shiki-dark:#B392F0">          viewBox</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">=</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF">"0 0 24 24"</span></span>
+<span class="line"><span style="--shiki-light:#6F42C1;--shiki-dark:#B392F0">          fill</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">=</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF">"none"</span></span>
+<span class="line"><span style="--shiki-light:#6F42C1;--shiki-dark:#B392F0">          xmlns</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">=</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF">"http://www.w3.org/2000/svg"</span></span>
+<span class="line"><span style="--shiki-light:#6F42C1;--shiki-dark:#B392F0">          color</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">=</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF">"currentColor"</span></span>
+<span class="line"><span style="--shiki-light:#6F42C1;--shiki-dark:#B392F0">          class</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">=</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF">"h-5 w-5"</span></span>
+<span class="line"><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">        ></span></span>
+<span class="line"><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">          &#x3C;</span><span style="--shiki-light:#22863A;--shiki-dark:#85E89D">path</span></span>
+<span class="line"><span style="--shiki-light:#6F42C1;--shiki-dark:#B392F0">            d</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">=</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF">"M18 8.4C18 6.70261 17.3679 5.07475 16.2426 3.87452C15.1174 2.67428 13.5913 2 12 2C10.4087 2 8.88258 2.67428 7.75736 3.87452C6.63214 5.07475 6 6.70261 6 8.4C6 15.8667 3 18 3 18H21C21 18 18 15.8667 18 8.4Z"</span></span>
+<span class="line"><span style="--shiki-light:#6F42C1;--shiki-dark:#B392F0">            stroke</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">=</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF">"currentColor"</span></span>
+<span class="line"><span style="--shiki-light:#6F42C1;--shiki-dark:#B392F0">            stroke-linecap</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">=</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF">"round"</span></span>
+<span class="line"><span style="--shiki-light:#6F42C1;--shiki-dark:#B392F0">            stroke-linejoin</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">=</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF">"round"</span></span>
+<span class="line"><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">          >&#x3C;/</span><span style="--shiki-light:#22863A;--shiki-dark:#85E89D">path</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">></span></span>
+<span class="line"><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">          &#x3C;</span><span style="--shiki-light:#22863A;--shiki-dark:#85E89D">path</span></span>
+<span class="line"><span style="--shiki-light:#6F42C1;--shiki-dark:#B392F0">            d</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">=</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF">"M13.73 21C13.5542 21.3031 13.3019 21.5547 12.9982 21.7295C12.6946 21.9044 12.3504 21.9965 12 21.9965C11.6496 21.9965 11.3054 21.9044 11.0018 21.7295C10.6982 21.5547 10.4458 21.3031 10.27 21"</span></span>
+<span class="line"><span style="--shiki-light:#6F42C1;--shiki-dark:#B392F0">            stroke</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">=</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF">"currentColor"</span></span>
+<span class="line"><span style="--shiki-light:#6F42C1;--shiki-dark:#B392F0">            stroke-linecap</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">=</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF">"round"</span></span>
+<span class="line"><span style="--shiki-light:#6F42C1;--shiki-dark:#B392F0">            stroke-linejoin</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">=</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF">"round"</span></span>
+<span class="line"><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">          >&#x3C;/</span><span style="--shiki-light:#22863A;--shiki-dark:#85E89D">path</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">>&#x3C;/</span><span style="--shiki-light:#B31D28;--shiki-light-font-style:italic;--shiki-dark:#FDAEB7;--shiki-dark-font-style:italic">svg</span></span>
+<span class="line"><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">      >&#x3C;/</span><span style="--shiki-light:#B31D28;--shiki-light-font-style:italic;--shiki-dark:#FDAEB7;--shiki-dark-font-style:italic">span</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">></span></span>
+<span class="line"><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">    &#x3C;/</span><span style="--shiki-light:#B31D28;--shiki-light-font-style:italic;--shiki-dark:#FDAEB7;--shiki-dark-font-style:italic">div</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">></span></span>
+<span class="line"><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">    &#x3C;</span><span style="--shiki-light:#B31D28;--shiki-light-font-style:italic;--shiki-dark:#FDAEB7;--shiki-dark-font-style:italic">div</span><span style="--shiki-light:#6F42C1;--shiki-dark:#B392F0"> class</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">=</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF">"flex-1 mb-10"</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">></span></span>
+<span class="line"><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">      &#x3C;</span><span style="--shiki-light:#B31D28;--shiki-light-font-style:italic;--shiki-dark:#FDAEB7;--shiki-dark-font-style:italic">h1</span><span style="--shiki-light:#6F42C1;--shiki-dark:#B392F0"> class</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">=</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF">"text-base font-bold text-stone-800 dark:text-white"</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">></span></span>
+<span class="line"><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">        Lorem ipsum</span></span>
+<span class="line"><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">      &#x3C;/</span><span style="--shiki-light:#B31D28;--shiki-light-font-style:italic;--shiki-dark:#FDAEB7;--shiki-dark-font-style:italic">h1</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">></span></span>
+<span class="line"><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">&#x3C;</span><span style="--shiki-light:#B31D28;--shiki-light-font-style:italic;--shiki-dark:#FDAEB7;--shiki-dark-font-style:italic">p</span><span style="--shiki-light:#6F42C1;--shiki-dark:#B392F0"> class</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">=</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF">"mt-2 block text-sm text-stone-600"</span></span>
+<span class="line"><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">        >There is no one who loves pain itself, who seeks after it and wants to have it, simply because it is pain...&#x3C;/</span><span style="--shiki-light:#B31D28;--shiki-light-font-style:italic;--shiki-dark:#FDAEB7;--shiki-dark-font-style:italic">p</span></span>
+<span class="line"><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">      ></span></span>
+<span class="line"><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">    &#x3C;/</span><span style="--shiki-light:#B31D28;--shiki-light-font-style:italic;--shiki-dark:#FDAEB7;--shiki-dark-font-style:italic">div</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">></span></span>
+<span class="line"><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">  &#x3C;/</span><span style="--shiki-light:#B31D28;--shiki-light-font-style:italic;--shiki-dark:#FDAEB7;--shiki-dark-font-style:italic">div</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">></span></span>
+<span class="line"></span>
+<span class="line"><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">  &#x3C;</span><span style="--shiki-light:#B31D28;--shiki-light-font-style:italic;--shiki-dark:#FDAEB7;--shiki-dark-font-style:italic">div</span><span style="--shiki-light:#6F42C1;--shiki-dark:#B392F0"> class</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">=</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF">"relative flex gap-4"</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">></span></span>
+<span class="line"><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">    &#x3C;</span><span style="--shiki-light:#B31D28;--shiki-light-font-style:italic;--shiki-dark:#FDAEB7;--shiki-dark-font-style:italic">div</span><span style="--shiki-light:#6F42C1;--shiki-dark:#B392F0"> class</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">=</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF">"relative"</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">></span></span>
+<span class="line"><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">      &#x3C;</span><span style="--shiki-light:#B31D28;--shiki-light-font-style:italic;--shiki-dark:#FDAEB7;--shiki-dark-font-style:italic">span</span></span>
+<span class="line"><span style="--shiki-light:#6F42C1;--shiki-dark:#B392F0">        class</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">=</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF">"relative grid h-10 w-10 place-items-center rounded-full bg-stone-200 text-surface-foreground"</span></span>
+<span class="line"><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">        >&#x3C;</span><span style="--shiki-light:#B31D28;--shiki-light-font-style:italic;--shiki-dark:#FDAEB7;--shiki-dark-font-style:italic">svg</span></span>
+<span class="line"><span style="--shiki-light:#6F42C1;--shiki-dark:#B392F0">          width</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">=</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF">"1.5em"</span></span>
+<span class="line"><span style="--shiki-light:#6F42C1;--shiki-dark:#B392F0">          height</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">=</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF">"1.5em"</span></span>
+<span class="line"><span style="--shiki-light:#6F42C1;--shiki-dark:#B392F0">          stroke-width</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">=</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF">"1.5"</span></span>
+<span class="line"><span style="--shiki-light:#6F42C1;--shiki-dark:#B392F0">          viewBox</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">=</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF">"0 0 24 24"</span></span>
+<span class="line"><span style="--shiki-light:#6F42C1;--shiki-dark:#B392F0">          fill</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">=</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF">"none"</span></span>
+<span class="line"><span style="--shiki-light:#6F42C1;--shiki-dark:#B392F0">          xmlns</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">=</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF">"http://www.w3.org/2000/svg"</span></span>
+<span class="line"><span style="--shiki-light:#6F42C1;--shiki-dark:#B392F0">          color</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">=</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF">"currentColor"</span></span>
+<span class="line"><span style="--shiki-light:#6F42C1;--shiki-dark:#B392F0">          class</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">=</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF">"h-5 w-5"</span></span>
+<span class="line"><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">        ></span></span>
+<span class="line"><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">          &#x3C;</span><span style="--shiki-light:#22863A;--shiki-dark:#85E89D">path</span></span>
+<span class="line"><span style="--shiki-light:#6F42C1;--shiki-dark:#B392F0">            d</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">=</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF">"M12 22C17.5228 22 22 17.5228 22 12C22 6.47715 17.5228 2 12 2C6.47715 2 2 6.47715 2 12C2 17.5228 6.47715 22 12 22Z"</span></span>
+<span class="line"><span style="--shiki-light:#6F42C1;--shiki-dark:#B392F0">            stroke</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">=</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF">"currentColor"</span></span>
+<span class="line"><span style="--shiki-light:#6F42C1;--shiki-dark:#B392F0">            stroke-linecap</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">=</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF">"round"</span></span>
+<span class="line"><span style="--shiki-light:#6F42C1;--shiki-dark:#B392F0">            stroke-linejoin</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">=</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF">"round"</span></span>
+<span class="line"><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">          >&#x3C;/</span><span style="--shiki-light:#22863A;--shiki-dark:#85E89D">path</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">></span></span>
+<span class="line"><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">          &#x3C;</span><span style="--shiki-light:#22863A;--shiki-dark:#85E89D">path</span></span>
+<span class="line"><span style="--shiki-light:#6F42C1;--shiki-dark:#B392F0">            d</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">=</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF">"M15 8.5C14.315 7.81501 13.1087 7.33855 12 7.30872M9 15C9.64448 15.8593 10.8428 16.3494 12 16.391M12 7.30872C10.6809 7.27322 9.5 7.86998 9.5 9.50001C9.5 12.5 15 11 15 14C15 15.711 13.5362 16.4462 12 16.391M12 7.30872V5.5M12 16.391V18.5"</span></span>
+<span class="line"><span style="--shiki-light:#6F42C1;--shiki-dark:#B392F0">            stroke</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">=</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF">"currentColor"</span></span>
+<span class="line"><span style="--shiki-light:#6F42C1;--shiki-dark:#B392F0">            stroke-linecap</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">=</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF">"round"</span></span>
+<span class="line"><span style="--shiki-light:#6F42C1;--shiki-dark:#B392F0">            stroke-linejoin</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">=</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF">"round"</span></span>
+<span class="line"><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">          >&#x3C;/</span><span style="--shiki-light:#22863A;--shiki-dark:#85E89D">path</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">>&#x3C;/</span><span style="--shiki-light:#B31D28;--shiki-light-font-style:italic;--shiki-dark:#FDAEB7;--shiki-dark-font-style:italic">svg</span></span>
+<span class="line"><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">      >&#x3C;/</span><span style="--shiki-light:#B31D28;--shiki-light-font-style:italic;--shiki-dark:#FDAEB7;--shiki-dark-font-style:italic">span</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">></span></span>
+<span class="line"><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">    &#x3C;/</span><span style="--shiki-light:#B31D28;--shiki-light-font-style:italic;--shiki-dark:#FDAEB7;--shiki-dark-font-style:italic">div</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">></span></span>
+<span class="line"><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">    &#x3C;</span><span style="--shiki-light:#B31D28;--shiki-light-font-style:italic;--shiki-dark:#FDAEB7;--shiki-dark-font-style:italic">div</span><span style="--shiki-light:#6F42C1;--shiki-dark:#B392F0"> class</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">=</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF">"flex-1"</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">></span></span>
+<span class="line"><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">      &#x3C;</span><span style="--shiki-light:#B31D28;--shiki-light-font-style:italic;--shiki-dark:#FDAEB7;--shiki-dark-font-style:italic">h1</span><span style="--shiki-light:#6F42C1;--shiki-dark:#B392F0"> class</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">=</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF">"text-base font-bold text-stone-800 dark:text-white"</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">></span></span>
+<span class="line"><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">        Lorem ipsum</span></span>
+<span class="line"><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">      &#x3C;/</span><span style="--shiki-light:#B31D28;--shiki-light-font-style:italic;--shiki-dark:#FDAEB7;--shiki-dark-font-style:italic">h1</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">></span></span>
+<span class="line"><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">      &#x3C;</span><span style="--shiki-light:#B31D28;--shiki-light-font-style:italic;--shiki-dark:#FDAEB7;--shiki-dark-font-style:italic">p</span><span style="--shiki-light:#6F42C1;--shiki-dark:#B392F0"> class</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">=</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF">"mt-2 block text-sm text-stone-600"</span></span>
+<span class="line"><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">        >There is no one who loves pain itself, who seeks after it and wants to have it, simply because it is pain...&#x3C;/</span><span style="--shiki-light:#B31D28;--shiki-light-font-style:italic;--shiki-dark:#FDAEB7;--shiki-dark-font-style:italic">p</span></span>
+<span class="line"><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">      ></span></span>
+<span class="line"><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">    &#x3C;/</span><span style="--shiki-light:#B31D28;--shiki-light-font-style:italic;--shiki-dark:#FDAEB7;--shiki-dark-font-style:italic">div</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">></span></span>
+<span class="line"><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">  &#x3C;/</span><span style="--shiki-light:#B31D28;--shiki-light-font-style:italic;--shiki-dark:#FDAEB7;--shiki-dark-font-style:italic">div</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">></span></span>
+<span class="line"><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">&#x3C;/</span><span style="--shiki-light:#B31D28;--shiki-light-font-style:italic;--shiki-dark:#FDAEB7;--shiki-dark-font-style:italic">div</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">></span></span></code></pre> </div>  </div> </div> <!-- CodePreview JS --> <script>(function(){const id = "tabs-tzf7ait";
+
+  (() => {
+    const container = document.getElementById(id);
+    if (!container) return;
+
+    const buttons = container.querySelectorAll(".tab-trigger");
+    const contents = container.querySelectorAll(".tab-content");
+
+    const activeClasses = [
+      "bg-card",
+      "text-primary",
+      "shadow-md",
+    ];
+
+    buttons.forEach((button) => {
+      button.addEventListener("click", () => {
+        buttons.forEach((btn) => {
+          btn.setAttribute("aria-selected", "false");
+          btn.classList.remove(...activeClasses);
+        });
+
+        contents.forEach((content) =>
+          content.classList.add("hidden")
+        );
+
+        button.setAttribute("aria-selected", "true");
+        button.classList.add(...activeClasses);
+
+        const targetType = button.dataset.target;
+        const targetContent = container.querySelector(
+          `[data-content="${targetType}"]`
+        );
+
+        if (targetContent) {
+          targetContent.classList.remove("hidden");
+        }
+      });
+    });
+  })();
+})();</script>  </main> </div>  <div class="flex justify-between px-4 py-4"> <div> <div class="flex items-center justify-center border border-border rounded-lg p-4"> <a href="/page/ui-components/textarea"> <a class="flex items-center gap-2" href="/page/ui-components/textarea"> <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" class="lucide lucide-arrow-left"> <path d="m12 19-7-7 7-7"></path><path d="M19 12H5"></path>  </svg> <span>Textarea</span> </a> </a> </div> </div> <div> <div class="flex items-center justify-center border border-border rounded-lg p-4"> <a href="/page/ui-components/tooltip"> <a class="flex items-center gap-2" href="/page/ui-components/tooltip"> <span>Tooltip</span> <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" class="lucide lucide-arrow-right"> <path d="M5 12h14"></path><path d="m12 5 7 7-7 7"></path>  </svg> </a> </a> </div> </div> </div> <footer class="flex flex-col md:flex-row items-center justify-between gap-4 border-t p-4 border-border"> <p class="text-primary text-xs  text-center">
+&copy; 2026 Sihh UI </p> <div class="flex items-center justify-center space-x-4"> <a target="_blank" href="https://" class="items-center justify-center text-black dark:text-white"><span class="sr-only">Facebook</span><svg class="size-6" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M22 12c0-5.523-4.477-10-10-10S2 6.477 2 12c0 4.991 3.657 9.128 8.438 9.878v-6.987h-2.54V12h2.54V9.797c0-2.506 1.492-3.89 3.777-3.89 1.094 0 2.238.195 2.238.195v2.46h-1.26c-1.243 0-1.63.771-1.63 1.562V12h2.773l-.443 2.89h-2.33v6.988C18.343 21.128 22 16.991 22 12z" clip-rule="evenodd"></path></svg></a><a target="_blank" href="https://" class="items-center justify-center text-black dark:text-white"><span class="sr-only">X</span><svg class="size-6" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true"><path d="M13.6823 10.6218L20.2391 3H18.6854L12.9921 9.61788L8.44486 3H3.2002L10.0765 13.0074L3.2002 21H4.75404L10.7663 14.0113L15.5685 21H20.8131L13.6819 10.6218H13.6823ZM11.5541 13.0956L10.8574 12.0991L5.31391 4.16971H7.70053L12.1742 10.5689L12.8709 11.5655L18.6861 19.8835H16.2995L11.5541 13.096V13.0956Z"></path></svg></a><a target="_blank" href="https://" class="items-center justify-center text-black dark:text-white"><span class="sr-only">YouTube</span><svg class="size-6" fill="currentColor" viewBox="1 1 22 22" aria-hidden="true"><path fill-rule="evenodd" d="M19.812 5.418c.861.23 1.538.907 1.768 1.768C21.998 8.746 22 12 22 12s0 3.255-.418 4.814a2.504 2.504 0 0 1-1.768 1.768c-1.56.419-7.814.419-7.814.419s-6.255 0-7.814-.419a2.505 2.505 0 0 1-1.768-1.768C2 15.255 2 12 2 12s0-3.255.417-4.814a2.507 2.507 0 0 1 1.768-1.768C5.744 5 11.998 5 11.998 5s6.255 0 7.814.418ZM15.194 12 10 15V9l5.194 3Z" clip-rule="evenodd"></path></svg></a><a target="_blank" href="https://" class="items-center justify-center text-black dark:text-white"><span class="sr-only">Discord</span><svg class="size-6" viewBox="0 -28.5 256 256" fill="currentColor" aria-hidden="true" preserveAspectRatio="xMidYMid"><g><path d="M216.856339,16.5966031 C200.285002,8.84328665 182.566144,3.2084988 164.041564,0 C161.766523,4.11318106 159.108624,9.64549908 157.276099,14.0464379 C137.583995,11.0849896 118.072967,11.0849896 98.7430163,14.0464379 C96.9108417,9.64549908 94.1925838,4.11318106 91.8971895,0 C73.3526068,3.2084988 55.6133949,8.86399117 39.0420583,16.6376612 C5.61752293,67.146514 -3.4433191,116.400813 1.08711069,164.955721 C23.2560196,181.510915 44.7403634,191.567697 65.8621325,198.148576 C71.0772151,190.971126 75.7283628,183.341335 79.7352139,175.300261 C72.104019,172.400575 64.7949724,168.822202 57.8887866,164.667963 C59.7209612,163.310589 61.5131304,161.891452 63.2445898,160.431257 C105.36741,180.133187 151.134928,180.133187 192.754523,160.431257 C194.506336,161.891452 196.298154,163.310589 198.110326,164.667963 C191.183787,168.842556 183.854737,172.420929 176.223542,175.320965 C180.230393,183.341335 184.861538,190.991831 190.096624,198.16893 C211.238746,191.588051 232.743023,181.531619 254.911949,164.955721 C260.227747,108.668201 245.831087,59.8662432 216.856339,16.5966031 Z M85.4738752,135.09489 C72.8290281,135.09489 62.4592217,123.290155 62.4592217,108.914901 C62.4592217,94.5396472 72.607595,82.7145587 85.4738752,82.7145587 C98.3405064,82.7145587 108.709962,94.5189427 108.488529,108.914901 C108.508531,123.290155 98.3405064,135.09489 85.4738752,135.09489 Z M170.525237,135.09489 C157.88039,135.09489 147.510584,123.290155 147.510584,108.914901 C147.510584,94.5396472 157.658606,82.7145587 170.525237,82.7145587 C183.391518,82.7145587 193.761324,94.5189427 193.539891,108.914901 C193.539891,123.290155 183.391518,135.09489 170.525237,135.09489 Z" fill-rule="nonzero"></path></g></svg></a><a target="_blank" href="https://" class="items-center justify-center text-black dark:text-white"><span class="sr-only">GitHub</span><svg fill="currentColor" viewBox="0 0 24 24" aria-hidden="true" class="size-6"><path fill-rule="evenodd" d="M12 2C6.477 2 2 6.484 2 12.017c0 4.425 2.865 8.18 6.839 9.504.5.092.682-.217.682-.483 0-.237-.008-.868-.013-1.703-2.782.605-3.369-1.343-3.369-1.343-.454-1.158-1.11-1.466-1.11-1.466-.908-.62.069-.608.069-.608 1.003.07 1.531 1.032 1.531 1.032.892 1.53 2.341 1.088 2.91.832.092-.647.35-1.088.636-1.338-2.22-.253-4.555-1.113-4.555-4.951 0-1.093.39-1.988 1.029-2.688-.103-.253-.446-1.272.098-2.65 0 0 .84-.27 2.75 1.026A9.564 9.564 0 0112 6.844c.85.004 1.705.115 2.504.337 1.909-1.296 2.747-1.027 2.747-1.027.546 1.379.202 2.398.1 2.651.64.7 1.028 1.595 1.028 2.688 0 3.848-2.339 4.695-4.566 4.943.359.309.678.92.678 1.855 0 1.338-.012 2.419-.012 2.747 0 .268.18.58.688.482A10.019 10.019 0 0022 12.017C22 6.484 17.522 2 12 2z" clip-rule="evenodd"></path></svg></a> </div> </footer>  </main> <script>
+  document.addEventListener('DOMContentLoaded', () => {
+    
+    // Copy Icon
+    const copyIcon = `
+     <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-clipboard-icon lucide-clipboard"><rect width="8" height="4" x="8" y="2" rx="1" ry="1"/><path d="M16 4h2a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2H6a2 2 0 0 1-2-2V6a2 2 0 0 1 2-2h2"/></svg>
+    `; 
+     
+    // Success Icon
+    const successIcon = `
+     <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-clipboard-check-icon lucide-clipboard-check text-green-400"><rect width="8" height="4" x="8" y="2" rx="1" ry="1"/><path d="M16 4h2a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2H6a2 2 0 0 1-2-2V6a2 2 0 0 1 2-2h2"/><path d="m9 14 2 2 4-4"/></svg>
+    `;
+
+    let codeBlocks = Array.from(document.querySelectorAll('pre'));
+    
+    const initialClasses = 'copy-button flex items-center justify-center absolute top-2 right-2 opacity-100 group-hover:opacity-100 focus-within:opacity-100 text-primary';
+
+    for (let codeBlock of codeBlocks) {
+      // Import wrapper
+      let wrapper = document.createElement('div');
+      wrapper.style.position = 'relative'; 
+      
+      let copyButton = document.createElement('button');
+
+      copyButton.className = initialClasses;
+      copyButton.innerHTML = copyIcon;
+      copyButton.setAttribute('aria-label', 'Copiar código'); 
+
+      codeBlock.classList.add('group');
+      codeBlock.setAttribute('tabindex', '0');
+      
+      // The button must be attached to the 'codeBlock' (pre) and the 'pre' inside the 'wrapper'
+      codeBlock.appendChild(copyButton);
+
+      let parent = codeBlock.parentNode;
+      if (parent) {
+        parent.insertBefore(wrapper, codeBlock);
+        wrapper.appendChild(codeBlock);
+      }
+
+      copyButton.addEventListener('click', async () => {
+        await copyCode(codeBlock, copyButton, initialClasses);
+      });
+    }
+
+    async function copyCode(block, button) {
+      let code = block.querySelector('code');
+      if (!code) return;
+
+      let text = code.innerText;
+
+      await navigator.clipboard.writeText(text);
+      
+      const copyIconHTML = copyIcon;
+      const successIconHTML = successIcon;
+      
+      button.innerHTML = successIconHTML;
+      
+      // Restores the original icon
+      setTimeout(() => {
+        button.innerHTML = copyIconHTML;
+      }, 2000);
+    }
+  });
+</script> </div>  </body></html>

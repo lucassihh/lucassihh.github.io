@@ -1,0 +1,1 @@
+let p=!1,r=null;function t(){return p||(p=!0,r=new Promise((o,n)=>{if(window.Popper){o(window.Popper);return}const e=document.createElement("script");e.src="https://unpkg.com/@popperjs/core@2",e.defer=!0,e.onload=()=>{o(window.Popper)},e.onerror=()=>{n(new Error("Failed to load Popper.js"))},document.head.appendChild(e)})),r}export{t as l};
