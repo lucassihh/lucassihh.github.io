@@ -21,35 +21,32 @@ http://localhost:4321/docs/features
 
 UI Components
 
-Accordion:
-http://localhost:4321/ui-components/accordion
+Avatar:
+http://localhost:4321/ui-components/avatar
 
 Alert:
 http://localhost:4321/ui-components/alert
 
-Avatar:
-http://localhost:4321/ui-components/avatar
-
-Breadcrumb:
-http://localhost:4321/ui-components/breadcrumb
+Accordion:
+http://localhost:4321/ui-components/accordion
 
 Badge:
 http://localhost:4321/ui-components/badge
 
-Button:
-http://localhost:4321/ui-components/button
+Breadcrumb:
+http://localhost:4321/ui-components/breadcrumb
 
 Button-Group:
 http://localhost:4321/ui-components/button-group
+
+Button:
+http://localhost:4321/ui-components/button
 
 Card:
 http://localhost:4321/ui-components/card
 
 Chip:
 http://localhost:4321/ui-components/chip
-
-Checkbox:
-http://localhost:4321/ui-components/checkbox
 
 Collapse:
 http://localhost:4321/ui-components/collapse
@@ -66,11 +63,8 @@ http://localhost:4321/ui-components/gallery
 Icon-Button:
 http://localhost:4321/ui-components/icon-button
 
-Image:
-http://localhost:4321/ui-components/image
-
-Navbar:
-http://localhost:4321/ui-components/navbar
+Checkbox:
+http://localhost:4321/ui-components/checkbox
 
 Input:
 http://localhost:4321/ui-components/input
@@ -78,8 +72,17 @@ http://localhost:4321/ui-components/input
 List:
 http://localhost:4321/ui-components/list
 
+Image:
+http://localhost:4321/ui-components/image
+
 Modal:
 http://localhost:4321/ui-components/modal
+
+Pagination:
+http://localhost:4321/ui-components/pagination
+
+Navbar:
+http://localhost:4321/ui-components/navbar
 
 Popover:
 http://localhost:4321/ui-components/popover
@@ -87,29 +90,26 @@ http://localhost:4321/ui-components/popover
 Progress:
 http://localhost:4321/ui-components/progress
 
-Pagination:
-http://localhost:4321/ui-components/pagination
-
 Radio:
 http://localhost:4321/ui-components/radio
 
 Rating:
 http://localhost:4321/ui-components/rating
 
-Spinner:
-http://localhost:4321/ui-components/spinner
+Sidebar:
+http://localhost:4321/ui-components/sidebar
 
 Slider:
 http://localhost:4321/ui-components/slider
 
-Sidebar:
-http://localhost:4321/ui-components/sidebar
-
-Stepper:
-http://localhost:4321/ui-components/stepper
+Spinner:
+http://localhost:4321/ui-components/spinner
 
 Switch:
 http://localhost:4321/ui-components/switch
+
+Stepper:
+http://localhost:4321/ui-components/stepper
 
 Table:
 http://localhost:4321/ui-components/table
@@ -120,11 +120,11 @@ http://localhost:4321/ui-components/tabs
 Textarea:
 http://localhost:4321/ui-components/textarea
 
-Timeline:
-http://localhost:4321/ui-components/timeline
-
 Tooltip:
 http://localhost:4321/ui-components/tooltip
+
+Timeline:
+http://localhost:4321/ui-components/timeline
 
 Typography:
 http://localhost:4321/ui-components/typography

@@ -225,40 +225,36 @@ Ele é o **Layout pai** e cobre os seguintes componentes do template:
 - Code Preview - **.src/components/CodePreview.astro**
 - Static build - **$ yarn build**
 
+{/* Using Code */}
+
 import CodePreview from "../../components/CodePreview.astro";
 
-{/* Import Components HTML */}
-import AccordionParafault from "../../components/ui-components/accordion/accordion-default.html";
-import rawAccordionParafault from "../../components/ui-components/accordion/accordion-default.html?raw";
+{/* Import Components */}
+import AvatarStack from "../../components/ui-components/avatar/avatar-stack.html";
+import rawAvatarStack from "../../components/ui-components/avatar/avatar-stack.html?raw";
+import AvatarVariants from "../../components/ui-components/avatar/avatar-variants.html";
+import rawAvatarVariants from "../../components/ui-components/avatar/avatar-variants.html?raw";
+import AvatarWithText from "../../components/ui-components/avatar/avatar-with-text.html";
+import rawAvatarWithText from "../../components/ui-components/avatar/avatar-with-text.html?raw";
 
-import AccordionCustomStyles from "../../components/ui-components/accordion/accordion-custom-styles.html";
-import rawAccordionCustomStyles from "../../components/ui-components/accordion/accordion-custom-styles.html?raw";
 
-# Accordion
-
-<CodePreview 
-  code={rawAccordionParafault} 
-  lang="html" 
-  title="Parafault"
->
+<CodePreview code={rawAvatarStack} lang="html" title="Avatar Stack">
   <div slot="preview">
-    <AccordionParafault />
+    <AvatarStack />
   </div>
 </CodePreview>
 
-
-<CodePreview
-  code={rawAccordionCustomStyles}
-  lang="html"
-  title="Border"
->
+<CodePreview code={rawAvatarVariants} lang="html" title="Avatar Variants">
   <div slot="preview">
-    <AccordionCustomStyles />
+    <AvatarVariants />
   </div>
 </CodePreview>
 
-
-# Documentação
+<CodePreview code={rawAvatarWithText} lang="html" title="Avatar With Text">
+  <div slot="preview">
+    <AvatarWithText />
+  </div>
+</CodePreview>
 
 {/* Using Code */}
 
@@ -346,86 +342,40 @@ import rawAlertWithList from "../../components/ui-components/alert/alert-with-li
   </div>
 </CodePreview>
 
-{/* Using Code */}
-
 import CodePreview from "../../components/CodePreview.astro";
 
-{/* Import Components */}
-import AvatarStack from "../../components/ui-components/avatar/avatar-stack.html";
-import rawAvatarStack from "../../components/ui-components/avatar/avatar-stack.html?raw";
-import AvatarVariants from "../../components/ui-components/avatar/avatar-variants.html";
-import rawAvatarVariants from "../../components/ui-components/avatar/avatar-variants.html?raw";
-import AvatarWithText from "../../components/ui-components/avatar/avatar-with-text.html";
-import rawAvatarWithText from "../../components/ui-components/avatar/avatar-with-text.html?raw";
+{/* Import Components HTML */}
+import AccordionParafault from "../../components/ui-components/accordion/accordion-default.html";
+import rawAccordionParafault from "../../components/ui-components/accordion/accordion-default.html?raw";
 
+import AccordionCustomStyles from "../../components/ui-components/accordion/accordion-custom-styles.html";
+import rawAccordionCustomStyles from "../../components/ui-components/accordion/accordion-custom-styles.html?raw";
 
-<CodePreview code={rawAvatarStack} lang="html" title="Avatar Stack">
-  <div slot="preview">
-    <AvatarStack />
-  </div>
-</CodePreview>
+# Accordion
 
-<CodePreview code={rawAvatarVariants} lang="html" title="Avatar Variants">
-  <div slot="preview">
-    <AvatarVariants />
-  </div>
-</CodePreview>
-
-<CodePreview code={rawAvatarWithText} lang="html" title="Avatar With Text">
-  <div slot="preview">
-    <AvatarWithText />
-  </div>
-</CodePreview>
-
-{/* Using Code */}
-
-import CodePreview from "../../components/CodePreview.astro";
-
-{/* Import Components */}
-import BreadcrumbCustomSeparator from "../../components/ui-components/breadcrumb/breadcrumb-custom-separator.html";
-import rawBreadcrumbCustomSeparator from "../../components/ui-components/breadcrumb/breadcrumb-custom-separator.html?raw";
-import BreadcrumbCustomStyles from "../../components/ui-components/breadcrumb/breadcrumb-custom-styles.html";
-import rawBreadcrumbCustomStyles from "../../components/ui-components/breadcrumb/breadcrumb-custom-styles.html?raw";
-import BreadcrumbParamo from "../../components/ui-components/breadcrumb/breadcrumb-demo.html";
-import rawBreadcrumbParamo from "../../components/ui-components/breadcrumb/breadcrumb-demo.html?raw";
-import BreadcrumbWithIcon from "../../components/ui-components/breadcrumb/breadcrumb-with-icon.html";
-import rawBreadcrumbWithIcon from "../../components/ui-components/breadcrumb/breadcrumb-with-icon.html?raw";
-
-<CodePreview
-  code={rawBreadcrumbCustomSeparator}
-  lang="html"
-  title="Breadcrumb Custom Separator"
+<CodePreview 
+  code={rawAccordionParafault} 
+  lang="html" 
+  title="Parafault"
 >
   <div slot="preview">
-    <BreadcrumbCustomSeparator />
+    <AccordionParafault />
   </div>
 </CodePreview>
+
 
 <CodePreview
-  code={rawBreadcrumbCustomStyles}
+  code={rawAccordionCustomStyles}
   lang="html"
-  title="Breadcrumb Custom Styles"
+  title="Border"
 >
   <div slot="preview">
-    <BreadcrumbCustomStyles />
+    <AccordionCustomStyles />
   </div>
 </CodePreview>
 
-<CodePreview code={rawBreadcrumbParamo} lang="html" title="Breadcrumb Paramo">
-  <div slot="preview">
-    <BreadcrumbParamo />
-  </div>
-</CodePreview>
 
-<CodePreview
-  code={rawBreadcrumbWithIcon}
-  lang="html"
-  title="Breadcrumb With Icon"
->
-  <div slot="preview">
-    <BreadcrumbWithIcon />
-  </div>
-</CodePreview>
+# Documentação
 
 {/* Using Code */}
 
@@ -490,84 +440,48 @@ import rawBadgePlacement from "../../components/ui-components/badge/badge-placem
 import CodePreview from "../../components/CodePreview.astro";
 
 {/* Import Components */}
-import BlockLevelButton from "../../components/ui-components/button/block-level-button.html";
-import rawBlockLevelButton from "../../components/ui-components/button/block-level-button.html?raw";
-import ButtonAsLink from "../../components/ui-components/button/button-as-link.html";
-import rawButtonAsLink from "../../components/ui-components/button/button-as-link.html?raw";
-import ButtonColors from "../../components/ui-components/button/button-colors.html";
-import rawButtonColors from "../../components/ui-components/button/button-colors.html?raw";
-import ButtonParamo from "../../components/ui-components/button/button-demo.html";
-import rawButtonParamo from "../../components/ui-components/button/button-demo.html?raw";
-import ButtonLoading from "../../components/ui-components/button/button-loading.html";
-import rawButtonLoading from "../../components/ui-components/button/button-loading.html?raw";
-import ButtonSizes from "../../components/ui-components/button/button-sizes.html";
-import rawButtonSizes from "../../components/ui-components/button/button-sizes.html?raw";
-import ButtonVariants from "../../components/ui-components/button/button-variants.html";
-import rawButtonVariants from "../../components/ui-components/button/button-variants.html?raw";
-import ButtonWithIcon from "../../components/ui-components/button/button-with-icon.html";
-import rawButtonWithIcon from "../../components/ui-components/button/button-with-icon.html?raw";
-import CustomAuthButton from "../../components/ui-components/button/custom-auth-button.html";
-import rawCustomAuthButton from "../../components/ui-components/button/custom-auth-button.html?raw";
-import PillButton from "../../components/ui-components/button/pill-button.html";
-import rawPillButton from "../../components/ui-components/button/pill-button.html?raw";
+import BreadcrumbCustomSeparator from "../../components/ui-components/breadcrumb/breadcrumb-custom-separator.html";
+import rawBreadcrumbCustomSeparator from "../../components/ui-components/breadcrumb/breadcrumb-custom-separator.html?raw";
+import BreadcrumbCustomStyles from "../../components/ui-components/breadcrumb/breadcrumb-custom-styles.html";
+import rawBreadcrumbCustomStyles from "../../components/ui-components/breadcrumb/breadcrumb-custom-styles.html?raw";
+import BreadcrumbParamo from "../../components/ui-components/breadcrumb/breadcrumb-demo.html";
+import rawBreadcrumbParamo from "../../components/ui-components/breadcrumb/breadcrumb-demo.html?raw";
+import BreadcrumbWithIcon from "../../components/ui-components/breadcrumb/breadcrumb-with-icon.html";
+import rawBreadcrumbWithIcon from "../../components/ui-components/breadcrumb/breadcrumb-with-icon.html?raw";
 
-<CodePreview code={rawBlockLevelButton} lang="html" title="Block Level Button">
+<CodePreview
+  code={rawBreadcrumbCustomSeparator}
+  lang="html"
+  title="Breadcrumb Custom Separator"
+>
   <div slot="preview">
-    <BlockLevelButton />
+    <BreadcrumbCustomSeparator />
   </div>
 </CodePreview>
 
-<CodePreview code={rawButtonAsLink} lang="html" title="Button As Link">
+<CodePreview
+  code={rawBreadcrumbCustomStyles}
+  lang="html"
+  title="Breadcrumb Custom Styles"
+>
   <div slot="preview">
-    <ButtonAsLink />
+    <BreadcrumbCustomStyles />
   </div>
 </CodePreview>
 
-<CodePreview code={rawButtonColors} lang="html" title="Button Colors">
+<CodePreview code={rawBreadcrumbParamo} lang="html" title="Breadcrumb Paramo">
   <div slot="preview">
-    <ButtonColors />
+    <BreadcrumbParamo />
   </div>
 </CodePreview>
 
-<CodePreview code={rawButtonParamo} lang="html" title="Button Paramo">
+<CodePreview
+  code={rawBreadcrumbWithIcon}
+  lang="html"
+  title="Breadcrumb With Icon"
+>
   <div slot="preview">
-    <ButtonParamo />
-  </div>
-</CodePreview>
-
-<CodePreview code={rawButtonLoading} lang="html" title="Button Loading">
-  <div slot="preview">
-    <ButtonLoading />
-  </div>
-</CodePreview>
-
-<CodePreview code={rawButtonSizes} lang="html" title="Button Sizes">
-  <div slot="preview">
-    <ButtonSizes />
-  </div>
-</CodePreview>
-
-<CodePreview code={rawButtonVariants} lang="html" title="Button Variants">
-  <div slot="preview">
-    <ButtonVariants />
-  </div>
-</CodePreview>
-
-<CodePreview code={rawButtonWithIcon} lang="html" title="Button With Icon">
-  <div slot="preview">
-    <ButtonWithIcon />
-  </div>
-</CodePreview>
-
-<CodePreview code={rawCustomAuthButton} lang="html" title="Custom Auth Button">
-  <div slot="preview">
-    <CustomAuthButton />
-  </div>
-</CodePreview>
-
-<CodePreview code={rawPillButton} lang="html" title="Pill Button">
-  <div slot="preview">
-    <PillButton />
+    <BreadcrumbWithIcon />
   </div>
 </CodePreview>
 
@@ -658,6 +572,92 @@ import rawPillButtonGroup from "../../components/ui-components/button-group/pill
 <CodePreview code={rawPillButtonGroup} lang="html" title="Pill Button Group">
   <div slot="preview">
     <PillButtonGroup />
+  </div>
+</CodePreview>
+
+{/* Using Code */}
+
+import CodePreview from "../../components/CodePreview.astro";
+
+{/* Import Components */}
+import BlockLevelButton from "../../components/ui-components/button/block-level-button.html";
+import rawBlockLevelButton from "../../components/ui-components/button/block-level-button.html?raw";
+import ButtonAsLink from "../../components/ui-components/button/button-as-link.html";
+import rawButtonAsLink from "../../components/ui-components/button/button-as-link.html?raw";
+import ButtonColors from "../../components/ui-components/button/button-colors.html";
+import rawButtonColors from "../../components/ui-components/button/button-colors.html?raw";
+import ButtonParamo from "../../components/ui-components/button/button-demo.html";
+import rawButtonParamo from "../../components/ui-components/button/button-demo.html?raw";
+import ButtonLoading from "../../components/ui-components/button/button-loading.html";
+import rawButtonLoading from "../../components/ui-components/button/button-loading.html?raw";
+import ButtonSizes from "../../components/ui-components/button/button-sizes.html";
+import rawButtonSizes from "../../components/ui-components/button/button-sizes.html?raw";
+import ButtonVariants from "../../components/ui-components/button/button-variants.html";
+import rawButtonVariants from "../../components/ui-components/button/button-variants.html?raw";
+import ButtonWithIcon from "../../components/ui-components/button/button-with-icon.html";
+import rawButtonWithIcon from "../../components/ui-components/button/button-with-icon.html?raw";
+import CustomAuthButton from "../../components/ui-components/button/custom-auth-button.html";
+import rawCustomAuthButton from "../../components/ui-components/button/custom-auth-button.html?raw";
+import PillButton from "../../components/ui-components/button/pill-button.html";
+import rawPillButton from "../../components/ui-components/button/pill-button.html?raw";
+
+<CodePreview code={rawBlockLevelButton} lang="html" title="Block Level Button">
+  <div slot="preview">
+    <BlockLevelButton />
+  </div>
+</CodePreview>
+
+<CodePreview code={rawButtonAsLink} lang="html" title="Button As Link">
+  <div slot="preview">
+    <ButtonAsLink />
+  </div>
+</CodePreview>
+
+<CodePreview code={rawButtonColors} lang="html" title="Button Colors">
+  <div slot="preview">
+    <ButtonColors />
+  </div>
+</CodePreview>
+
+<CodePreview code={rawButtonParamo} lang="html" title="Button Paramo">
+  <div slot="preview">
+    <ButtonParamo />
+  </div>
+</CodePreview>
+
+<CodePreview code={rawButtonLoading} lang="html" title="Button Loading">
+  <div slot="preview">
+    <ButtonLoading />
+  </div>
+</CodePreview>
+
+<CodePreview code={rawButtonSizes} lang="html" title="Button Sizes">
+  <div slot="preview">
+    <ButtonSizes />
+  </div>
+</CodePreview>
+
+<CodePreview code={rawButtonVariants} lang="html" title="Button Variants">
+  <div slot="preview">
+    <ButtonVariants />
+  </div>
+</CodePreview>
+
+<CodePreview code={rawButtonWithIcon} lang="html" title="Button With Icon">
+  <div slot="preview">
+    <ButtonWithIcon />
+  </div>
+</CodePreview>
+
+<CodePreview code={rawCustomAuthButton} lang="html" title="Custom Auth Button">
+  <div slot="preview">
+    <CustomAuthButton />
+  </div>
+</CodePreview>
+
+<CodePreview code={rawPillButton} lang="html" title="Pill Button">
+  <div slot="preview">
+    <PillButton />
   </div>
 </CodePreview>
 
@@ -834,88 +834,6 @@ import rawChipWithAvatar from "../../components/ui-components/chip/chip-with-ava
 <CodePreview code={rawChipWithAvatar} lang="html" title="Chip With Avatar">
   <div slot="preview">
     <ChipWithAvatar />
-  </div>
-</CodePreview>
-
-{/* Using Code */}
-
-import CodePreview from "../../components/CodePreview.astro";
-
-{/* Import Components */}
-import CheckboxColors from "../../components/ui-components/checkbox/checkbox-colors.html";
-import rawCheckboxColors from "../../components/ui-components/checkbox/checkbox-colors.html?raw";
-import CheckboxParamo from "../../components/ui-components/checkbox/checkbox-demo.html";
-import rawCheckboxParamo from "../../components/ui-components/checkbox/checkbox-demo.html?raw";
-import CheckboxWithCustomIcon from "../../components/ui-components/checkbox/checkbox-with-custom-icon.html";
-import rawCheckboxWithCustomIcon from "../../components/ui-components/checkbox/checkbox-with-custom-icon.html?raw";
-import CheckboxWithParascription from "../../components/ui-components/checkbox/checkbox-with-description.html";
-import rawCheckboxWithParascription from "../../components/ui-components/checkbox/checkbox-with-description.html?raw";
-import CheckboxWithLabel from "../../components/ui-components/checkbox/checkbox-with-label.html";
-import rawCheckboxWithLabel from "../../components/ui-components/checkbox/checkbox-with-label.html?raw";
-import CheckboxWithLink from "../../components/ui-components/checkbox/checkbox-with-link.html";
-import rawCheckboxWithLink from "../../components/ui-components/checkbox/checkbox-with-link.html?raw";
-import CustomCheckbox from "../../components/ui-components/checkbox/custom-checkbox.html";
-import rawCustomCheckbox from "../../components/ui-components/checkbox/custom-checkbox.html?raw";
-import DisabledCheckbox from "../../components/ui-components/checkbox/disabled-checkbox.html";
-import rawDisabledCheckbox from "../../components/ui-components/checkbox/disabled-checkbox.html?raw";
-
-<CodePreview code={rawCheckboxColors} lang="html" title="Checkbox Colors">
-  <div slot="preview">
-    <CheckboxColors />
-  </div>
-</CodePreview>
-
-<CodePreview code={rawCheckboxParamo} lang="html" title="Checkbox Paramo">
-  <div slot="preview">
-    <CheckboxParamo />
-  </div>
-</CodePreview>
-
-<CodePreview
-  code={rawCheckboxWithCustomIcon}
-  lang="html"
-  title="Checkbox With Custom Icon"
->
-  <div slot="preview">
-    <CheckboxWithCustomIcon />
-  </div>
-</CodePreview>
-
-<CodePreview
-  code={rawCheckboxWithParascription}
-  lang="html"
-  title="Checkbox With Parascription"
->
-  <div slot="preview">
-    <CheckboxWithParascription />
-  </div>
-</CodePreview>
-
-<CodePreview
-  code={rawCheckboxWithLabel}
-  lang="html"
-  title="Checkbox With Label"
->
-  <div slot="preview">
-    <CheckboxWithLabel />
-  </div>
-</CodePreview>
-
-<CodePreview code={rawCheckboxWithLink} lang="html" title="Checkbox With Link">
-  <div slot="preview">
-    <CheckboxWithLink />
-  </div>
-</CodePreview>
-
-<CodePreview code={rawCustomCheckbox} lang="html" title="Custom Checkbox">
-  <div slot="preview">
-    <CustomCheckbox />
-  </div>
-</CodePreview>
-
-<CodePreview code={rawDisabledCheckbox} lang="html" title="Disabled Checkbox">
-  <div slot="preview">
-    <DisabledCheckbox />
   </div>
 </CodePreview>
 
@@ -1206,126 +1124,80 @@ import rawRoundedIconButton from "../../components/ui-components/icon-button/rou
 import CodePreview from "../../components/CodePreview.astro";
 
 {/* Import Components */}
-import CircularImage from "../../components/ui-components/image/circular-image.html";
-import rawCircularImage from "../../components/ui-components/image/circular-image.html?raw";
-import ImageParamo from "../../components/ui-components/image/image-demo.html";
-import rawImageParamo from "../../components/ui-components/image/image-demo.html?raw";
-import ImageWithBlurredCaption from "../../components/ui-components/image/image-with-blurred-caption.html";
-import rawImageWithBlurredCaption from "../../components/ui-components/image/image-with-blurred-caption.html?raw";
-import ImageWithCaption from "../../components/ui-components/image/image-with-caption.html";
-import rawImageWithCaption from "../../components/ui-components/image/image-with-caption.html?raw";
-import ImageWithRoundedCorners from "../../components/ui-components/image/image-with-rounded-corners.html";
-import rawImageWithRoundedCorners from "../../components/ui-components/image/image-with-rounded-corners.html?raw";
-import ImageWithShadow from "../../components/ui-components/image/image-with-shadow.html";
-import rawImageWithShadow from "../../components/ui-components/image/image-with-shadow.html?raw";
+import CheckboxColors from "../../components/ui-components/checkbox/checkbox-colors.html";
+import rawCheckboxColors from "../../components/ui-components/checkbox/checkbox-colors.html?raw";
+import CheckboxParamo from "../../components/ui-components/checkbox/checkbox-demo.html";
+import rawCheckboxParamo from "../../components/ui-components/checkbox/checkbox-demo.html?raw";
+import CheckboxWithCustomIcon from "../../components/ui-components/checkbox/checkbox-with-custom-icon.html";
+import rawCheckboxWithCustomIcon from "../../components/ui-components/checkbox/checkbox-with-custom-icon.html?raw";
+import CheckboxWithParascription from "../../components/ui-components/checkbox/checkbox-with-description.html";
+import rawCheckboxWithParascription from "../../components/ui-components/checkbox/checkbox-with-description.html?raw";
+import CheckboxWithLabel from "../../components/ui-components/checkbox/checkbox-with-label.html";
+import rawCheckboxWithLabel from "../../components/ui-components/checkbox/checkbox-with-label.html?raw";
+import CheckboxWithLink from "../../components/ui-components/checkbox/checkbox-with-link.html";
+import rawCheckboxWithLink from "../../components/ui-components/checkbox/checkbox-with-link.html?raw";
+import CustomCheckbox from "../../components/ui-components/checkbox/custom-checkbox.html";
+import rawCustomCheckbox from "../../components/ui-components/checkbox/custom-checkbox.html?raw";
+import DisabledCheckbox from "../../components/ui-components/checkbox/disabled-checkbox.html";
+import rawDisabledCheckbox from "../../components/ui-components/checkbox/disabled-checkbox.html?raw";
 
-<CodePreview code={rawCircularImage} lang="html" title="Circular Image">
+<CodePreview code={rawCheckboxColors} lang="html" title="Checkbox Colors">
   <div slot="preview">
-    <CircularImage />
+    <CheckboxColors />
   </div>
 </CodePreview>
 
-<CodePreview code={rawImageParamo} lang="html" title="Image Paramo">
+<CodePreview code={rawCheckboxParamo} lang="html" title="Checkbox Paramo">
   <div slot="preview">
-    <ImageParamo />
-  </div>
-</CodePreview>
-
-<CodePreview
-  code={rawImageWithBlurredCaption}
-  lang="html"
-  title="Image With Blurred Caption"
->
-  <div slot="preview">
-    <ImageWithBlurredCaption />
-  </div>
-</CodePreview>
-
-<CodePreview code={rawImageWithCaption} lang="html" title="Image With Caption">
-  <div slot="preview">
-    <ImageWithCaption />
+    <CheckboxParamo />
   </div>
 </CodePreview>
 
 <CodePreview
-  code={rawImageWithRoundedCorners}
+  code={rawCheckboxWithCustomIcon}
   lang="html"
-  title="Image With Rounded Corners"
+  title="Checkbox With Custom Icon"
 >
   <div slot="preview">
-    <ImageWithRoundedCorners />
-  </div>
-</CodePreview>
-
-<CodePreview code={rawImageWithShadow} lang="html" title="Image With Shadow">
-  <div slot="preview">
-    <ImageWithShadow />
-  </div>
-</CodePreview>
-
-{/* Using Code */}
-
-import CodePreview from "../../components/CodePreview.astro";
-
-{/* Import Components */}
-import ComplexNavbar from "../../components/ui-components/navbar/complex-navbar.html";
-import rawComplexNavbar from "../../components/ui-components/navbar/complex-navbar.html?raw";
-import DarkNavbar from "../../components/ui-components/navbar/dark-navbar.html";
-import rawDarkNavbar from "../../components/ui-components/navbar/dark-navbar.html?raw";
-import NavbarParamo from "../../components/ui-components/navbar/navbar-demo.html";
-import rawNavbarParamo from "../../components/ui-components/navbar/navbar-demo.html?raw";
-import NavbarWithMegaMenu from "../../components/ui-components/navbar/navbar-with-mega-menu.html";
-import rawNavbarWithMegaMenu from "../../components/ui-components/navbar/navbar-with-mega-menu.html?raw";
-import NavbarWithSearch from "../../components/ui-components/navbar/navbar-with-search.html";
-import rawNavbarWithSearch from "../../components/ui-components/navbar/navbar-with-search.html?raw";
-import SimpleNavbar from "../../components/ui-components/navbar/simple-navbar.html";
-import rawSimpleNavbar from "../../components/ui-components/navbar/simple-navbar.html?raw";
-import StickyNavbar from "../../components/ui-components/navbar/sticky-navbar.html";
-import rawStickyNavbar from "../../components/ui-components/navbar/sticky-navbar.html?raw";
-
-<CodePreview code={rawComplexNavbar} lang="html" title="Complex Navbar">
-  <div slot="preview">
-    <ComplexNavbar />
-  </div>
-</CodePreview>
-
-<CodePreview code={rawDarkNavbar} lang="html" title="Dark Navbar">
-  <div slot="preview">
-    <DarkNavbar />
-  </div>
-</CodePreview>
-
-<CodePreview code={rawNavbarParamo} lang="html" title="Navbar Paramo">
-  <div slot="preview">
-    <NavbarParamo />
+    <CheckboxWithCustomIcon />
   </div>
 </CodePreview>
 
 <CodePreview
-  code={rawNavbarWithMegaMenu}
+  code={rawCheckboxWithParascription}
   lang="html"
-  title="Navbar With Mega Menu"
+  title="Checkbox With Parascription"
 >
   <div slot="preview">
-    <NavbarWithMegaMenu />
+    <CheckboxWithParascription />
   </div>
 </CodePreview>
 
-<CodePreview code={rawNavbarWithSearch} lang="html" title="Navbar With Search">
+<CodePreview
+  code={rawCheckboxWithLabel}
+  lang="html"
+  title="Checkbox With Label"
+>
   <div slot="preview">
-    <NavbarWithSearch />
+    <CheckboxWithLabel />
   </div>
 </CodePreview>
 
-<CodePreview code={rawSimpleNavbar} lang="html" title="Simple Navbar">
+<CodePreview code={rawCheckboxWithLink} lang="html" title="Checkbox With Link">
   <div slot="preview">
-    <SimpleNavbar />
+    <CheckboxWithLink />
   </div>
 </CodePreview>
 
-<CodePreview code={rawStickyNavbar} lang="html" title="Sticky Navbar">
+<CodePreview code={rawCustomCheckbox} lang="html" title="Custom Checkbox">
   <div slot="preview">
-    <StickyNavbar />
+    <CustomCheckbox />
+  </div>
+</CodePreview>
+
+<CodePreview code={rawDisabledCheckbox} lang="html" title="Disabled Checkbox">
+  <div slot="preview">
+    <DisabledCheckbox />
   </div>
 </CodePreview>
 
@@ -1522,6 +1394,68 @@ import rawListWithSelectedItem from "../../components/ui-components/list/list-wi
 import CodePreview from "../../components/CodePreview.astro";
 
 {/* Import Components */}
+import CircularImage from "../../components/ui-components/image/circular-image.html";
+import rawCircularImage from "../../components/ui-components/image/circular-image.html?raw";
+import ImageParamo from "../../components/ui-components/image/image-demo.html";
+import rawImageParamo from "../../components/ui-components/image/image-demo.html?raw";
+import ImageWithBlurredCaption from "../../components/ui-components/image/image-with-blurred-caption.html";
+import rawImageWithBlurredCaption from "../../components/ui-components/image/image-with-blurred-caption.html?raw";
+import ImageWithCaption from "../../components/ui-components/image/image-with-caption.html";
+import rawImageWithCaption from "../../components/ui-components/image/image-with-caption.html?raw";
+import ImageWithRoundedCorners from "../../components/ui-components/image/image-with-rounded-corners.html";
+import rawImageWithRoundedCorners from "../../components/ui-components/image/image-with-rounded-corners.html?raw";
+import ImageWithShadow from "../../components/ui-components/image/image-with-shadow.html";
+import rawImageWithShadow from "../../components/ui-components/image/image-with-shadow.html?raw";
+
+<CodePreview code={rawCircularImage} lang="html" title="Circular Image">
+  <div slot="preview">
+    <CircularImage />
+  </div>
+</CodePreview>
+
+<CodePreview code={rawImageParamo} lang="html" title="Image Paramo">
+  <div slot="preview">
+    <ImageParamo />
+  </div>
+</CodePreview>
+
+<CodePreview
+  code={rawImageWithBlurredCaption}
+  lang="html"
+  title="Image With Blurred Caption"
+>
+  <div slot="preview">
+    <ImageWithBlurredCaption />
+  </div>
+</CodePreview>
+
+<CodePreview code={rawImageWithCaption} lang="html" title="Image With Caption">
+  <div slot="preview">
+    <ImageWithCaption />
+  </div>
+</CodePreview>
+
+<CodePreview
+  code={rawImageWithRoundedCorners}
+  lang="html"
+  title="Image With Rounded Corners"
+>
+  <div slot="preview">
+    <ImageWithRoundedCorners />
+  </div>
+</CodePreview>
+
+<CodePreview code={rawImageWithShadow} lang="html" title="Image With Shadow">
+  <div slot="preview">
+    <ImageWithShadow />
+  </div>
+</CodePreview>
+
+{/* Using Code */}
+
+import CodePreview from "../../components/CodePreview.astro";
+
+{/* Import Components */}
 import ModalParamo from "../../components/ui-components/modal/modal-demo.html";
 import rawModalParamo from "../../components/ui-components/modal/modal-demo.html?raw";
 import ModalLong from "../../components/ui-components/modal/modal-long.html";
@@ -1584,6 +1518,114 @@ import rawModalWithImage from "../../components/ui-components/modal/modal-with-i
 <CodePreview code={rawModalWithImage} lang="html" title="Modal With Image">
   <div slot="preview">
     <ModalWithImage />
+  </div>
+</CodePreview>
+
+{/* Using Code */}
+
+import CodePreview from "../../components/CodePreview.astro";
+
+{/* Import Components */}
+import PaginationCircular from "../../components/ui-components/pagination/pagination-circular.html";
+import rawPaginationCircular from "../../components/ui-components/pagination/pagination-circular.html?raw";
+import PaginationParamo from "../../components/ui-components/pagination/pagination-demo.html";
+import rawPaginationParamo from "../../components/ui-components/pagination/pagination-demo.html?raw";
+import PaginationGroup from "../../components/ui-components/pagination/pagination-group.html";
+import rawPaginationGroup from "../../components/ui-components/pagination/pagination-group.html?raw";
+import SimplePagination from "../../components/ui-components/pagination/simple-pagination.html";
+import rawSimplePagination from "../../components/ui-components/pagination/simple-pagination.html?raw";
+
+<CodePreview
+  code={rawPaginationCircular}
+  lang="html"
+  title="Pagination Circular"
+>
+  <div slot="preview">
+    <PaginationCircular />
+  </div>
+</CodePreview>
+
+<CodePreview code={rawPaginationParamo} lang="html" title="Pagination Paramo">
+  <div slot="preview">
+    <PaginationParamo />
+  </div>
+</CodePreview>
+
+<CodePreview code={rawPaginationGroup} lang="html" title="Pagination Group">
+  <div slot="preview">
+    <PaginationGroup />
+  </div>
+</CodePreview>
+
+<CodePreview code={rawSimplePagination} lang="html" title="Simple Pagination">
+  <div slot="preview">
+    <SimplePagination />
+  </div>
+</CodePreview>
+
+{/* Using Code */}
+
+import CodePreview from "../../components/CodePreview.astro";
+
+{/* Import Components */}
+import ComplexNavbar from "../../components/ui-components/navbar/complex-navbar.html";
+import rawComplexNavbar from "../../components/ui-components/navbar/complex-navbar.html?raw";
+import DarkNavbar from "../../components/ui-components/navbar/dark-navbar.html";
+import rawDarkNavbar from "../../components/ui-components/navbar/dark-navbar.html?raw";
+import NavbarParamo from "../../components/ui-components/navbar/navbar-demo.html";
+import rawNavbarParamo from "../../components/ui-components/navbar/navbar-demo.html?raw";
+import NavbarWithMegaMenu from "../../components/ui-components/navbar/navbar-with-mega-menu.html";
+import rawNavbarWithMegaMenu from "../../components/ui-components/navbar/navbar-with-mega-menu.html?raw";
+import NavbarWithSearch from "../../components/ui-components/navbar/navbar-with-search.html";
+import rawNavbarWithSearch from "../../components/ui-components/navbar/navbar-with-search.html?raw";
+import SimpleNavbar from "../../components/ui-components/navbar/simple-navbar.html";
+import rawSimpleNavbar from "../../components/ui-components/navbar/simple-navbar.html?raw";
+import StickyNavbar from "../../components/ui-components/navbar/sticky-navbar.html";
+import rawStickyNavbar from "../../components/ui-components/navbar/sticky-navbar.html?raw";
+
+<CodePreview code={rawComplexNavbar} lang="html" title="Complex Navbar">
+  <div slot="preview">
+    <ComplexNavbar />
+  </div>
+</CodePreview>
+
+<CodePreview code={rawDarkNavbar} lang="html" title="Dark Navbar">
+  <div slot="preview">
+    <DarkNavbar />
+  </div>
+</CodePreview>
+
+<CodePreview code={rawNavbarParamo} lang="html" title="Navbar Paramo">
+  <div slot="preview">
+    <NavbarParamo />
+  </div>
+</CodePreview>
+
+<CodePreview
+  code={rawNavbarWithMegaMenu}
+  lang="html"
+  title="Navbar With Mega Menu"
+>
+  <div slot="preview">
+    <NavbarWithMegaMenu />
+  </div>
+</CodePreview>
+
+<CodePreview code={rawNavbarWithSearch} lang="html" title="Navbar With Search">
+  <div slot="preview">
+    <NavbarWithSearch />
+  </div>
+</CodePreview>
+
+<CodePreview code={rawSimpleNavbar} lang="html" title="Simple Navbar">
+  <div slot="preview">
+    <SimpleNavbar />
+  </div>
+</CodePreview>
+
+<CodePreview code={rawStickyNavbar} lang="html" title="Sticky Navbar">
+  <div slot="preview">
+    <StickyNavbar />
   </div>
 </CodePreview>
 
@@ -1732,48 +1774,6 @@ import rawProgressSizes from "../../components/ui-components/progress/progress-s
 import CodePreview from "../../components/CodePreview.astro";
 
 {/* Import Components */}
-import PaginationCircular from "../../components/ui-components/pagination/pagination-circular.html";
-import rawPaginationCircular from "../../components/ui-components/pagination/pagination-circular.html?raw";
-import PaginationParamo from "../../components/ui-components/pagination/pagination-demo.html";
-import rawPaginationParamo from "../../components/ui-components/pagination/pagination-demo.html?raw";
-import PaginationGroup from "../../components/ui-components/pagination/pagination-group.html";
-import rawPaginationGroup from "../../components/ui-components/pagination/pagination-group.html?raw";
-import SimplePagination from "../../components/ui-components/pagination/simple-pagination.html";
-import rawSimplePagination from "../../components/ui-components/pagination/simple-pagination.html?raw";
-
-<CodePreview
-  code={rawPaginationCircular}
-  lang="html"
-  title="Pagination Circular"
->
-  <div slot="preview">
-    <PaginationCircular />
-  </div>
-</CodePreview>
-
-<CodePreview code={rawPaginationParamo} lang="html" title="Pagination Paramo">
-  <div slot="preview">
-    <PaginationParamo />
-  </div>
-</CodePreview>
-
-<CodePreview code={rawPaginationGroup} lang="html" title="Pagination Group">
-  <div slot="preview">
-    <PaginationGroup />
-  </div>
-</CodePreview>
-
-<CodePreview code={rawSimplePagination} lang="html" title="Simple Pagination">
-  <div slot="preview">
-    <SimplePagination />
-  </div>
-</CodePreview>
-
-{/* Using Code */}
-
-import CodePreview from "../../components/CodePreview.astro";
-
-{/* Import Components */}
 import CustomRadio from "../../components/ui-components/radio/custom-radio.html";
 import rawCustomRadio from "../../components/ui-components/radio/custom-radio.html?raw";
 import DisabledRadio from "../../components/ui-components/radio/disabled-radio.html";
@@ -1902,98 +1902,6 @@ import rawReadonlyRating from "../../components/ui-components/rating/readonly-ra
 import CodePreview from "../../components/CodePreview.astro";
 
 {/* Import Components */}
-import SpinnerColors from "../../components/ui-components/spinner/spinner-colors.html";
-import rawSpinnerColors from "../../components/ui-components/spinner/spinner-colors.html?raw";
-import SpinnerCustomStyles from "../../components/ui-components/spinner/spinner-custom-styles.html";
-import rawSpinnerCustomStyles from "../../components/ui-components/spinner/spinner-custom-styles.html?raw";
-import SpinnerParamo from "../../components/ui-components/spinner/spinner-demo.html";
-import rawSpinnerParamo from "../../components/ui-components/spinner/spinner-demo.html?raw";
-import SpinnerSizes from "../../components/ui-components/spinner/spinner-sizes.html";
-import rawSpinnerSizes from "../../components/ui-components/spinner/spinner-sizes.html?raw";
-
-<CodePreview code={rawSpinnerColors} lang="html" title="Spinner Colors">
-  <div slot="preview">
-    <SpinnerColors />
-  </div>
-</CodePreview>
-
-<CodePreview
-  code={rawSpinnerCustomStyles}
-  lang="html"
-  title="Spinner Custom Styles"
->
-  <div slot="preview">
-    <SpinnerCustomStyles />
-  </div>
-</CodePreview>
-
-<CodePreview code={rawSpinnerParamo} lang="html" title="Spinner Paramo">
-  <div slot="preview">
-    <SpinnerParamo />
-  </div>
-</CodePreview>
-
-<CodePreview code={rawSpinnerSizes} lang="html" title="Spinner Sizes">
-  <div slot="preview">
-    <SpinnerSizes />
-  </div>
-</CodePreview>
-
-{/* Using Code */}
-
-import CodePreview from "../../components/CodePreview.astro";
-
-{/* Import Components */}
-import RangeSliderWithTwoThumbs from "../../components/ui-components/slider/range-slider-with-two-thumbs.html";
-import rawRangeSliderWithTwoThumbs from "../../components/ui-components/slider/range-slider-with-two-thumbs.html?raw";
-import SliderColors from "../../components/ui-components/slider/slider-colors.html";
-import rawSliderColors from "../../components/ui-components/slider/slider-colors.html?raw";
-import SliderParamo from "../../components/ui-components/slider/slider-demo.html";
-import rawSliderParamo from "../../components/ui-components/slider/slider-demo.html?raw";
-import SliderSizes from "../../components/ui-components/slider/slider-sizes.html";
-import rawSliderSizes from "../../components/ui-components/slider/slider-sizes.html?raw";
-import SliderWithTicks from "../../components/ui-components/slider/slider-with-ticks.html";
-import rawSliderWithTicks from "../../components/ui-components/slider/slider-with-ticks.html?raw";
-
-<CodePreview
-  code={rawRangeSliderWithTwoThumbs}
-  lang="html"
-  title="Range Slider With Two Thumbs"
->
-  <div slot="preview">
-    <RangeSliderWithTwoThumbs />
-  </div>
-</CodePreview>
-
-<CodePreview code={rawSliderColors} lang="html" title="Slider Colors">
-  <div slot="preview">
-    <SliderColors />
-  </div>
-</CodePreview>
-
-<CodePreview code={rawSliderParamo} lang="html" title="Slider Paramo">
-  <div slot="preview">
-    <SliderParamo />
-  </div>
-</CodePreview>
-
-<CodePreview code={rawSliderSizes} lang="html" title="Slider Sizes">
-  <div slot="preview">
-    <SliderSizes />
-  </div>
-</CodePreview>
-
-<CodePreview code={rawSliderWithTicks} lang="html" title="Slider With Ticks">
-  <div slot="preview">
-    <SliderWithTicks />
-  </div>
-</CodePreview>
-
-{/* Using Code */}
-
-import CodePreview from "../../components/CodePreview.astro";
-
-{/* Import Components */}
 import MultiLevelSidebar from "../../components/ui-components/sidebar/multi-level-sidebar.html";
 import rawMultiLevelSidebar from "../../components/ui-components/sidebar/multi-level-sidebar.html?raw";
 import SidebarParamo from "../../components/ui-components/sidebar/sidebar-demo.html";
@@ -2072,52 +1980,90 @@ import rawSidebarWithSearch from "../../components/ui-components/sidebar/sidebar
 import CodePreview from "../../components/CodePreview.astro";
 
 {/* Import Components */}
-import StepperCustomStyles from "../../components/ui-components/stepper/stepper-custom-styles.html";
-import rawStepperCustomStyles from "../../components/ui-components/stepper/stepper-custom-styles.html?raw";
-import StepperParamo from "../../components/ui-components/stepper/stepper-demo.html";
-import rawStepperParamo from "../../components/ui-components/stepper/stepper-demo.html?raw";
-import StepperWithContent from "../../components/ui-components/stepper/stepper-with-content.html";
-import rawStepperWithContent from "../../components/ui-components/stepper/stepper-with-content.html?raw";
-import StepperWithDots from "../../components/ui-components/stepper/stepper-with-dots.html";
-import rawStepperWithDots from "../../components/ui-components/stepper/stepper-with-dots.html?raw";
-import StepperWithIcon from "../../components/ui-components/stepper/stepper-with-icon.html";
-import rawStepperWithIcon from "../../components/ui-components/stepper/stepper-with-icon.html?raw";
+import RangeSliderWithTwoThumbs from "../../components/ui-components/slider/range-slider-with-two-thumbs.html";
+import rawRangeSliderWithTwoThumbs from "../../components/ui-components/slider/range-slider-with-two-thumbs.html?raw";
+import SliderColors from "../../components/ui-components/slider/slider-colors.html";
+import rawSliderColors from "../../components/ui-components/slider/slider-colors.html?raw";
+import SliderParamo from "../../components/ui-components/slider/slider-demo.html";
+import rawSliderParamo from "../../components/ui-components/slider/slider-demo.html?raw";
+import SliderSizes from "../../components/ui-components/slider/slider-sizes.html";
+import rawSliderSizes from "../../components/ui-components/slider/slider-sizes.html?raw";
+import SliderWithTicks from "../../components/ui-components/slider/slider-with-ticks.html";
+import rawSliderWithTicks from "../../components/ui-components/slider/slider-with-ticks.html?raw";
 
 <CodePreview
-  code={rawStepperCustomStyles}
+  code={rawRangeSliderWithTwoThumbs}
   lang="html"
-  title="Stepper Custom Styles"
+  title="Range Slider With Two Thumbs"
 >
   <div slot="preview">
-    <StepperCustomStyles />
+    <RangeSliderWithTwoThumbs />
   </div>
 </CodePreview>
 
-<CodePreview code={rawStepperParamo} lang="html" title="Stepper Paramo">
+<CodePreview code={rawSliderColors} lang="html" title="Slider Colors">
   <div slot="preview">
-    <StepperParamo />
+    <SliderColors />
+  </div>
+</CodePreview>
+
+<CodePreview code={rawSliderParamo} lang="html" title="Slider Paramo">
+  <div slot="preview">
+    <SliderParamo />
+  </div>
+</CodePreview>
+
+<CodePreview code={rawSliderSizes} lang="html" title="Slider Sizes">
+  <div slot="preview">
+    <SliderSizes />
+  </div>
+</CodePreview>
+
+<CodePreview code={rawSliderWithTicks} lang="html" title="Slider With Ticks">
+  <div slot="preview">
+    <SliderWithTicks />
+  </div>
+</CodePreview>
+
+{/* Using Code */}
+
+import CodePreview from "../../components/CodePreview.astro";
+
+{/* Import Components */}
+import SpinnerColors from "../../components/ui-components/spinner/spinner-colors.html";
+import rawSpinnerColors from "../../components/ui-components/spinner/spinner-colors.html?raw";
+import SpinnerCustomStyles from "../../components/ui-components/spinner/spinner-custom-styles.html";
+import rawSpinnerCustomStyles from "../../components/ui-components/spinner/spinner-custom-styles.html?raw";
+import SpinnerParamo from "../../components/ui-components/spinner/spinner-demo.html";
+import rawSpinnerParamo from "../../components/ui-components/spinner/spinner-demo.html?raw";
+import SpinnerSizes from "../../components/ui-components/spinner/spinner-sizes.html";
+import rawSpinnerSizes from "../../components/ui-components/spinner/spinner-sizes.html?raw";
+
+<CodePreview code={rawSpinnerColors} lang="html" title="Spinner Colors">
+  <div slot="preview">
+    <SpinnerColors />
   </div>
 </CodePreview>
 
 <CodePreview
-  code={rawStepperWithContent}
+  code={rawSpinnerCustomStyles}
   lang="html"
-  title="Stepper With Content"
+  title="Spinner Custom Styles"
 >
   <div slot="preview">
-    <StepperWithContent />
+    <SpinnerCustomStyles />
   </div>
 </CodePreview>
 
-<CodePreview code={rawStepperWithDots} lang="html" title="Stepper With Dots">
+<CodePreview code={rawSpinnerParamo} lang="html" title="Spinner Paramo">
   <div slot="preview">
-    <StepperWithDots />
+    <SpinnerParamo />
   </div>
 </CodePreview>
 
-<CodePreview code={rawStepperWithIcon} lang="html" title="Stepper With Icon">
+<CodePreview code={rawSpinnerSizes} lang="html" title="Spinner Sizes">
   <div slot="preview">
-    <StepperWithIcon />
+    <SpinnerSizes />
   </div>
 </CodePreview>
 
@@ -2192,6 +2138,60 @@ import rawSwitchWithLink from "../../components/ui-components/switch/switch-with
 <CodePreview code={rawSwitchWithLink} lang="html" title="Switch With Link">
   <div slot="preview">
     <SwitchWithLink />
+  </div>
+</CodePreview>
+
+{/* Using Code */}
+
+import CodePreview from "../../components/CodePreview.astro";
+
+{/* Import Components */}
+import StepperCustomStyles from "../../components/ui-components/stepper/stepper-custom-styles.html";
+import rawStepperCustomStyles from "../../components/ui-components/stepper/stepper-custom-styles.html?raw";
+import StepperParamo from "../../components/ui-components/stepper/stepper-demo.html";
+import rawStepperParamo from "../../components/ui-components/stepper/stepper-demo.html?raw";
+import StepperWithContent from "../../components/ui-components/stepper/stepper-with-content.html";
+import rawStepperWithContent from "../../components/ui-components/stepper/stepper-with-content.html?raw";
+import StepperWithDots from "../../components/ui-components/stepper/stepper-with-dots.html";
+import rawStepperWithDots from "../../components/ui-components/stepper/stepper-with-dots.html?raw";
+import StepperWithIcon from "../../components/ui-components/stepper/stepper-with-icon.html";
+import rawStepperWithIcon from "../../components/ui-components/stepper/stepper-with-icon.html?raw";
+
+<CodePreview
+  code={rawStepperCustomStyles}
+  lang="html"
+  title="Stepper Custom Styles"
+>
+  <div slot="preview">
+    <StepperCustomStyles />
+  </div>
+</CodePreview>
+
+<CodePreview code={rawStepperParamo} lang="html" title="Stepper Paramo">
+  <div slot="preview">
+    <StepperParamo />
+  </div>
+</CodePreview>
+
+<CodePreview
+  code={rawStepperWithContent}
+  lang="html"
+  title="Stepper With Content"
+>
+  <div slot="preview">
+    <StepperWithContent />
+  </div>
+</CodePreview>
+
+<CodePreview code={rawStepperWithDots} lang="html" title="Stepper With Dots">
+  <div slot="preview">
+    <StepperWithDots />
+  </div>
+</CodePreview>
+
+<CodePreview code={rawStepperWithIcon} lang="html" title="Stepper With Icon">
+  <div slot="preview">
+    <StepperWithIcon />
   </div>
 </CodePreview>
 
@@ -2364,6 +2364,28 @@ import rawCommentBoxWithTextarea from "../../components/ui-components/textarea/c
 import CodePreview from "../../components/CodePreview.astro";
 
 {/* Import Components */}
+import TooltipDefault from "../../components/ui-components/tooltip/tooltip-default.html";
+import rawTooltipDefault from "../../components/ui-components/tooltip/tooltip-default.html?raw";
+
+# Tooltips
+
+<CodePreview
+  code={rawTooltipDefault}
+  lang="html"
+  title="Tooltip Default"
+>
+  <div slot="preview">
+    <TooltipDefault />
+  </div>
+</CodePreview>
+
+# Documentação
+
+{/* Using Code */}
+
+import CodePreview from "../../components/CodePreview.astro";
+
+{/* Import Components */}
 import TimelineDefault from "../../components/ui-components/timeline/timeline-default.html";
 import rawTimelineDefault from "../../components/ui-components/timeline/timeline-default.html?raw";
 import TimelineCard from "../../components/ui-components/timeline/timeline-card.html";
@@ -2407,28 +2429,6 @@ import rawTimelineWithIcon from "../../components/ui-components/timeline/timelin
     <TimelineWithIcon />
   </div>
 </CodePreview>
-
-{/* Using Code */}
-
-import CodePreview from "../../components/CodePreview.astro";
-
-{/* Import Components */}
-import TooltipDefault from "../../components/ui-components/tooltip/tooltip-default.html";
-import rawTooltipDefault from "../../components/ui-components/tooltip/tooltip-default.html?raw";
-
-# Tooltips
-
-<CodePreview
-  code={rawTooltipDefault}
-  lang="html"
-  title="Tooltip Default"
->
-  <div slot="preview">
-    <TooltipDefault />
-  </div>
-</CodePreview>
-
-# Documentação
 
 {/* Using Code */}
 
