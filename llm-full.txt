@@ -1,270 +1,176 @@
 # Sihh UI Full Documentation
 
-# Sobre o template
+# Necessary Settings
 
-### Clonar o repositório do github
+## Theme
 
-```bash
-$ git clone https://github.com/....
+To use all the colors that the components need, it is necessary to configure the **theme.css** file.
+
+```css
+:root {
+  --radius: 0.625rem;
+  --background: oklch(1 0 0);
+  --card: oklch(1 0 0);
+  --primary: oklch(0.13 0.028 261.692);
+  --secondary: oklch(0.985 0.002 247.839);
+  --muted: oklch(0.556 0 0);
+  --accent: oklch(0.371 0 0);
+  --border: oklch(0.922 0 0);
+  --input: oklch(0.922 0 0);
+  --ring: oklch(0.556 0 0);
+  --sidebar: oklch(0.985 0 0);
+
+  /* COLORS 400/500/600 */
+  --purple: oklch(0.714 0.203 305.504);
+  --purple-accent: oklch(0.627 0.265 303.9);
+  --purple-shadow: oklch(0.558 0.288 302.321);
+  --yellow: oklch(0.905 0.182 98.111);
+  --yellow-accent: oklch(0.852 0.199 91.936);
+  --yellow-shadow: oklch(0.795 0.184 86.047);
+  --green: oklch(0.792 0.209 151.711);
+  --green-accent: oklch(0.723 0.219 149.579);
+  --green-shadow: oklch(0.627 0.194 149.214);
+  --pink: oklch(0.718 0.202 349.761);
+  --pink-accent: oklch(0.656 0.241 354.308);
+  --pink-shadow: oklch(0.592 0.249 0.584);
+  --blue: oklch(0.707 0.165 254.624);
+  --blue-accent: oklch(0.623 0.214 259.815);
+  --blue-shadow: oklch(0.546 0.245 262.881);
+  --orange: oklch(0.75 0.183 55.934);
+  --orange-accent: oklch(0.705 0.213 47.604);
+  --orange-shadow: oklch(0.646 0.222 41.116);
+  --red: oklch(0.704 0.191 22.216);
+  --red-accent: oklch(0.637 0.237 25.331);
+  --red-shadow: oklch(0.577 0.245 27.325);
+}
+
+.dark {
+  --background: oklch(0.145 0 0);
+  --card: oklch(0.205 0 0);
+  --primary: oklch(0.985 0.002 247.839);
+  --secondary: oklch(0.13 0.028 261.692);
+  --muted: oklch(0.708 0 0);
+  --accent: oklch(0.371 0 0);
+  --border: oklch(1 0 0 / 10%);
+  --input: oklch(1 0 0 / 15%);
+  --ring: oklch(0.556 0 0);
+  --sidebar: oklch(0.205 0 0);
+  color-scheme: dark;
+}
+
+@theme {
+  --radius-sm: calc(var(--radius) - 4px);
+  --radius-md: calc(var(--radius) - 2px);
+  --radius-lg: var(--radius);
+  --radius-xl: calc(var(--radius) + 4px);
+  --color-background: var(--background);
+  --color-card: var(--card);
+  --color-primary: var(--primary);
+  --color-secondary: var(--secondary);
+  --color-muted: var(--muted);
+  --color-accent: var(--accent);
+  --color-border: var(--border);
+  --color-input: var(--input);
+  --color-ring: var(--ring);
+  --color-sidebar: var(--sidebar);
+
+  /* Colors 400/500/600 */
+  --color-purple: var(--purple);
+  --color-purple-accent: var(--purple-accent);
+  --color-purple-shadow: var(--purple-shadow);
+  --color-yellow: var(--yellow);
+  --color-yellow-accent: var(--yellow-accent);
+  --color-yellow-shadow: var(--yellow-shadow);
+  --color-green: var(--green);
+  --color-green-accent: var(--green-accent);
+  --color-green-shadow: var(--green-shadow);
+  --color-pink: var(--pink);
+  --color-pink-accent: var(--pink-accent);
+  --color-pink-shadow: var(--pink-shadow);
+  --color-blue: var(--blue);
+  --color-blue-accent: var(--blue-accent);
+  --color-blue-shadow: var(--blue-shadow);
+  --color-orange: var(--orange);
+  --color-orange-accent: var(--orange-accent);
+  --color-orange-shadow: var(--orange-shadow);
+  --color-red: var(--red);
+  --color-red-accent: var(--red-accent);
+  --color-red-shadow: var(--red-shadow);
+
+  /* Fonts */
+  --font-jakarta: "Plus Jakarta Sans", sans-serif;
+}
 ```
 
-### Configurações base do template em **/src/config/pageConfig.ts**
+## JavaScript Files
 
-É necessário setar a variável **BASE**, Deixe vazio para usar **/** como url base **http://localhost:4321/**
+Javascript is also necessary for the functioning of some components such as `Modal`, `Accordion`, `Dropdown`, etc...
 
-Link social para ativar o icone na **Header** em **components/Header.astro**
+- **Download** [JavaScript Files](/src/scripts/sihh-ui-js/sihh-ui-js.zip)
 
-```ts
-export const pageConfig: pageConfig = {
-  SITE: "http://localhost:4321",
-  BASE: "", // Url Base [!code highlight]
+After downloading, you need to import the Javascript in your `HTML`
+Example for the Accordion:
 
-  SITE_NAME: "Astro-docs",
-  SITE_DESCRIPTION: "Template de Documentação e Componentes",
-  SITE_FAVICON: "",
-
-  SOCIAL_LINKS: {
-    FACEBOOK_URL: "",
-    TWITTER_URL: "",
-    GITHUB_URL: "",
-    YOUTUBE_URL: "",
-    DISCORD_URL: "",
-  },
-};
+```javascript
+<script type="module" src="./accordion.js"></script>
 ```
 
-### Instalar dependências e iniciar o template
-
-```bash
-$ yarn
-$ yarn dev
-```
-
-- Dependências principais:
-
-```json
-"dependencies": {
-    "@astrojs/check": "^0.9.4",
-    "@astrojs/mdx": "^4.0.8",
-    "@astrojs/prism": "^3.3.0",
-    "@shikijs/transformers": "^1.24.2",
-    "@tailwindcss/vite": "^4.1.13",
-    "astro": "^5.3.0",
-    "astro-og-canvas": "^0.7.0",
-    "prettier": "^3.6.2",
-    "tailwind-merge": "^2.5.4",
-    "tailwindcss": "^4.1.13",
-    "typescript": "^5.6.3"
-  }
-```
-
-# Adicionar conteúdo
-
-### Conteúdo de documentação
-
-- Adicionar arquivos MarkdownX **.mdx** em **/src/content/docs/nome-do-mdx**
-
-### Configurar o Frontmatter
-
-```
----
-title: ""
-description: ""
-category: ""
-order: 3 // Ordem na categoria.
----
-
-```
-
-### Links
-
-- Todos os links relativos devem começar com **/BASE/**
-- O caminho **BASE** é definido em **src/config.ts**
-
-Não é necessário colocar a extensão **.mdx**
-
-[Exemplo de link](/page/docs/configurar-o-layout)
-
-`[Exemplo de Link](/page/docs/configurar-o-layout)`
-
---- 
-
-### Adicionar conteúdo para o CodePreview
-
-1. Adicionar a pasta com os arquivos HTML em **.src/components/HTML/nome-da-pasta/**
-2. Após isso adicionar a pasta com os arquivos MDX em **.src/content/html-mdx/nome-da-pasta/**
-
-### Exemplo de arquivos .mdx para os componentes HTML
-
-1. Configurar o Frontmatter 
-2. Importar o CodePreview
-3. Importar os Arquivos HTML
-4. Passar o arquivo HTML e o Raw para CodePreview
-
-```markdown
----
-title: "Modal"
-description: "Exemplo de Modal"
-category: "HTML"
-order: 1
----
-
-{/* Importar o CodePreview */}
-import CodePreview from "../../../components/CodePreview.astro";
-
-{/* Importar os Arquivos HTML */}
-import Modal from "../../../components/HTML/nome-da-pasta/modal.html";
-import rawModal from "../../../components/HTML/nome-da-pasta/modal.html?raw";
-
-### Modal HTML
-
-Descrição 
-
-<CodePreview 
-  code={rawModal} 
-  lang="html" 
-  title="Exemplo de Modal"
->
-  <div slot="preview">
-    <Modal />
-  </div>
-</CodePreview>
-```
-
-# Layout do Template
-
-### BaseLayout
-
-**.src/layouts/BaseLayout.astro**
-Ele é o **Layout pai** e cobre os seguintes componentes do template:
-
-- `<html>`
-- `<head>`
-  Carrega o componente `<BaseHead />` que contém as meta tags. e também o Open Graph
-- `<body>`
-
-### Documentation
-
-**.src/layout/Documentation.astro** Carrega o **Header** a **Sidebar** e o **CodeCopyButton**
-
-```astro
-<BaseLayout {title} {description} {image}>
-  <Header /> [!code highlight]
-  <div class="flex justify-center">
-    <Sidebar {id} {headings} />
-      <!-- Main Content -->
-      <main class="h-full w-full min-h-screen">
-          <slot />
-      </main>
-    <CodeCopyButton />
-  </div>
-</BaseLayout>
-```
-
-# Estrutura de Arquivos
-
-```
- src/
-├── assets
-│   ├── backgrounds
-│   └── fonts
-│
-├── components
-│   ├── ui-components        # Componentes HTML
-│   ├── BaseHead.astro       # Meta tags e SEO
-│   ├── CodeCopyButton.astro # Btn Copiar código
-│   ├── CodePreview.astro    # Preview para componentes HTML
-│   ├── Footer.astro         # Footer
-│   ├── Header.astro         # Header
-│   ├── PrevNextBtn.astro    # Botão Anterior/Próximo
-│   ├── Sidebar.astro        # Sidebar
-│   └── SocialIcons.astro    # Verifica o pageConfig e mostra os icones
-│
-├── config
-│   └── shiki-themes.js      # Config do Shiki
-│   └── pageConfig.ts        # Variáveis do template
-│
-├── content
-│   ├── ui-components        # Mdx para os componentes HTML
-│   └── docs                 # Mdx docs do template
-│
-├── layouts
-│   ├── BaseLayout.astro     # Estrutura principal
-│   ├── Documentation        # Layout para docs
-│   └── Prose.astro          # Aplica o Prose(Tailwind Typography)
-│
-├── pages
-│   ├── page                 # Rotas dinâmicas
-│   ├── open-graph           # Geração de imagens (OG)
-│   ├── index.astro          # Home page
-│   ├── llm-full.txt.ts
-│   └── llm.txt.ts
-│
-├── scripts                  # JS para ui-componentes
-│   └── sihh-ui
-│ 
-│
-├── styles
-│   ├── globals.css         # CSS principal
-│   └── theme.css           # Tema
-│
-├── content.config.ts
-├── env.d.ts
-├── utils.ts
-├── astro.config.ts          # Config do Astro
-├── package.json
-├── README.md
-├── tsconfig.json
-└── yarn.lock
-```
-
-# Features
-
-- Dark and Light Theme
-- Shiki and Transformers - **.src/config/shiki-themes.js**
-- Code Preview - **.src/components/CodePreview.astro**
-- Static build - **$ yarn build**
-
+{/* CodePreview */}
 import CodePreview from "../../components/CodePreview.astro";
 
-{/* Import Components HTML */}
-import AccordionParafault from "../../components/ui-components/accordion/accordion-default.html";
-import rawAccordionParafault from "../../components/ui-components/accordion/accordion-default.html?raw";
+{/* Imports HTML */}
+import AccordionBasic from "../../components/ui-components/accordion/accordion-basic.html";
+import rawAccordionBasic from "../../components/ui-components/accordion/accordion-basic.html?raw";
+import AccordionBorder from "../../components/ui-components/accordion/accordion-border.html";
+import rawAccordionBorder from "../../components/ui-components/accordion/accordion-border.html?raw";
 
-import AccordionCustomStyles from "../../components/ui-components/accordion/accordion-custom-styles.html";
-import rawAccordionCustomStyles from "../../components/ui-components/accordion/accordion-custom-styles.html?raw";
+# Accordion Components
 
-# Accordion
-
-<CodePreview 
-  code={rawAccordionParafault} 
-  lang="html" 
-  title="Parafault"
->
+<CodePreview code={rawAccordionBasic} lang="html" title="Basic">
   <div slot="preview">
-    <AccordionParafault />
+    <AccordionBasic />
   </div>
 </CodePreview>
 
-
-<CodePreview
-  code={rawAccordionCustomStyles}
-  lang="html"
-  title="Border"
->
+<CodePreview code={rawAccordionBorder} lang="html" title="Border">
   <div slot="preview">
-    <AccordionCustomStyles />
+    <AccordionBorder />
   </div>
 </CodePreview>
 
-
-# Documentação
-
-{/* Using Code */}
-
+{/* CodePreview */}
 import CodePreview from "../../components/CodePreview.astro";
 
-{/* Import Components */}
+{/* Imports HTML */}
+import AlertColors from "../../components/ui-components/alert/alert-colors.html";
+import rawAlertColors from "../../components/ui-components/alert/alert-colors.html?raw";
+import AlertDismissible from "../../components/ui-components/alert/alert-dismissible.html";
+import rawAlertDismissible from "../../components/ui-components/alert/alert-dismissible.html?raw";
+import AlertWithContent from "../../components/ui-components/alert/alert-with-content.html";
+import rawAlertWithContent from "../../components/ui-components/alert/alert-with-content.html?raw";
+
+<CodePreview code={rawAlertColors} lang="html" title="Colors">
+  <div slot="preview">
+    <AlertColors />
+  </div>
+</CodePreview>
+
+<CodePreview code={rawAlertDismissible} lang="html" title="Dismissible">
+  <div slot="preview">
+    <AlertDismissible />
+  </div>
+</CodePreview>
+
+<CodePreview code={rawAlertWithContent} lang="html" title="With-content">
+  <div slot="preview">
+    <AlertWithContent />
+  </div>
+</CodePreview>
+
+{/* CodePreview */}
+import CodePreview from "../../components/CodePreview.astro";
+
+{/* Imports HTML */}
 import AvatarStack from "../../components/ui-components/avatar/avatar-stack.html";
 import rawAvatarStack from "../../components/ui-components/avatar/avatar-stack.html?raw";
 import AvatarVariants from "../../components/ui-components/avatar/avatar-variants.html";
@@ -272,190 +178,342 @@ import rawAvatarVariants from "../../components/ui-components/avatar/avatar-vari
 import AvatarWithText from "../../components/ui-components/avatar/avatar-with-text.html";
 import rawAvatarWithText from "../../components/ui-components/avatar/avatar-with-text.html?raw";
 
-
-<CodePreview code={rawAvatarStack} lang="html" title="Avatar Stack">
+<CodePreview code={rawAvatarStack} lang="html" title="Stack">
   <div slot="preview">
     <AvatarStack />
   </div>
 </CodePreview>
 
-<CodePreview code={rawAvatarVariants} lang="html" title="Avatar Variants">
+<CodePreview code={rawAvatarVariants} lang="html" title="Variants">
   <div slot="preview">
     <AvatarVariants />
   </div>
 </CodePreview>
 
-<CodePreview code={rawAvatarWithText} lang="html" title="Avatar With Text">
+<CodePreview code={rawAvatarWithText} lang="html" title="With-text">
   <div slot="preview">
     <AvatarWithText />
   </div>
 </CodePreview>
 
-{/* Using Code */}
-
+{/* CodePreview */}
 import CodePreview from "../../components/CodePreview.astro";
 
-{/* Import Components */}
+{/* Imports HTML */}
+import BadgeColors from "../../components/ui-components/badge/badge-colors.html";
+import rawBadgeColors from "../../components/ui-components/badge/badge-colors.html?raw";
+import BadgeProfile from "../../components/ui-components/badge/badge-profile.html";
+import rawBadgeProfile from "../../components/ui-components/badge/badge-profile.html?raw";
 
-import ButtonAsLink from "../../components/ui-components/button/button-as-link.html";
-import rawButtonAsLink from "../../components/ui-components/button/button-as-link.html?raw";
-import ButtonColors from "../../components/ui-components/button/button-colors.html";
-import rawButtonColors from "../../components/ui-components/button/button-colors.html?raw";
-import ButtonParamo from "../../components/ui-components/button/button-demo.html";
-import rawButtonParamo from "../../components/ui-components/button/button-demo.html?raw";
-import ButtonLoading from "../../components/ui-components/button/button-loading.html";
-import rawButtonLoading from "../../components/ui-components/button/button-loading.html?raw";
-import ButtonSizes from "../../components/ui-components/button/button-sizes.html";
-import rawButtonSizes from "../../components/ui-components/button/button-sizes.html?raw";
-import ButtonVariants from "../../components/ui-components/button/button-variants.html";
-import rawButtonVariants from "../../components/ui-components/button/button-variants.html?raw";
-import ButtonWithIcon from "../../components/ui-components/button/button-with-icon.html";
-import rawButtonWithIcon from "../../components/ui-components/button/button-with-icon.html?raw";
-import CustomAuthButton from "../../components/ui-components/button/custom-auth-button.html";
-import rawCustomAuthButton from "../../components/ui-components/button/custom-auth-button.html?raw";
-import PillButton from "../../components/ui-components/button/pill-button.html";
-import rawPillButton from "../../components/ui-components/button/pill-button.html?raw";
-
-# Button Component
-
-<CodePreview code={rawButtonAsLink} lang="html" title="Button As Link">
+<CodePreview code={rawBadgeColors} lang="html" title="Colors">
   <div slot="preview">
-    <ButtonAsLink />
+    <BadgeColors />
   </div>
 </CodePreview>
 
-<CodePreview code={rawButtonColors} lang="html" title="Button Colors">
+<CodePreview code={rawBadgeProfile} lang="html" title="Profile">
+  <div slot="preview">
+    <BadgeProfile />
+  </div>
+</CodePreview>
+
+{/* CodePreview */}
+import CodePreview from "../../components/CodePreview.astro";
+
+{/* Imports HTML */}
+import BreadcrumbCustomStyles from "../../components/ui-components/breadcrumb/breadcrumb-custom-styles.html";
+import rawBreadcrumbCustomStyles from "../../components/ui-components/breadcrumb/breadcrumb-custom-styles.html?raw";
+import BreadcrumbWithIcon from "../../components/ui-components/breadcrumb/breadcrumb-with-icon.html";
+import rawBreadcrumbWithIcon from "../../components/ui-components/breadcrumb/breadcrumb-with-icon.html?raw";
+
+<CodePreview code={rawBreadcrumbCustomStyles} lang="html" title="Custom-styles">
+  <div slot="preview">
+    <BreadcrumbCustomStyles />
+  </div>
+</CodePreview>
+
+<CodePreview code={rawBreadcrumbWithIcon} lang="html" title="With-icon">
+  <div slot="preview">
+    <BreadcrumbWithIcon />
+  </div>
+</CodePreview>
+
+{/* CodePreview */}
+import CodePreview from "../../components/CodePreview.astro";
+
+{/* Imports HTML */}
+import ButtonOutline from "../../components/ui-components/button/button-outline.html";
+import rawButtonOutline from "../../components/ui-components/button/button-outline.html?raw";
+import ButtonColors from "../../components/ui-components/button/button-colors.html";
+import rawButtonColors from "../../components/ui-components/button/button-colors.html?raw";
+import ButtonGradient from "../../components/ui-components/button/button-gradient.html";
+import rawButtonGradient from "../../components/ui-components/button/button-gradient.html?raw";
+import ButtonGradientTwo from "../../components/ui-components/button/button-gradient-two.html";
+import rawButtonGradientTwo from "../../components/ui-components/button/button-gradient-two.html?raw";
+
+<CodePreview code={rawButtonOutline} lang="html" title="Outline">
+  <div slot="preview">
+    <ButtonOutline />
+  </div>
+</CodePreview>
+
+<CodePreview code={rawButtonColors} lang="html" title="Colors">
   <div slot="preview">
     <ButtonColors />
   </div>
 </CodePreview>
 
-<CodePreview code={rawButtonParamo} lang="html" title="Button Paramo">
+<CodePreview code={rawButtonGradient} lang="html" title="Gradient">
   <div slot="preview">
-    <ButtonParamo />
+    <ButtonGradient />
   </div>
 </CodePreview>
 
-<CodePreview code={rawButtonLoading} lang="html" title="Button Loading">
+<CodePreview code={rawButtonGradientTwo} lang="html" title="Gradient-two">
   <div slot="preview">
-    <ButtonLoading />
+    <ButtonGradientTwo />
   </div>
 </CodePreview>
 
-<CodePreview code={rawButtonSizes} lang="html" title="Button Sizes">
-  <div slot="preview">
-    <ButtonSizes />
-  </div>
-</CodePreview>
-
-<CodePreview code={rawButtonVariants} lang="html" title="Button Variants">
-  <div slot="preview">
-    <ButtonVariants />
-  </div>
-</CodePreview>
-
-<CodePreview code={rawButtonWithIcon} lang="html" title="Button With Icon">
-  <div slot="preview">
-    <ButtonWithIcon />
-  </div>
-</CodePreview>
-
-<CodePreview code={rawCustomAuthButton} lang="html" title="Custom Auth Button">
-  <div slot="preview">
-    <CustomAuthButton />
-  </div>
-</CodePreview>
-
-<CodePreview code={rawPillButton} lang="html" title="Pill Button">
-  <div slot="preview">
-    <PillButton />
-  </div>
-</CodePreview>
-
-{/* Using Code */}
-
+{/* CodePreview */}
 import CodePreview from "../../components/CodePreview.astro";
 
-{/* Import Components */}
-import TimelineDefault from "../../components/ui-components/timeline/timeline-default.html";
-import rawTimelineDefault from "../../components/ui-components/timeline/timeline-default.html?raw";
-import TimelineCard from "../../components/ui-components/timeline/timeline-card.html";
-import rawTimelineCard from "../../components/ui-components/timeline/timeline-card.html?raw";
-import TimelineWithAvatar from "../../components/ui-components/timeline/timeline-with-avatar.html";
-import rawTimelineWithAvatar from "../../components/ui-components/timeline/timeline-with-avatar.html?raw";
-import TimelineWithIcon from "../../components/ui-components/timeline/timeline-with-icon.html";
-import rawTimelineWithIcon from "../../components/ui-components/timeline/timeline-with-icon.html?raw";
+{/* Imports HTML */}
+import BlogCard from "../../components/ui-components/card/blog-card.html";
+import rawBlogCard from "../../components/ui-components/card/blog-card.html?raw";
 
-# Timelines 
+import EcommerceCard from "../../components/ui-components/card/ecommerce-card.html";
+import rawEcommerceCard from "../../components/ui-components/card/ecommerce-card.html?raw";
 
-<CodePreview code={rawTimelineDefault} lang="html" title="Timeline Default">
+import LoginCard from "../../components/ui-components/card/login-card.html";
+import rawLoginCard from "../../components/ui-components/card/login-card.html?raw";
+
+<CodePreview code={rawBlogCard} lang="html" title="Blog Card">
   <div slot="preview">
-    <TimelineDefault />
+    <BlogCard />
   </div>
 </CodePreview>
 
-
-<CodePreview
-  code={rawTimelineCard}
-  lang="html"
-  title="Timeline Card"
->
+<CodePreview code={rawEcommerceCard} lang="html" title="Ecommerce">
   <div slot="preview">
-    <TimelineCard />
+    <EcommerceCard />
+  </div>
+</CodePreview>
+
+<CodePreview code={rawLoginCard} lang="html" title="Login">
+  <div slot="preview">
+    <LoginCard />
+  </div>
+</CodePreview>
+
+{/* CodePreview */}
+import CodePreview from "../../components/CodePreview.astro";
+
+{/* Imports HTML */}
+import CheckboxColors from "../../components/ui-components/checkbox/checkbox-colors.html";
+import rawCheckboxColors from "../../components/ui-components/checkbox/checkbox-colors.html?raw";
+import CheckboxWithCustomIcon from "../../components/ui-components/checkbox/checkbox-with-custom-icon.html";
+import rawCheckboxWithCustomIcon from "../../components/ui-components/checkbox/checkbox-with-custom-icon.html?raw";
+import CheckboxWithLink from "../../components/ui-components/checkbox/checkbox-with-link.html";
+import rawCheckboxWithLink from "../../components/ui-components/checkbox/checkbox-with-link.html?raw";
+
+<CodePreview code={rawCheckboxColors} lang="html" title="Colors">
+  <div slot="preview">
+    <CheckboxColors />
   </div>
 </CodePreview>
 
 <CodePreview
-  code={rawTimelineWithAvatar}
+  code={rawCheckboxWithCustomIcon}
   lang="html"
-  title="Timeline With Avatar"
+  title="With-custom-icon"
 >
   <div slot="preview">
-    <TimelineWithAvatar />
+    <CheckboxWithCustomIcon />
   </div>
 </CodePreview>
 
-<CodePreview code={rawTimelineWithIcon} lang="html" title="Timeline With Icon">
+<CodePreview code={rawCheckboxWithLink} lang="html" title="With-link">
   <div slot="preview">
-    <TimelineWithIcon />
+    <CheckboxWithLink />
   </div>
 </CodePreview>
 
-{/* Using Code */}
-
+{/* CodePreview */}
 import CodePreview from "../../components/CodePreview.astro";
 
-{/* Import Components */}
-import TooltipDefault from "../../components/ui-components/tooltip/tooltip-default.html";
-import rawTooltipDefault from "../../components/ui-components/tooltip/tooltip-default.html?raw";
+{/* Imports HTML */}
+import CollapseDemo from "../../components/ui-components/collapse/collapse-demo.html";
+import rawCollapseDemo from "../../components/ui-components/collapse/collapse-demo.html?raw";
+import CollapseList from "../../components/ui-components/collapse/collapse-list.html";
+import rawCollapseList from "../../components/ui-components/collapse/collapse-list.html?raw";
 
-# Tooltips
+<CodePreview code={rawCollapseDemo} lang="html" title="Demo">
+  <div slot="preview">
+    <CollapseDemo />
+  </div>
+</CodePreview>
+
+<CodePreview code={rawCollapseList} lang="html" title="List">
+  <div slot="preview">
+    <CollapseList />
+  </div>
+</CodePreview>
+
+{/* CodePreview */}
+import CodePreview from "../../components/CodePreview.astro";
+
+{/* Imports HTML */}
+import FooterWithSocialLink from "../../components/ui-components/footer/footer-with-social-link.html";
+import rawFooterWithSocialLink from "../../components/ui-components/footer/footer-with-social-link.html?raw";
 
 <CodePreview
-  code={rawTooltipDefault}
+  code={rawFooterWithSocialLink}
   lang="html"
-  title="Tooltip Default"
+  title="With-social-link"
 >
   <div slot="preview">
-    <TooltipDefault />
+    <FooterWithSocialLink />
   </div>
 </CodePreview>
 
-# Documentação
-
-{/* Using Code */}
-
+{/* CodePreview */}
 import CodePreview from "../../components/CodePreview.astro";
 
-{/* Import Components */}
+{/* Imports HTML */}
+import DropdownCheckbox from "../../components/ui-components/dropdown/dropdown-checkbox.html";
+import rawDropdownCheckbox from "../../components/ui-components/dropdown/dropdown-checkbox.html?raw";
+import DropdownDefault from "../../components/ui-components/dropdown/dropdown-default.html";
+import rawDropdownDefault from "../../components/ui-components/dropdown/dropdown-default.html?raw";
+import DropdownNested from "../../components/ui-components/dropdown/dropdown-nested.html";
+import rawDropdownNested from "../../components/ui-components/dropdown/dropdown-nested.html?raw";
+import DropdownPlacement from "../../components/ui-components/dropdown/dropdown-placement.html";
+import rawDropdownPlacement from "../../components/ui-components/dropdown/dropdown-placement.html?raw";
+import DropdownScrolling from "../../components/ui-components/dropdown/dropdown-scrolling.html";
+import rawDropdownScrolling from "../../components/ui-components/dropdown/dropdown-scrolling.html?raw";
+
+<CodePreview code={rawDropdownCheckbox} lang="html" title="Checkbox">
+  <div slot="preview">
+    <DropdownCheckbox />
+  </div>
+</CodePreview>
+
+<CodePreview code={rawDropdownDefault} lang="html" title="Default">
+  <div slot="preview">
+    <DropdownDefault />
+  </div>
+</CodePreview>
+
+<CodePreview code={rawDropdownNested} lang="html" title="Nested">
+  <div slot="preview">
+    <DropdownNested />
+  </div>
+</CodePreview>
+
+<CodePreview code={rawDropdownPlacement} lang="html" title="Placement">
+  <div slot="preview">
+    <DropdownPlacement />
+  </div>
+</CodePreview>
+
+<CodePreview code={rawDropdownScrolling} lang="html" title="Scrolling">
+  <div slot="preview">
+    <DropdownScrolling />
+  </div>
+</CodePreview>
+
+{/* CodePreview */}
+import CodePreview from "../../components/CodePreview.astro";
+
+{/* Imports HTML */}
+import InputWithButton from "../../components/ui-components/input/input-with-button.html";
+import rawInputWithButton from "../../components/ui-components/input/input-with-button.html?raw";
+import InputWithHelperText from "../../components/ui-components/input/input-with-helper-text.html";
+import rawInputWithHelperText from "../../components/ui-components/input/input-with-helper-text.html?raw";
+import InputWithIcon from "../../components/ui-components/input/input-with-icon.html";
+import rawInputWithIcon from "../../components/ui-components/input/input-with-icon.html?raw";
+
+<CodePreview code={rawInputWithButton} lang="html" title="With-button">
+  <div slot="preview">
+    <InputWithButton />
+  </div>
+</CodePreview>
+
+<CodePreview code={rawInputWithHelperText} lang="html" title="With-helper-text">
+  <div slot="preview">
+    <InputWithHelperText />
+  </div>
+</CodePreview>
+
+<CodePreview code={rawInputWithIcon} lang="html" title="With-icon">
+  <div slot="preview">
+    <InputWithIcon />
+  </div>
+</CodePreview>
+
+{/* CodePreview */}
+import CodePreview from "../../components/CodePreview.astro";
+
+{/* Imports HTML */}
+import ListWithAvatar from "../../components/ui-components/list/list-with-avatar.html";
+import rawListWithAvatar from "../../components/ui-components/list/list-with-avatar.html?raw";
+import ListWithBadge from "../../components/ui-components/list/list-with-badge.html";
+import rawListWithBadge from "../../components/ui-components/list/list-with-badge.html?raw";
+
+<CodePreview code={rawListWithAvatar} lang="html" title="With-avatar">
+  <div slot="preview">
+    <ListWithAvatar />
+  </div>
+</CodePreview>
+
+<CodePreview code={rawListWithBadge} lang="html" title="With-badge">
+  <div slot="preview">
+    <ListWithBadge />
+  </div>
+</CodePreview>
+
+{/* CodePreview */}
+import CodePreview from "../../components/CodePreview.astro";
+
+{/* Imports HTML */}
+import ModalLogin from "../../components/ui-components/modal/modal-login.html";
+import rawModalLogin from "../../components/ui-components/modal/modal-login.html?raw";
+
+<CodePreview code={rawModalLogin} lang="html" title="Login">
+  <div slot="preview">
+    <ModalLogin />
+  </div>
+</CodePreview>
+
+{/* CodePreview */}
+import CodePreview from "../../components/CodePreview.astro";
+
+{/* Imports HTML */}
+import TestimonialBasic from "../../components/ui-components/testimonial/testimonial-basic.html";
+import rawTestimonialBasic from "../../components/ui-components/testimonial/testimonial-basic.html?raw";
+import TestimonialAnimated from "../../components/ui-components/testimonial/testimonial-animated.html";
+import rawTestimonialAnimated from "../../components/ui-components/testimonial/testimonial-animated.html?raw";
+
+<CodePreview code={rawTestimonialBasic} lang="html" title="Basic">
+  <div slot="preview">
+    <TestimonialBasic />
+  </div>
+</CodePreview>
+
+<CodePreview code={rawTestimonialAnimated} lang="html" title="Animated">
+  <div slot="preview">
+    <TestimonialAnimated />
+  </div>
+</CodePreview>
+
+{/* CodePreview */}
+import CodePreview from "../../components/CodePreview.astro";
+
+{/* Imports HTML */}
 import Headings from "../../components/ui-components/typography/headings.html";
 import rawHeadings from "../../components/ui-components/typography/headings.html?raw";
-
 import TypographyColors from "../../components/ui-components/typography/typography-colors.html";
 import rawTypographyColors from "../../components/ui-components/typography/typography-colors.html?raw";
-
-
-# Typography 
 
 <CodePreview code={rawHeadings} lang="html" title="Headings">
   <div slot="preview">
@@ -463,11 +521,9 @@ import rawTypographyColors from "../../components/ui-components/typography/typog
   </div>
 </CodePreview>
 
-<CodePreview code={rawTypographyColors} lang="html" title="Typography Colors">
+<CodePreview code={rawTypographyColors} lang="html" title="Colors">
   <div slot="preview">
     <TypographyColors />
   </div>
 </CodePreview>
-
-# Documentação
 

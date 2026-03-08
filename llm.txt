@@ -2,39 +2,57 @@
 
 
 
-Sobre o template:
-https://lucassihh.github.io//docs/sobre-o-template
-
-Adicionar conteúdo:
-https://lucassihh.github.io//docs/adicionar-conteudo
-
-Configuração do Layout:
-https://lucassihh.github.io//docs/configurar-o-layout
-
-Estrutura de arquivos:
-https://lucassihh.github.io//docs/estrutura-de-arquivos
-
-Features:
-https://lucassihh.github.io//docs/features
+Theme and JavaScript:
+https://lucassihh.github.io//docs/theme-and-javascript
 
 
 
-UI Components
+Components
 
 Accordion:
 https://lucassihh.github.io//ui-components/accordion
 
+Alert:
+https://lucassihh.github.io//ui-components/alert
+
 Avatar:
 https://lucassihh.github.io//ui-components/avatar
+
+Badge:
+https://lucassihh.github.io//ui-components/badge
+
+Breadcrumb:
+https://lucassihh.github.io//ui-components/breadcrumb
 
 Button:
 https://lucassihh.github.io//ui-components/button
 
-Timeline:
-https://lucassihh.github.io//ui-components/timeline
+Card:
+https://lucassihh.github.io//ui-components/card
 
-Tooltip:
-https://lucassihh.github.io//ui-components/tooltip
+Checkbox:
+https://lucassihh.github.io//ui-components/checkbox
+
+Collapse:
+https://lucassihh.github.io//ui-components/collapse
+
+Footer:
+https://lucassihh.github.io//ui-components/footer
+
+Dropdown:
+https://lucassihh.github.io//ui-components/dropdown
+
+Input:
+https://lucassihh.github.io//ui-components/input
+
+List:
+https://lucassihh.github.io//ui-components/list
+
+Modal:
+https://lucassihh.github.io//ui-components/modal
+
+Testimonial:
+https://lucassihh.github.io//ui-components/testimonial
 
 Typography:
 https://lucassihh.github.io//ui-components/typography
