@@ -45,29 +45,14 @@ https://lucassihh.github.io//ui-components/dropdown
 Footer:
 https://lucassihh.github.io//ui-components/footer
 
-Hero:
-https://lucassihh.github.io//ui-components/hero
-
 Input:
 https://lucassihh.github.io//ui-components/input
 
 List:
 https://lucassihh.github.io//ui-components/list
 
-Loading:
-https://lucassihh.github.io//ui-components/loading
-
 Modal:
 https://lucassihh.github.io//ui-components/modal
-
-Navbar:
-https://lucassihh.github.io//ui-components/navbar
-
-Newsletter:
-https://lucassihh.github.io//ui-components/newsletter
-
-Progress:
-https://lucassihh.github.io//ui-components/progress
 
 Testimonial:
 https://lucassihh.github.io//ui-components/testimonial
