@@ -27,6 +27,9 @@ https://lucassihh.github.io//ui-components/breadcrumb
 Button:
 https://lucassihh.github.io//ui-components/button
 
+Button-icon:
+https://lucassihh.github.io//ui-components/button-icon
+
 Card:
 https://lucassihh.github.io//ui-components/card
 

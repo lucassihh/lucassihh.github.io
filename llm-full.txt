@@ -126,17 +126,20 @@ import rawAccordionBorder from "../../components/ui-components/accordion/accordi
 
 # Accordion Component
 
+
 <CodePreview code={rawAccordionBasic} lang="html" title="Basic">
   <div slot="preview">
     <AccordionBasic />
   </div>
 </CodePreview>
 
+
 <CodePreview code={rawAccordionBorder} lang="html" title="Border">
   <div slot="preview">
     <AccordionBorder />
   </div>
 </CodePreview>
+
 
 ## How to use this component
 
@@ -153,11 +156,13 @@ import rawAlertWithContent from "../../components/ui-components/alert/alert-with
 
 # Alert Component
 
+
 <CodePreview code={rawAlertColors} lang="html" title="Colors">
   <div slot="preview">
     <AlertColors />
   </div>
 </CodePreview>
+
 
 <CodePreview code={rawAlertDismissible} lang="html" title="Dismissible">
   <div slot="preview">
@@ -165,11 +170,13 @@ import rawAlertWithContent from "../../components/ui-components/alert/alert-with
   </div>
 </CodePreview>
 
+
 <CodePreview code={rawAlertWithContent} lang="html" title="With Content">
   <div slot="preview">
     <AlertWithContent />
   </div>
 </CodePreview>
+
 
 ## How to use this component
 
@@ -188,11 +195,13 @@ import rawAvatarWithText from "../../components/ui-components/avatar/avatar-with
 
 # Avatar Component
 
+
 <CodePreview code={rawAvatarGradient} lang="html" title="Gradient">
   <div slot="preview">
     <AvatarGradient />
   </div>
 </CodePreview>
+
 
 <CodePreview code={rawAvatarStack} lang="html" title="Stack">
   <div slot="preview">
@@ -200,17 +209,20 @@ import rawAvatarWithText from "../../components/ui-components/avatar/avatar-with
   </div>
 </CodePreview>
 
+
 <CodePreview code={rawAvatarVariants} lang="html" title="Variants">
   <div slot="preview">
     <AvatarVariants />
   </div>
 </CodePreview>
 
+
 <CodePreview code={rawAvatarWithText} lang="html" title="With Text">
   <div slot="preview">
     <AvatarWithText />
   </div>
 </CodePreview>
+
 
 ## How to use this component
 
@@ -225,17 +237,20 @@ import rawBadgeProfile from "../../components/ui-components/badge/badge-profile.
 
 # Badge Component
 
+
 <CodePreview code={rawBadgeColors} lang="html" title="Colors">
   <div slot="preview">
     <BadgeColors />
   </div>
 </CodePreview>
 
+
 <CodePreview code={rawBadgeProfile} lang="html" title="Profile">
   <div slot="preview">
     <BadgeProfile />
   </div>
 </CodePreview>
+
 
 ## How to use this component
 
@@ -250,17 +265,20 @@ import rawBreadcrumbWithIcon from "../../components/ui-components/breadcrumb/bre
 
 # Breadcrumb Component
 
+
 <CodePreview code={rawBreadcrumbCustomStyles} lang="html" title="Custom Styles">
   <div slot="preview">
     <BreadcrumbCustomStyles />
   </div>
 </CodePreview>
 
+
 <CodePreview code={rawBreadcrumbWithIcon} lang="html" title="With Icon">
   <div slot="preview">
     <BreadcrumbWithIcon />
   </div>
 </CodePreview>
+
 
 ## How to use this component
 
@@ -274,12 +292,11 @@ import ButtonGradient from "../../components/ui-components/button/button-gradien
 import rawButtonGradient from "../../components/ui-components/button/button-gradient.html?raw";
 import ButtonGradientTwo from "../../components/ui-components/button/button-gradient-two.html";
 import rawButtonGradientTwo from "../../components/ui-components/button/button-gradient-two.html?raw";
-import ButtonIcon from "../../components/ui-components/button/button-icon.html";
-import rawButtonIcon from "../../components/ui-components/button/button-icon.html?raw";
 import ButtonOutline from "../../components/ui-components/button/button-outline.html";
 import rawButtonOutline from "../../components/ui-components/button/button-outline.html?raw";
 
 # Button Component
+
 
 <CodePreview code={rawButtonColors} lang="html" title="Colors">
   <div slot="preview">
@@ -287,11 +304,13 @@ import rawButtonOutline from "../../components/ui-components/button/button-outli
   </div>
 </CodePreview>
 
+
 <CodePreview code={rawButtonGradient} lang="html" title="Gradient">
   <div slot="preview">
     <ButtonGradient />
   </div>
 </CodePreview>
+
 
 <CodePreview code={rawButtonGradientTwo} lang="html" title="Gradient Two">
   <div slot="preview">
@@ -299,17 +318,32 @@ import rawButtonOutline from "../../components/ui-components/button/button-outli
   </div>
 </CodePreview>
 
-<CodePreview code={rawButtonIcon} lang="html" title="Icon">
-  <div slot="preview">
-    <ButtonIcon />
-  </div>
-</CodePreview>
 
 <CodePreview code={rawButtonOutline} lang="html" title="Outline">
   <div slot="preview">
     <ButtonOutline />
   </div>
 </CodePreview>
+
+
+## How to use this component
+
+{/* CodePreview */}
+import CodePreview from "../../components/CodePreview.astro";
+
+{/* Imports HTML */}
+import ButtonIconDefault from "../../components/ui-components/button-icon/button-icon-default.html";
+import rawButtonIconDefault from "../../components/ui-components/button-icon/button-icon-default.html?raw";
+
+# Button-icon Component
+
+
+<CodePreview code={rawButtonIconDefault} lang="html" title="Default">
+  <div slot="preview">
+    <ButtonIconDefault />
+  </div>
+</CodePreview>
+
 
 ## How to use this component
 
@@ -319,18 +353,13 @@ import CodePreview from "../../components/CodePreview.astro";
 {/* Imports HTML */}
 import CardBlog from "../../components/ui-components/card/card-blog.html";
 import rawCardBlog from "../../components/ui-components/card/card-blog.html?raw";
-import CardEcommerce from "../../components/ui-components/card/card-ecommerce.html";
-import rawCardEcommerce from "../../components/ui-components/card/card-ecommerce.html?raw";
 import CardEcommerceGrid from "../../components/ui-components/card/card-ecommerce-grid.html";
 import rawCardEcommerceGrid from "../../components/ui-components/card/card-ecommerce-grid.html?raw";
 import CardLogin from "../../components/ui-components/card/card-login.html";
 import rawCardLogin from "../../components/ui-components/card/card-login.html?raw";
-import CardLoginSocial from "../../components/ui-components/card/card-login-social.html";
-import rawCardLoginSocial from "../../components/ui-components/card/card-login-social.html?raw";
-import CardLoginSocialModern from "../../components/ui-components/card/card-login-social-modern.html";
-import rawCardLoginSocialModern from "../../components/ui-components/card/card-login-social-modern.html?raw";
 
 # Card Component
+
 
 <CodePreview code={rawCardBlog} lang="html" title="Blog">
   <div slot="preview">
@@ -338,11 +367,6 @@ import rawCardLoginSocialModern from "../../components/ui-components/card/card-l
   </div>
 </CodePreview>
 
-<CodePreview code={rawCardEcommerce} lang="html" title="Ecommerce">
-  <div slot="preview">
-    <CardEcommerce />
-  </div>
-</CodePreview>
 
 <CodePreview code={rawCardEcommerceGrid} lang="html" title="Ecommerce Grid">
   <div slot="preview">
@@ -350,27 +374,13 @@ import rawCardLoginSocialModern from "../../components/ui-components/card/card-l
   </div>
 </CodePreview>
 
+
 <CodePreview code={rawCardLogin} lang="html" title="Login">
   <div slot="preview">
     <CardLogin />
   </div>
 </CodePreview>
 
-<CodePreview code={rawCardLoginSocial} lang="html" title="Login Social">
-  <div slot="preview">
-    <CardLoginSocial />
-  </div>
-</CodePreview>
-
-<CodePreview
-  code={rawCardLoginSocialModern}
-  lang="html"
-  title="Login Social Modern"
->
-  <div slot="preview">
-    <CardLoginSocialModern />
-  </div>
-</CodePreview>
 
 ## How to use this component
 
@@ -387,21 +397,20 @@ import rawCheckboxWithLink from "../../components/ui-components/checkbox/checkbo
 
 # Checkbox Component
 
+
 <CodePreview code={rawCheckboxColors} lang="html" title="Colors">
   <div slot="preview">
     <CheckboxColors />
   </div>
 </CodePreview>
 
-<CodePreview
-  code={rawCheckboxWithCustomIcon}
-  lang="html"
-  title="With Custom Icon"
->
+
+<CodePreview code={rawCheckboxWithCustomIcon} lang="html" title="With Custom Icon">
   <div slot="preview">
     <CheckboxWithCustomIcon />
   </div>
 </CodePreview>
+
 
 <CodePreview code={rawCheckboxWithLink} lang="html" title="With Link">
   <div slot="preview">
@@ -409,30 +418,34 @@ import rawCheckboxWithLink from "../../components/ui-components/checkbox/checkbo
   </div>
 </CodePreview>
 
+
 ## How to use this component
 
 {/* CodePreview */}
 import CodePreview from "../../components/CodePreview.astro";
 
 {/* Imports HTML */}
-import CollapseDemo from "../../components/ui-components/collapse/collapse-demo.html";
-import rawCollapseDemo from "../../components/ui-components/collapse/collapse-demo.html?raw";
+import CollapseDefault from "../../components/ui-components/collapse/collapse-default.html";
+import rawCollapseDefault from "../../components/ui-components/collapse/collapse-default.html?raw";
 import CollapseList from "../../components/ui-components/collapse/collapse-list.html";
 import rawCollapseList from "../../components/ui-components/collapse/collapse-list.html?raw";
 
 # Collapse Component
 
-<CodePreview code={rawCollapseDemo} lang="html" title="Demo">
+
+<CodePreview code={rawCollapseDefault} lang="html" title="Default">
   <div slot="preview">
-    <CollapseDemo />
+    <CollapseDefault/>
   </div>
 </CodePreview>
+
 
 <CodePreview code={rawCollapseList} lang="html" title="List">
   <div slot="preview">
     <CollapseList />
   </div>
 </CodePreview>
+
 
 ## How to use this component
 
@@ -453,11 +466,13 @@ import rawDropdownScrolling from "../../components/ui-components/dropdown/dropdo
 
 # Dropdown Component
 
+
 <CodePreview code={rawDropdownCheckbox} lang="html" title="Checkbox">
   <div slot="preview">
     <DropdownCheckbox />
   </div>
 </CodePreview>
+
 
 <CodePreview code={rawDropdownDefault} lang="html" title="Default">
   <div slot="preview">
@@ -465,11 +480,13 @@ import rawDropdownScrolling from "../../components/ui-components/dropdown/dropdo
   </div>
 </CodePreview>
 
+
 <CodePreview code={rawDropdownNested} lang="html" title="Nested">
   <div slot="preview">
     <DropdownNested />
   </div>
 </CodePreview>
+
 
 <CodePreview code={rawDropdownPlacement} lang="html" title="Placement">
   <div slot="preview">
@@ -477,11 +494,13 @@ import rawDropdownScrolling from "../../components/ui-components/dropdown/dropdo
   </div>
 </CodePreview>
 
+
 <CodePreview code={rawDropdownScrolling} lang="html" title="Scrolling">
   <div slot="preview">
     <DropdownScrolling />
   </div>
 </CodePreview>
+
 
 ## How to use this component
 
@@ -494,15 +513,13 @@ import rawFooterWithSocialLink from "../../components/ui-components/footer/foote
 
 # Footer Component
 
-<CodePreview
-  code={rawFooterWithSocialLink}
-  lang="html"
-  title="With Social Link"
->
+
+<CodePreview code={rawFooterWithSocialLink} lang="html" title="With Social Link">
   <div slot="preview">
     <FooterWithSocialLink />
   </div>
 </CodePreview>
+
 
 ## How to use this component
 
@@ -535,11 +552,13 @@ import rawHero9 from "../../components/ui-components/hero/hero9.html?raw";
 
 # Hero Component
 
+
 <CodePreview code={rawHero1} lang="html" title="1">
   <div slot="preview">
     <Hero1 />
   </div>
 </CodePreview>
+
 
 <CodePreview code={rawHero10} lang="html" title="10">
   <div slot="preview">
@@ -547,11 +566,13 @@ import rawHero9 from "../../components/ui-components/hero/hero9.html?raw";
   </div>
 </CodePreview>
 
+
 <CodePreview code={rawHero11} lang="html" title="11">
   <div slot="preview">
     <Hero11 />
   </div>
 </CodePreview>
+
 
 <CodePreview code={rawHero2} lang="html" title="2">
   <div slot="preview">
@@ -559,11 +580,13 @@ import rawHero9 from "../../components/ui-components/hero/hero9.html?raw";
   </div>
 </CodePreview>
 
+
 <CodePreview code={rawHero3} lang="html" title="3">
   <div slot="preview">
     <Hero3 />
   </div>
 </CodePreview>
+
 
 <CodePreview code={rawHero4} lang="html" title="4">
   <div slot="preview">
@@ -571,11 +594,13 @@ import rawHero9 from "../../components/ui-components/hero/hero9.html?raw";
   </div>
 </CodePreview>
 
+
 <CodePreview code={rawHero5} lang="html" title="5">
   <div slot="preview">
     <Hero5 />
   </div>
 </CodePreview>
+
 
 <CodePreview code={rawHero6} lang="html" title="6">
   <div slot="preview">
@@ -583,11 +608,13 @@ import rawHero9 from "../../components/ui-components/hero/hero9.html?raw";
   </div>
 </CodePreview>
 
+
 <CodePreview code={rawHero7} lang="html" title="7">
   <div slot="preview">
     <Hero7 />
   </div>
 </CodePreview>
+
 
 <CodePreview code={rawHero8} lang="html" title="8">
   <div slot="preview">
@@ -595,11 +622,13 @@ import rawHero9 from "../../components/ui-components/hero/hero9.html?raw";
   </div>
 </CodePreview>
 
+
 <CodePreview code={rawHero9} lang="html" title="9">
   <div slot="preview">
     <Hero9 />
   </div>
 </CodePreview>
+
 
 ## How to use this component
 
@@ -616,11 +645,13 @@ import rawInputWithIcon from "../../components/ui-components/input/input-with-ic
 
 # Input Component
 
+
 <CodePreview code={rawInputWithButton} lang="html" title="With Button">
   <div slot="preview">
     <InputWithButton />
   </div>
 </CodePreview>
+
 
 <CodePreview code={rawInputWithHelperText} lang="html" title="With Helper Text">
   <div slot="preview">
@@ -628,11 +659,13 @@ import rawInputWithIcon from "../../components/ui-components/input/input-with-ic
   </div>
 </CodePreview>
 
+
 <CodePreview code={rawInputWithIcon} lang="html" title="With Icon">
   <div slot="preview">
     <InputWithIcon />
   </div>
 </CodePreview>
+
 
 ## How to use this component
 
@@ -647,17 +680,20 @@ import rawListWithBadge from "../../components/ui-components/list/list-with-badg
 
 # List Component
 
+
 <CodePreview code={rawListWithAvatar} lang="html" title="With Avatar">
   <div slot="preview">
     <ListWithAvatar />
   </div>
 </CodePreview>
 
+
 <CodePreview code={rawListWithBadge} lang="html" title="With Badge">
   <div slot="preview">
     <ListWithBadge />
   </div>
 </CodePreview>
+
 
 ## How to use this component
 
@@ -670,11 +706,13 @@ import rawLoading from "../../components/ui-components/loading/loading.html?raw"
 
 # Loading Component
 
+
 <CodePreview code={rawLoading} lang="html" title="Loading">
   <div slot="preview">
     <Loading />
   </div>
 </CodePreview>
+
 
 ## How to use this component
 
@@ -687,11 +725,13 @@ import rawModalLogin from "../../components/ui-components/modal/modal-login.html
 
 # Modal Component
 
+
 <CodePreview code={rawModalLogin} lang="html" title="Login">
   <div slot="preview">
     <ModalLogin />
   </div>
 </CodePreview>
+
 
 ## How to use this component
 
@@ -704,11 +744,13 @@ import rawNavbar1 from "../../components/ui-components/navbar/navbar1.html?raw";
 
 # Navbar Component
 
+
 <CodePreview code={rawNavbar1} lang="html" title="1">
   <div slot="preview">
     <Navbar1 />
   </div>
 </CodePreview>
+
 
 ## How to use this component
 
@@ -723,17 +765,20 @@ import rawNewsletter2 from "../../components/ui-components/newsletter/newsletter
 
 # Newsletter Component
 
+
 <CodePreview code={rawNewsletter1} lang="html" title="1">
   <div slot="preview">
     <Newsletter1 />
   </div>
 </CodePreview>
 
+
 <CodePreview code={rawNewsletter2} lang="html" title="2">
   <div slot="preview">
     <Newsletter2 />
   </div>
 </CodePreview>
+
 
 ## How to use this component
 
@@ -752,11 +797,13 @@ import rawProgressBarText from "../../components/ui-components/progress/progress
 
 # Progress Component
 
+
 <CodePreview code={rawProgressBar} lang="html" title="Bar">
   <div slot="preview">
     <ProgressBar />
   </div>
 </CodePreview>
+
 
 <CodePreview code={rawProgressBarCircle} lang="html" title="Bar Circle">
   <div slot="preview">
@@ -764,17 +811,20 @@ import rawProgressBarText from "../../components/ui-components/progress/progress
   </div>
 </CodePreview>
 
+
 <CodePreview code={rawProgressBarGradient} lang="html" title="Bar Gradient">
   <div slot="preview">
     <ProgressBarGradient />
   </div>
 </CodePreview>
 
+
 <CodePreview code={rawProgressBarText} lang="html" title="Bar Text">
   <div slot="preview">
     <ProgressBarText />
   </div>
 </CodePreview>
+
 
 ## How to use this component
 
@@ -789,17 +839,20 @@ import rawTestimonialBasic from "../../components/ui-components/testimonial/test
 
 # Testimonial Component
 
+
 <CodePreview code={rawTestimonialAnimated} lang="html" title="Animated">
   <div slot="preview">
     <TestimonialAnimated />
   </div>
 </CodePreview>
 
+
 <CodePreview code={rawTestimonialBasic} lang="html" title="Basic">
   <div slot="preview">
     <TestimonialBasic />
   </div>
 </CodePreview>
+
 
 ## How to use this component
 
@@ -814,17 +867,20 @@ import rawTypographyHeadings from "../../components/ui-components/typography/typ
 
 # Typography Component
 
+
 <CodePreview code={rawTypographyColors} lang="html" title="Colors">
   <div slot="preview">
     <TypographyColors />
   </div>
 </CodePreview>
 
+
 <CodePreview code={rawTypographyHeadings} lang="html" title="Headings">
   <div slot="preview">
     <TypographyHeadings />
   </div>
 </CodePreview>
+
 
 ## How to use this component
 
