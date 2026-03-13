@@ -27,9 +27,6 @@ https://lucassihh.github.io//ui-components/breadcrumb
 Button:
 https://lucassihh.github.io//ui-components/button
 
-Button-icon:
-https://lucassihh.github.io//ui-components/button-icon
-
 Card:
 https://lucassihh.github.io//ui-components/card
 
@@ -44,6 +41,9 @@ https://lucassihh.github.io//ui-components/dropdown
 
 Footer:
 https://lucassihh.github.io//ui-components/footer
+
+Icon:
+https://lucassihh.github.io//ui-components/icon
 
 Input:
 https://lucassihh.github.io//ui-components/input
